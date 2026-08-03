@@ -6,15 +6,14 @@
 
 ## Single Authorized Action
 
-> Run exactly one fresh-instance, read-only Cold-Start Recovery Test. The test instance must receive only the repository path and the canonical test prompt. Do not provide previous chat reports, summaries, model evaluations, or explanatory context.
+> Prepare a bounded Modularity & Replaceability Doctrine proposal for outside review. Define Artifact-first persistence and environment-mediated coordination as stable kernel principles, and define the five current capabilities as replaceable providers. Do not implement providers or modify CR-S0.
 
 ---
 
 ## Prohibited Next Actions
 
-1. **DO NOT** run the cold-start test within this same execution instance.
-2. **DO NOT** modify any existing repository files during the cold-start test.
-3. **DO NOT** request or attempt execution of `CR-S0`.
-4. **DO NOT** launch background daemons, runners, compilers, OpenClaw, or subagents.
-5. **DO NOT** implement Current Knowledge, Stigmergy, Protocol Runtime, or AutoResearch.
-6. **DO NOT** create any additional preparation or repair phase before the cold-start test; the next step after this write-back is the fresh-instance test execution.
+1. **DO NOT** implement any Four-Layer capability provider (Stigmergy, LLM Wiki / Current Knowledge, Software 3.0 Protocol Runtime, or AutoResearch runtime).
+2. **DO NOT** modify, execute, or attempt to authorize `CR-S0`.
+3. **DO NOT** launch background daemons, runners, compilers, OpenClaw, or subagents.
+4. **DO NOT** treat superseded drafts or examination files as current doctrine.
+5. **DO NOT** claim execution-process behavior as externally confirmed; such claims remain `CLAIMED-NOT-EVIDENCED`.

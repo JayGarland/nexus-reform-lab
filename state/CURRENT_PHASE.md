@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Fresh-Instance Cold-Start Recovery Test`
-- **Current Focus**: Empirically test whether a zero-memory instance can recover the correct repository state from WAKE.md and canonical files alone.
-- **External Audit Status**: `FOUNDATION 0.4.1a CONFIRMED FOR REVIEWED SCOPE — COLD-START TEST RELEASED`
-- **Started At**: `2026-08-03T21:55:00+02:00`
+- **Current Phase**: `Post-Cold-Start Architectural Kernel Definition`
+- **Current Focus**: Formalize the stable Artifact-first and environment-mediated coordination invariants, plus modular replaceability boundaries, before implementing any Four-Layer capability provider.
+- **External Audit Status**: `FRESH-INSTANCE COLD-START RECOVERY CONFIRMED — LEVEL 2 RECOVERABLE PERSISTENT ARTIFACT WORLD ESTABLISHED`
+- **Started At**: `2026-08-03T22:05:00+02:00`
 
 ---
 

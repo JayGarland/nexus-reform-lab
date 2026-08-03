@@ -100,8 +100,15 @@
 - **Resulting Commit**: `98f17cedfffd6ad8d042d0bcd70fe66a2b13bc78`
 - **Actions**: Closed Foundation 0.4.1a as `CONFIRMED FOR REVIEWED SCOPE` (commit `d970a85aea7c879f29689f019b3250f3438db370`) in `EXTERNAL_VERDICT_HISTORY.md` (no new UNDER OUTSIDE REVIEW stage). Updated `CURRENT_PHASE.md` to `Fresh-Instance Cold-Start Recovery Test`, `CURRENT_VERDICT.md` (State Consistency CONFIRMED; Cold-Start AUTHORIZED—NOT YET EXECUTED; CR-S0 WITHHELD), `NEXT_ACTION.md` (authorize exactly one fresh-instance read-only cold-start test), and `HELLO.md` pointers. No new preparation or repair phase created. Production verifier exit code 0; negative fixtures 12/12; positive fixture 1/1.
 
-### Maintenance: Cold-Start Benchmark Reading-Sequence Alignment Patch
+### Milestone Maintenance: Cold-Start Benchmark Reading-Sequence Alignment Patch
 - **Date**: 2026-08-03T22:00:00+02:00
 - **Based-on Commit**: `98f17cedfffd6ad8d042d0bcd70fe66a2b13bc78`
-- **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
+- **Resulting Commit**: `3fe265d4141b66f362459a65dec1912888d1b74c`
 - **Actions**: Aligned the cold-start benchmark input and acceptance criteria by adding `state/OPEN_QUESTIONS.md` to the `WAKE.md` mandatory cold-start reading sequence (step 5, after `NEXT_ACTION.md`) and to the `COLD_START_RECOVERY_TEST.md` strict reading sequence. Explicitly required `Unresolved Blockers` to be reported from `state/OPEN_QUESTIONS.md` with no background context. No Foundation stage created; no verifier logic changes. Re-ran `verify_state_consistency.js` (exit 0) and negative/positive fixture suite (12/12, 1/1, exit 0).
+
+### Milestone 0.4.2: Fresh-Instance Cold-Start Recovery Test — External Evaluation Record
+- **Date**: 2026-08-03T22:05:00+02:00
+- **Evaluation Type**: Box-outside external adjudication (read-only fresh-instance cold-start recovery test)
+- **Based-on Commit**: `3fe265d4141b66f362459a65dec1912888d1b74c`
+- **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
+- **Actions**: Recorded the box-outside verdict for the Foundation 0.4.2 Fresh-Instance Cold-Start Recovery Test as `CONFIRMED FOR RECOVERY SCOPE` in `EXTERNAL_VERDICT_HISTORY.md`; upgraded Repository-wide Persistent Artifact World to Level 2 `CONFIRMED` and Cold-Start Recoverability to `CONFIRMED` in `CURRENT_VERDICT.md`; transitioned `CURRENT_PHASE.md` to `Post-Cold-Start Architectural Kernel Definition`; set `NEXT_ACTION.md` to the Modularity & Replaceability Doctrine proposal; updated `HELLO.md` pointers; closed the prior reading-sequence patch lineage to `3fe265d4141b66f362459a65dec1912888d1b74c`. The cold-start test-output chat is an external evaluation record, not itself a Git commit; execution-process claims remain `CLAIMED-NOT-EVIDENCED`.
