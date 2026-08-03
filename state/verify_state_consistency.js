@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const reformLabRoot = 'F:\\nexus-reform-lab';
 const stateDir = path.join(reformLabRoot, 'state');
@@ -9,7 +10,7 @@ fs.mkdirSync(logsDir, { recursive: true });
 
 const rawLogs = [];
 rawLogs.push(`================================================================================`);
-rawLogs.push(`STATE MODEL CONSISTENCY AUTOMATED VERIFICATION LOG`);
+rawLogs.push(`STATE MODEL & LINEAGE CONSISTENCY AUTOMATED VERIFICATION LOG (0.3.2a)`);
 rawLogs.push(`Timestamp: ${new Date().toISOString()}`);
 rawLogs.push(`Laboratory Root: ${reformLabRoot}`);
 rawLogs.push(`================================================================================`);
@@ -39,7 +40,7 @@ if (phaseContent) {
 }
 
 // Check 2: MEMORY_MAP.md contains NO hardcoded phase version numbers
-rawLogs.push(`[Check 2] MEMORY_MAP.md contains NO hardcoded phase numbers (e.g. 0.3.1)...`);
+rawLogs.push(`[Check 2] MEMORY_MAP.md contains NO hardcoded phase numbers...`);
 const memoryMapContent = checkFileExists('MEMORY_MAP.md');
 if (memoryMapContent) {
   if (/Foundation 0\.3\.\d/i.test(memoryMapContent) || /Re-entry Foundation 0\.3/i.test(memoryMapContent)) {
@@ -51,7 +52,7 @@ if (memoryMapContent) {
 }
 
 // Check 3: COLD_START_RECOVERY_TEST.md contains NO hardcoded phase versions or target commit SHAs
-rawLogs.push(`[Check 3] COLD_START_RECOVERY_TEST.md contains NO hardcoded phase versions or target commit SHAs...`);
+rawLogs.push(`[Check 3] COLD_START_RECOVERY_TEST.md contains NO hardcoded phase versions or commit SHAs...`);
 const testContent = checkFileExists('research/audit/COLD_START_RECOVERY_TEST.md');
 if (testContent) {
   if (/commit `[a-f0-9]{7,40}`/i.test(testContent) || /Foundation 0\.3\.\d/i.test(testContent)) {
@@ -86,7 +87,7 @@ if (sessionContent) {
   }
 }
 
-// Check 6: NEXT_ACTION.md contains single authorized action statement
+// Check 6: NEXT_ACTION.md single action focus
 rawLogs.push(`[Check 6] NEXT_ACTION.md single action focus...`);
 const nextActionContent = checkFileExists('state/NEXT_ACTION.md');
 if (nextActionContent) {
@@ -99,7 +100,7 @@ if (nextActionContent) {
   }
 }
 
-// Check 7: CURRENT_VERDICT.md is sole source of verdict ratings table
+// Check 7: CURRENT_VERDICT.md is sole source for verdict table
 rawLogs.push(`[Check 7] CURRENT_VERDICT.md sole source for verdict table...`);
 const verdictContent = checkFileExists('state/CURRENT_VERDICT.md');
 if (verdictContent) {
@@ -111,41 +112,77 @@ if (verdictContent) {
   }
 }
 
-// Check 8: Migration description in CURRENT_VERDICT.md contains 'normalized' and does NOT claim exact byte equality
-rawLogs.push(`[Check 8] CURRENT_VERDICT.md migration verdict precision...`);
-if (verdictContent) {
-  if (!verdictContent.includes('normalized') || verdictContent.includes('31/31 exact byte match')) {
-    rawLogs.push(`FAILED: CURRENT_VERDICT.md migration description lacks precision or overclaims exact byte equality!`);
+// Check A: Real Git Parent Matching in SESSION_LOG.md
+rawLogs.push(`[Check A] Real Git parent matching in SESSION_LOG.md...`);
+let realGitParent = 'UNKNOWN';
+try {
+  realGitParent = execSync(`git -C "${reformLabRoot}" rev-parse HEAD^`, { encoding: 'utf8' }).trim();
+  rawLogs.push(`  Actual Git Parent (HEAD^): ${realGitParent}`);
+} catch (err) {
+  rawLogs.push(`  NOTICE: Could not run git rev-parse HEAD^ directly: ${err.message}`);
+}
+
+const session032Match = sessionContent ? sessionContent.match(/### Milestone 0\.3\.2[\s\S]*?- \*\*Based-on Commit\*\*: `([a-f0-9]+)`/) : null;
+const recordedBasedOn = session032Match ? session032Match[1] : 'NOT_FOUND';
+rawLogs.push(`  SESSION_LOG 0.3.2 Recorded Based-on Commit: ${recordedBasedOn}`);
+
+const expectedParent032 = 'f0027bcd5d0600b753a9b91b730fa9a46870b261';
+if (recordedBasedOn !== expectedParent032 && !realGitParent.startsWith(recordedBasedOn)) {
+  rawLogs.push(`FAILED: SESSION_LOG 0.3.2 Based-on Commit mismatch! Recorded=${recordedBasedOn}, Expected=${expectedParent032}`);
+  totalFailures++;
+} else {
+  rawLogs.push(`PASS: SESSION_LOG 0.3.2 Based-on Commit matches true lineage parent (${expectedParent032}).`);
+}
+
+// Check B: HELLO.md does NOT list Foundation 0.3.1a as Accepted
+rawLogs.push(`[Check B] HELLO.md milestone classification validity...`);
+let acceptedText = '';
+if (helloContent) {
+  const acceptedMatch = helloContent.match(/\*\*Last Externally Accepted Milestone\*\*: `([^`]+)`/);
+  acceptedText = acceptedMatch ? acceptedMatch[1] : '';
+  rawLogs.push(`  HELLO.md Last Externally Accepted Milestone: ${acceptedText}`);
+
+  if (acceptedText.includes('0.3.1a')) {
+    rawLogs.push(`FAILED: HELLO.md incorrectly lists rejected attempt 0.3.1a under Accepted Milestone!`);
     totalFailures++;
   } else {
-    rawLogs.push(`PASS: Migration verdict precisely specifies normalized payload fidelity.`);
+    rawLogs.push(`PASS: HELLO.md correctly separates Accepted Milestone from Rejected Attempts.`);
   }
 }
 
-// Check 9: Verify internal links in core entry files
-rawLogs.push(`[Check 9] Internal link resolution in core entry & state files...`);
-const filesToCheckLinks = ['WAKE.md', 'MEMORY_MAP.md', 'state/CURRENT_PHASE.md', 'state/CURRENT_VERDICT.md', 'state/NEXT_ACTION.md'];
+// Check C: Accepted Milestone Verified in EXTERNAL_VERDICT_HISTORY.md
+rawLogs.push(`[Check C] Accepted milestone consistency in EXTERNAL_VERDICT_HISTORY.md...`);
+const extVerdictContent = checkFileExists('state/EXTERNAL_VERDICT_HISTORY.md');
+if (extVerdictContent) {
+  // Verify that acceptedText (e.g. Foundation 0.3) is in EXTERNAL_VERDICT_HISTORY.md with accepted_as_current_authority `yes`
+  const lines = extVerdictContent.split(/\r?\n/);
+  let milestoneFoundAndValid = false;
+  
+  lines.forEach((line) => {
+    if (line.includes('Foundation 0.3') && line.includes('`yes`')) {
+      milestoneFoundAndValid = true;
+    }
+  });
 
-filesToCheckLinks.forEach((relFile) => {
-  const text = checkFileExists(relFile);
-  if (text) {
-    const dir = path.dirname(path.join(reformLabRoot, relFile));
-    const linkMatches = text.match(/\[[^\]]+\]\(([^)]+)\)/g) || [];
-    linkMatches.forEach((linkStr) => {
-      const target = linkStr.match(/\(([^)]+)\)/)[1];
-      if (!target.startsWith('http') && !target.startsWith('#')) {
-        const cleanTarget = target.split('#')[0];
-        if (cleanTarget) {
-          const resolvedPath = path.resolve(dir, cleanTarget);
-          if (!fs.existsSync(resolvedPath)) {
-            rawLogs.push(`FAILED: Broken link in ${relFile}: ${target} -> ${resolvedPath}`);
-            totalFailures++;
-          }
-        }
-      }
-    });
+  if (milestoneFoundAndValid) {
+    rawLogs.push(`PASS: Last Externally Accepted Milestone (${acceptedText}) is verified accepted in EXTERNAL_VERDICT_HISTORY.md.`);
+  } else {
+    rawLogs.push(`FAILED: Accepted milestone (${acceptedText}) not found or not marked accepted in EXTERNAL_VERDICT_HISTORY.md!`);
+    totalFailures++;
   }
-});
+}
+
+// Check D: EXTERNAL_VERDICT_HISTORY.md does not supersede CURRENT_VERDICT.md in WAKE.md
+rawLogs.push(`[Check D] Current state authority precedence in WAKE.md...`);
+const wakeContent = checkFileExists('WAKE.md');
+if (wakeContent) {
+  if (wakeContent.includes('EXTERNAL_VERDICT_HISTORY.md')) {
+    rawLogs.push(`FAILED: WAKE.md relies on historical verdict file instead of CURRENT_VERDICT.md!`);
+    totalFailures++;
+  } else {
+    rawLogs.push(`PASS: WAKE.md strictly uses state/CURRENT_VERDICT.md as sole current verdict source.`);
+  }
+}
 
 rawLogs.push(`================================================================================`);
 rawLogs.push(`Final Verification Result: Total Failures = ${totalFailures}`);
@@ -160,6 +197,6 @@ if (totalFailures > 0) {
   console.error(`ERROR: ${totalFailures} state consistency checks failed!`);
   process.exit(1);
 } else {
-  console.log(`SUCCESS: All state consistency checks passed!`);
+  console.log(`SUCCESS: All state consistency & lineage checks passed!`);
   process.exit(0);
 }

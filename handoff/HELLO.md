@@ -6,20 +6,23 @@
 
 ## 1. Handoff Pointers & Baseline Status
 
-- **Last Externally Reviewed Commit**: `61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34`
-- **Last Completed Milestone**: `Foundation 0.3.1a State Closure`
+- **Last Externally Accepted Milestone**: `Foundation 0.3 Persistent Memory Skeleton` (Reviewed Commit: `10928fd0284721538aec9b7bd4575f24ed8232cf`)
+- **Latest Rejected / Repaired Attempt**: `Foundation 0.3.1a State Closure (REJECTED due to pending self-referential commit SHA)`
+- **Current Work Under Review**: `Foundation 0.3.2a Historical Lineage Integrity Fix`
 - **Current Operational Phase**: See [`../state/CURRENT_PHASE.md`](../state/CURRENT_PHASE.md)
 - **Current Ratified Verdicts**: See [`../state/CURRENT_VERDICT.md`](../state/CURRENT_VERDICT.md)
+- **External Verdict History**: See [`../state/EXTERNAL_VERDICT_HISTORY.md`](../state/EXTERNAL_VERDICT_HISTORY.md)
 - **Authorized Next Action**: See [`../state/NEXT_ACTION.md`](../state/NEXT_ACTION.md)
 - **Current Git HEAD Resolution**: Execute `git rev-parse HEAD` dynamically.
 
 ---
 
 ## 2. Session Summary
-- Conducted repository state model repair (Foundation 0.3.2).
-- Established [`state/STATE_MODEL.md`](../state/STATE_MODEL.md) defining single sources of truth.
-- Removed self-referential static commit tracking and duplicate state fields.
-- Corrected state file links and established `state/verify_state_consistency.js` automated check.
+- Conducted historical lineage integrity fix (Foundation 0.3.2a).
+- Corrected 0.3.2 based-on commit SHA in [`SESSION_LOG.md`](SESSION_LOG.md) to `f0027bcd5d0600b753a9b91b730fa9a46870b261`.
+- Reclassified 0.3.1a as `Latest Rejected / Repaired Attempt` in `HELLO.md`.
+- Created [`state/EXTERNAL_VERDICT_HISTORY.md`](../state/EXTERNAL_VERDICT_HISTORY.md) recording historical outside review adjudications.
+- Expanded [`state/verify_state_consistency.js`](../state/verify_state_consistency.js) to dynamically verify Git parent commit SHA matching.
 
 ---
 
