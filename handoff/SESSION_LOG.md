@@ -1,6 +1,6 @@
 # Session Milestone Log
 
-> **Notice**: Git history is the authoritative source of commit lineage (`git log`). SESSION_LOG is a human-readable milestone index only. Resulting commits for current sessions are resolved dynamically from Git.
+> **Notice**: Git history is the authoritative source of commit lineage (`git log`). SESSION_LOG is a human-readable milestone index only. Resulting commits for current sessions are resolved dynamically from Git. All commit references must use full 40-character hexadecimal SHA strings.
 
 ---
 
@@ -49,5 +49,11 @@
 ### Milestone 0.3.2b: External Verdict History & Lineage Verification Repair 0.3.2b
 - **Date**: 2026-08-03T21:19:00+02:00
 - **Based-on Commit**: `03a98d7bf6787f44fa823a18cbf165ceb5aee307`
+- **Resulting Commit**: `5ac021c9ae3a362243a2f442316310ff0b065e27`
+- **Actions**: Refactored `EXTERNAL_VERDICT_HISTORY.md` data schema, updated `HELLO.md`, updated exact migration wording across all state files, and expanded `verify_state_consistency.js`.
+
+### Milestone 0.3.2c: Strict SHA & External Verdict Accuracy Repair 0.3.2c
+- **Date**: 2026-08-03T21:22:00+02:00
+- **Based-on Commit**: `5ac021c9ae3a362243a2f442316310ff0b065e27`
 - **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
-- **Actions**: Refactored `EXTERNAL_VERDICT_HISTORY.md` data schema, updated `HELLO.md` to specify `Last Externally Accepted Scope: Persistent Memory Skeleton (from Foundation 0.3, commit 10928fd0284721538aec9b7bd4575f24ed8232cf)`, updated exact migration wording across all state files, and expanded `verify_state_consistency.js` to dynamically execute `git rev-parse <resulting_commit>~1` for line-by-line parent SHA equality checks.
+- **Actions**: Enforced strict 40-character SHA matching without `startsWith` or short SHA regex, corrected Foundation 0.3.2a to `REJECTED`, reclassified Doctrine Repair 0.2.1 milestone to `PARTIAL PASS` with 4 accepted doctrine scopes, updated column header in `EXTERNAL_VERDICT_HISTORY.md`, and updated `HELLO.md`.

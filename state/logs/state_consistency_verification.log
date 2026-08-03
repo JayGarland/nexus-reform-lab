@@ -1,120 +1,145 @@
 ================================================================================
-STATE MODEL, LINEAGE & VERDICT CONSISTENCY AUTOMATED VERIFICATION LOG (0.3.2b)
-Timestamp: 2026-08-03T19:20:13.060Z
+STRICT SHA & VERDICT ACCURACY AUTOMATED VERIFICATION LOG (0.3.2c)
+Timestamp: 2026-08-03T19:22:20.366Z
 Laboratory Root: F:\nexus-reform-lab
 ================================================================================
-[Check Lineage] Dynamic Git parent lineage verification from SESSION_LOG.md...
+[Check A] Strict 40-character SHA & dynamic Git parent verification...
   Milestone: 0.1: Clean-Room Laboratory Bootstrap & Manifest Repair
-    Resulting Commit: a78709e9bf07c14d46276d60da978bfedaf2f5c4
-    Recorded Based-on: 30f73ae08804efb890f3e7721e7f629cc8166f8d
+    Resulting Commit (40-char): a78709e9bf07c14d46276d60da978bfedaf2f5c4
+    Recorded Based-on (40-char): 30f73ae08804efb890f3e7721e7f629cc8166f8d
     Actual Git Parent (~1): 30f73ae08804efb890f3e7721e7f629cc8166f8d
-    Parent Equality: YES
-  PASS: Dynamic parent lineage verified.
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
   Milestone: 0.2: Doctrine & Research Migration Repair 0.2.1
-    Resulting Commit: 57b5aa59ef0b0285f051de3ce18980bac02cc91e
-    Recorded Based-on: dd88a3e3e16cab36e1819af99e18a4a486f45ee1
+    Resulting Commit (40-char): 57b5aa59ef0b0285f051de3ce18980bac02cc91e
+    Recorded Based-on (40-char): dd88a3e3e16cab36e1819af99e18a4a486f45ee1
     Actual Git Parent (~1): dd88a3e3e16cab36e1819af99e18a4a486f45ee1
-    Parent Equality: YES
-  PASS: Dynamic parent lineage verified.
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
   Milestone: 0.2.2: Migration Verification Fix 0.2.2
-    Resulting Commit: 4e7fe457bb25eb5e9d13a8f01f16edb55714e6d5
-    Recorded Based-on: 57b5aa59ef0b0285f051de3ce18980bac02cc91e
+    Resulting Commit (40-char): 4e7fe457bb25eb5e9d13a8f01f16edb55714e6d5
+    Recorded Based-on (40-char): 57b5aa59ef0b0285f051de3ce18980bac02cc91e
     Actual Git Parent (~1): 57b5aa59ef0b0285f051de3ce18980bac02cc91e
-    Parent Equality: YES
-  PASS: Dynamic parent lineage verified.
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
   Milestone: 0.3: Persistent Memory Structure Build & Re-entry Foundation 0.3
-    Resulting Commit: 10928fd0284721538aec9b7bd4575f24ed8232cf
-    Recorded Based-on: c054f1a63531bce20f227a391e7572f9709b3ec2
+    Resulting Commit (40-char): 10928fd0284721538aec9b7bd4575f24ed8232cf
+    Recorded Based-on (40-char): c054f1a63531bce20f227a391e7572f9709b3ec2
     Actual Git Parent (~1): c054f1a63531bce20f227a391e7572f9709b3ec2
-    Parent Equality: YES
-  PASS: Dynamic parent lineage verified.
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
   Milestone: 0.3.1 / 0.3.1a: Foundation 0.3.1 Memory Consistency & State Closure
-    Resulting Commit: f0027bcd5d0600b753a9b91b730fa9a46870b261
-    Recorded Based-on: 61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34
+    Resulting Commit (40-char): f0027bcd5d0600b753a9b91b730fa9a46870b261
+    Recorded Based-on (40-char): 61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34
     Actual Git Parent (~1): 61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34
-    Parent Equality: YES
-  PASS: Dynamic parent lineage verified.
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
   Milestone: 0.3.2: Persistent Memory State Model Repair
-    Resulting Commit: fc209ffd4d7a6046ab75532f2a9c61fd41255ee6
-    Recorded Based-on: f0027bcd5d0600b753a9b91b730fa9a46870b261
+    Resulting Commit (40-char): fc209ffd4d7a6046ab75532f2a9c61fd41255ee6
+    Recorded Based-on (40-char): f0027bcd5d0600b753a9b91b730fa9a46870b261
     Actual Git Parent (~1): f0027bcd5d0600b753a9b91b730fa9a46870b261
-    Parent Equality: YES
-  PASS: Dynamic parent lineage verified.
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
   Milestone: 0.3.2a: Lineage Integrity Fix 0.3.2a
-    Resulting Commit: 03a98d7bf6787f44fa823a18cbf165ceb5aee307
-    Recorded Based-on: fc209ffd4d7a6046ab75532f2a9c61fd41255ee6
+    Resulting Commit (40-char): 03a98d7bf6787f44fa823a18cbf165ceb5aee307
+    Recorded Based-on (40-char): fc209ffd4d7a6046ab75532f2a9c61fd41255ee6
     Actual Git Parent (~1): fc209ffd4d7a6046ab75532f2a9c61fd41255ee6
-    Parent Equality: YES
-  PASS: Dynamic parent lineage verified.
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
+  Milestone: 0.3.2b: External Verdict History & Lineage Verification Repair 0.3.2b
+    Resulting Commit (40-char): 5ac021c9ae3a362243a2f442316310ff0b065e27
+    Recorded Based-on (40-char): 03a98d7bf6787f44fa823a18cbf165ceb5aee307
+    Actual Git Parent (~1): 03a98d7bf6787f44fa823a18cbf165ceb5aee307
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
 
-[Check 1] Reviewed Commit Existence in Git History...
+[Check B/C/D] EXTERNAL_VERDICT_HISTORY.md Schema & Verdict Accuracy...
 --- Milestone: **Clean-Room Bootstrap** ---
-  Reviewed Commit: a78709e9bf07c14d46276d60da978bfedaf2f5c4
+  Reviewed Commit (40-char): a78709e9bf07c14d46276d60da978bfedaf2f5c4
   Outside Verdict: CONFIRMED
   Fully Accepted: yes
   Accepted Scope: Clean-Room Lab Setup, Charter, Invariants, Drive Manifest
-  Current Authority: yes
+  Rejected Scope: None
+  Milestone Current Authority: yes
   Git Commit Existence Check (a78709e9bf07c14d46276d60da978bfedaf2f5c4): EXISTS
 --- Milestone: **Doctrine Repair 0.2.1** ---
-  Reviewed Commit: 57b5aa59ef0b0285f051de3ce18980bac02cc91e
-  Outside Verdict: CONFIRMED
-  Fully Accepted: yes
-  Accepted Scope: 1 World Substrate + 4 Orthogonal Layers Doctrine
-  Current Authority: yes
+  Reviewed Commit (40-char): 57b5aa59ef0b0285f051de3ce18980bac02cc91e
+  Outside Verdict: PARTIAL PASS
+  Fully Accepted: no
+  Accepted Scope: Four-Layer One-World Doctrine, LLM Wiki Doctrine, Software 3.0 Doctrine, Controlled AutoResearch Doctrine
+  Rejected Scope: Migration byte-integrity verifier, Exact destination/source verification
+  Milestone Current Authority: no
   Git Commit Existence Check (57b5aa59ef0b0285f051de3ce18980bac02cc91e): EXISTS
+  PASS: Doctrine Repair 0.2.1 accurately classified as PARTIAL PASS with 4 scopes.
 --- Milestone: **Migration Verification Fix 0.2.2** ---
-  Reviewed Commit: 4e7fe457bb25eb5e9d13a8f01f16edb55714e6d5
+  Reviewed Commit (40-char): 4e7fe457bb25eb5e9d13a8f01f16edb55714e6d5
   Outside Verdict: CONFIRMED
   Fully Accepted: yes
   Accepted Scope: 31/31 normalized text equivalence after frontmatter/newline normalization
-  Current Authority: yes
+  Rejected Scope: Exact payload byte equality
+  Milestone Current Authority: yes
   Git Commit Existence Check (4e7fe457bb25eb5e9d13a8f01f16edb55714e6d5): EXISTS
 --- Milestone: **Foundation 0.3** ---
-  Reviewed Commit: 10928fd0284721538aec9b7bd4575f24ed8232cf
+  Reviewed Commit (40-char): 10928fd0284721538aec9b7bd4575f24ed8232cf
   Outside Verdict: PARTIAL PASS
   Fully Accepted: no
   Accepted Scope: Persistent Memory Skeleton
-  Current Authority: no
+  Rejected Scope: Handoff commit closure, State consistency, Cold-start recoverability
+  Milestone Current Authority: no
   Git Commit Existence Check (10928fd0284721538aec9b7bd4575f24ed8232cf): EXISTS
 --- Milestone: **Foundation 0.3.1** ---
-  Reviewed Commit: 61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34
+  Reviewed Commit (40-char): 61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34
   Outside Verdict: PARTIAL PASS
   Fully Accepted: no
   Accepted Scope: Consistency Fix Content
-  Current Authority: no
+  Rejected Scope: 0.3.1 commit self-embedding pending
+  Milestone Current Authority: no
   Git Commit Existence Check (61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34): EXISTS
 --- Milestone: **Foundation 0.3.1a** ---
-  Reviewed Commit: f0027bcd5d0600b753a9b91b730fa9a46870b261
+  Reviewed Commit (40-char): f0027bcd5d0600b753a9b91b730fa9a46870b261
   Outside Verdict: REJECTED
   Fully Accepted: no
   Accepted Scope: None
-  Current Authority: no
+  Rejected Scope: Entire milestone rejected
+  Milestone Current Authority: no
   Git Commit Existence Check (f0027bcd5d0600b753a9b91b730fa9a46870b261): EXISTS
 --- Milestone: **Foundation 0.3.2** ---
-  Reviewed Commit: fc209ffd4d7a6046ab75532f2a9c61fd41255ee6
+  Reviewed Commit (40-char): fc209ffd4d7a6046ab75532f2a9c61fd41255ee6
   Outside Verdict: PARTIAL PASS
   Fully Accepted: no
   Accepted Scope: State Model Repair
-  Current Authority: no
+  Rejected Scope: Parent commit SHA & milestone classification fix
+  Milestone Current Authority: no
   Git Commit Existence Check (fc209ffd4d7a6046ab75532f2a9c61fd41255ee6): EXISTS
 --- Milestone: **Foundation 0.3.2a** ---
-  Reviewed Commit: 03a98d7bf6787f44fa823a18cbf165ceb5aee307
+  Reviewed Commit (40-char): 03a98d7bf6787f44fa823a18cbf165ceb5aee307
+  Outside Verdict: REJECTED
+  Fully Accepted: no
+  Accepted Scope: None
+  Rejected Scope: Verifier logic produced a false pass, External verdict history remained untrustworthy, Repository-wide World Audit authorization remained withheld
+  Milestone Current Authority: no
+  Git Commit Existence Check (03a98d7bf6787f44fa823a18cbf165ceb5aee307): EXISTS
+  PASS: Foundation 0.3.2a accurately classified as REJECTED.
+--- Milestone: **Foundation 0.3.2b** ---
+  Reviewed Commit (40-char): 5ac021c9ae3a362243a2f442316310ff0b065e27
   Outside Verdict: PARTIAL PASS
   Fully Accepted: no
-  Accepted Scope: Lineage Parent SHA Fix
-  Current Authority: no
-  Git Commit Existence Check (03a98d7bf6787f44fa823a18cbf165ceb5aee307): EXISTS
---- Milestone: **Foundation 0.3.2b** ---
-  Reviewed Commit: DYNAMIC/UNRESOLVED
+  Accepted Scope: Dynamic Parent Lineage Verification
+  Rejected Scope: Verdict schema accuracy & strict 40-char SHA enforcement
+  Milestone Current Authority: no
+  Git Commit Existence Check (5ac021c9ae3a362243a2f442316310ff0b065e27): EXISTS
+--- Milestone: **Foundation 0.3.2c** ---
+  Reviewed Commit (40-char): DYNAMIC/UNRESOLVED
   Outside Verdict: UNDER OUTSIDE REVIEW
   Fully Accepted: no
   Accepted Scope: None
-  Current Authority: no
+  Rejected Scope: Whole milestone under review
+  Milestone Current Authority: no
 
-[Check 4] HELLO.md Accepted Scope Alignment...
-PASS: HELLO.md precisely specifies accepted scope as Persistent Memory Skeleton.
+[Check E] HELLO.md Authority Alignment...
+PASS: HELLO.md precisely aligns authority and scope.
 
-[Check 5] Migration Wording Precision...
+[Check Migration Wording] Precision verification...
 PASS: Migration wording precisely specifies normalized text equivalence.
 ================================================================================
 Final Verification Result: Total Failures = 0

@@ -10,7 +10,7 @@ fs.mkdirSync(logsDir, { recursive: true });
 
 const rawLogs = [];
 rawLogs.push(`================================================================================`);
-rawLogs.push(`STATE MODEL, LINEAGE & VERDICT CONSISTENCY AUTOMATED VERIFICATION LOG (0.3.2b)`);
+rawLogs.push(`STRICT SHA & VERDICT ACCURACY AUTOMATED VERIFICATION LOG (0.3.2c)`);
 rawLogs.push(`Timestamp: ${new Date().toISOString()}`);
 rawLogs.push(`Laboratory Root: ${reformLabRoot}`);
 rawLogs.push(`================================================================================`);
@@ -27,8 +27,8 @@ function checkFileExists(relPath) {
   return fs.readFileSync(abs, 'utf8');
 }
 
-// 1. Dynamic Parent Lineage Verification from SESSION_LOG.md
-rawLogs.push(`[Check Lineage] Dynamic Git parent lineage verification from SESSION_LOG.md...`);
+// Check A: Strict 40-Character SHA & Dynamic Git Parent Verification from SESSION_LOG.md
+rawLogs.push(`[Check A] Strict 40-character SHA & dynamic Git parent verification...`);
 const sessionContent = checkFileExists('handoff/SESSION_LOG.md');
 
 if (sessionContent) {
@@ -37,7 +37,9 @@ if (sessionContent) {
     if (idx === 0) return;
     const nameMatch = block.match(/^([^\r\n]+)/);
     const mName = nameMatch ? nameMatch[1].trim() : `Block ${idx}`;
-    const basedOnMatch = block.match(/- \*\*Based-on Commit\*\*: `([a-f0-9]{7,40})`/);
+
+    // STRICT 40-character hexadecimal SHA regex ONLY
+    const basedOnMatch = block.match(/- \*\*Based-on Commit\*\*: `([a-f0-9]{40})`/);
     const resultingMatch = block.match(/- \*\*Resulting Commit\*\*: `([a-f0-9]{40})`/);
 
     if (resultingMatch && basedOnMatch) {
@@ -51,29 +53,38 @@ if (sessionContent) {
         actualParent = 'GIT-REV-PARSE-FAILED';
       }
 
-      const match = (actualParent === recBasedOn || (recBasedOn.length >= 7 && actualParent.startsWith(recBasedOn)));
-      rawLogs.push(`  Milestone: ${mName}`);
-      rawLogs.push(`    Resulting Commit: ${resSha}`);
-      rawLogs.push(`    Recorded Based-on: ${recBasedOn}`);
-      rawLogs.push(`    Actual Git Parent (~1): ${actualParent}`);
-      rawLogs.push(`    Parent Equality: ${match ? 'YES' : 'NO'}`);
+      // STRICT equality test (no startsWith, no prefix comparison)
+      const isStrictEqual = (actualParent === recBasedOn);
 
-      if (!match) {
-        rawLogs.push(`  FAILED: Lineage parent mismatch for ${mName}! Recorded=${recBasedOn}, Actual=${actualParent}`);
+      rawLogs.push(`  Milestone: ${mName}`);
+      rawLogs.push(`    Resulting Commit (40-char): ${resSha}`);
+      rawLogs.push(`    Recorded Based-on (40-char): ${recBasedOn}`);
+      rawLogs.push(`    Actual Git Parent (~1): ${actualParent}`);
+      rawLogs.push(`    Strict 40-Char Equality: ${isStrictEqual ? 'YES' : 'NO'}`);
+
+      if (!isStrictEqual) {
+        rawLogs.push(`  FAILED: Strict 40-char parent SHA mismatch for ${mName}! Recorded=${recBasedOn}, Actual=${actualParent}`);
         totalFailures++;
       } else {
-        rawLogs.push(`  PASS: Dynamic parent lineage verified.`);
+        rawLogs.push(`  PASS: Strict 40-char parent SHA equality verified.`);
       }
+    } else if (block.includes('Resulting Commit') && !block.includes('RESOLVE_FROM_GIT_HISTORY')) {
+      rawLogs.push(`  FAILED: Non-40-character commit SHA format detected in ${mName}!`);
+      totalFailures++;
     }
   });
 }
 
-// Check 1: Reviewed Commit Existence in Git History
-rawLogs.push(`\n[Check 1] Reviewed Commit Existence in Git History...`);
+// Check 1 & Check B/C/D: EXTERNAL_VERDICT_HISTORY.md Validation
+rawLogs.push(`\n[Check B/C/D] EXTERNAL_VERDICT_HISTORY.md Schema & Verdict Accuracy...`);
 const extVerdictContent = checkFileExists('state/EXTERNAL_VERDICT_HISTORY.md');
 
 if (extVerdictContent) {
   const rows = extVerdictContent.split(/\r?\n/).filter(line => line.startsWith('| **'));
+  
+  let found032a = false;
+  let foundDoctrine021 = false;
+
   rows.forEach((row) => {
     const cols = row.split('|').map(c => c.trim());
     if (cols.length >= 8) {
@@ -86,11 +97,12 @@ if (extVerdictContent) {
       const currentAuthority = cols[7].replace(/`/g, '');
 
       rawLogs.push(`--- Milestone: ${milestone} ---`);
-      rawLogs.push(`  Reviewed Commit: ${commitMatch ? commitMatch[1] : 'DYNAMIC/UNRESOLVED'}`);
+      rawLogs.push(`  Reviewed Commit (40-char): ${commitMatch ? commitMatch[1] : 'DYNAMIC/UNRESOLVED'}`);
       rawLogs.push(`  Outside Verdict: ${verdict}`);
       rawLogs.push(`  Fully Accepted: ${fullyAccepted}`);
       rawLogs.push(`  Accepted Scope: ${acceptedScope}`);
-      rawLogs.push(`  Current Authority: ${currentAuthority}`);
+      rawLogs.push(`  Rejected Scope: ${rejectedScope}`);
+      rawLogs.push(`  Milestone Current Authority: ${currentAuthority}`);
 
       if (commitMatch) {
         const cSha = commitMatch[1];
@@ -108,39 +120,70 @@ if (extVerdictContent) {
         }
       }
 
-      // Check 2: Partial PASS must NOT be fully accepted
-      if (verdict.includes('PARTIAL') && fullyAccepted === 'yes') {
-        rawLogs.push(`  FAILED: Partial PASS milestone cannot be fully accepted!`);
-        totalFailures++;
+      // Check B: Foundation 0.3.2a MUST be REJECTED
+      if (milestone.includes('Foundation 0.3.2a')) {
+        found032a = true;
+        if (verdict !== 'REJECTED' || fullyAccepted !== 'no' || acceptedScope !== 'None' || currentAuthority !== 'no') {
+          rawLogs.push(`  FAILED: Foundation 0.3.2a verdict specification inaccurate!`);
+          totalFailures++;
+        } else {
+          rawLogs.push(`  PASS: Foundation 0.3.2a accurately classified as REJECTED.`);
+        }
       }
 
-      // Check 3: Rejected / Partial / Under Review cannot be current authority
-      if ((verdict.includes('REJECTED') || verdict.includes('PARTIAL') || verdict.includes('UNDER REVIEW') || verdict.includes('WITHHELD')) && currentAuthority === 'yes') {
-        rawLogs.push(`  FAILED: Non-confirmed milestone cannot be marked current authority!`);
+      // Check C: Doctrine Repair 0.2.1 MUST be PARTIAL PASS with 4 accepted scopes
+      if (milestone.includes('Doctrine Repair 0.2.1')) {
+        foundDoctrine021 = true;
+        const requiredScopes = ['Four-Layer One-World Doctrine', 'LLM Wiki Doctrine', 'Software 3.0 Doctrine', 'Controlled AutoResearch Doctrine'];
+        const hasAllScopes = requiredScopes.every(sc => acceptedScope.includes(sc));
+        if (verdict !== 'PARTIAL PASS' || fullyAccepted !== 'no' || currentAuthority !== 'no' || !hasAllScopes) {
+          rawLogs.push(`  FAILED: Doctrine Repair 0.2.1 verdict specification inaccurate!`);
+          totalFailures++;
+        } else {
+          rawLogs.push(`  PASS: Doctrine Repair 0.2.1 accurately classified as PARTIAL PASS with 4 scopes.`);
+        }
+      }
+
+      // Check D: Partial milestone rules
+      if (verdict.includes('PARTIAL')) {
+        if (fullyAccepted !== 'no' || currentAuthority !== 'no' || acceptedScope === 'None' || rejectedScope === 'None') {
+          rawLogs.push(`  FAILED: Partial PASS milestone rules violated!`);
+          totalFailures++;
+        }
+      }
+
+      // Check E: Non-confirmed milestones MUST NOT be milestone_accepted_as_current_authority: yes
+      if (!verdict.includes('CONFIRMED') && currentAuthority === 'yes') {
+        rawLogs.push(`  FAILED: Non-confirmed milestone claimed as current authority!`);
         totalFailures++;
       }
     }
   });
+
+  if (!found032a || !foundDoctrine021) {
+    rawLogs.push(`FAILED: Required milestones missing from EXTERNAL_VERDICT_HISTORY.md!`);
+    totalFailures++;
+  }
 }
 
-// Check 4: HELLO.md Accepted Scope Alignment
-rawLogs.push(`\n[Check 4] HELLO.md Accepted Scope Alignment...`);
+// Check E: HELLO.md Authority Alignment
+rawLogs.push(`\n[Check E] HELLO.md Authority Alignment...`);
 const helloContent = checkFileExists('handoff/HELLO.md');
 
 if (helloContent) {
   if (helloContent.includes('Last Externally Accepted Milestone: Foundation 0.3')) {
     rawLogs.push(`FAILED: HELLO.md overclaims entire Foundation 0.3 as accepted milestone!`);
     totalFailures++;
-  } else if (helloContent.includes('Persistent Memory Skeleton')) {
-    rawLogs.push(`PASS: HELLO.md precisely specifies accepted scope as Persistent Memory Skeleton.`);
+  } else if (helloContent.includes('Persistent Memory Skeleton') && helloContent.includes('No partial milestone is treated as fully accepted')) {
+    rawLogs.push(`PASS: HELLO.md precisely aligns authority and scope.`);
   } else {
-    rawLogs.push(`FAILED: HELLO.md accepted scope specification missing or invalid.`);
+    rawLogs.push(`FAILED: HELLO.md scope authority alignment missing or invalid.`);
     totalFailures++;
   }
 }
 
-// Check 5: Migration Wording Precision across files
-rawLogs.push(`\n[Check 5] Migration Wording Precision...`);
+// Check Migration Wording Precision
+rawLogs.push(`\n[Check Migration Wording] Precision verification...`);
 const verdictContent = checkFileExists('state/CURRENT_VERDICT.md');
 
 if (verdictContent) {
@@ -165,6 +208,6 @@ if (totalFailures > 0) {
   console.error(`ERROR: ${totalFailures} state consistency checks failed!`);
   process.exit(1);
 } else {
-  console.log(`SUCCESS: All state consistency, lineage & verdict checks passed!`);
+  console.log(`SUCCESS: All strict SHA, state consistency & verdict accuracy checks passed!`);
   process.exit(0);
 }
