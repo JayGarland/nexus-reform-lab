@@ -14,7 +14,7 @@ epistemic_status: SUPERSEDED
 
 > ⚠️ **NOTICE**: This audit status document has been **SUPERSEDED**.  
 > The premature `CONFIRMED` ratings assigned during bootstrap reconnaissance failed to reflect clean-room experimental gaps.  
-> **Canonical Replacement**: [`research/audit/MIGRATION_GAP_AUDIT.md`](file:///F:/nexus-reform-lab/research/audit/MIGRATION_GAP_AUDIT.md)
+> **Canonical Replacement**: [`research/audit/MIGRATION_GAP_AUDIT.md`](../audit/MIGRATION_GAP_AUDIT.md)
 
 ---
 

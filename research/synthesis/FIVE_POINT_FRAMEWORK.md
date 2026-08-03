@@ -1,57 +1,81 @@
 # CANONICAL DOCTRINE — ONLY AUTHORITATIVE FIVE-POINT DEFINITION
 
-> **Document Status**: CANONICAL DOCTRINE  
-> **Authority**: Sole authoritative specification of the Five-Point / Four-Layer One-World Architecture for the Nexus Reform Lab.  
+> **Document Status**: CANONICAL DOCTRINE (Repair 0.2.1)  
+> **Authority**: Sole authoritative specification of the Four-Layer One-World Architecture for the Nexus Reform Lab.  
 
 ---
 
-## 1. The Five Core Architectural Components
+## 1. Structural Architecture: One World Substrate + Four Orthogonal Layers
+
+The architecture consists of **One Persistent Artifact World Runtime** (the continuous runtime substrate) and **Four Orthogonal Layer Mechanisms** that operate within it:
 
 ```mermaid
 graph TD
-    World["1. Persistent Artifact World Runtime"] --> Stigmergy["2. Stigmergy"]
-    World --> Wiki["3. LLM Wiki / Current-State Compilation"]
-    World --> Soft3["4. Software 3.0 Protocol Governance"]
-    World --> AutoRes["5. Controlled AutoResearch"]
+    World["Persistent Artifact World Runtime (Continuous Substrate)"] --> Layer1["Layer 1: Stigmergy"]
+    World --> Layer2["Layer 2: LLM Wiki / Current Knowledge System"]
+    World --> Layer3["Layer 3: Software 3.0 Protocol Governance"]
+    World --> Layer4["Layer 4: Controlled AutoResearch"]
 ```
-
-### Component 1: Persistent Artifact World Runtime
-- The continuous, file-backed environment in which ephemeral agent instances run, mutate state, and exit.
-- Survives independently across agent restarts.
-
-### Component 2: Stigmergy
-- Environment-mediated coordination. Ephemeral agents coordinate by leaving persistent artifacts (files, records, status flags) in the environment, rather than passing transient context messages.
-
-### Component 3: LLM Wiki / Current-State & Knowledge Compilation
-- The continuous ingestion, extraction, reconciliation, and compilation of raw execution history into a structured, multi-page, linked knowledge graph.
-
-### Component 4: Software 3.0 Protocol Governance
-- Declarative specifications written in plain text / markdown that govern system invariants, state transitions, and execution boundaries, replacing rigid imperative code.
-
-### Component 5: Controlled AutoResearch
-- Closed-loop hypothesis generation, tool-use probes, evaluation metric logging, and empirical verification.
 
 ---
 
-## 2. Anti-Drift Clauses & Strict Definitions
+## 2. The Persistent Artifact World Runtime (The One World)
 
-To prevent semantic degradation, the following anti-drift clauses are formally ratified:
+The **Persistent Artifact World Runtime** is not a plain filesystem directory, nor is it merely a Git repository. It is a continuous, state-gated environment designed for ephemeral agent re-entry:
 
-1. **Wiki != A Single Parser**:
-   - An LLM Wiki is NOT a simple script or AST parser. It is an active compilation pipeline that extracts claims, reconciles entities, and synthesizes structured knowledge.
+1. **Lifecycle Loop**: Operates on an explicit `observe → act → leave trace → exit → re-entry` lifecycle loop.
+2. **Transient Agent Executor Pattern**: Ephemeral agent instances are temporary, unprivileged executors with no inherited internal state, seat identity, or persona.
+3. **Inherited Structure**: Subsequent agent instances inherit accumulated structure, state, and knowledge by reading persistent world artifacts upon wake/re-entry.
+4. **Apparatus Isolation**: Agent-visible world state (`worlds/`) MUST remain strictly isolated from operator tooling, evaluation harnesses, runners, and databases (`operator/`).
+5. **Bounded Actions**: Agent actions within the World are strictly bounded by explicit policy rules and human-authorized execution limits.
+6. **Criteria Distinguishing World Runtime from Plain Directory**:
+   - A plain directory is a passive storage location.
+   - A **World Runtime** enforces state schemas, apparatus isolation, wake/re-entry protocols, structural invariants, and automated projection compilation.
 
-2. **Wiki != A Single `CURRENT_STATE.md` File**:
-   - An LLM Wiki is a multi-page, hyperlinked, incrementally recompiled knowledge system containing entity pages, topic pages, indices, provenance matrices, correction registers, supersede tags, and explicit contradiction logs. A single `CURRENT_STATE.md` file is merely a projected view, not the entire Wiki.
+---
 
-3. **Current State is Lossy but Traceable**:
-   - Current-State projections summarize truth and are inherently lossy for efficiency. They are NOT required to be lossless.
-   - Complete, lossless historical evidence MUST remain separately preserved in append-only Raw History artifacts. Current State and Raw History MUST NEVER be collapsed into the same file.
+## 3. The Four Orthogonal Layers
 
-4. **Software 3.0 != A Single Protocol File**:
-   - Software 3.0 is a comprehensive governance system of declarative contracts, policy boundaries, and validation rules, not a single static preamble or prompt snippet.
+### Layer 1: Stigmergy
+- Environment-mediated coordination. Ephemeral agents discover work, claim tasks, update progress, and signal completion by leaving persistent artifacts (files, records, status flags) in the environment, rather than passing transient context messages.
 
-5. **AutoResearch != A Human Evaluation Table**:
-   - AutoResearch is an automated, repeatable empirical loop consisting of hypothesis formulation, probe execution, quantitative benchmark logging, and automated evaluation. A static manual markdown table is not AutoResearch.
+### Layer 2: LLM Wiki / Current Knowledge System
+- Continuous, incremental compilation of raw append-only execution history into a structured, hyperlinked knowledge system (Entity pages, Topic pages, Current State projections, Indices, Contradiction registers, and Provenance matrices).
 
-6. **World != A Plain Directory**:
-   - An Artifact World is a structured, persistent, state-gated environment operating under strict apparatus isolation rules, where agent visibility is strictly bounded and operator tooling (`.beads`, CLI runners) is isolated from domain state.
+### Layer 3: Software 3.0 Protocol Governance
+- Natural language protocols are treated as versioned, governed software assets.
+- **Mandatory Protocol Components**:
+  - `Protocol ID` & `Version`
+  - `Scope` (Target domain and applicability)
+  - `Inputs / Outputs` (Defined wire formats and parameters)
+  - `Precedence Rules` (Conflict resolution hierarchy)
+  - `Allowed / Forbidden Actions` (Explicit permissions)
+  - `Linting & Automated Tests`
+  - `Rollout`, `Deprecation`, and `Rollback` procedures
+- **Immutable Boundary Rule**: Software 3.0 does NOT replace deterministic code, databases, transaction boundaries, or security enforcement mechanisms. Protocols CANNOT override, bypass, or self-rewrite security boundaries.
+
+### Layer 4: Controlled AutoResearch
+- Closed-loop empirical hypothesis generation, tool-use evaluation, and quantitative/qualitative verification.
+- **Mandatory Requirements**:
+  - `Fixed Workload`: Standardized test inputs.
+  - `Baseline`: Established benchmark performance.
+  - `Candidate`: Bounded single-variable modification being tested.
+  - `External / Independent Evaluator`: Evaluation executed outside the tested agent context.
+  - `Raw Outputs`: Full stdout, stderr, logs, and exit codes captured and persisted.
+  - `Decision Criteria`: Explicit `KEEP / REFINE / DISCARD / REVERT` rules.
+  - `Experiment Lineage & Rollback`: Clear parent commit tracking and automated rollback capability.
+
+---
+
+## 4. Anti-Drift Clauses
+
+1. **World != Five Parallel Components**:
+   - The World is the unified substrate; Stigmergy, LLM Wiki, Software 3.0, and AutoResearch are four layer mechanisms operating inside it.
+2. **Software 3.0 != Markdown Replacing Imperative Code**:
+   - Software 3.0 governs natural language protocol assets; it does not replace low-level code, database transactions, or security gates.
+3. **AutoResearch != A Static Human Evaluation Table**:
+   - AutoResearch requires automated, repeatable empirical loops comparing candidates against baselines with external evaluators and raw output logs.
+4. **Wiki != A Single `CURRENT_STATE.md` File**:
+   - An LLM Wiki is a multi-page, hyperlinked knowledge graph. A single `CURRENT_STATE.md` file is merely a projected view.
+5. **Current State is Lossy but Traceable**:
+   - Current State projections summarize state for efficiency; Raw History is preserved separately in append-only format.

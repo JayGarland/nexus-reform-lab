@@ -14,7 +14,7 @@ epistemic_status: SUPERSEDED
 
 > ⚠️ **NOTICE**: This document has been **SUPERSEDED** due to semantic drift.  
 > It incorrectly collapsed the LLM Wiki concept into a single static `CURRENT_STATE.md` file, falsely claimed Current-State Compilation was lossless, and prematurely marked layers as `CONFIRMED` prior to clean-room experimental validation.  
-> **Canonical Replacement**: [`research/synthesis/FIVE_POINT_FRAMEWORK.md`](file:///F:/nexus-reform-lab/research/synthesis/FIVE_POINT_FRAMEWORK.md)
+> **Canonical Replacement**: [`research/synthesis/FIVE_POINT_FRAMEWORK.md`](FIVE_POINT_FRAMEWORK.md)
 
 ---
 
