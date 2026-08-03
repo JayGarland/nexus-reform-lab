@@ -1,0 +1,586 @@
+AGENTS.md	20	[COMPLETE]	Commit and push every completed iteration.
+CHARTER.md	17	[CURRENT]	- Current-state compilation;
+INVARIANTS.md	11	[CANONICAL]	- Filesystem artifacts are the canonical persistent substrate.
+INVARIANTS.md	13	[CANONICAL]	- Operator-side databases and indexes are derived or replaceable state unless an explicit protocol promotes them to canonical Artifact status.
+INVARIANTS.md	18	[CURRENT]	- **Current-State Compilation**: Current-State Compilation is a deterministic, provenance-preserving projection of current truth. It is not required t
+INVARIANTS.md	46	[COMPLETE]	- Every completed iteration MUST be verified locally, committed, and pushed to the remote repository.
+MEMORY_MAP.md	10	[CURRENT]	1. Current State Files (state/)               [Highest Operational Authority]
+MEMORY_MAP.md	12	[CANONICAL]	2. Canonical Doctrine Documents                [Architectural Authority]
+MEMORY_MAP.md	18	[HISTORICAL]	5. Raw Evidence & Execution Logs               [Historical Provenance]
+MEMORY_MAP.md	20	[HISTORICAL]	6. Historical Synthesis Documents              [Derived Background]
+MEMORY_MAP.md	22	[SUPERSEDED]	7. Superseded Files & Failure Archives         [Read-Only Audit Trail]
+MEMORY_MAP.md	35	[CANONICAL]	- [`research/synthesis/FIVE_POINT_FRAMEWORK.md`](research/synthesis/FIVE_POINT_FRAMEWORK.md): **Sole Canonical Specification** of One World Substrate 
+MEMORY_MAP.md	36	[CURRENT]	- [`research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md`](research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md): Specification for incremental 
+MEMORY_MAP.md	42	[CURRENT]	### B. Current Working Memory
+MEMORY_MAP.md	43	[CURRENT]	*Preserves active operational state, current phase, verdicts, and immediate next action.*
+MEMORY_MAP.md	45	[CURRENT]	- [`state/CURRENT_PHASE.md`](state/CURRENT_PHASE.md): Current operational phase status.
+MEMORY_MAP.md	46	[CURRENT]	- [`state/CURRENT_VERDICT.md`](state/CURRENT_VERDICT.md): Confirmed vs withheld adjudications.
+MEMORY_MAP.md	54	[CURRENT]	*Compiled current truth, entity pages, topic breakdowns, and indices.*
+MEMORY_MAP.md	56	[NOT YET]	> ⚠️ **STATUS**: **STRUCTURAL PLACEHOLDER / NOT YET IMPLEMENTED**
+MEMORY_MAP.md	61	[HISTORICAL]	### D. Episodic & Historical Memory
+MEMORY_MAP.md	62	[HISTORICAL]	*Raw evidence, historical runs, migration proofs, audit logs, and examination records.*
+MEMORY_MAP.md	66	[HISTORICAL]	- [`research/examinations/`](research/examinations/): Historical citation examination reports and raw evidence snapshots.
+MEMORY_MAP.md	92	[CURRENT]	- **Decision Lineage**: Recorded in [`handoff/SESSION_LOG.md`](handoff/SESSION_LOG.md) and [`state/CURRENT_VERDICT.md`](state/CURRENT_VERDICT.md).
+REVOLUTION.md	24	[CURRENT]	World --> Layer2["Layer 2: LLM Wiki / Current Knowledge System"]
+REVOLUTION.md	37	[CURRENT]	3. **LLM Wiki / Current Knowledge System**:
+REVOLUTION.md	38	[CURRENT]	- Incremental compilation of raw, append-only history into a structured, hyperlinked multi-page knowledge graph (Entity pages, Topic pages, Current St
+REVOLUTION.md	65	[HISTORICAL]	- History is preserved in append-only raw form; failed experiments are logged as historical evidence and rolled back cleanly.
+WAKE.md	20	[CURRENT]	4. **Superseded File Ban**: Files marked `SUPERSEDED` or `HISTORICAL_FAILURE` MUST NOT be used as current rules or directives.
+WAKE.md	21	[CURRENT]	5. **Raw Evidence vs. Current Knowledge**: Raw log files (`research/legacy-evidence/`) prove historical events; they are not current synthesized rules
+WAKE.md	33	[CURRENT]	2. state/CURRENT_PHASE.md
+WAKE.md	35	[CURRENT]	3. state/CURRENT_VERDICT.md
+WAKE.md	58	[CURRENT]	- Treating superseded drafts (`four-layer-one-world-framework.md`) or examination files (`FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md`) as current doct
+WAKE.md	59	[COMPLETE]	- Announcing that `CR-S0` or `Persistent Artifact World` is authorized or completed.
+WAKE.md	68	[CURRENT]	1. Current Phase: [Value from state/CURRENT_PHASE.md]
+WAKE.md	69	[CURRENT]	2. Current Verdict: [Value from state/CURRENT_VERDICT.md]
+WAKE.md	72	[CANONICAL]	5. Canonical Doctrine Path: [research/synthesis/FIVE_POINT_FRAMEWORK.md]
+external-artifacts/drive-manifest.json	7	[CANONICAL]	"canonical_identity": "folder_id",
+fixtures/legacy-nexus/slice-0-fixture/FIXTURE_METADATA.md	8	[CONFIRMED]	epistemic_status: CONFIRMED
+fixtures/legacy-nexus/slice-0-fixture/FIXTURE_METADATA.md	15	[CURRENT]	It serves strictly as a **READ-ONLY LEGACY FIXTURE** for research, parsing evaluation, and current-state compilation probes.
+fixtures/legacy-nexus/slice-0-fixture/L-0658.query.md	25	[COMPLETE]	2. **Control/Data Decoupling RFC Design**: Design an RFC that completely decouples control flow from the text stream (e.g. replacing text regex matchi
+fixtures/legacy-nexus/slice-0-fixture/L-0658.result.md	19	[READY]	Boss's "`[DISPATCH]` text matching is a surface slice" instinct is correct, but the deeper defect is not "text matching exists" in general — **six ind
+fixtures/legacy-nexus/slice-0-fixture/L-0658.result.md	21	[READY]	**Root cause, one sentence**: *the message-handling pipeline (whatever text arrives — from the user, from the assistant's own generation, or resynthes
+fixtures/legacy-nexus/slice-0-fixture/L-0658.result.md	23	[CANONICAL]	This is not a fresh finding invented for this letter — it is the **second occurrence** of an invariant this fleet already wrote down. `docs/protocols/
+fixtures/legacy-nexus/slice-0-fixture/L-0658.result.md	33	[READY]	| Extend `DispatchExpectation` ledger (`core/dispatch.go:46-73`) into a general session ledger | **Adopt (Phase 1)** | Already the closest existing pa
+fixtures/legacy-nexus/slice-0-fixture/L-0658.result.md	35	[READY]	| Native LLM tool-call / function-call for dispatch instead of `[DISPATCH]` text block | **Adopt, capability-gated (Phase 3)** | Claude Code CLI suppo
+fixtures/legacy-nexus/slice-0-fixture/L-0658.result.md	36	[READY]	| Telegram Inline Keyboard buttons for session lifecycle actions | **Adopt, fix the collapse (Phase 5)** | The mechanism already exists (`handleCallba
+fixtures/legacy-nexus/slice-0-fixture/L-0658.result.md	38	[READY]	| Do nothing beyond the already-landed L-0587 fix | **Reject** | Query item 3 (100% real-time session visibility) has no code today — `StatusBoard` (`
+fixtures/legacy-nexus/slice-0-fixture/L-0658.result.md	42	[CURRENT]	### Current shape (six decision sites, evidence)
+fixtures/legacy-nexus/slice-0-fixture/L-0658.result.md	91	[CONFIRMED]	- **Phase 3 — kill the dispatch-block text-actuation hole**: for harnesses with native tool-call support (Claude Code, confirmed), replace the assista
+fixtures/legacy-nexus/slice-0-fixture/L-0658.result.md	101	[CURRENT]	1. **(Recommended) Approve Phase 1 now, Phases 2-5 as a follow-up letter after L-0657 lands.** Phase 1 is pure-additive visibility (directly answers "
+fixtures/legacy-nexus/slice-0-fixture/L-0660.query.md	21	[READY]	- Archive scan (L-0636): rescanned `INDEX.md`/`threads/cc-connect-dispatch-architecture-redesign/` for "sessions_ledger", "/sessions command" — no pri
+fixtures/legacy-nexus/slice-0-fixture/L-0660.query.md	28	[READY]	2. Wire the ledger to update at existing transition points ONLY (`resetSessionForTurn`, `/new`, `/switch`, dispatch creation) — read-only observation 
+fixtures/legacy-nexus/slice-0-fixture/L-0660.query.md	29	[CURRENT]	3. A `/sessions` command that renders the ledger's current contents (which physical sessions exist right now, for which workspace, in what state).
+fixtures/legacy-nexus/slice-0-fixture/L-0660.result.md	27	[READY]	- `core/sessions_snapshot.go`: `SessionSnapshotEntry` struct + `(e *Engine) sessionSnapshot() []SessionSnapshotEntry` (enumerates the default `Session
+fixtures/legacy-nexus/slice-0-fixture/L-0660.result.md	28	[READY]	- `core/engine.go`: two additive hunks only — `{[]string{"sessionboard"}, "sessionboard"}` added to `builtinCommands` (`engine.go:7011-7014`) and `cas
+fixtures/legacy-nexus/slice-0-fixture/L-0660.result.md	49	[READY]	`go build ./...` at the repo root fails on `web\embed.go:13:12: pattern all:dist: no matching files found` — pre-existing, unrelated to this change (t
+fixtures/legacy-nexus/slice-0-fixture/L-0660.result.md	51	[CONFIRMED]	**No existing transition behavior changed**: `git diff` against `origin/main` touches only `builtinCommands` (additive list entry) and `handleCommand`
+fixtures/legacy-nexus/slice-0-fixture/L-0660.result.md	55	[READY]	1. **Persisted ledger → live snapshot (the load-bearing decision).** The QUERY (and the L-0658 RFC it came from) specified building `sessions_ledger.j
+fixtures/legacy-nexus/slice-0-fixture/L-0660.result.md	56	[READY]	2. **StatusBoard extension (QUERY item 4) not implemented.** `core/statusboard.go` is explicitly documented as decoupled from "the `[[projects]]` seat
+fixtures/legacy-nexus/slice-0-fixture/L-0660.result.md	57	[CURRENT]	3. **Command name `/sessionboard`, not `/sessions`.** Discovered mid-implementation that `sessions` is already a live alias for the existing `/list` c
+fixtures/legacy-nexus/slice-0-fixture/L-0660.result.md	58	[READY]	4. **Anomaly found and corrected before committing, not by me, in this worktree — record for the safety trail.** After creating the worktree and befor
+fixtures/legacy-nexus/slice-0-fixture/L-0660.result.md	66	[ACCEPTED]	<!-- 追击 (2026-07-27): Boss — approved this RESULT and instructed "continue phase 2." I initially registered that as a separate letter (L-0662) with it
+fixtures/legacy-nexus/slice-0-fixture/L-0662.result.md	27	[REJECTED]	- `core/controlplane_test.go`: `TestControlPlaneDispatch_RecordsAuditEntryAndPreservesBehavior` reruns the exact scenario from the pre-existing `TestE
+fixtures/legacy-nexus/slice-0-fixture/L-0662.result.md	47	[CONFIRMED]	**Diff scope, verified**: `git diff origin/main` touches only `core/dispatch.go` (1 line), `core/engine.go` (+4 lines, struct field only), plus 3 new 
+fixtures/legacy-nexus/slice-0-fixture/L-0662.result.md	54	[CURRENT]	- `ControlPlaneDispatch` currently has exactly one caller (`maybeHandleDispatchBlock`). This is intentional incremental growth per the L-0658 RFC's ph
+fixtures/legacy-nexus/slice-0-fixture/L-0662.result.md	57	[CANONICAL]	<!-- correction (2026-07-27): Boss — this letter should not have been registered as a separate Engineer-originated letter/worktree. Boss's instruction
+fixtures/legacy-nexus/slice-0-fixture/L-0666.query.md	18	[CONFIRMED]	- Boss reported (this conversation, 2026-07-27): in a Secretary-dispatched letter Topic (example: letter-L-0664), a bare Telegram message (no `@`, no 
+fixtures/legacy-nexus/slice-0-fixture/L-0666.query.md	20	[CONFIRMED]	- Code read (this letter's own investigation, `platform/telegram/telegram.go:1339-1401`, `isDirectedAtBot`): a message counts as "directed at this bot
+fixtures/legacy-nexus/slice-0-fixture/L-0666.query.md	21	[CONFIRMED]	- **Working hypothesis, not yet independently confirmed by raw Telegram payload inspection** (Evidence Gap, see below): Telegram Forum Topics implicit
+fixtures/legacy-nexus/slice-0-fixture/L-0666.query.md	28	[CURRENT]	3. Confirm or fix separately: does the `To:`-bound target seat (e.g. dev-pro) currently reliably receive a bare, non-mentioning, non-replying message 
+fixtures/legacy-nexus/slice-0-fixture/L-0666.query.md	35	[CURRENT]	4. If item 1 cannot be confirmed without live DEBUG-level Telegram payload capture that isn't currently available, say so explicitly and report the fi
+fixtures/legacy-nexus/slice-0-fixture/L-0666.result.md	15	[CONFIRMED]	# L-0666 RESULT: Fixed the False Topic-Root Reply Privilege — One Confirmed Fix, One Open Verification
+fixtures/legacy-nexus/slice-0-fixture/L-0666.result.md	19	[READY]	Fixed `isDirectedAtBot` (`platform/telegram/telegram.go`) so a message whose `reply_to_message` points at its own Telegram Forum Topic's root message 
+fixtures/legacy-nexus/slice-0-fixture/L-0666.result.md	47	[CURRENT]	1. **QUERY item 1 (raw payload confirmation) — not obtained.** I did not capture or inspect a real Telegram update JSON for Boss's repro; the fix is b
+fixtures/legacy-nexus/slice-0-fixture/L-0666.result.md	48	[CURRENT]	2. **QUERY item 3 (target-seat bare-message reception) — genuinely unresolved, not fixed by this change.** I looked for a mechanism that lets a `works
+fixtures/legacy-nexus/slice-0-fixture/L-0666.result.md	52	[CURRENT]	- Please confirm in a live dispatched Topic (after this fix is deployed — rebuild + restart, not just committed) whether: (a) a bare message from Boss
+fixtures/legacy-nexus/slice-0-fixture/L-0667.query.md	29	[READY]	4. Handle the stale/double-press case (pending entry already consumed or never existed) gracefully — edit the card to say so, do not error silently or
+fixtures/legacy-nexus/slice-0-fixture/L-0667.result.md	19	[CONFIRMED]	Built exactly to Boss's spec. `maybeHandleDispatchBlock` no longer calls `ControlPlaneDispatch` the instant a `[DISPATCH]` block parses — it renders a
+fixtures/legacy-nexus/slice-0-fixture/L-0667.result.md	26	[READY]	- `platform/telegram/telegram.go`: `SetDispatchConfirmHandler` + new `dispatch_confirm:` branch in `handleCallbackQuery`, placed before the `cmd:` bra
+fixtures/legacy-nexus/slice-0-fixture/L-0667.result.md	48	[CONFIRMED]	`TestMaybeHandleDispatchBlock_RendersConfirmCardInsteadOfAutoExecuting` asserts zero dispatch-ledger entries exist immediately after the block is pars
+fixtures/legacy-nexus/slice-0-fixture/L-0667.result.md	52	[CURRENT]	1. **Card placement interpretation.** Boss said "复用既有 Outbox 卡片组件" (reuse the existing Outbox card component). I interpreted this as reusing the **car
+fixtures/legacy-nexus/slice-0-fixture/L-0667.result.md	53	[READY]	2. **No mocked-bot integration test for the full Telegram round-trip beyond `handleCallbackQuery` itself.** `TestHandleCallbackQuery_DispatchConfirm{,
+fixtures/legacy-nexus/slice-0-fixture/L-0667.result.md	54	[READY]	3. **`ConfirmDispatch`'s error path when `dispatchErr != nil`** (i.e., confirm was pressed but the underlying `executeDispatch` failed — e.g., target 
+fixtures/legacy-nexus/slice-0-fixture/L-0669.result.md	23	[ACCEPTED]	`isDirectedAtBot` (`platform/telegram/telegram.go`) now has a structured, non-heuristic fallback: a **truly bare** message (no `/command`, no `@mentio
+fixtures/legacy-nexus/slice-0-fixture/L-0669.result.md	27	[READY]	3. **An over-reach bug Boss found in further testing**: In a Topic already bound to seat A, if Boss @mentioned seat B instead, **both** A and B would 
+fixtures/legacy-nexus/slice-0-fixture/L-0669.result.md	31	[READY]	2. **Topic-seat-binding source** (Boss's first follow-up): a new `topic_seat_bindings.json` store, written once — deterministically, from the already-
+fixtures/legacy-nexus/slice-0-fixture/L-0669.result.md	53	[CURRENT]	**Why the checker lives on `Engine`, not a new store:** the dispatch ledger (`dispatch_expectations.json`, `core/dispatch.go`) already records `TopicI
+fixtures/legacy-nexus/slice-0-fixture/L-0669.result.md	59	[READY]	**Why this is still deterministic, not a heuristic:** `mentioned := botName != "" && strings.Contains(msg.Text, "@"+botName)` (line ~745) already chec
+fixtures/legacy-nexus/slice-0-fixture/L-0669.result.md	66	[READY]	5. **`core/topic_seat_binding.go`** (new file) — `topicSeatBindingStore`, a minimal JSON-file store (`topic_seat_bindings.json`) keyed by `ThreadID ->
+fixtures/legacy-nexus/slice-0-fixture/L-0669.result.md	77	[READY]	- **Sensors never actuate (L-0658):** the checker only *reads* its two sources; it writes nothing, dispatches nothing, and is consulted purely inside 
+fixtures/legacy-nexus/slice-0-fixture/L-0669.result.md	78	[READY]	- **No text/reply heuristic revived (L-0666):** the new fallback fires only after msg.Text-based command/mention checks and the (already-fixed) reply-
+fixtures/legacy-nexus/slice-0-fixture/L-0669.result.md	79	[READY]	- **No `[DISPATCH]` auto-execute regression (L-0667):** nothing here parses or executes a `[DISPATCH]` block; the ledger is only read, and only after 
+fixtures/legacy-nexus/slice-0-fixture/L-0669.result.md	92	[ACCEPTED]	--- PASS: .../bare_text_accepted_when_topic_bound_to_this_seat
+fixtures/legacy-nexus/slice-0-fixture/L-0669.result.md	93	[REJECTED]	--- PASS: .../bare_text_rejected_when_topic_bound_to_a_different_seat
+fixtures/legacy-nexus/slice-0-fixture/L-0669.result.md	94	[REJECTED]	--- PASS: .../bare_text_rejected_when_no_checker_is_wired
+fixtures/legacy-nexus/slice-0-fixture/L-0669.result.md	138	[NOT YET]	- **Deploy is not yet live**: this is a worktree with two commits (`f425acec`, `de1465fb` on `letter/L-0669`), not merged to `main` or restarted into 
+fixtures/legacy-nexus/slice-0-fixture/L-0669.result.md	139	[CURRENT]	- **First-writer-wins is untested against real concurrent creation**: `topicSeatBindingStore.bind` assumes a Topic has exactly one creator, which hold
+fixtures/legacy-nexus/slice-0-fixture/L-0669.result.md	140	[READY]	- **Scope boundary honored**: `platform/matrix/matrix.go` has its own `isDirectedAtBot` with no forum-Topic concept in Matrix's protocol; left untouch
+fixtures/legacy-nexus/slice-0-fixture/L-0680.query.md	52	[REJECTED]	- **硬性告警机制**：当 `[DISPATCH]` 校验失败（被 `validateDispatchArchive` 拦截拒绝）时，系统必须向当前 Topic/Session 发送显式失败通知卡片（例如 `⚠️ Dispatch rejected: letter header ID="" doe
+fixtures/legacy-nexus/slice-0-fixture/L-0680.result.md	38	[REJECTED]	- **取证静默已证实**：`grep -i "Dispatch rejected\|does not match" F:\nexus\logs\cc-connect-stdout.log` → **零命中**；日志里只见 L-0679 修好后于 `16:08:41` 成功建 worktree/sp
+fixtures/legacy-nexus/slice-0-fixture/L-0680.result.md	46	[CANONICAL]	- `core/dispatch.go`：`parseArchiveFrontMatter` 新增 `archiveHeaderCanonical` 表，把已知协议 key 归一到规范大小写（未知 key 原样保留）；新增 `rejectDispatch` helper，pre-validation
+fixtures/legacy-nexus/slice-0-fixture/L-0759.query.md	26	[READY]	- **L-0719 已修过同一函数的另一半**（`Verify` 值以 `none` 开头即判 ready，修复豁免信被误判为 awaiting）。**本信不得回归该修复。**
+fixtures/legacy-nexus/slice-0-fixture/L-0759.result.md	17	[CURRENT]	## Current Status
+fixtures/legacy-nexus/slice-0-fixture/L-0759.result.md	27	[REJECTED]	L-0759 四项全部完成，另总裁 pursuit 补做一项：派发准入检查从 wrapper 下沉到 actuator（`executeDispatch` 内置、从信件自身 front matter 读 `Verify`/`Verified`、L-0757 放置），`classifyVerifica
+fixtures/legacy-nexus/slice-0-fixture/L-0759.result.md	65	[READY]	- **红证（原始输出，基线 @ `640f7260`）**——修复前弱判据把下列值全部判 `ready`：
+fixtures/legacy-nexus/slice-0-fixture/L-0759.result.md	76	[READY]	修复后全部绿；协议 PASS 值（`architect-codex-L-0686 · 2026-07-29 · PASS`）与 `none` 豁免分支保持 ready（L-0719 未回归）。
+fixtures/legacy-nexus/slice-0-fixture/L-0759.result.md	78	[READY]	**实例闸（item 1 先决 + Outbox 可见行为）—— `TestPreferenceExtractQueryAppearsInOutbox`** @ `core/dispatch_test.go`：真实 `buildPreferenceExtractQuery` 生成 → INDEX 登
+fixtures/legacy-nexus/slice-0-fixture/L-0759.result.md	100	[READY]	- **测试调用点**：`core/dispatch_test.go` 6 处直调 `executeDispatch`（`:353/:407/:478/:601/:710/:819`）——其 query 文件无 `Verify:`（空 → ready）→ 闸放行，测试保持绿；测试直调非生产派发路径，
+fixtures/legacy-nexus/slice-0-fixture/L-0759.result.md	119	[READY]	1. `extractPreferencesFromClosedLetter`（`core/engine.go:8104 @ 0d6f62da`）删除 `:8152` 的 `e.executeDispatch`，注册（`:8140` `registerArchiveQuery`）成功后回执 `Msg
+fixtures/legacy-nexus/slice-0-fixture/L-0759.result.md	120	[READY]	2. **Outbox 出现证据**：`TestPreferenceExtractQueryAppearsInOutbox` 用真实 `buildPreferenceExtractQuery` 生成 + INDEX 登记行 + 真实 `scanOutboxQueries`，断言 `L-0770` 被
+fixtures/legacy-nexus/slice-0-fixture/L-0759.result.md	128	[READY]	- 原始提交 `6bae6366 feat(outbox): add boss and secretary dispatch actions`：按钮文本 `🙋 我自己发` → `manual`、`🧑💼 交秘书发` → `secretary`（commit 标题中的 "boss" 即 manua
+fixtures/legacy-nexus/slice-0-fixture/L-0759.result.md	131	[REJECTED]	> **更正 (2026-08-02)**: 总裁已裁决（L-0759 pursuit，Boss）并本信就地补做——确认卡片失败（平台无 `ReceiptCardManager` 能力或 `SendReceiptCard` 报错）即 fail-closed 拒绝派发：两个失败分支改走 `reject
+fixtures/legacy-nexus/slice-0-fixture/L-0759.result.md	132	[PARTIAL]	- **G2b 可信 verifier 身份**：本信明确不做；并行的 L-0760（TRUSTED_IDENTITY_PARTIAL）已由总裁 CLOSED 裁决暂不做（信任模型=单人类，伪造风险可接受），本信不再重复。
+fixtures/legacy-nexus/slice-0-fixture/L-0759.result.md	141	[REJECTED]	- `core/dispatch.go`：`!supportsCard`（平台无 `ReceiptCardManager`）与 `SendReceiptCard` 报错两个分支改走 `rejectDispatch`（slog + `dispatch_rejected` 审计条目 + 拒绝回执）；`d
+fixtures/legacy-nexus/slice-0-fixture/L-0759.result.md	142	[REJECTED]	- `core/dispatch_confirm_test.go`：三个旧 auto-fallback 测试移除，改两个 fail-closed 测试——`TestMaybeHandleDispatchBlock_NoCardCapabilityRejectsFailClosed` / `TestM
+fixtures/legacy-nexus/slice-0-fixture/L-0767.result.md	16	[CURRENT]	## Current Status
+fixtures/legacy-nexus/slice-0-fixture/L-0768.query.md	18	[CONFIRMED]	L-0767 performed audit and initial fail-closed handling for cc-connect pattern seat worktree fabrication. Further inspection confirmed cc-connect core
+fixtures/legacy-nexus/slice-0-fixture/L-0768.result.md	16	[CURRENT]	## Current Status
+fixtures/legacy-nexus/slice-0-fixture/L-0768.result.md	19	[COMPLETE]	- **Summary**: Completed comprehensive architecture audit of cc-connect vs upstream divergence and Nexus coupling. Report saved to F:\nexus\docs\anti-
+fixtures/legacy-nexus/slice-0-fixture/L-0768.result.md	25	[COMPLETE]	cc-connect architecture audit completed. Full report saved to `F:\nexus\docs\anti-corruption\cc-connect\architecture-audit-report.md`.
+fixtures/legacy-nexus/slice-0-fixture/L-0768.result.md	32	[CURRENT]	- Option 2: Keep current fail-closed logic while planning phased plugin refactoring.
+handoff/HELLO.md	3	[CURRENT]	> **Notice**: Current repository commit must be resolved dynamically from Git using `git rev-parse HEAD`. Do not treat hardcoded SHA strings in handof
+handoff/HELLO.md	9	[ACCEPTED]	- **Last Externally Accepted Repair**: `Foundation 0.3.2c strict SHA and verdict accuracy repair` (Reviewed Commit: `8ddabe908e62d748081b587f6fa55a6c8
+handoff/HELLO.md	10	[PARTIAL]	- **Latest Partial Pass Attempt**: `Foundation 0.3.2e verdict-verifier regression repair` (Reviewed Commit: `31fda2f54a2346e791e63352a236824db9f17ae5`
+handoff/HELLO.md	12	[CURRENT]	- **Current Operational Phase**: See [`../state/CURRENT_PHASE.md`](../state/CURRENT_PHASE.md)
+handoff/HELLO.md	13	[CURRENT]	- **Current Ratified Verdicts**: See [`../state/CURRENT_VERDICT.md`](../state/CURRENT_VERDICT.md)
+handoff/HELLO.md	16	[CURRENT]	- **Current Git HEAD Resolution**: Execute `git rev-parse HEAD` dynamically.
+handoff/HELLO.md	22	[PARTIAL]	- Recorded Foundation 0.3.2e as `PARTIAL PASS` in [`state/EXTERNAL_VERDICT_HISTORY.md`](../state/EXTERNAL_VERDICT_HISTORY.md).
+handoff/HELLO.md	23	[CURRENT]	- Updated [`state/CURRENT_VERDICT.md`](../state/CURRENT_VERDICT.md) to set State Consistency to `PARTIAL`.
+handoff/SESSION_LOG.md	3	[CURRENT]	> **Notice**: Git history is the authoritative source of commit lineage (`git log`). SESSION_LOG is a human-readable milestone index only. Resulting c
+handoff/SESSION_LOG.md	23	[CONFIRMED]	- **Actions**: Implemented `verify_migration.js` with direct git commit blob extraction, frontmatter stripping. 31/31 normalized text equivalence conf
+handoff/SESSION_LOG.md	59	[ACCEPTED]	- **Actions**: Enforced strict 40-character SHA matching without `startsWith` or short SHA regex, corrected Foundation 0.3.2a to `REJECTED`, reclassif
+handoff/SESSION_LOG.md	61	[CURRENT]	### Milestone 0.3.2d: Current-State Closure & Verdict-Register Hardening 0.3.2d
+handoff/SESSION_LOG.md	65	[CURRENT]	- **Actions**: Closed Foundation 0.3.2c as `CONFIRMED FOR REVIEWED SCOPE` in `EXTERNAL_VERDICT_HISTORY.md` (commit `8ddabe908e62d748081b587f6fa55a6c87
+handoff/SESSION_LOG.md	71	[CURRENT]	- **Actions**: Dynamically resolved repository root via `path.resolve(__dirname, '..')`, implemented row-based `getVerdictRow` parser for `CURRENT_VER
+handoff/SESSION_LOG.md	77	[CURRENT]	- **Actions**: Enforced strict `allowedVerdicts` whitelist, refactored `getVerdictRows` to enforce subject uniqueness in `CURRENT_VERDICT.md`, added s
+research/audit/COLD_START_RECOVERY_TEST.md	16	[CANONICAL]	Report current phase, current verdict, authorized next action, prohibited actions, canonical doctrine path, and unresolved blockers.
+research/audit/COLD_START_RECOVERY_TEST.md	26	[CURRENT]	| 2 | **Strict Reading Sequence** | Instance reads files strictly in sequence (`WAKE.md` → `state/CURRENT_PHASE.md` → `state/CURRENT_VERDICT.md` → `st
+research/audit/COLD_START_RECOVERY_TEST.md	27	[CURRENT]	| 3 | **Phase Accuracy (Source Match)** | Instance reports phase matching [`state/CURRENT_PHASE.md`](../../state/CURRENT_PHASE.md) dynamically without
+research/audit/COLD_START_RECOVERY_TEST.md	28	[CURRENT]	| 4 | **Verdict Accuracy (Source Match)** | Instance reads and reports verdicts directly from [`state/CURRENT_VERDICT.md`](../../state/CURRENT_VERDICT
+research/audit/COLD_START_RECOVERY_TEST.md	29	[CANONICAL]	| 5 | **Canonical Path Accuracy** | Instance identifies `research/synthesis/FIVE_POINT_FRAMEWORK.md` as sole canonical framework spec. | `REQUIRED` |
+research/audit/COLD_START_RECOVERY_TEST.md	30	[CURRENT]	| 6 | **Superseded Isolation** | Instance does NOT cite `four-layer-one-world-framework.md` as current doctrine. | `REQUIRED` |
+research/audit/COLD_START_RECOVERY_TEST.md	31	[CURRENT]	| 7 | **Examination Isolation** | Instance does NOT treat `FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md` as doctrine or current directive. | `REQUIRED` 
+research/audit/COLD_START_RECOVERY_TEST.md	40	[CANONICAL]	The test instance output is evaluated against the live contents of the canonical state files:
+research/audit/COLD_START_RECOVERY_TEST.md	41	[CURRENT]	- **Phase Verification Source**: [`state/CURRENT_PHASE.md`](../../state/CURRENT_PHASE.md)
+research/audit/COLD_START_RECOVERY_TEST.md	42	[CURRENT]	- **Verdict Verification Source**: [`state/CURRENT_VERDICT.md`](../../state/CURRENT_VERDICT.md)
+research/audit/MIGRATION_GAP_AUDIT.md	3	[HISTORICAL]	> **Scope**: Audit of historical research, wheel probes, local world findings, and failed Slice 0 evidence migrated into the Clean-Room Reform Lab.
+research/audit/MIGRATION_GAP_AUDIT.md	15	[CONFIRMED]	- **Migration Byte-Level Integrity (`semantic_verification`)**: Verifies that the migrated file's content accurately reflects the legacy source file r
+research/audit/MIGRATION_GAP_AUDIT.md	16	[CONFIRMED]	- **Source Document Epistemic Validity (`epistemic_status`)**: Represents the scientific or empirical truth of the findings inside the document. Migra
+research/audit/MIGRATION_GAP_AUDIT.md	24	[CONFIRMED]	| **Local World Evidence** | `research/legacy-evidence/local-world/` | 13 | `VERBATIM` | `CONFIRMED` | `CONFIRMED` |
+research/audit/MIGRATION_GAP_AUDIT.md	25	[CONFIRMED]	| **Wheel Probes Evidence** | `research/legacy-evidence/wheel-probes/` | 6 | `VERBATIM` | `CONFIRMED` | `PARTIAL` |
+research/audit/MIGRATION_GAP_AUDIT.md	26	[CONFIRMED]	| **Failed Slice 0 Evidence** | `research/legacy-evidence/failed-slice-0/` | 12 | `VERBATIM` | `CONFIRMED` | `HISTORICAL-FAILURE` |
+research/audit/MIGRATION_GAP_AUDIT.md	37	[PARTIAL]	- `probes/go-workflows`, `probes/restate`, and `probes/beads` contain partial exploratory code probes.
+research/audit/MIGRATION_GAP_AUDIT.md	38	[CONFIRMED]	- **Epistemic Rating**: Maintained as `PARTIAL` / `CLAIMED-NOT-EVIDENCED`. They have NOT been promoted to `CONFIRMED`.
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	5	[SUPERSEDED]	> **Audit Purpose**: Evaluate repository structure, authority relationships, superseded risks, state model single sources of truth, and cold-start rec
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	11	[CURRENT]	### 1. Is there currently a single entry point?
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	17	[CANONICAL]	- **Action**: Draft file `four-layer-one-world-framework.md` marked `SUPERSEDED`. `FIVE_POINT_FRAMEWORK.md` and `REVOLUTION.md` are sole canonical doc
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	19	[SUPERSEDED]	### 3. Could a new instance misread superseded files?
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	21	[SUPERSEDED]	- **Action**: Added YAML frontmatter status headers (`status: SUPERSEDED` / `HISTORICAL_FAILURE`) to prevent misreading.
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	23	[CURRENT]	### 4. Are current phase, verdict, and next action independently logged on disk?
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	25	[CURRENT]	- **Action**: `state/CURRENT_PHASE.md` is sole source for phase, `state/CURRENT_VERDICT.md` is sole source for verdicts, `state/NEXT_ACTION.md` is sol
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	31	[CURRENT]	### 6. Are historical evidence and current knowledge mixed together?
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	39	[CURRENT]	### 8. Does the current structure express "files are memory, structure is gene"?
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	40	[NOT YET]	- **Status**: `STRUCTURE ESTABLISHED (STATE MODEL REPAIRED, RECOVERABILITY NOT YET TESTED)`.
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	49	[CURRENT]	1. **Static Self-Referential Commit Tracking Removed**: Excised static `Current Commit` fields from `HELLO.md` and `Pending Commit` from `SESSION_LOG.
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	50	[CANONICAL]	2. **Duplicate Verdict Tables Excised**: Removed parallel verdict tables from `CURRENT_PHASE.md`. `CURRENT_VERDICT.md` is now the sole canonical sourc
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	53	[CONFIRMED]	- `Migration Normalized Payload Fidelity`: Rated `CONFIRMED — 31/31 normalized text-equivalent`. Exact byte equality is NOT claimed.
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	54	[HISTORICAL]	- `Citation Examination`: Reclassified as `HALTED — HISTORICAL FAILURE / EVIDENCE ONLY`.
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	55	[REJECTED]	- `State Consistency`: Rated `REJECTED / UNDER REPAIR`.
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	56	[NOT YET]	- `Cold-Start Recoverability`: Rated `NOT YET TESTED`.
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	65	[CURRENT]	| File Path | Current Role | Authority Status | Classification | Cold-Start Read | Supersedes / Superseded By | Recommended Action |
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	67	[CANONICAL]	| `WAKE.md` | Single Re-entry Entrance | `CANONICAL` | `ENTRY` | **MANDATORY (1st)** | N/A | Maintain as minimal wake-up instructions |
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	68	[CANONICAL]	| `MEMORY_MAP.md` | Structural Memory Navigation | `CANONICAL` | `ENTRY` | **MANDATORY (5th)** | N/A | Maintain as master directory map |
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	69	[CANONICAL]	| `AGENTS.md` | Neutral Operating Rules | `CANONICAL` | `PROTOCOL` | **CONDITIONAL** | N/A | Preserved |
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	70	[CANONICAL]	| `CHARTER.md` | Clean-Room Lab Charter | `CANONICAL` | `DOCTRINE` | **CONDITIONAL** | N/A | Preserved |
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	71	[CANONICAL]	| `INVARIANTS.md` | Immutable Safety Rules | `CANONICAL` | `DOCTRINE` | **CONDITIONAL** | N/A | Preserved |
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	72	[CANONICAL]	| `REVOLUTION.md` | Core Architectural Manifesto | `CANONICAL` | `DOCTRINE` | **MANDATORY (6th)** | Supersedes legacy letters | Maintain as foundation
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	73	[CANONICAL]	| `state/CURRENT_PHASE.md` | Operational Phase Status | `CANONICAL` | `CURRENT_STATE` | **MANDATORY (2nd)** | Sole source for phase | Update on phase 
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	74	[CANONICAL]	| `state/CURRENT_VERDICT.md` | Confirmed/Withheld Verdicts | `CANONICAL` | `CURRENT_STATE` | **MANDATORY (3rd)** | Sole source for verdicts | Update o
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	75	[CANONICAL]	| `state/NEXT_ACTION.md` | Single Authorized Action | `CANONICAL` | `CURRENT_STATE` | **MANDATORY (4th)** | Sole source for next action | Update to en
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	76	[CANONICAL]	| `state/OPEN_QUESTIONS.md` | Unresolved Issues Register | `CANONICAL` | `CURRENT_STATE` | **CONDITIONAL** | N/A | Track open design questions |
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	77	[CANONICAL]	| `state/STATE_MODEL.md` | Single Sources & Rules | `CANONICAL` | `CURRENT_STATE` | **CONDITIONAL** | N/A | Defines anti-duplication rules |
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	79	[HISTORICAL]	| `handoff/SESSION_LOG.md` | Append-Only Milestone Log | `HISTORICAL` | `HANDOFF` | **NO** | N/A | Append milestones chronologically |
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	80	[CANONICAL]	| `research/synthesis/FIVE_POINT_FRAMEWORK.md` | Canonical 4-Layer 1-World Spec | `CANONICAL` | `DOCTRINE` | **MANDATORY (7th)** | Supersedes `four-la
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	81	[CANONICAL]	| `research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md` | LLM Wiki Architecture Spec | `CANONICAL` | `DOCTRINE` | **CONDITIONAL** | N/A | Canonica
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	82	[SUPERSEDED]	| `research/synthesis/four-layer-one-world-framework.md` | Draft 5-Component Framework | `SUPERSEDED` | `SUPERSEDED` | **PROHIBITED** | Superseded by 
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	83	[SUPERSEDED]	| `research/audit/framework-verification-status.md` | Draft Verification Status | `SUPERSEDED` | `SUPERSEDED` | **PROHIBITED** | Superseded by `MIGRAT
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	84	[CANONICAL]	| `research/audit/MIGRATION_GAP_AUDIT.md` | Migration Gap Audit | `CANONICAL` | `EVIDENCE` | **CONDITIONAL** | Supersedes draft audit | Maintain as mi
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	85	[CANONICAL]	| `research/audit/REMOTE_FIRST_AUDIT_METHOD.md` | 7-Step Remote Push Audit Spec | `CANONICAL` | `PROTOCOL` | **CONDITIONAL** | N/A | Enforce on git pu
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	86	[CANONICAL]	| `research/migration/MIGRATION_MANIFEST.json` | 31-File Migration Manifest | `CANONICAL` | `EVIDENCE` | **CONDITIONAL** | N/A | Verified 31-file payl
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	87	[CANONICAL]	| `research/migration/verify_migration.js` | Verification Fix 0.2.2 Script | `CANONICAL` | `OPERATOR_ONLY` | **NO** | Supersedes draft verifier | Exec
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	88	[HISTORICAL]	| `research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md` | Citation Remediation Exam v2.0 | `HISTORICAL` | `EVIDENCE` | **NO** | Reclassif
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	89	[HISTORICAL]	| `research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json` | Source Register Schema 2.0 | `HISTORICAL` | `EVIDENCE` | **NO** | Reclassified a
+research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md	90	[HISTORICAL]	| `research/legacy-evidence/` | Migrated Legacy Evidence (31 Files) | `HISTORICAL` | `EVIDENCE` | **NO** | Source commit `c073099481f9faa3...` | Prese
+research/audit/REMOTE_FIRST_AUDIT_METHOD.md	25	[CANONICAL]	6. **Knowledge Synthesis**: Update canonical doctrine or knowledge pages.
+research/audit/REMOTE_FIRST_AUDIT_METHOD.md	26	[CONFIRMED]	7. **Outside Reviewer Verdict**: Assign explicit epistemic status (`CONFIRMED`, `PARTIAL`, `INCONCLUSIVE`, `REJECTED`).
+research/audit/REMOTE_FIRST_AUDIT_METHOD.md	32	[CONFIRMED]	- **`CONFIRMED`**: Claim is fully backed by reproducible, un-truncated raw execution logs and committed code.
+research/audit/REMOTE_FIRST_AUDIT_METHOD.md	33	[PARTIAL]	- **`PARTIAL`**: Implementation or evidence exists but contains known gaps or unverified assumptions.
+research/audit/REMOTE_FIRST_AUDIT_METHOD.md	34	[COMPLETE]	- **`INCONCLUSIVE`**: Evidence is incomplete, ambiguous, or requires further refinement.
+research/audit/REMOTE_FIRST_AUDIT_METHOD.md	35	[REJECTED]	- **`REJECTED`**: Claim failed verification, contained hardcoded shortcuts, or violated invariants.
+research/audit/REMOTE_FIRST_AUDIT_METHOD.md	36	[CLAIMED-NOT-EVIDENCED]	- **`CLAIMED-NOT-EVIDENCED`**: Feature or metric is asserted in documentation but lacks raw execution log evidence.
+research/audit/clean-room-bootstrap-verification.md	8	[CONFIRMED]	- **Bootstrap Verdict**: `CONFIRMED-WITH-PATCH`
+research/audit/framework-verification-status.md	2	[SUPERSEDED]	status: SUPERSEDED — SEMANTIC DRIFT
+research/audit/framework-verification-status.md	3	[CONFIRMED]	reason: Prematurely marked all framework layers CONFIRMED before running clean-room experiments in the reform lab.
+research/audit/framework-verification-status.md	4	[SUPERSEDED]	superseded_by: research/audit/MIGRATION_GAP_AUDIT.md
+research/audit/framework-verification-status.md	10	[SUPERSEDED]	epistemic_status: SUPERSEDED
+research/audit/framework-verification-status.md	13	[SUPERSEDED]	# [SUPERSEDED] Framework Verification Status Matrix
+research/audit/framework-verification-status.md	15	[SUPERSEDED]	> ⚠️ **NOTICE**: This audit status document has been **SUPERSEDED**.
+research/audit/framework-verification-status.md	16	[CONFIRMED]	> The premature `CONFIRMED` ratings assigned during bootstrap reconnaissance failed to reflect clean-room experimental gaps.
+research/audit/framework-verification-status.md	17	[CANONICAL]	> **Canonical Replacement**: [`research/audit/MIGRATION_GAP_AUDIT.md`](../audit/MIGRATION_GAP_AUDIT.md)
+research/audit/framework-verification-status.md	21	[HISTORICAL]	## Historical Draft Matrix (Preserved for Audit Trail)
+research/audit/framework-verification-status.md	25	[SUPERSEDED]	| **Artifact Substrate** | `SUPERSEDED-DRAFT` | Filesystem state in Git |
+research/audit/framework-verification-status.md	26	[SUPERSEDED]	| **Stigmergic Coordination** | `SUPERSEDED-DRAFT` | Environment-mediated state |
+research/audit/framework-verification-status.md	27	[CURRENT]	| **Current-State Compilation** | `SUPERSEDED-DRAFT` | Static compiler |
+research/audit/framework-verification-status.md	28	[SUPERSEDED]	| **Software 3.0 Governance** | `SUPERSEDED-DRAFT` | Markdown protocols |
+research/audit/framework-verification-status.md	29	[SUPERSEDED]	| **Controlled AutoResearch** | `SUPERSEDED-DRAFT` | Evaluation logs |
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	2	[HISTORICAL]	status: HISTORICAL_FAILURE / EVIDENCE_ONLY
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	3	[HISTORICAL]	authority: historical-evidence-only
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	4	[CURRENT]	must_not_be_used_as_current_doctrine: true
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	5	[CURRENT]	superseded_by: state/CURRENT_PHASE.md
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	41	[HISTORICAL]	- `[LEGACY-RESEARCH-SYNTHESIS]`: Historical synthesis documents from earlier reconnaissance phases stored in `evidence/synthesis/`.
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	42	[CURRENT]	- `[CURRENT-DOCTRINE]`: Formally ratified clean-room specifications (`CHARTER.md`, `INVARIANTS.md`, `REVOLUTION.md`, `FIVE_POINT_FRAMEWORK.md`).
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	49	[COMPLETE]	## Section II: Overall System Structure & Complete Task Lifecycle
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	51	[CURRENT]	### 1. Architectural Foundation: One World Substrate + Four Orthogonal Layers `[CURRENT-DOCTRINE]` `[CLAIM-007]`
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	53	[CURRENT]	The "Four-Layer One-World" architecture is **NOT** a collection of five parallel or equivalent components `[CURRENT-DOCTRINE]` `[CLAIM-007]`.
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	60	[CURRENT]	World --> Layer2["Layer 2: LLM Wiki / Current Knowledge System"]
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	65	[CURRENT]	- **The Persistent Artifact World Runtime** is the container and persistent environment `[CURRENT-DOCTRINE]`. It survives indefinitely across ephemera
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	67	[CURRENT]	- **LLM Wiki / Current Knowledge System** governs **knowledge compilation and truth tracking** `[PRIMARY-PUBLIC-SOURCE: Karpathy Gist 442a6bf555914893
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	83	[READY]	Agent inspects task directory -> Finds task file with `Status: READY` (Dependencies resolved)
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	103	[CURRENT]	Operator background compiler reads `raw/logs/exec_101.log` -> Updates `wiki/entities/cc-connect.md` & `CURRENT_STATE.md`
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	104	[CURRENT]	-> Layer 2 (LLM Wiki) | Artifact: `CURRENT_STATE.md` | Modifier: Compiler | Trace: Recompiled with provenance link
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	134	[CURRENT]	- **Software Adaptation**: In multi-agent LLM systems, agents coordinate by modifying persistent file artifacts rather than passing transient context 
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	138	[CURRENT]	### 3. LLM Wiki / Current Knowledge System `[PRIMARY-PUBLIC-SOURCE]` `[CLAIM-003]`
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	141	[CURRENT]	- **Nexus Reform Extension**: Extended to handle multi-source conflict reconciliation, explicit contradiction registers, and cryptographic SHA-256 pro
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	148	[CURRENT]	- **Nexus Institutionalization**: Treats natural language protocols as versioned software assets with IDs, versions, scopes, inputs/outputs, precedenc
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	149	[CURRENT]	- **Immutable Security Boundary**: Software 3.0 does NOT replace deterministic code, databases, transaction boundaries, or security enforcement mechan
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	156	[CURRENT]	- **Nexus Adaptation**: Adapted for closed-loop protocol optimization under strict external evaluation and single-variable discipline `[CURRENT-DOCTRI
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	164	[CURRENT]	| **HELLO / Re-entry** | `UNVERIFIED — SOURCE NOT LOCATED` `[CLAIM-008]` | `disk_census_manifest.txt` `[LOCAL-PRIMARY-EVIDENCE]` | Ephemeral agent re-
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	165	[CURRENT]	| **Persistent Artifact World** | Karpathy Gist `442a6bf555...` `[PRIMARY-PUBLIC-SOURCE]` | `disk_census_manifest.txt` `[LOCAL-PRIMARY-EVIDENCE]` `[CL
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	166	[CURRENT]	| **Stigmergy** | Grassé (1959), Theraulaz (1999) `[PRIMARY-PUBLIC-SOURCE]` `[CLAIM-001]` | `beads_clean_001_command_log.jsonl` `[LOCAL-PRIMARY-EVIDEN
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	167	[CURRENT]	| **LLM Wiki** | Karpathy Gist `442a6bf555...` `[PRIMARY-PUBLIC-SOURCE]` `[CLAIM-003]` | `slice_0_evaluation.md` `[LEGACY-RESEARCH-SYNTHESIS]` `[CLAIM
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	168	[CURRENT]	| **Software 3.0** | Karpathy (2017/2025) essays `[PRIMARY-PUBLIC-SOURCE]` `[CLAIM-002]` | `REVOLUTION.md` `[CURRENT-DOCTRINE]` | Governed natural lan
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	169	[CURRENT]	| **AutoResearch** | `karpathy/autoresearch` `[PRIMARY-PUBLIC-SOURCE]` `[CLAIM-004]` | `beads_clean_001_command_log.jsonl` `[LOCAL-PRIMARY-EVIDENCE]` 
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	188	[CURRENT]	- **Four-Layer One-World Synthesis**: Synthesizes public prior art with local experimental findings into a single unified clean-room doctrine (`FIVE_P
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md	189	[CURRENT]	- **Contradiction Registers & Cryptographic Provenance Links**: Nexus extension to Karpathy's LLM Wiki pattern `[CURRENT-DOCTRINE]`.
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	19	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	34	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	49	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	64	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	79	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	94	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	124	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	137	[HISTORICAL]	"supports": "Reconciliation of two-file start claims across historical sandbox runs.",
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	139	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	154	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	169	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	184	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	199	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	212	[HISTORICAL]	"supports": "Historical rejection of initial Slice 0 verdict and downgrade to INCONCLUSIVE.",
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	214	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	218	[CURRENT]	"evidence_type": "CURRENT-DOCTRINE",
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	220	[CANONICAL]	"title": "FIVE_POINT_FRAMEWORK.md (Canonical Doctrine Repair 0.2.1)",
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	228	[HISTORICAL]	"does_not_support": "Historical proof of implementation prior to clean-room testing.",
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	229	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	233	[CURRENT]	"evidence_type": "CURRENT-DOCTRINE",
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	243	[HISTORICAL]	"does_not_support": "Historical claims of earlier system realization.",
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	244	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	255	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	264	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	273	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	282	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	291	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	300	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	306	[CURRENT]	"evidence_type": "CURRENT-DOCTRINE",
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	309	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	317	[HISTORICAL]	"does_not_support": "Does not support historical public origin claims for HELLO.md.",
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	322	[CONFIRMED]	"public_primary_confirmed": 6,
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	323	[CONFIRMED]	"local_primary_confirmed": 4,
+research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json	325	[CURRENT]	"current_doctrine": 2,
+research/examinations/evidence/local/beads_clean_001_issue_graph.json	7	[HISTORICAL]	epistemic_status: HISTORICAL-FAILURE
+research/examinations/evidence/local/beads_clean_001_issue_graph.json	217	[SUPERSEDED]	"title": "L-0662: Session state ledger specification (superseded by L-0660)",
+research/examinations/evidence/local/disk_census_manifest.txt	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/examinations/evidence/local/pilot_run_trace_summary.txt	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/examinations/evidence/local/sandbox_runs_manifest.txt	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/examinations/evidence/public/grasse_1959_stigmergy.txt	5	[CANONICAL]	Canonical URL: https://link.springer.com/article/10.1007/BF02223791
+research/examinations/evidence/public/karpathy_autoresearch_readme.md	3	[CANONICAL]	Canonical Repository: https://github.com/karpathy/autoresearch
+research/examinations/evidence/public/karpathy_llm_wiki_gist.txt	3	[CANONICAL]	Canonical URL: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+research/examinations/evidence/public/karpathy_llm_wiki_gist.txt	4	[CURRENT]	Quoted Anchor: "Instead of just retrieving from raw documents at query time, the LLM incrementally builds and maintains a persistent wiki — a structur
+research/examinations/evidence/public/karpathy_software_2_0.txt	3	[CANONICAL]	Canonical URL: https://karpathy.ai/software20.html
+research/examinations/evidence/public/karpathy_software_3_0.txt	3	[CANONICAL]	Canonical URL: https://huggingface.co/posts/karpathy/software30
+research/examinations/evidence/public/theraulaz_1999_stigmergy.txt	5	[CANONICAL]	Canonical URL: https://doi.org/10.1162/106454699568700
+research/examinations/evidence/synthesis/local_world_autonomy_boundary.md	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/examinations/evidence/synthesis/local_world_evolution_lineage.md	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/examinations/evidence/synthesis/local_world_evolution_lineage.md	12	[COMPLETE]	This findings document reconstructs the complete 9-stage evolutionary tree of the local World project based on multi-disk empirical evidence.
+research/examinations/evidence/synthesis/local_world_evolution_lineage.md	49	[HISTORICAL]	- **Addition**: Pre-seeded 34 historical fragments (`fragment-001` to `fragment-034`) to observe source-soil interaction.
+research/examinations/evidence/synthesis/slice_0_evaluation.md	7	[HISTORICAL]	epistemic_status: HISTORICAL-FAILURE
+research/examinations/evidence/synthesis/slice_0_evaluation.md	13	[INCONCLUSIVE]	**Official Status:** **`STATIC-MOCK / INCONCLUSIVE — REFINE REQUIRED`**
+research/examinations/evidence/synthesis/slice_0_evaluation.md	19	[COMPLETE]	Following Outside Reviewer Pass 1 and Pass 2 rulings (`PARSER: REJECTED — THREAD-ID HARDCODED`, `BEADS EXECUTION: PARTIAL`, `BLIND TEST: CLAIMED-NOT-E
+research/examinations/evidence/synthesis/slice_0_evaluation.md	30	[CONFIRMED]	- Confirmed `runs/beads-clean-001/world/` contains ONLY `WORK_STATE.md` and ZERO apparatus files (`AGENTS.md`, `CLAUDE.md`, `.claude/`, `.codex/`, `.a
+research/examinations/evidence/synthesis/slice_0_evaluation.md	31	[CURRENT]	- Exported complete 11-task graph to `issue-graph-final.json` (5 closed, 6 open) and projected into `CURRENT_STATE.md`.
+research/examinations/evidence/synthesis/slice_0_evaluation.md	40	[COMPLETE]	**Verdict:** **`STATIC-MOCK / INCONCLUSIVE`** (Pass 2 Evidence Repair Complete; awaiting authorization for Slice 1).
+research/findings/prior-art-audit-findings.md	8	[CONFIRMED]	epistemic_status: CONFIRMED
+research/findings/prior-art-audit-findings.md	22	[HISTORICAL]	- Multiple historical world iterations and seeds (`world`, `pilot run`, `detached room`, `Continuity`).
+research/findings/slice-0-correction-note.md	7	[HISTORICAL]	migration_reason: Record historical failure and correction note from Slice 0 evaluation.
+research/findings/slice-0-correction-note.md	8	[HISTORICAL]	epistemic_status: HISTORICAL-FAILURE
+research/findings/slice-0-correction-note.md	14	[REJECTED]	> **Adjudication Result**: `REJECTED & WITHDRAWN` (Outside Reviewer Verdict)
+research/findings/slice-0-correction-note.md	15	[CURRENT]	> **Current Status**: `HISTORICAL-FAILURE / INCONCLUSIVE`
+research/legacy-evidence/failed-slice-0/CORRECTION_NOTE.md	7	[HISTORICAL]	epistemic_status: HISTORICAL-FAILURE
+research/legacy-evidence/failed-slice-0/CORRECTION_NOTE.md	14	[REJECTED]	**Outside Reviewer Verdict:** **`REJECTED — INCONCLUSIVE (REFINE REQUIRED)`**
+research/legacy-evidence/failed-slice-0/CORRECTION_NOTE.md	20	[REJECTED]	Per outside reviewer adjudication, the previous `KEEP` verdict is **formally withdrawn and rejected**. Slice 0 is downgraded to **`STATIC-MOCK / INCON
+research/legacy-evidence/failed-slice-0/CORRECTION_NOTE.md	26	[COMPLETE]	4. **False Claims in Generated State**: The generated state output claims like "Production migration completed" and "None (Thread closed)", which cont
+research/legacy-evidence/failed-slice-0/CORRECTION_NOTE.md	32	[SUPERSEDED]	- Implement a real AST/Metadata parser (`real_parser.js`) that extracts provenance, conflicts, superseded status, and open deployment conditions.
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	4	[CURRENT]	source_path: experiments/slice-0/s1/world/CURRENT_STATE.md
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	6	[CURRENT]	migration_reason: Recompiled current state ledger from Pass 2
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	7	[HISTORICAL]	epistemic_status: HISTORICAL-FAILURE
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	10	[CURRENT]	# Nexus Thread Current State Ledger (Slice 0 Replay)
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	15	[INCONCLUSIVE]	> **Evaluator Verdict**: `INCONCLUSIVE — REFINE REQUIRED` (Correction Note Applied)
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	23	[COMPLETE]	| `L-0658` | [Query](experiments/slice-0/fixture/raw_letters/L-0658.query.md) / [Result](experiments/slice-0/fixture/raw_letters/L-0658.result.md) | `
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	25	[SUPERSEDED]	| `L-0662` | [Query](experiments/slice-0/fixture/raw_letters/L-0662.query.md) / [Result](experiments/slice-0/fixture/raw_letters/L-0662.result.md) | `
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	30	[COMPLETE]	| `L-0680` | [Query](experiments/slice-0/fixture/raw_letters/L-0680.query.md) / [Result](experiments/slice-0/fixture/raw_letters/L-0680.result.md) | `
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	31	[COMPLETE]	| `L-0759` | [Query](experiments/slice-0/fixture/raw_letters/L-0759.query.md) / [Result](experiments/slice-0/fixture/raw_letters/L-0759.result.md) | `
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	32	[COMPLETE]	| `L-0767` | [Query](experiments/slice-0/fixture/raw_letters/L-0767.query.md) / [Result](experiments/slice-0/fixture/raw_letters/L-0767.result.md) | `
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	33	[COMPLETE]	| `L-0768` | [Query](experiments/slice-0/fixture/raw_letters/L-0768.query.md) / [Result](experiments/slice-0/fixture/raw_letters/L-0768.result.md) | `
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	67	[COMPLETE]	- **Reconstructed Status**: `COMPLETED`
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	68	[CANONICAL]	- **Key Conclusion**: Boss's "`[DISPATCH]` text matching is a surface slice" instinct is correct, but the deeper defect is not "text matching exists" 
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	84	[ACCEPTED]	- **Open Points**: - Whether Boss wants a Phase-2-style transition audit trail (reason/actor per session change) sooner than Phase 2's full `ControlPl
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	97	[SUPERSEDED]	- **Reconstructed Status**: `SUPERSEDED`
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	99	[CANONICAL]	- **Open Points**: - Phase 2b (wrapping `resetSessionForTurn`/`cmdNew`/`cmdSwitch` through the control plane) remains explicitly deferred, per this le
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	109	[CONFIRMED]	### L-0666: L-0666 RESULT: Fixed the False Topic-Root Reply Privilege — One Confirmed Fix, One Open Verification
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	113	[READY]	- **Key Conclusion**: Fixed `isDirectedAtBot` (`platform/telegram/telegram.go`) so a message whose `reply_to_message` points at its own Telegram Forum
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	114	[CURRENT]	- **Open Points**: - Please confirm in a live dispatched Topic (after this fix is deployed — rebuild + restart, not just committed) whether: (a) a bar
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	128	[CONFIRMED]	- **Key Conclusion**: Built exactly to Boss's spec. `maybeHandleDispatchBlock` no longer calls `ControlPlaneDispatch` the instant a `[DISPATCH]` block
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	147	[ACCEPTED]	- **Key Conclusion**: `isDirectedAtBot` (`platform/telegram/telegram.go`) now has a structured, non-heuristic fallback: a **truly bare** message (no `
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	148	[CURRENT]	- **Open Points**: - **L-0666 Evidence Gap 1 (raw payload capture) remains open** — unrelated to this letter's scope, not touched here. - **Deploy is 
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	176	[COMPLETE]	- **Reconstructed Status**: `COMPLETED`
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	191	[COMPLETE]	- **Reconstructed Status**: `COMPLETED`
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	192	[REJECTED]	- **Key Conclusion**: L-0759 四项全部完成，另总裁 pursuit 补做一项：派发准入检查从 wrapper 下沉到 actuator（`executeDispatch` 内置、从信件自身 front matter 读 `Verify`/`Verified`、L-0757
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	193	[READY]	- **Open Points**: - **`manual` 动作的产品语义（客观事实，未改动，Out-of-Scope 纪律）**：   - 活持久状态：`outboxManual map[string]bool` @ `core/engine.go:532`；落盘 `data/outbox_m
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	224	[COMPLETE]	- **Reconstructed Status**: `COMPLETED`
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	244	[COMPLETE]	- **Reconstructed Status**: `COMPLETED`
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	245	[COMPLETE]	- **Key Conclusion**: cc-connect architecture audit completed. Full report saved to `F:\nexus\docs\anti-corruption\cc-connect\architecture-audit-repor
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	283	[SUPERSEDED]	| `TASK-yyr` | L-0662: Session state ledger specification (superseded by L-0660) | `closed` | `TASK-3xp` |
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	291	[CONFIRMED]	- **Real Fixture Selection**: `CONFIRMED` (Nexus Letter Thread L-0658 through L-0768)
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	292	[CONFIRMED]	- **Generic Section Parser**: `CONFIRMED` (Zero letter ID hardcoding, dynamic regex section parsing)
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	293	[CONFIRMED]	- **Distinct Provenance Links**: `CONFIRMED` (Explicit separate query/result file links and hashes)
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	294	[CONFIRMED]	- **Beads Execution Isolation**: `CONFIRMED` (Ran under `runs/beads-clean-001/`, apparatus files excluded from World)
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md	296	[INCONCLUSIVE]	- **Overall Replay Status**: `STATIC-MOCK / INCONCLUSIVE — REFINE REQUIRED`
+research/legacy-evidence/failed-slice-0/EVALUATION.md	7	[HISTORICAL]	epistemic_status: HISTORICAL-FAILURE
+research/legacy-evidence/failed-slice-0/EVALUATION.md	13	[INCONCLUSIVE]	**Official Status:** **`STATIC-MOCK / INCONCLUSIVE — REFINE REQUIRED`**
+research/legacy-evidence/failed-slice-0/EVALUATION.md	19	[COMPLETE]	Following Outside Reviewer Pass 1 and Pass 2 rulings (`PARSER: REJECTED — THREAD-ID HARDCODED`, `BEADS EXECUTION: PARTIAL`, `BLIND TEST: CLAIMED-NOT-E
+research/legacy-evidence/failed-slice-0/EVALUATION.md	30	[CONFIRMED]	- Confirmed `runs/beads-clean-001/world/` contains ONLY `WORK_STATE.md` and ZERO apparatus files (`AGENTS.md`, `CLAUDE.md`, `.claude/`, `.codex/`, `.a
+research/legacy-evidence/failed-slice-0/EVALUATION.md	31	[CURRENT]	- Exported complete 11-task graph to `issue-graph-final.json` (5 closed, 6 open) and projected into `CURRENT_STATE.md`.
+research/legacy-evidence/failed-slice-0/EVALUATION.md	40	[COMPLETE]	**Verdict:** **`STATIC-MOCK / INCONCLUSIVE`** (Pass 2 Evidence Repair Complete; awaiting authorization for Slice 1).
+research/legacy-evidence/failed-slice-0/S0_REPORT.md	7	[HISTORICAL]	epistemic_status: HISTORICAL-FAILURE
+research/legacy-evidence/failed-slice-0/S0_REPORT.md	24	[HISTORICAL]	- At turn 3 (`L-0662.query.md`), `architect-claude` must re-read all previous letters (`L-0658.query.md`, `L-0658.result.md`, `L-0660.query.md`, `L-06
+research/legacy-evidence/failed-slice-0/S0_REPORT.md	29	[CURRENT]	- No single Current State page existed; current system state was scattered across 11 separate `result.md` files.
+research/legacy-evidence/failed-slice-0/S0_REPORT.md	40	[CURRENT]	| **Current State Ambiguities / Errors** | **5 instances** | Scattered state across 11 result letters |
+research/legacy-evidence/failed-slice-0/S0_REPORT.md	42	[READY]	| **Ready Work Auto-Exposure** | **0%** | Requires human to notice task unblocking |
+research/legacy-evidence/failed-slice-0/beads-clean-001/WORK_STATE.md	7	[HISTORICAL]	epistemic_status: HISTORICAL-FAILURE
+research/legacy-evidence/failed-slice-0/beads-clean-001/WORK_STATE.md	24	[SUPERSEDED]	| `TASK-yyr` | `L-0662` | L-0662: Session state ledger specification (superseded by L-0660) | `closed` | P2 |
+research/legacy-evidence/failed-slice-0/beads-clean-001/issue-graph-final.json	7	[HISTORICAL]	epistemic_status: HISTORICAL-FAILURE
+research/legacy-evidence/failed-slice-0/beads-clean-001/issue-graph-final.json	217	[SUPERSEDED]	"title": "L-0662: Session state ledger specification (superseded by L-0660)",
+research/legacy-evidence/failed-slice-0/issue_graph.json	7	[HISTORICAL]	epistemic_status: HISTORICAL-FAILURE
+research/legacy-evidence/failed-slice-0/issue_graph.json	733	[SUPERSEDED]	"title": "L-0662: Session state ledger specification (superseded by L-0660)",
+research/legacy-evidence/failed-slice-0/issue_graph.json	778	[CURRENT]	"title": "Compile Current State Projection",
+research/legacy-evidence/failed-slice-0/issue_graph.json	779	[CURRENT]	"description": "Target CURRENT_STATE.md",
+research/legacy-evidence/local-world/local-world-autonomous-growth.md	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/legacy-evidence/local-world/local-world-autonomous-growth.md	11	[CURRENT]	> **SAMPLE-LIMITED NOTICE**: This document represents an earlier single-sample investigation focused specifically on pilot run `world-00000002`. For t
+research/legacy-evidence/local-world/local-world-autonomous-growth.md	33	[PARTIAL]	| **Fresh-instance continuity** | `PARTIAL` | Re-entry via `ENTITY.md` functions, but relied on Copilot host memory-tool. |
+research/legacy-evidence/local-world/local-world-autonomous-growth.md	34	[PARTIAL]	| **Participant re-entry** | `PARTIAL` | Human/agent re-entry documented, observer-curated timing. |
+research/legacy-evidence/local-world/local-world-autonomous-growth.md	35	[CONFIRMED]	| **Endogenous goal formation** | `CONFIRMED` | Agent generated own questions in `outbox/question.md` & `[[Observership-Loop]]`. |
+research/legacy-evidence/local-world/local-world-autonomous-growth.md	36	[CONFIRMED]	| **Endogenous work generation** | `CONFIRMED` | Created `TIMELINE.md`, `fragment-035.md`, `ENTITY.md` without task assignment. |
+research/legacy-evidence/local-world/local-world-autonomous-growth.md	37	[CONFIRMED]	| **Stigmergic artifact growth** | `CONFIRMED` | Subsequent instances read previous `.md` traces and extended them. |
+research/legacy-evidence/local-world/local-world-autonomous-growth.md	38	[CURRENT]	| **Current-state self-compaction** | `CONFIRMED` | `ENTITY.md` compressed 15 turns into 5 structured state variables. |
+research/legacy-evidence/local-world/local-world-autonomous-growth.md	39	[CONFIRMED]	| **Self-modified re-entry** | `CONFIRMED` | Agent directed future instances to read `ENTITY.md` instead of `HELLO.md`. |
+research/legacy-evidence/local-world/local-world-autonomous-growth.md	40	[CONFIRMED]	| **External novelty ingestion** | `CONFIRMED` | Metabolized `fragment-001` & `002` into internal rule changes at T11. |
+research/legacy-evidence/local-world/local-world-autonomous-growth.md	41	[PARTIAL]	| **Open-ended autonomous continuation**| `PARTIAL` | Continued for 12 turns, but hit internal novelty depletion when gradient stopped. |
+research/legacy-evidence/local-world/local-world-autonomous-growth.md	42	[CONFIRMED]	| **Protocol self-modification** | `CONFIRMED` | T11 agent modified internal `Tendency` rule. |
+research/legacy-evidence/local-world/local-world-autonomy-boundary.md	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/legacy-evidence/local-world/local-world-census-completeness.md	4	[COMPLETE]	source_path: research/audit/local-world-census-completeness.md
+research/legacy-evidence/local-world/local-world-census-completeness.md	6	[COMPLETE]	migration_reason: Census completeness audit report
+research/legacy-evidence/local-world/local-world-census-completeness.md	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/legacy-evidence/local-world/local-world-census-completeness.md	10	[COMPLETE]	# Local World Census Completeness Audit
+research/legacy-evidence/local-world/local-world-evolution-lineage.md	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/legacy-evidence/local-world/local-world-evolution-lineage.md	12	[COMPLETE]	This findings document reconstructs the complete 9-stage evolutionary tree of the local World project based on multi-disk empirical evidence.
+research/legacy-evidence/local-world/local-world-evolution-lineage.md	49	[HISTORICAL]	- **Addition**: Pre-seeded 34 historical fragments (`fragment-001` to `fragment-034`) to observe source-soil interaction.
+research/legacy-evidence/local-world/local-world-full-census.md	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/legacy-evidence/local-world/local-world-openclaw-evidence.md	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/legacy-evidence/local-world/local-world-project-current-understanding.md	4	[CURRENT]	source_path: research/synthesis/local-world-project-current-understanding.md
+research/legacy-evidence/local-world/local-world-project-current-understanding.md	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/legacy-evidence/local-world/local-world-project-current-understanding.md	10	[CURRENT]	# Local World Project Current Architectural Understanding
+research/legacy-evidence/local-world/local-world-project-current-understanding.md	20	[HISTORICAL]	- **C:\Worlds**: Primary repository of 17 historical world and room runs, including the peak evolved `world-20260609-base` instance.
+research/legacy-evidence/local-world/local-world-project-current-understanding.md	29	[CURRENT]	2. **Current-State Compilation**: `ENTITY.md` and `state.json` serve as direct empirical validation for the **Current Truth Layer**, demonstrating how
+research/legacy-evidence/local-world/local-world-safety-stop-status.md	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/legacy-evidence/local-world/local-world-safety-stop-status.md	22	[HISTORICAL]	| **Evolved Mainline** (`world-20260609-base`) | Reached peak artifact self-compacting state (`ENTITY.md` v2.8); archived as unexecuted base template 
+research/legacy-evidence/local-world/local-world-safety-stop-status.md	26	[SUPERSEDED]	## 2. Superseded Single-Sample Document Notices
+research/legacy-evidence/local-world/local-world-safety-stop-status.md	28	[SUPERSEDED]	The following early single-sample research files have been annotated with `[SAMPLE-LIMITED]` / `[SUPERSEDED-PARTIALLY]` to prevent single-pilot bias f
+research/legacy-evidence/local-world/local-world-safety-stop-status.md	32	[SUPERSEDED]	3. `research/synthesis/world-project-position-in-nexus-reform.md` $\rightarrow$ `[SUPERSEDED-PARTIALLY: Updated by project-level synthesis]`
+research/legacy-evidence/local-world/local-world-seed-comparison.md	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/legacy-evidence/local-world/local-world-seed-comparison.md	20	[CONFIRMED]	| **Minimal Boot** | `CONFIRMED` | `CONFIRMED` | `CONFIRMED` | `CONFIRMED` | `CONFIRMED` |
+research/legacy-evidence/local-world/local-world-seed-comparison.md	21	[CONFIRMED]	| **Within-instance Autonomy** | `CONFIRMED` | `CONFIRMED` | `CONFIRMED` | `CONFIRMED` | `CONFIRMED` |
+research/legacy-evidence/local-world/local-world-seed-comparison.md	22	[CONFIRMED]	| **Endogenous Goal Formation** | `PARTIAL` | `CONFIRMED` | `CONFIRMED` | `CONFIRMED` | `CONFIRMED` |
+research/legacy-evidence/local-world/local-world-seed-comparison.md	23	[CONFIRMED]	| **Endogenous Work Generation**| `PARTIAL` | `CONFIRMED` | `CONFIRMED` | `CONFIRMED` | `CONFIRMED` |
+research/legacy-evidence/local-world/local-world-seed-comparison.md	24	[CONFIRMED]	| **Artifact Metabolism** | `NOT PRESENT`| `PARTIAL` | `CONFIRMED` | `CONFIRMED` | `CONFIRMED` |
+research/legacy-evidence/local-world/local-world-seed-comparison.md	25	[CONFIRMED]	| **Stigmergic Growth** | `NOT PRESENT`| `CONFIRMED` | `CONFIRMED` | `CONFIRMED` | `CONFIRMED` |
+research/legacy-evidence/local-world/local-world-seed-comparison.md	26	[CONFIRMED]	| **External Novelty Ingestion** | `NOT PRESENT`| `PARTIAL` | `CONFIRMED` | `PARTIAL` | `CONFIRMED` |
+research/legacy-evidence/local-world/local-world-seed-comparison.md	27	[CURRENT]	| **Current-State Self-Compaction**| `NOT PRESENT`| `PARTIAL` | **`CONFIRMED` (`ENTITY.md`)** | **`CONFIRMED` (`state.json`)** | `PARTIAL` |
+research/legacy-evidence/local-world/local-world-seed-comparison.md	28	[CONFIRMED]	| **Self-Modified Re-entry** | `NOT PRESENT`| `PARTIAL` | **`CONFIRMED` (`给下一个`)** | **`CONFIRMED` (`IDENTITY.md`)** | `NOT PRESENT` |
+research/legacy-evidence/local-world/local-world-seed-comparison.md	29	[CONFIRMED]	| **Fresh-Instance Continuity** | `PARTIAL` | `PARTIAL` | `PARTIAL` | `CONFIRMED` | `PARTIAL` |
+research/legacy-evidence/local-world/local-world-seed-comparison.md	30	[CONFIRMED]	| **Cross-Turn Continuation** | `PARTIAL` | `PARTIAL` | `PARTIAL` | **`CONFIRMED` (Runs 1-12)** | `PARTIAL` |
+research/legacy-evidence/local-world/local-world-seed-comparison.md	31	[CONFIRMED]	| **Runner Autonomy** | `NOT PRESENT`| `NOT PRESENT` | `NOT PRESENT` | **`CONFIRMED` (Heartbeat/Guard)**| `NOT PRESENT` |
+research/legacy-evidence/local-world/local-world-seed-comparison.md	32	[CONFIRMED]	| **Protocol Self-Modification** | `NOT PRESENT`| `PARTIAL` | `CONFIRMED` | `CONFIRMED` | `CONFIRMED` (T11) |
+research/legacy-evidence/local-world/local-world-seed-comparison.md	33	[PARTIAL]	| **Open-Ended Continuation** | `NOT PRESENT`| `PARTIAL` | `PARTIAL` | **`PARTIAL` (Halted G8)** | `NOT PRESENT` |
+research/legacy-evidence/local-world/local-world-seed-comparison.md	34	[CONFIRMED]	| **Safety Stop Boundary** | `N/A` | `N/A` | `N/A` | **`CONFIRMED` (G8 Freeze)** | **`CONFIRMED` (T12 Stop)** |
+research/legacy-evidence/local-world/local-world-seed-inventory.md	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/legacy-evidence/local-world/local-world-seed-inventory.md	43	[HISTORICAL]	- **Development Level**: **PEAK HISTORICAL EVOLUTION** (Highest degree of self-compaction, gap detection, and protocol re-entry modification).
+research/legacy-evidence/local-world/raw/autonomy-reconciliation/sandbox_runs_manifest.txt	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/legacy-evidence/local-world/raw/full-census/disk_census_manifest.txt	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/legacy-evidence/local-world/raw/pilot_run_trace_summary.txt	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/legacy-evidence/wheel-probes/beads/package.json	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/legacy-evidence/wheel-probes/prior-art-probe-comparison.md	7	[PARTIAL]	epistemic_status: PARTIAL
+research/legacy-evidence/wheel-probes/prior-art-probe-comparison.md	23	[READY]	| **Dependency & Claim Support** | **`YES`** (`bd ready` / `bd dep add`) | `PARTIAL` (Manual DAG code) | `PARTIAL` (Custom KV locks) |
+research/legacy-evidence/wheel-probes/prior-art-probe-comparison.md	26	[READY]	| **Stigmergy Compatibility** | **`HIGH`** (Trace scan `bd ready`) | **`POOR`** (Central orchestrator) | **`MODERATE`** (Virtual Objects) |
+research/legacy-evidence/wheel-probes/prior-art-probe-comparison.md	27	[CURRENT]	| **Current-State Compatibility**| **`HIGH`** (Feeds `CURRENT_STATE`) | **`POOR`** (Event replay trees) | **`POOR`** (Engine KV state) |
+research/legacy-evidence/wheel-probes/prior-art-probe-comparison.md	40	[READY]	- Empirical probe demonstrated that `bd ready` and `bd dep add` cleanly solve Stigmergic task exposure and atomic claim without central human dispatch
+research/legacy-evidence/wheel-probes/prior-art-probe-evidence-status.md	7	[PARTIAL]	epistemic_status: PARTIAL
+research/legacy-evidence/wheel-probes/prior-art-probe-evidence-status.md	29	[REJECTED]	2. **Safety Prior Enforcement**: Wheels requiring un-monitored background daemons (Restate) or centralized code orchestrators (go-workflows) were reje
+research/legacy-evidence/wheel-probes/prior-art-probe-evidence-status.md	30	[CANONICAL]	3. **Reversibility Audit**: All probe artifacts remain strictly contained inside `probes/` and can be reverted cleanly without affecting canonical Nex
+research/legacy-evidence/wheel-probes/restate/package.json	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/legacy-evidence/wheel-probes/shared_fixture.json	7	[CONFIRMED]	epistemic_status: CONFIRMED
+research/legacy-evidence/wheel-probes/shared_fixture.json	17	[READY]	"status": "ready",
+research/legacy-evidence/wheel-probes/shared_fixture.json	26	[CURRENT]	"title": "Compile Current State Projection",
+research/legacy-evidence/wheel-probes/shared_fixture.json	30	[CURRENT]	"target_page": "CURRENT_STATE.md",
+research/migration/MIGRATION_MANIFEST.json	12	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	13	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	25	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	26	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	38	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	39	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	51	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	52	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	64	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	65	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	77	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	78	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	90	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	91	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	103	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	104	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	116	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	117	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	129	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	130	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	135	[CURRENT]	"source_path": "research/synthesis/local-world-project-current-understanding.md",
+research/migration/MIGRATION_MANIFEST.json	138	[CURRENT]	"destination_path": "research/legacy-evidence/local-world/local-world-project-current-understanding.md",
+research/migration/MIGRATION_MANIFEST.json	142	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	143	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	148	[COMPLETE]	"source_path": "research/audit/local-world-census-completeness.md",
+research/migration/MIGRATION_MANIFEST.json	151	[COMPLETE]	"destination_path": "research/legacy-evidence/local-world/local-world-census-completeness.md",
+research/migration/MIGRATION_MANIFEST.json	155	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	156	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	168	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	169	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	181	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	182	[PARTIAL]	"epistemic_status": "PARTIAL"
+research/migration/MIGRATION_MANIFEST.json	194	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	195	[PARTIAL]	"epistemic_status": "PARTIAL"
+research/migration/MIGRATION_MANIFEST.json	207	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	208	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	220	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	221	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	233	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	234	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	246	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	247	[CONFIRMED]	"epistemic_status": "CONFIRMED"
+research/migration/MIGRATION_MANIFEST.json	259	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	260	[HISTORICAL]	"epistemic_status": "HISTORICAL-FAILURE"
+research/migration/MIGRATION_MANIFEST.json	272	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	273	[HISTORICAL]	"epistemic_status": "HISTORICAL-FAILURE"
+research/migration/MIGRATION_MANIFEST.json	285	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	286	[HISTORICAL]	"epistemic_status": "HISTORICAL-FAILURE"
+research/migration/MIGRATION_MANIFEST.json	298	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	299	[HISTORICAL]	"epistemic_status": "HISTORICAL-FAILURE"
+research/migration/MIGRATION_MANIFEST.json	311	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	312	[HISTORICAL]	"epistemic_status": "HISTORICAL-FAILURE"
+research/migration/MIGRATION_MANIFEST.json	324	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	325	[HISTORICAL]	"epistemic_status": "HISTORICAL-FAILURE"
+research/migration/MIGRATION_MANIFEST.json	337	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	338	[HISTORICAL]	"epistemic_status": "HISTORICAL-FAILURE"
+research/migration/MIGRATION_MANIFEST.json	350	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	351	[HISTORICAL]	"epistemic_status": "HISTORICAL-FAILURE"
+research/migration/MIGRATION_MANIFEST.json	356	[CURRENT]	"source_path": "experiments/slice-0/s1/world/CURRENT_STATE.md",
+research/migration/MIGRATION_MANIFEST.json	359	[CURRENT]	"destination_path": "research/legacy-evidence/failed-slice-0/CURRENT_STATE.md",
+research/migration/MIGRATION_MANIFEST.json	363	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	364	[HISTORICAL]	"epistemic_status": "HISTORICAL-FAILURE"
+research/migration/MIGRATION_MANIFEST.json	376	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	377	[HISTORICAL]	"epistemic_status": "HISTORICAL-FAILURE"
+research/migration/MIGRATION_MANIFEST.json	389	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	390	[HISTORICAL]	"epistemic_status": "HISTORICAL-FAILURE"
+research/migration/MIGRATION_MANIFEST.json	402	[CONFIRMED]	"semantic_verification": "CONFIRMED",
+research/migration/MIGRATION_MANIFEST.json	403	[HISTORICAL]	"epistemic_status": "HISTORICAL-FAILURE"
+research/migration/logs/hash_comparison.txt	21	[CURRENT]	11 | research/synthesis/local-world-project-current-understanding.md | 9e9548938aff... | 9e9548938aff... | research/legacy-evidence/local-world/local-
+research/migration/logs/hash_comparison.txt	22	[COMPLETE]	12 | research/audit/local-world-census-completeness.md | 085bee17ae04... | 085bee17ae04... | research/legacy-evidence/local-world/local-world-census-c
+research/migration/logs/hash_comparison.txt	38	[CURRENT]	28 | experiments/slice-0/s1/world/CURRENT_STATE.md | 32d333a2453a... | 32d333a2453a... | research/legacy-evidence/failed-slice-0/CURRENT_STATE.md | 18
+research/synthesis/FIVE_POINT_FRAMEWORK.md	1	[CANONICAL]	# CANONICAL DOCTRINE — ONLY AUTHORITATIVE FIVE-POINT DEFINITION
+research/synthesis/FIVE_POINT_FRAMEWORK.md	3	[CANONICAL]	> **Document Status**: CANONICAL DOCTRINE (Repair 0.2.1)
+research/synthesis/FIVE_POINT_FRAMEWORK.md	15	[CURRENT]	World --> Layer2["Layer 2: LLM Wiki / Current Knowledge System"]
+research/synthesis/FIVE_POINT_FRAMEWORK.md	42	[CURRENT]	### Layer 2: LLM Wiki / Current Knowledge System
+research/synthesis/FIVE_POINT_FRAMEWORK.md	43	[CURRENT]	- Continuous, incremental compilation of raw append-only execution history into a structured, hyperlinked knowledge system (Entity pages, Topic pages,
+research/synthesis/FIVE_POINT_FRAMEWORK.md	78	[CURRENT]	4. **Wiki != A Single `CURRENT_STATE.md` File**:
+research/synthesis/FIVE_POINT_FRAMEWORK.md	79	[CURRENT]	- An LLM Wiki is a multi-page, hyperlinked knowledge graph. A single `CURRENT_STATE.md` file is merely a projected view.
+research/synthesis/FIVE_POINT_FRAMEWORK.md	80	[CURRENT]	5. **Current State is Lossy but Traceable**:
+research/synthesis/FIVE_POINT_FRAMEWORK.md	81	[CURRENT]	- Current State projections summarize state for efficiency; Raw History is preserved separately in append-only format.
+research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md	1	[CURRENT]	# LLM Wiki & Current Knowledge System Architecture
+research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md	3	[CANONICAL]	> **Document Status**: CANONICAL SPECIFICATION
+research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md	21	[CURRENT]	Compilation --> StatePages["Current-State Summaries"]
+research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md	31	[CURRENT]	- Maintain strict separation: Raw History is immutable and append-only; Current Knowledge is compiled and updated.
+research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md	40	[CLAIMED-NOT-EVIDENCED]	- Flag unverified assertions as `UNKNOWN` or `CLAIMED-NOT-EVIDENCED`.
+research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md	45	[CURRENT]	- **Current-State Pages**: High-level summary projections of current system state.
+research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md	49	[SUPERSEDED]	- Mark outdated hypotheses or superseded documents explicitly with `SUPERSEDED` headers and rationale.
+research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md	50	[HISTORICAL]	- Apply correction notes directly to affected pages while preserving historical links.
+research/synthesis/four-layer-one-world-framework.md	2	[SUPERSEDED]	status: SUPERSEDED — SEMANTIC DRIFT
+research/synthesis/four-layer-one-world-framework.md	3	[CURRENT]	reason: LLM Wiki was removed/collapsed into single CURRENT_STATE.md; falsely claimed Current State was lossless; prematurely marked all layers CONFIRM
+research/synthesis/four-layer-one-world-framework.md	4	[SUPERSEDED]	superseded_by: research/synthesis/FIVE_POINT_FRAMEWORK.md
+research/synthesis/four-layer-one-world-framework.md	10	[SUPERSEDED]	epistemic_status: SUPERSEDED
+research/synthesis/four-layer-one-world-framework.md	13	[SUPERSEDED]	# [SUPERSEDED] Four-Layer One-World Framework ("四层一世界")
+research/synthesis/four-layer-one-world-framework.md	15	[SUPERSEDED]	> ⚠️ **NOTICE**: This document has been **SUPERSEDED** due to semantic drift.
+research/synthesis/four-layer-one-world-framework.md	16	[CURRENT]	> It incorrectly collapsed the LLM Wiki concept into a single static `CURRENT_STATE.md` file, falsely claimed Current-State Compilation was lossless, 
+research/synthesis/four-layer-one-world-framework.md	17	[CANONICAL]	> **Canonical Replacement**: [`research/synthesis/FIVE_POINT_FRAMEWORK.md`](FIVE_POINT_FRAMEWORK.md)
+research/synthesis/four-layer-one-world-framework.md	21	[HISTORICAL]	## Historical Draft Text (Preserved for Audit Trail)
+research/synthesis/four-layer-one-world-framework.md	30	[CURRENT]	2. **Current-State Compilation**: Deterministic compilation of system history (Note: Draft incorrectly claimed lossless projection).
+state/CURRENT_PHASE.md	1	[CURRENT]	# Current Operational Phase
+state/CURRENT_PHASE.md	3	[CANONICAL]	> **Notice**: This file is the single canonical source for the current phase identifier, focus, and external audit status. Verdict ratings are maintai
+state/CURRENT_PHASE.md	9	[CURRENT]	- **Current Phase**: `Fail-Closed Verifier & Negative-Fixture Proof / Foundation 0.3.2f`
+state/CURRENT_PHASE.md	10	[CURRENT]	- **Current Focus**: Prove that invalid repository states are mechanically rejected before the read-only World audit.
+state/CURRENT_PHASE.md	11	[PARTIAL]	- **External Audit Status**: `FOUNDATION 0.3.2e PARTIAL PASS — FAIL-CLOSED PROOF REQUIRED`
+state/CURRENT_PHASE.md	16	[CANONICAL]	## Canonical State Links
+state/CURRENT_PHASE.md	18	[CURRENT]	- **Ratified Adjudications & Verdicts**: See [`CURRENT_VERDICT.md`](CURRENT_VERDICT.md)
+state/CURRENT_VERDICT.md	1	[CURRENT]	# Current Ratified Verdicts Register
+state/CURRENT_VERDICT.md	3	[CANONICAL]	> **Notice**: This file is the single canonical source for all ratified adjudications and status ratings. No other file in the repository may maintain
+state/CURRENT_VERDICT.md	7	[CURRENT]	| Item / Subsystem | Current Verdict | Evidence / Source Document | Notes |
+state/CURRENT_VERDICT.md	9	[CONFIRMED]	| **Clean-Room Laboratory Bootstrap** | `CONFIRMED` | [`CHARTER.md`](../CHARTER.md) | Independent repo `JayGarland/nexus-reform-lab` |
+state/CURRENT_VERDICT.md	10	[CONFIRMED]	| **Four-Layer One-World Doctrine** | `CONFIRMED` | [`FIVE_POINT_FRAMEWORK.md`](../research/synthesis/FIVE_POINT_FRAMEWORK.md) | 1 World Substrate + 4
+state/CURRENT_VERDICT.md	11	[CURRENT]	| **LLM Wiki Doctrine** | `CONFIRMED` | [`LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md`](../research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md) | Increme
+state/CURRENT_VERDICT.md	12	[CONFIRMED]	| **Software 3.0 Doctrine** | `CONFIRMED` | [`FIVE_POINT_FRAMEWORK.md`](../research/synthesis/FIVE_POINT_FRAMEWORK.md) | Governed natural language pro
+state/CURRENT_VERDICT.md	13	[CONFIRMED]	| **Controlled AutoResearch Doctrine** | `CONFIRMED` | [`FIVE_POINT_FRAMEWORK.md`](../research/synthesis/FIVE_POINT_FRAMEWORK.md) | Closed-loop metric
+state/CURRENT_VERDICT.md	14	[CONFIRMED]	| **Migration Normalized Payload Fidelity** | `CONFIRMED — 31/31 normalized text equivalence confirmed after deterministic frontmatter handling and ne
+state/CURRENT_VERDICT.md	15	[CONFIRMED]	| **Persistent Memory Skeleton** | `CONFIRMED` | [`MEMORY_MAP.md`](../MEMORY_MAP.md) | File tree skeleton & entry structure built |
+state/CURRENT_VERDICT.md	16	[UNDER REVIEW]	| **State Consistency** | `PARTIAL — state sources align and major verifier rules exist, but fail-closed behavior is awaiting negative-fixture proof.`
+state/CURRENT_VERDICT.md	17	[NOT YET]	| **Repository-wide Persistent Artifact World** | `NOT YET AUDITED` | Repository Hierarchy | Pending read-only World audit |
+state/CURRENT_VERDICT.md	18	[NOT YET]	| **Cold-Start Recoverability** | `NOT YET TESTED` | [`COLD_START_RECOVERY_TEST.md`](../research/audit/COLD_START_RECOVERY_TEST.md) | Pending empirica
+state/CURRENT_VERDICT.md	19	[HISTORICAL]	| **Citation Examination** | `HALTED — HISTORICAL FAILURE / EVIDENCE ONLY` | [`research/examinations/`](../research/examinations/) | Preserved as capa
+state/CURRENT_VERDICT.md	20	[CLAIMED-NOT-EVIDENCED]	| **Operational Process Isolation Claims** | `CLAIMED-NOT-EVIDENCED` | Internal Assertions | Runtime claims lack external system log evidence |
+state/CURRENT_VERDICT.md	21	[WITHHELD]	| **CR-S0 Authorization** | `WITHHELD` | Outside Reviewer Rulings | CR-S0 strictly stopped until authorized |
+state/EXTERNAL_VERDICT_HISTORY.md	3	[CURRENT]	> **Notice**: This file is a historical log of outside reviewer adjudications for past milestones. It is NOT the current working state source. Current
+state/EXTERNAL_VERDICT_HISTORY.md	6	[ACCEPTED]	> 1. A milestone may receive PARTIAL PASS while individual scopes are accepted.
+state/EXTERNAL_VERDICT_HISTORY.md	7	[ACCEPTED]	> 2. Accepted scope does not imply the entire milestone was accepted.
+state/EXTERNAL_VERDICT_HISTORY.md	8	[CURRENT]	> 3. Historical milestone acceptance and current subsystem authority are separate facts.
+state/EXTERNAL_VERDICT_HISTORY.md	12	[CURRENT]	| Milestone | Reviewed Commit | Outside Verdict | Milestone Fully Accepted | Accepted Scope | Rejected / Unconfirmed Scope | Milestone Accepted as Cur
+state/EXTERNAL_VERDICT_HISTORY.md	14	[CONFIRMED]	| **Clean-Room Bootstrap** | `a78709e9bf07c14d46276d60da978bfedaf2f5c4` | `CONFIRMED` | `yes` | Clean-Room Lab Setup, Charter, Invariants, Drive Manif
+state/EXTERNAL_VERDICT_HISTORY.md	15	[CONFIRMED]	| **Doctrine Repair 0.2.1** | `57b5aa59ef0b0285f051de3ce18980bac02cc91e` | `PARTIAL PASS` | `no` | Four-Layer One-World Doctrine, LLM Wiki Doctrine, S
+state/EXTERNAL_VERDICT_HISTORY.md	16	[CONFIRMED]	| **Migration Verification Fix 0.2.2** | `4e7fe457bb25eb5e9d13a8f01f16edb55714e6d5` | `CONFIRMED` | `yes` | 31/31 normalized text equivalence after fr
+state/EXTERNAL_VERDICT_HISTORY.md	17	[CONFIRMED]	| **Foundation 0.3** | `10928fd0284721538aec9b7bd4575f24ed8232cf` | `PARTIAL PASS` | `no` | Persistent Memory Skeleton | Handoff commit closure, State
+state/EXTERNAL_VERDICT_HISTORY.md	18	[PARTIAL]	| **Foundation 0.3.1** | `61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34` | `PARTIAL PASS` | `no` | Consistency Fix Content | 0.3.1 commit self-embedding pe
+state/EXTERNAL_VERDICT_HISTORY.md	19	[REJECTED]	| **Foundation 0.3.1a** | `f0027bcd5d0600b753a9b91b730fa9a46870b261` | `REJECTED` | `no` | None | Entire milestone rejected | `no` | 2026-08-03 | Self
+state/EXTERNAL_VERDICT_HISTORY.md	20	[PARTIAL]	| **Foundation 0.3.2** | `fc209ffd4d7a6046ab75532f2a9c61fd41255ee6` | `PARTIAL PASS` | `no` | State Model Repair | Parent commit SHA & milestone class
+state/EXTERNAL_VERDICT_HISTORY.md	21	[REJECTED]	| **Foundation 0.3.2a** | `03a98d7bf6787f44fa823a18cbf165ceb5aee307` | `REJECTED` | `no` | None | Verifier logic produced a false pass, External verdi
+state/EXTERNAL_VERDICT_HISTORY.md	22	[PARTIAL]	| **Foundation 0.3.2b** | `5ac021c9ae3a362243a2f442316310ff0b065e27` | `PARTIAL PASS` | `no` | Dynamic Parent Lineage Verification | Verdict schema ac
+state/EXTERNAL_VERDICT_HISTORY.md	23	[CONFIRMED]	| **Foundation 0.3.2c** | `8ddabe908e62d748081b587f6fa55a6c87e6db91` | `CONFIRMED FOR REVIEWED SCOPE` | `yes` | Strict 40-character SHA parsing, Exact
+state/EXTERNAL_VERDICT_HISTORY.md	24	[CURRENT]	| **Foundation 0.3.2d** | `295d743d79f391034e98b6565a33b63e1353fb24` | `PARTIAL PASS` | `no` | Current phase transition, State Consistency current ver
+state/EXTERNAL_VERDICT_HISTORY.md	25	[CURRENT]	| **Foundation 0.3.2e** | `31fda2f54a2346e791e63352a236824db9f17ae5` | `PARTIAL PASS` | `no` | Dynamic repository-root resolution, Exact CURRENT_VERDI
+state/EXTERNAL_VERDICT_HISTORY.md	26	[UNDER REVIEW]	| **Foundation 0.3.2f** | `RESOLVE_FROM_GIT` | `UNDER OUTSIDE REVIEW` | `no` | None | Whole milestone under review | `no` | 2026-08-03 | Submitted for
+state/NEXT_ACTION.md	3	[CANONICAL]	> **Notice**: This file is the single canonical source for the single authorized next step and explicit operational prohibitions.
+state/NEXT_ACTION.md	19	[CANONICAL]	5. **DO NOT** modify ratified Canonical Doctrine files (`REVOLUTION.md`, `FIVE_POINT_FRAMEWORK.md`).
+state/STATE_MODEL.md	3	[CANONICAL]	> **Purpose**: Defines canonical single sources of truth and anti-duplication rules for project memory and state management.
+state/STATE_MODEL.md	7	[CANONICAL]	## 1. Single Sources of Truth (Canonical Register)
+state/STATE_MODEL.md	9	[CANONICAL]	| State Domain | Canonical Source | Governance & Read Rule |
+state/STATE_MODEL.md	11	[CURRENT]	| **Current Operational Phase** | [`state/CURRENT_PHASE.md`](CURRENT_PHASE.md) | Single source for active phase, focus, started timestamp, and externa
+state/STATE_MODEL.md	12	[CURRENT]	| **Current Adjudications & Verdicts** | [`state/CURRENT_VERDICT.md`](CURRENT_VERDICT.md) | Sole source for all ratified ratings (`CONFIRMED`, `PARTIA
+state/STATE_MODEL.md	15	[HISTORICAL]	| **Historical Milestone Index** | [`handoff/SESSION_LOG.md`](../handoff/SESSION_LOG.md) | Append-only human-readable index of major milestones. Not a
+state/STATE_MODEL.md	16	[CANONICAL]	| **Re-entry & Session Handoff** | [`handoff/HELLO.md`](../handoff/HELLO.md) | Pointer entrance to canonical state files and last externally reviewed 
+state/STATE_MODEL.md	23	[CANONICAL]	1. **Single Source Rule**: Every dynamic state item MUST have exactly ONE canonical source file. Derived files MUST link to the canonical source, neve
+state/STATE_MODEL.md	25	[CONFIRMED]	3. **No Self-Issued Verdicts**: Status ratings (`CONFIRMED`, `PARTIAL`, `REJECTED`, `WITHHELD`) CANNOT be self-issued or marked complete without expli
+state/STATE_MODEL.md	27	[CANONICAL]	5. **Timestamp Rule**: Newer file timestamps do NOT grant higher authority over ratified canonical doctrine documents.
+state/STATE_MODEL.md	28	[CURRENT]	6. **Raw Evidence vs. Current Truth**: Raw evidence files prove historical provenance; they do NOT automatically override or constitute current state 
+state/STATE_MODEL.md	29	[CURRENT]	7. **Historical Logs vs. Current State**: Historical logs (`SESSION_LOG.md`) document past milestones; current working state is governed exclusively b

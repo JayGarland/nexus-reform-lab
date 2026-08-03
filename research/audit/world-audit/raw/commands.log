@@ -1,0 +1,27 @@
+# COMMANDS.LOG — Command Evidence
+Format: command | working directory | timestamp (UTC) | exit code | stdout | stderr
+
+| # | Command | Working Directory | Timestamp (UTC) | Exit Code | Stdout | Stderr |
+|---|---|---|---|---|---|---|
+| 1 | `git ls-files` | F:\nexus-reform-lab | 2026-08-03T~20:00Z | 0 | raw/git_ls_files.log | none |
+| 2 | `git ls-tree -r HEAD --name-only` | F:\nexus-reform-lab | 2026-08-03T~20:00Z | 0 | raw/tree.log | none |
+| 3 | `git log --oneline -30` ; `git branch -vv` ; `git remote -v` | F:\nexus-reform-lab | 2026-08-03T~20:00Z | 0 | inline | none |
+| 4 | `git rev-parse HEAD` | F:\nexus-reform-lab | 2026-08-03T~20:00Z | 0 | `a2d2434d38b33c67dd3535375621ae9523b6fbd7` | none |
+| 5 | `git branch --show-current` | F:\nexus-reform-lab | 2026-08-03T~20:00Z | 0 | `experiment/fail-closed-verifier-0.3.2f` | none |
+| 6 | `git rev-parse origin/experiment/fail-closed-verifier-0.3.2f` | F:\nexus-reform-lab | 2026-08-03T~20:00Z | 0 | `a2d2434d38b33c67dd3535375621ae9523b6fbd7` (matches HEAD) | none |
+| 7 | `git status --porcelain` | F:\nexus-reform-lab | 2026-08-03T~20:00Z | 0 | `M state/logs/state_consistency_negative_tests.log` (pre-existing), later `?? research/audit/world-audit/` | none |
+| 8 | `git diff -- state/logs/state_consistency_negative_tests.log` | F:\nexus-reform-lab | 2026-08-03T~20:00Z | 0 | timestamp-only diff (19:30:32Z vs 19:30:57Z) | none |
+| 9 | `git show HEAD:state/logs/state_consistency_negative_tests.log` | F:\nexus-reform-lab | 2026-08-03T~20:00Z | 0 | 12/12 negative + 1/1 positive pass, exit 0 | none |
+| 10 | Link checker script (linkcheck2.js) over all 70 tracked .md | F:\nexus-reform-lab | 2026-08-03T~20:05Z | 0 | raw/link_check.log | none |
+| 11 | Orphan detection script (orphancheck.js) | F:\nexus-reform-lab | 2026-08-03T~20:05Z | 0 | raw/orphan_files.log | none |
+| 12 | Authority keyword scan over all tracked .md/.json/.txt | F:\nexus-reform-lab | 2026-08-03T~20:05Z | 0 | raw/authority_claims.log (586 hits) | none |
+| 13 | `rg -l "four-layer-one-world-framework.md"` etc. (superseded ref scan) | F:\nexus-reform-lab | 2026-08-03T~20:10Z | 0 | inline | none |
+| 14 | `rg -n "State Consistency|Persistent Artifact World" state/*.md` | F:\nexus-reform-lab | 2026-08-03T~20:10Z | 0 | inline | none |
+| 15 | Directory existence probe (state/handoff/research/.../protocols/etc.) | F:\nexus-reform-lab | 2026-08-03T~20:00Z | 0 | inline | none |
+| 16 | `git ls-files | Where .md | Measure` | F:\nexus-reform-lab | 2026-08-03T~20:00Z | 0 | 70 markdown files | none |
+
+Notes:
+- No command modified any pre-existing tracked file. The only working-tree change during the audit was the creation of `research/audit/world-audit/` files.
+- `state/logs/state_consistency_negative_tests.log` was already modified (uncommitted, timestamp-only) BEFORE this audit began (observed in the first `git status`).
+- Link check command summary: 70 md scanned; 62 file links OK; 4 directory links OK; 44 broken (all in one HISTORICAL-FAILURE evidence file); 0 broken anchors; 15 external http(s) links.
+- Orphan check summary: 50 md files with zero incoming markdown links (predominantly legacy evidence + fixtures).
