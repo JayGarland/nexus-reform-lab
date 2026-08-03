@@ -13,7 +13,7 @@
 | **Controlled AutoResearch Doctrine** | `CONFIRMED` | [`FIVE_POINT_FRAMEWORK.md`](../research/synthesis/FIVE_POINT_FRAMEWORK.md) | Closed-loop metric evaluation |
 | **Migration Normalized Payload Fidelity** | `CONFIRMED — 31/31 normalized text equivalence confirmed after deterministic frontmatter handling and newline/whitespace normalization. Exact destination payload SHA equality is not claimed.` | [`MIGRATION_GAP_AUDIT.md`](../research/audit/MIGRATION_GAP_AUDIT.md) | `verify_migration.js` exit code 0 |
 | **Persistent Memory Skeleton** | `CONFIRMED` | [`MEMORY_MAP.md`](../MEMORY_MAP.md) | File tree skeleton & entry structure built |
-| **State Consistency** | `PARTIAL — state sources are aligned, but verifier completeness is under repair.` | [`STATE_MODEL.md`](STATE_MODEL.md) | Verifier schema validation regression under repair |
+| **State Consistency** | `PARTIAL — state sources align and major verifier rules exist, but fail-closed behavior is awaiting negative-fixture proof.` | [`STATE_MODEL.md`](STATE_MODEL.md) | Verifier fail-closed behavior & negative fixtures under review |
 | **Repository-wide Persistent Artifact World** | `NOT YET AUDITED` | Repository Hierarchy | Pending read-only World audit |
 | **Cold-Start Recoverability** | `NOT YET TESTED` | [`COLD_START_RECOVERY_TEST.md`](../research/audit/COLD_START_RECOVERY_TEST.md) | Pending empirical cold-start test run |
 | **Citation Examination** | `HALTED — HISTORICAL FAILURE / EVIDENCE ONLY` | [`research/examinations/`](../research/examinations/) | Preserved as capability-boundary evidence |

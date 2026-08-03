@@ -67,5 +67,11 @@
 ### Milestone 0.3.2e: Verdict Verifier Regression Repair 0.3.2e
 - **Date**: 2026-08-03T21:25:00+02:00
 - **Based-on Commit**: `295d743d79f391034e98b6565a33b63e1353fb24`
+- **Resulting Commit**: `31fda2f54a2346e791e63352a236824db9f17ae5`
+- **Actions**: Dynamically resolved repository root via `path.resolve(__dirname, '..')`, implemented row-based `getVerdictRow` parser for `CURRENT_VERDICT.md`, restored full milestone schema checks in `EXTERNAL_VERDICT_HISTORY.md`, verified table headers & 9-column count integrity, enforced 0.3.2a REJECTED and Doctrine 0.2.1 4-scope verifications, and strictly verified `NEXT_ACTION.md`.
+
+### Milestone 0.3.2f: Fail-Closed Verifier & Negative-Fixture Proof 0.3.2f
+- **Date**: 2026-08-03T21:28:00+02:00
+- **Based-on Commit**: `31fda2f54a2346e791e63352a236824db9f17ae5`
 - **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
-- **Actions**: Dynamically resolved repository root via `path.resolve(__dirname, '..')`, implemented row-based `getVerdictRow` parser for `CURRENT_VERDICT.md`, restored full milestone schema checks for `PARTIAL PASS`, `REJECTED`, `CONFIRMED`, `CONFIRMED FOR REVIEWED SCOPE`, and `UNDER OUTSIDE REVIEW` entries in `EXTERNAL_VERDICT_HISTORY.md`, verified table headers & 9-column count integrity, enforced 0.3.2a REJECTED and Doctrine 0.2.1 4-scope verifications, enforced `unresolvedCount === 1` for Foundation 0.3.2e, and strictly verified blockquote text in `NEXT_ACTION.md`.
+- **Actions**: Enforced strict `allowedVerdicts` whitelist, refactored `getVerdictRows` to enforce subject uniqueness in `CURRENT_VERDICT.md`, added strict case-insensitive milestone duplicate detection in `EXTERNAL_VERDICT_HISTORY.md`, refactored verifier into exportable core function `verifyRepository(targetRoot, options)`, created automated test suite `verify_state_consistency_negative_tests.js` executing 12 negative fixtures and 1 positive fixture, and recorded test log to `state_consistency_negative_tests.log`.

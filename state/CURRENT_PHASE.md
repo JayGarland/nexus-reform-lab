@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Verdict Verifier Regression Repair / Foundation 0.3.2e`
-- **Current Focus**: Restore complete milestone-verdict schema validation before repository-wide World audit.
-- **External Audit Status**: `FOUNDATION 0.3.2d PARTIAL PASS — VERIFIER REGRESSION UNDER REPAIR`
-- **Started At**: `2026-08-03T21:25:00+02:00`
+- **Current Phase**: `Fail-Closed Verifier & Negative-Fixture Proof / Foundation 0.3.2f`
+- **Current Focus**: Prove that invalid repository states are mechanically rejected before the read-only World audit.
+- **External Audit Status**: `FOUNDATION 0.3.2e PARTIAL PASS — FAIL-CLOSED PROOF REQUIRED`
+- **Started At**: `2026-08-03T21:28:00+02:00`
 
 ---
 
