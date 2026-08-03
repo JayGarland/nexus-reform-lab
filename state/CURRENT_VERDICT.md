@@ -22,4 +22,5 @@
 | **Cold-Start Recoverability** | `CONFIRMED — fresh-instance semantic recovery passed against repository commit 3fe265d4141b66f362459a65dec1912888d1b74c.` | [`COLD_START_RECOVERY_TEST.md`](../research/audit/COLD_START_RECOVERY_TEST.md) | Read-only fresh-instance Cold-Start Recovery Test verdict CONFIRMED FOR RECOVERY SCOPE |
 | **Citation Examination** | `HALTED — HISTORICAL FAILURE / EVIDENCE ONLY` | [`research/examinations/`](../research/examinations/) | Preserved as capability-boundary evidence |
 | **Operational Process Isolation Claims** | `CLAIMED-NOT-EVIDENCED` | Internal Assertions | Runtime claims lack external system log evidence |
+| **Modularity & Replaceability Doctrine** | `UNDER OUTSIDE REVIEW — proposal only, not canonical and not implemented.` | [`MODULARITY_AND_REPLACEABILITY_PROPOSAL.md`](../research/synthesis/MODULARITY_AND_REPLACEABILITY_PROPOSAL.md) | Foundation 0.5 proposal submitted; no provider implemented |
 | **CR-S0 Authorization** | `WITHHELD` | Outside Reviewer Rulings | CR-S0 strictly stopped until authorized |

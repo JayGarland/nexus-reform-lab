@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Post-Cold-Start Architectural Kernel Definition`
-- **Current Focus**: Formalize the stable Artifact-first and environment-mediated coordination invariants, plus modular replaceability boundaries, before implementing any Four-Layer capability provider.
-- **External Audit Status**: `FRESH-INSTANCE COLD-START RECOVERY CONFIRMED — LEVEL 2 RECOVERABLE PERSISTENT ARTIFACT WORLD ESTABLISHED`
-- **Started At**: `2026-08-03T22:05:00+02:00`
+- **Current Phase**: `Modularity & Replaceability Doctrine Proposal / Foundation 0.5`
+- **Current Focus**: Prepare a bounded Modularity & Replaceability Doctrine proposal defining the stable architectural kernel (Artifact-first persistence + environment-mediated coordination) and five replaceable capability providers, for outside review.
+- **External Audit Status**: `FOUNDATION 0.5 MODULARITY & REPLACEABILITY DOCTRINE PROPOSAL SUBMITTED — UNDER OUTSIDE REVIEW`
+- **Started At**: `2026-08-03T22:10:00+02:00`
 
 ---
 

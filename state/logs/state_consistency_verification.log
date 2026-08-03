@@ -1,23 +1,25 @@
 ================================================================================
 FAIL-CLOSED VERIFIER & STATE CONSISTENCY ENGINE LOG
-Timestamp: 2026-08-03T20:25:29.701Z
+Timestamp: 2026-08-03T20:33:08.758Z
 Target Repository Root: F:\nexus-reform-lab
 Git Resolution Root: F:\nexus-reform-lab
 ================================================================================
 
 [Check 4] CURRENT_PHASE.md Gate-Stage Selection...
-  Current Phase: Post-Cold-Start Architectural Kernel Definition
-  Selected Gate Stage: AFTER_COLD_START_KERNEL_DEFINITION
+  Current Phase: Modularity & Replaceability Doctrine Proposal / Foundation 0.5
+  Selected Gate Stage: MODULARITY_PROPOSAL_UNDER_REVIEW
 
 [Check 1] CURRENT_VERDICT.md Gate-Subject Validation...
   Subject [State Consistency]: Matching Rows Count = 1
-  PASS: Subject [State Consistency] category "CONFIRMED" legal for stage "AFTER_COLD_START_KERNEL_DEFINITION".
+  PASS: Subject [State Consistency] category "CONFIRMED" legal for stage "MODULARITY_PROPOSAL_UNDER_REVIEW".
   Subject [Repository-wide Persistent Artifact World]: Matching Rows Count = 1
-  PASS: Subject [Repository-wide Persistent Artifact World] category "CONFIRMED AT LEVEL 2" legal for stage "AFTER_COLD_START_KERNEL_DEFINITION".
+  PASS: Subject [Repository-wide Persistent Artifact World] category "CONFIRMED AT LEVEL 2" legal for stage "MODULARITY_PROPOSAL_UNDER_REVIEW".
   Subject [Cold-Start Recoverability]: Matching Rows Count = 1
-  PASS: Subject [Cold-Start Recoverability] category "CONFIRMED" legal for stage "AFTER_COLD_START_KERNEL_DEFINITION".
+  PASS: Subject [Cold-Start Recoverability] category "CONFIRMED" legal for stage "MODULARITY_PROPOSAL_UNDER_REVIEW".
   Subject [CR-S0 Authorization]: Matching Rows Count = 1
-  PASS: Subject [CR-S0 Authorization] category "WITHHELD" legal for stage "AFTER_COLD_START_KERNEL_DEFINITION".
+  PASS: Subject [CR-S0 Authorization] category "WITHHELD" legal for stage "MODULARITY_PROPOSAL_UNDER_REVIEW".
+  Subject [Modularity & Replaceability Doctrine]: Matching Rows Count = 1
+  PASS: Subject [Modularity & Replaceability Doctrine] category "UNDER OUTSIDE REVIEW" legal for stage "MODULARITY_PROPOSAL_UNDER_REVIEW".
 
 [Check 2] Dynamic Git parent lineage verification from SESSION_LOG.md...
   Milestone: 0.1: Clean-Room Laboratory Bootstrap & Manifest Repair
@@ -122,6 +124,12 @@ Git Resolution Root: F:\nexus-reform-lab
     Actual Git Parent (~1): 98f17cedfffd6ad8d042d0bcd70fe66a2b13bc78
     Strict 40-Char Equality: YES
   PASS: Strict 40-char parent SHA equality verified.
+  Milestone: 0.4.2: Fresh-Instance Cold-Start Recovery Test — External Evaluation Record
+    Resulting Commit (40-char): d3097e9117167eb81e4b4958acc3a88133fa764b
+    Recorded Based-on (40-char): 3fe265d4141b66f362459a65dec1912888d1b74c
+    Actual Git Parent (~1): 3fe265d4141b66f362459a65dec1912888d1b74c
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
 
 [Check 3] EXTERNAL_VERDICT_HISTORY.md Table Header & Schema Integrity...
   PASS: Table header structure and 9-column layout verified.
@@ -182,18 +190,21 @@ Git Resolution Root: F:\nexus-reform-lab
   Reviewed Commit: 3fe265d4141b66f362459a65dec1912888d1b74c
   Outside Verdict: CONFIRMED FOR RECOVERY SCOPE
   NOTE: Acceptance is bounded to the recovery scope; execution-process claims remain CLAIMED-NOT-EVIDENCED.
-  PASS: No active UNDER OUTSIDE REVIEW entry in released gate phase.
+--- Milestone Schema Check: Foundation 0.5 Modularity & Replaceability Doctrine Proposal ---
+  Reviewed Commit: RESOLVE_FROM_GIT
+  Outside Verdict: UNDER OUTSIDE REVIEW
+  PASS: Active UNDER OUTSIDE REVIEW entry correctly isolated (Foundation 0.5 Modularity & Replaceability Doctrine Proposal).
 
 [Check 5] NEXT_ACTION.md Blockquote Parsing & Strict Validation...
-  Parsed Blockquote Action Text: "Prepare a bounded Modularity & Replaceability Doctrine proposal for outside review. Define Artifact-first persistence and environment-mediated coordination as stable kernel principles, and define the five current capabilities as replaceable providers. Do not implement providers or modify CR-S0."
+  Parsed Blockquote Action Text: "Submit the bounded Modularity & Replaceability Doctrine proposal for outside review. Do not implement any capability provider."
   PASS: NEXT_ACTION.md single authorized action references current phase and contains no forbidden phrases.
 ================================================================================
 Verification Summary:
   Target Repository Root: F:\nexus-reform-lab
   Git Resolution Root: F:\nexus-reform-lab
-  Active Gate Stage: AFTER_COLD_START_KERNEL_DEFINITION
-  Verified History Entries Count: 17
-  Active UNDER OUTSIDE REVIEW Milestone: NONE
+  Active Gate Stage: MODULARITY_PROPOSAL_UNDER_REVIEW
+  Verified History Entries Count: 18
+  Active UNDER OUTSIDE REVIEW Milestone: Foundation 0.5 Modularity & Replaceability Doctrine Proposal
   Total Failures: 0
   Script Exit Code: 0
 ================================================================================

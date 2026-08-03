@@ -8,7 +8,7 @@
 
 - **Latest Externally Confirmed Evaluation**: `Fresh-Instance Cold-Start Recovery Test — CONFIRMED FOR RECOVERY SCOPE` (Reviewed Commit: `3fe265d4141b66f362459a65dec1912888d1b74c`)
 - **Current World Level**: `Level 2 — Recoverable Persistent Artifact World`
-- **Next Authorized Work**: `Modularity & Replaceability Doctrine proposal`
+- **Active Proposal**: `Modularity & Replaceability Doctrine Proposal / Foundation 0.5 — UNDER OUTSIDE REVIEW`
 - **Current Operational Phase**: See [`../state/CURRENT_PHASE.md`](../state/CURRENT_PHASE.md)
 - **Current Ratified Verdicts**: See [`../state/CURRENT_VERDICT.md`](../state/CURRENT_VERDICT.md)
 - **External Verdict History**: See [`../state/EXTERNAL_VERDICT_HISTORY.md`](../state/EXTERNAL_VERDICT_HISTORY.md)
@@ -20,7 +20,7 @@
 ## 2. Session Summary
 - Recorded the box-outside verdict for the Foundation 0.4.2 Fresh-Instance Cold-Start Recovery Test as `CONFIRMED FOR RECOVERY SCOPE` (commit `3fe265d4141b66f362459a65dec1912888d1b74c`).
 - Upgraded Repository-wide Persistent Artifact World to Level 2 `CONFIRMED` and Cold-Start Recoverability to `CONFIRMED`; CR-S0 stays `WITHHELD`.
-- Transitioned [`state/CURRENT_PHASE.md`](../state/CURRENT_PHASE.md) to `Post-Cold-Start Architectural Kernel Definition` and set [`state/NEXT_ACTION.md`](../state/NEXT_ACTION.md) to the Modularity & Replaceability Doctrine proposal.
+- Submitted the Foundation 0.5 Modularity & Replaceability Doctrine proposal: created [`research/synthesis/MODULARITY_AND_REPLACEABILITY_PROPOSAL.md`](../research/synthesis/MODULARITY_AND_REPLACEABILITY_PROPOSAL.md) and [`research/audit/modularity-replaceability/PROPOSAL_AUDIT_CHECKLIST.md`](../research/audit/modularity-replaceability/PROPOSAL_AUDIT_CHECKLIST.md); transitioned [`state/CURRENT_PHASE.md`](../state/CURRENT_PHASE.md) to `Modularity & Replaceability Doctrine Proposal / Foundation 0.5` and set [`state/NEXT_ACTION.md`](../state/NEXT_ACTION.md) to submit the proposal for outside review. No provider implemented.
 
 ---
 

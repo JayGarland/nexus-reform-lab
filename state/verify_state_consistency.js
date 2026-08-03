@@ -26,6 +26,18 @@ const allowedVerdicts = new Set([
 // ---------------------------------------------------------------------------
 const GATE_STAGES = [
   {
+    id: 'MODULARITY_PROPOSAL_UNDER_REVIEW',
+    phaseIncludes: ['modularity', 'replaceability'],
+    actionReference: ['modularity', 'replaceability'],
+    verdicts: {
+      'State Consistency': ['CONFIRMED', 'PARTIAL', 'REJECTED', 'WITHHELD'],
+      'Repository-wide Persistent Artifact World': ['CONFIRMED', 'CONFIRMED AT LEVEL 2'],
+      'Cold-Start Recoverability': ['CONFIRMED'],
+      'CR-S0 Authorization': ['WITHHELD'],
+      'Modularity & Replaceability Doctrine': ['UNDER OUTSIDE REVIEW']
+    }
+  },
+  {
     id: 'AFTER_COLD_START_KERNEL_DEFINITION',
     phaseIncludes: ['post-cold-start'],
     verdicts: {
@@ -422,7 +434,10 @@ function verifyRepository(targetRoot, options = {}) {
         const hasForbidden = forbiddenPhrases.some(p => lower.includes(p));
 
         const phaseToken = extractPhaseToken(phaseValue);
-        const referencesPhase = phaseToken ? lower.includes(phaseToken) : true;
+        let referencesPhase = phaseToken ? lower.includes(phaseToken) : true;
+        if (!referencesPhase && activeStage && Array.isArray(activeStage.actionReference) && activeStage.actionReference.length > 0) {
+          referencesPhase = activeStage.actionReference.every(t => lower.includes(t));
+        }
 
         if (hasForbidden || !referencesPhase) {
           fail(`NEXT_ACTION.md blockquote text invalid: forbidden phrase detected=${hasForbidden}, references current phase=${referencesPhase}`);

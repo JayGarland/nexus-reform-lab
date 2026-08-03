@@ -110,5 +110,11 @@
 - **Date**: 2026-08-03T22:05:00+02:00
 - **Evaluation Type**: Box-outside external adjudication (read-only fresh-instance cold-start recovery test)
 - **Based-on Commit**: `3fe265d4141b66f362459a65dec1912888d1b74c`
-- **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
+- **Resulting Commit**: `d3097e9117167eb81e4b4958acc3a88133fa764b`
 - **Actions**: Recorded the box-outside verdict for the Foundation 0.4.2 Fresh-Instance Cold-Start Recovery Test as `CONFIRMED FOR RECOVERY SCOPE` in `EXTERNAL_VERDICT_HISTORY.md`; upgraded Repository-wide Persistent Artifact World to Level 2 `CONFIRMED` and Cold-Start Recoverability to `CONFIRMED` in `CURRENT_VERDICT.md`; transitioned `CURRENT_PHASE.md` to `Post-Cold-Start Architectural Kernel Definition`; set `NEXT_ACTION.md` to the Modularity & Replaceability Doctrine proposal; updated `HELLO.md` pointers; closed the prior reading-sequence patch lineage to `3fe265d4141b66f362459a65dec1912888d1b74c`. The cold-start test-output chat is an external evaluation record, not itself a Git commit; execution-process claims remain `CLAIMED-NOT-EVIDENCED`.
+
+### Milestone 0.5: Modularity & Replaceability Doctrine Proposal — Submitted for Outside Review
+- **Date**: 2026-08-03T22:10:00+02:00
+- **Based-on Commit**: `d3097e9117167eb81e4b4958acc3a88133fa764b`
+- **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
+- **Actions**: Closed the Foundation 0.4.2 external evaluation record lineage to `d3097e9117167eb81e4b4958acc3a88133fa764b`. Created `research/synthesis/MODULARITY_AND_REPLACEABILITY_PROPOSAL.md` (proposal-only; 10 sections: Problem Statement, Stable Kernel, Replaceable Providers, Provider Contract, Replacement Lifecycle, Box-In / Box-Outside Boundary, Model-Neutrality Rule, Migration and Rollback, Open Questions, Non-Goals) and `research/audit/modularity-replaceability/PROPOSAL_AUDIT_CHECKLIST.md`. Recorded Foundation 0.5 as active `UNDER OUTSIDE REVIEW` in `EXTERNAL_VERDICT_HISTORY.md`. Updated `CURRENT_PHASE.md` (Modularity & Replaceability Doctrine Proposal / Foundation 0.5), `CURRENT_VERDICT.md` (Modularity & Replaceability Doctrine UNDER OUTSIDE REVIEW — proposal only, not canonical, not implemented), and `NEXT_ACTION.md` (submit proposal; do not implement any capability provider). No provider implemented; CR-S0 remains WITHHELD. Production verifier exit code 0; negative fixtures 12/12; positive fixture 1/1.
