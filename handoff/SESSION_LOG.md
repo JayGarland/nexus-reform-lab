@@ -122,5 +122,12 @@
 ### Milestone 0.5.1: Modularity & Replaceability Doctrine Ratification — Write-Back Submitted
 - **Date**: 2026-08-03T22:15:00+02:00
 - **Based-on Commit**: `0f32f5f6aa721ac74711fe917a135504cf994995`
-- **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
+- **Resulting Commit**: `715a6d5f96eaae44ec4822630e8a053e4344a14c`
 - **Actions**: Closed Foundation 0.5 as `CONFIRMED FOR DOCTRINE SCOPE` (commit `0f32f5f6aa721ac74711fe917a135504cf994995`) in `EXTERNAL_VERDICT_HISTORY.md` and added Foundation 0.5.1 as active `UNDER OUTSIDE REVIEW`. Created `research/synthesis/MODULARITY_AND_REPLACEABILITY_DOCTRINE.md` as canonical Doctrine (Stable Kernel; five replaceable Provider slots; Provider Contract; replacement lifecycle; model-neutrality rule; Box-In / Box-Outside boundary; does not supersede `FIVE_POINT_FRAMEWORK.md`). Fixed the Box-In boundary wording in `MODULARITY_AND_REPLACEABILITY_PROPOSAL.md` (Agent-readable ≠ Agent-modifiable ≠ Agent-ratifiable) and filled `PROPOSAL_AUDIT_CHECKLIST.md` (7/7 PASS). Updated `CURRENT_PHASE.md` (Modularity & Replaceability Doctrine Ratification / Foundation 0.5.1), `CURRENT_VERDICT.md` (Modularity & Replaceability Doctrine CONFIRMED), `NEXT_ACTION.md` (submit ratification write-back), `HELLO.md`, and `MEMORY_MAP.md`. No Provider implemented; CR-S0 remains WITHHELD. Production verifier exit code 0; negative fixtures 12/12; positive fixture 1/1.
+
+### Milestone Adjudication: Foundation 0.5.1 Final Acceptance Write-Back
+- **Date**: 2026-08-03T22:20:00+02:00
+- **Evaluation Type**: Box-outside final adjudication write-back
+- **Based-on Commit**: `715a6d5f96eaae44ec4822630e8a053e4344a14c`
+- **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
+- **Actions**: Closed Foundation 0.5.1 as `CONFIRMED FOR REVIEWED SCOPE` (commit `715a6d5f96eaae44ec4822630e8a053e4344a14c`) in `EXTERNAL_VERDICT_HISTORY.md`; no new `UNDER OUTSIDE REVIEW` entry created. Updated `CURRENT_PHASE.md` (Prior-Art Discovery & Provider Boundary Investigation), `NEXT_ACTION.md` (prepare bounded Prior-Art Discovery plan only), and `HELLO.md` pointers; removed the Active Ratification `UNDER OUTSIDE REVIEW` wording. Doctrine content unchanged; no Provider implemented or selected; CR-S0 remains WITHHELD. Production verifier exit code 0; negative fixtures 12/12; positive fixture 1/1.

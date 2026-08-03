@@ -6,14 +6,16 @@
 
 ## Single Authorized Action
 
-> Submit Foundation 0.5.1 Doctrine ratification write-back for outside review. Do not implement or select any capability Provider.
+> Prepare a bounded Prior-Art Discovery plan that maps existing candidate wheels to the five replaceable Provider capability boundaries. The plan must define evidence requirements and comparison criteria only. Do not select, install, implement, adapt, or bind any Provider.
 
 ---
 
 ## Prohibited Next Actions
 
-1. **DO NOT** implement or select any capability Provider (Coordination, Knowledge Projection, Protocol Governance, Experiment / Evaluation, or Runtime / Re-entry).
-2. **DO NOT** modify, execute, or attempt to authorize `CR-S0`.
-3. **DO NOT** launch background daemons, runners, compilers, OpenClaw, services, or subagents.
-4. **DO NOT** treat the Stable Kernel as self-amendable by box-in agents, or lower migration, rollback, evidence, or safety gates.
-5. **DO NOT** claim execution-process behavior as externally confirmed; such claims remain `CLAIMED-NOT-EVIDENCED`.
+1. **DO NOT** implement any capability Provider.
+2. **DO NOT** select a final wheel for any capability slot.
+3. **DO NOT** write, install, or bind any Adapter.
+4. **DO NOT** run, modify, or attempt to authorize `CR-S0`.
+5. **DO NOT** launch background agents, OpenClaw, runners, compilers, services, or subagents.
+6. **DO NOT** modify the official Nexus.
+7. **DO NOT** change the Stable Kernel or Provider Contract based on Gemini, DeepSeek, or any other model profile.

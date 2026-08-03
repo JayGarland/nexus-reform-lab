@@ -38,6 +38,17 @@ const GATE_STAGES = [
     }
   },
   {
+    id: 'PRIOR_ART_DISCOVERY',
+    phaseIncludes: ['prior-art'],
+    verdicts: {
+      'State Consistency': ['CONFIRMED', 'PARTIAL', 'REJECTED', 'WITHHELD'],
+      'Repository-wide Persistent Artifact World': ['CONFIRMED', 'CONFIRMED AT LEVEL 2'],
+      'Cold-Start Recoverability': ['CONFIRMED'],
+      'CR-S0 Authorization': ['WITHHELD'],
+      'Modularity & Replaceability Doctrine': ['CONFIRMED']
+    }
+  },
+  {
     id: 'MODULARITY_PROPOSAL_UNDER_REVIEW',
     phaseIncludes: ['modularity', 'replaceability'],
     actionReference: ['modularity', 'replaceability'],
