@@ -1,6 +1,6 @@
 # Nexus Reform Lab Invariants
 
-> **Status**: RATIFIED (Clean-Room Bootstrap)  
+> **Status**: RATIFIED (Clean-Room Bootstrap Patch 0.1)  
 > **Scope**: Nexus Reform Laboratory Architecture & Governance Invariants  
 
 ---
@@ -8,12 +8,14 @@
 ## 1. Substrate & Execution Invariants
 
 1. **Persistent Artifact Substrate**:
-   - Files and Markdown artifacts are the sole persistent substrate for state, memory, and coordination.
+   - Filesystem artifacts are the canonical persistent substrate.
+   - Markdown is the preferred human-readable state format.
+   - Operator-side databases and indexes are derived or replaceable state unless an explicit protocol promotes them to canonical Artifact status.
    - Transient agent context windows or LLM memory do not constitute system state.
 
 2. **Four-Layer One-World Architecture ("四层一世界")**:
    - **Stigmergy**: Environment-mediated stigmergic coordination via persistent state changes.
-   - **Current-State Compilation**: Lossless projection and deterministic compilation of world state.
+   - **Current-State Compilation**: Current-State Compilation is a deterministic, provenance-preserving projection of current truth. It is not required to be lossless. Lossless historical evidence remains separately preserved in immutable or append-only Raw History artifacts. Current State and Raw History MUST NOT be merged into the same file.
    - **Software 3.0 Protocol Governance**: Declarative specification over hardcoded control flows.
    - **Controlled AutoResearch**: Hypothesis testing, evaluation, and empirical verification.
    - **Persistent Artifact World Runtime**: The unified environment in which the four layers operate.
@@ -45,4 +47,4 @@
 
 7. **Dual-Storage Manifest Rule (GitHub + Google Drive)**:
    - Git tracks all code, artifacts, specifications, logs, and evaluation reports.
-   - Heavy media assets (videos, large archives, raw traces) placed in Google Drive MUST be registered in `external-artifacts/drive-manifest.json` with file ID, SHA-256 hash, purpose, and associated commit SHA.
+   - Heavy media assets (videos, large archives, raw traces) placed in Google Drive MUST be descendants of the `ChatGPT-Bridge` root folder (`1CdkiOeZNsQ9HAMXXbZHSjMi_oUuRvKf2`) and MUST be registered in `external-artifacts/drive-manifest.json` with file ID, SHA-256 hash, purpose, and associated commit SHA.

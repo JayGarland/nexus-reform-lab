@@ -1,7 +1,11 @@
-[
-  {
-    "$schema_version": "1.0",
-    "description": "Registry for large external attachments stored in Google Drive associated with git commits.",
-    "entries": []
-  }
-]
+{
+  "$schema_version": "1.1",
+  "drive_root": {
+    "folder_name": "ChatGPT-Bridge",
+    "folder_id": "1CdkiOeZNsQ9HAMXXbZHSjMi_oUuRvKf2",
+    "local_sync_path": "G:\\My Drive\\ChatGPT-Bridge",
+    "canonical_identity": "folder_id",
+    "policy": "All Google Drive artifacts for this laboratory must be descendants of this folder."
+  },
+  "entries": []
+}
