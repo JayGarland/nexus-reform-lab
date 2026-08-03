@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Modularity & Replaceability Doctrine Proposal / Foundation 0.5`
-- **Current Focus**: Prepare a bounded Modularity & Replaceability Doctrine proposal defining the stable architectural kernel (Artifact-first persistence + environment-mediated coordination) and five replaceable capability providers, for outside review.
-- **External Audit Status**: `FOUNDATION 0.5 MODULARITY & REPLACEABILITY DOCTRINE PROPOSAL SUBMITTED — UNDER OUTSIDE REVIEW`
-- **Started At**: `2026-08-03T22:10:00+02:00`
+- **Current Phase**: `Modularity & Replaceability Doctrine Ratification / Foundation 0.5.1`
+- **Current Focus**: Extract the externally accepted modularity proposal into bounded canonical Doctrine without implementing any Provider.
+- **External Audit Status**: `FOUNDATION 0.5 CONFIRMED FOR DOCTRINE SCOPE`
+- **Started At**: `2026-08-03T22:15:00+02:00`
 
 ---
 

@@ -34,6 +34,7 @@
 - [`REVOLUTION.md`](REVOLUTION.md): Foundational manifesto terminating letter-centric governance.
 - [`research/synthesis/FIVE_POINT_FRAMEWORK.md`](research/synthesis/FIVE_POINT_FRAMEWORK.md): **Sole Canonical Specification** of One World Substrate + 4 Orthogonal Layers.
 - [`research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md`](research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md): Specification for incremental knowledge compilation.
+- [`research/synthesis/MODULARITY_AND_REPLACEABILITY_DOCTRINE.md`](research/synthesis/MODULARITY_AND_REPLACEABILITY_DOCTRINE.md): Canonical Doctrine governing Stable Kernel, Provider replaceability, Replacement lifecycle, Model neutrality, and outside-controlled architecture change.
 - [`CHARTER.md`](CHARTER.md): Clean-room lab operating charter.
 - [`INVARIANTS.md`](INVARIANTS.md): Immutable safety boundaries and non-negotiable rules.
 

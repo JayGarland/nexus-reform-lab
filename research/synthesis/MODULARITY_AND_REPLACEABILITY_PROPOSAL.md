@@ -161,7 +161,18 @@ The Replacement Gate MUST answer all of the following:
 
 ## 6. Box-In / Box-Outside Boundary
 
-### Box-In Canonical Architecture (inside an agent's authority)
+### Box-In Canonical Architecture
+Visible to box-in agents; mutation and ratification remain outside-controlled.
+
+Box-In Canonical Architecture is visible to agents, but it is NOT authority that agents may modify or ratify on their own. The following must be kept distinct:
+
+```text
+Agent-readable
+≠
+Agent-modifiable
+≠
+Agent-ratifiable
+```
 
 Inside the box, the architecture MAY hold:
 
@@ -190,9 +201,10 @@ Write-back authorization
 **In-box AI MUST NOT**:
 
 - modify the Stable Kernel on its own;
+- approve a Kernel amendment on its own;
 - approve a Provider replacement on its own;
-- declare that a new architecture is better than the old one;
-- lower migration, rollback, or safety gates on its own.
+- lower migration, rollback, evidence, or safety gates on its own;
+- declare that a new architecture has already superseded the old one.
 
 ---
 
