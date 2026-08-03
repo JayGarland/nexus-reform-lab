@@ -1,0 +1,7 @@
+[
+  {
+    "$schema_version": "1.0",
+    "description": "Registry for large external attachments stored in Google Drive associated with git commits.",
+    "entries": []
+  }
+]
