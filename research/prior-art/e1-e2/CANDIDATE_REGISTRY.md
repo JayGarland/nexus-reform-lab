@@ -13,7 +13,7 @@
 | KurrentDB (EventStoreDB) | Knowledge Projection | E2 | `PARTIAL FIT` | github.com/kurrent-io/KurrentDB | Event-native store with streaming engine; projection lineage; evidence-grade raw events | E2 projections docs; E3; export/import |
 | Marten | Knowledge Projection | E2 | `PARTIAL FIT` — adjacent projection substrate | github.com/JasperFx/marten | Event-store / deterministic read-model projection infrastructure; adjacent to LLM-maintained wiki capability | E3 (if ever re-entered as bottom projection); LLM-wiki capability must come from a Current-Knowledge compiler |
 | karpathy llm-wiki | Knowledge Projection | E1 | `PARTIAL FIT` — pattern / idea file | gist.github.com/karpathy/442a6bf555914893e9891c11519de94f (llm-wiki.md, read in this pass) | Andrej Karpathy — LLM Wiki pattern; designed to be copied to a coding agent for implementation; not a packaged software product | Compare implementations (Astro-Han, SamurAIGPT, ussumant, atomicstrata, base-llm-wiki) before any E3 |
-| base-llm-wiki (local) | Knowledge Projection | E1 | `PROMISING` (preliminary) | local `F:\subwikis\base-llm-wiki` — LOCAL INSPECTION CLAIMED-NOT-EVIDENCED; remote repo has no captured local source snapshot, file excerpts, manifest, hashes, or raw inspection log | Existing local in-house LLM-wiki pattern instantiation (claimed); E1 records local project identity and claimed structure only | Produce a bounded, non-secret local inspection artifact (path, manifest, SHA-256, excerpts, secret screening, command+timestamp, findings) for outside review before E2 |
+| base-llm-wiki (local) | Knowledge Projection | E2 | `PROMISING` | local `F:\subwikis\base-llm-wiki` — architecture evidence committed at `research/prior-art/e1-e2/local-base-llm-wiki/` (manifest, hashes, bounded excerpts, commands, secret screening, findings) | Existing local in-house LLM-wiki pattern instantiation; raw/ immutable, wiki/ LLM-maintained, no external tooling | Runtime behavior / semantic compilation quality / raw-source coverage / incremental update correctness NOT YET VERIFIED; E3 not authorized |
 | Astro-Han/karpathy-llm-wiki | Knowledge Projection | E2 | `PROMISING` | github.com/Astro-Han/karpathy-llm-wiki | Agent Skills-compatible LLM wiki skill; raw/ + wiki/ + index.md + log.md; ingest/query/lint; no MCP or vector DB | E1/E2 comparison vs other LLM-wiki candidates; outside review before any E3 |
 | SamurAIGPT/llm-wiki-agent | Knowledge Projection | E2 | `PROMISING` | github.com/SamurAIGPT/llm-wiki-agent | Coding agent skill; entities/concepts/syntheses pages; graph.json/html; contradiction flags at ingest; multi-format ingest (markitdown) | E1/E2 comparison; assess optional Python conversion deps before E3 |
 | ussumant/llm-wiki-compiler | Knowledge Projection | E2 | `PROMISING` | github.com/ussumant/llm-wiki-compiler | Claude Code/Codex plugin; incremental /wiki-compile; schema.md; coverage indicators; opt-in macOS launchd autostart for /fetch-bookmarks schedule | E1/E2 comparison; assess autostart/background-job surface before any E3 |
@@ -32,14 +32,14 @@
 
 - Candidates registered: 20
 - Reached at least E1: 20
-- Reached E2: 17
+- Reached E2: 18
 - E0: 0
 - INSUFFICIENT EVIDENCE: 0
 - ARCHITECTURAL REFERENCE ONLY: 1
 - Selected or bound: 0
 
-> Arithmetic (registry-internal): registered 20 = E0 0 + E1-only 3 + E2 17; at-least-E1 20 = E1-only 3 + E2 17.
-> Note: base-llm-wiki downgraded E2 → E1 (LOCAL INSPECTION CLAIMED-NOT-EVIDENCED); karpathy llm-wiki E1 (pattern gist inspected); Marten PARTIAL FIT (adjacent projection substrate), E2 retained.
+> Arithmetic (registry-internal): registered 20 = E0 0 + E1-only 2 + E2 18; at-least-E1 20 = E1-only 2 + E2 18.
+> Note: base-llm-wiki upgraded E1 → E2 (bounded local source/artifact architecture inspected; evidence committed and outside-reviewed); karpathy llm-wiki E1 (pattern gist inspected); Marten PARTIAL FIT (adjacent projection substrate), E2 retained.
 
 ---
 

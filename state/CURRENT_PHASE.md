@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Knowledge Projection Provider Dedicated Comparison / Foundation 0.9`
-- **Current Focus**: Compare the Karpathy LLM Wiki pattern and five LLM-wiki implementation candidates (E1/E2) and capture bounded local evidence for base-llm-wiki.
-- **External Audit Status**: `FOUNDATION 0.8 CONFIRMED FOR QUEUE-STRUCTURE AND EVIDENCE-BOUNDARY SCOPE — KNOWLEDGE COMPARISON AUTHORIZED`
-- **Started At**: `2026-08-03T23:30:00+02:00`
+- **Current Phase**: `Astro-Han Knowledge Provider E3 Probe / Foundation 1.0`
+- **Current Focus**: Execute one isolated upstream-native E3 Probe of Astro-Han/karpathy-llm-wiki.
+- **External Audit Status**: `FOUNDATION 0.9 CONFIRMED FOR E1/E2 COMPARISON SCOPE — ONE KNOWLEDGE E3 PROBE AUTHORIZED`
+- **Started At**: `2026-08-03T23:41:00+02:00`
 
 ---
 

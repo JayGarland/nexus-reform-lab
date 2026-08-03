@@ -1,0 +1,10 @@
+.\SKILL.md
+.\fixtures\source-a.md
+.\fixtures\source-b.md
+.\references\archive-template.md
+.\references\article-template.md
+.\references\index-template.md
+.\references\raw-template.md
+.\scripts\check_evidence.py
+.\wiki\index.md
+.\wiki\log.md

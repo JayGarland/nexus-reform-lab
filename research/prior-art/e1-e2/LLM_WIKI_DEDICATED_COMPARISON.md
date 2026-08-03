@@ -2,7 +2,7 @@
 
 > **Status**: UNDER OUTSIDE REVIEW (Foundation 0.9)
 > **Scope**: E1/E2 evidence comparison of the Karpathy LLM Wiki pattern and five candidates. No candidate installed, run, selected, or executed.
-> **Comparison objects**: Karpathy original LLM Wiki pattern (canonical reference, NOT an executable candidate), Astro-Han/karpathy-llm-wiki, SamurAIGPT/llm-wiki-agent, ussumant/llm-wiki-compiler, atomicstrata/llm-wiki-compiler, local base-llm-wiki (E1 / LOCAL INSPECTION CLAIMED-NOT-EVIDENCED; bounded evidence artifact captured this round).
+> **Comparison objects**: Karpathy original LLM Wiki pattern (canonical reference, NOT an executable candidate), Astro-Han/karpathy-llm-wiki, SamurAIGPT/llm-wiki-agent, ussumant/llm-wiki-compiler, atomicstrata/llm-wiki-compiler, local base-llm-wiki (E2 — bounded local source/artifact architecture inspected; evidence committed at `local-base-llm-wiki/`).
 
 ---
 
@@ -54,7 +54,7 @@ Cross-Provider coupling:
 
 ## 3. Answers to the Mandatory Questions
 
-1. **Most Artifact-first**: `base-llm-wiki` (local) and `Astro-Han/karpathy-llm-wiki` — pure raw/ → wiki/ Markdown with index + log, no server/DB/autostart. Astro-Han is the leanest public implementation. (base-llm-wiki is E1 / CLAIMED-NOT-EVIDENCED pending artifact review.)
+1. **Most Artifact-first**: `base-llm-wiki` (local) and `Astro-Han/karpathy-llm-wiki` — pure raw/ → wiki/ Markdown with index + log, no server/DB/autostart. Astro-Han is the leanest public implementation. (base-llm-wiki is E2 — architecture inspected; runtime not yet verified.)
 2. **Most model-neutral**: `base-llm-wiki` (model-agnostic AGENTS.md) and `Astro-Han` (agent-agnostic skill). atomicstrata is provider-portable but still LLM-dependent by design.
 3. **Strongest provenance**: `atomicstrata/llm-wiki-compiler` — claim-level citations with source line ranges, hash-pinned artifacts, review gates, OKF provenance, citation-coverage eval.
 4. **Heaviest coupling**: `atomicstrata/llm-wiki-compiler` — MCP server + SDK + Configurable Lifecycle Profiles + template/tap ecosystem + provider credentials + eval/lint gates. `ussumant` second (plugin + optional launchd autostart + Node dependency).
@@ -65,8 +65,8 @@ Cross-Provider coupling:
 
 ## 4. E3 Recommendation Boundary
 
-- Maximum one public implementation is PROPOSED FOR E3: `Astro-Han/karpathy-llm-wiki`.
-- Local control candidate: `base-llm-wiki` — enters E3 consideration only after outside review of `research/prior-art/e1-e2/local-base-llm-wiki/`.
+- Maximum one public implementation was PROPOSED FOR E3: `Astro-Han/karpathy-llm-wiki`. Its isolated upstream-native E3 probe was subsequently authorized and executed (Foundation 1.0; see `research/probes/e3/astro-han-llm-wiki/`).
+- Local control candidate: `base-llm-wiki` — E2 (architecture inspected); NOT promoted to E3.
 - If evidence is insufficient, the Knowledge slot remains empty.
 - Forbidden labels not used: `ADOPT`, `KEEP`, `SELECTED`, `BOUND`, `IMPLEMENTED`.
 
@@ -79,7 +79,7 @@ Cross-Provider coupling:
 | SamurAIGPT/llm-wiki-agent | `PROMISING` |
 | ussumant/llm-wiki-compiler | `PROMISING` |
 | atomicstrata/llm-wiki-compiler | `PROMISING` (heavy; high-capability reference) |
-| base-llm-wiki (local) | `PROMISING` (preliminary; E1 / CLAIMED-NOT-EVIDENCED) |
+| base-llm-wiki (local) | `PROMISING` (E2 — architecture inspected; runtime NOT YET VERIFIED) |
 
 ---
 

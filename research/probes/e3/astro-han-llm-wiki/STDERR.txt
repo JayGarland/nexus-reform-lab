@@ -1,0 +1,9 @@
+# stderr — Astro-Han E3
+
+The upstream lint script (`scripts/check_evidence.py`) produced NO stderr output.
+
+```
+(empty)
+```
+
+Full file: `RAW_OUTPUT/lint_stderr.txt` (0 bytes).

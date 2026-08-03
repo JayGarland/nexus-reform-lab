@@ -31,7 +31,7 @@
 | KurrentDB | E2 | yes | export NOT VERIFIED | yes |
 | Marten | E2 | yes | partial | yes |
 | karpathy llm-wiki | E1 (gist read) | yes | n/a | yes (pattern file; implementations are the candidates) |
-| base-llm-wiki | E1 (local identity + claimed structure; LOCAL INSPECTION CLAIMED-NOT-EVIDENCED) | yes | n/a | yes (E2 requires outside-reviewed local inspection artifact) |
+| base-llm-wiki | E2 (bounded local source/artifact architecture inspected; committed evidence) | yes | n/a | yes (runtime/semantic/incremental NOT VERIFIED; no E3) |
 | Astro-Han/karpathy-llm-wiki | E2 | yes | partial | yes |
 | SamurAIGPT/llm-wiki-agent | E2 | yes | partial | yes |
 | ussumant/llm-wiki-compiler | E2 | yes | partial | yes (autostart surface flagged for assessment) |
@@ -51,14 +51,14 @@
 ## Evidence-Level Summary (consistent with Registry)
 
 ```text
-E2:            17
-E1 only:       3   (karpathy llm-wiki gist, base-llm-wiki, Oso)
+E2:            18
+E1 only:       2   (karpathy llm-wiki gist, Oso)
 E0:            0
 Reached at least E1: 20
 Registered:    20
 ```
 
-> Updated under the Foundation 0.8 local evidence boundary correction: base-llm-wiki downgraded E2 → E1 (LOCAL INSPECTION CLAIMED-NOT-EVIDENCED — remote repo has no captured local source snapshot, file excerpts, manifest, hashes, or raw inspection log); karpathy llm-wiki E1 (pattern gist inspected); four public LLM-wiki implementation candidates E2; Marten PARTIAL FIT (adjacent deterministic projection substrate), E2 retained.
+> Updated under Foundation 1.0: base-llm-wiki upgraded E1 → E2 (bounded local source/artifact architecture inspected; evidence committed at `research/prior-art/e1-e2/local-base-llm-wiki/` and outside-reviewed for architecture). Registry arithmetic 20 = 0 + 2 + 18; at-least-E1 20 = 2 + 18.
 
 ---
 

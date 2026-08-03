@@ -12,7 +12,8 @@ const allowedVerdicts = new Set([
   'CONFIRMED FOR DOCTRINE SCOPE',
   'CONFIRMED FOR PLANNING SCOPE',
   'CONFIRMED FOR E1/E2 SURVEY SCOPE',
-  'CONFIRMED FOR QUEUE-STRUCTURE AND EVIDENCE-BOUNDARY SCOPE'
+  'CONFIRMED FOR QUEUE-STRUCTURE AND EVIDENCE-BOUNDARY SCOPE',
+  'CONFIRMED FOR E1/E2 COMPARISON SCOPE'
 ]);
 
 // ---------------------------------------------------------------------------
@@ -29,6 +30,24 @@ const allowedVerdicts = new Set([
 // "AUTHORIZED", "NOT YET AUDITED" => "NOT YET AUDITED").
 // ---------------------------------------------------------------------------
 const GATE_STAGES = [
+  {
+    id: 'ASTRO_HAN_KNOWLEDGE_E3',
+    phaseIncludes: ['astro-han'],
+    actionReference: ['astro-han', 'e3'],
+    verdicts: {
+      'State Consistency': ['CONFIRMED', 'PARTIAL', 'REJECTED', 'WITHHELD'],
+      'Repository-wide Persistent Artifact World': ['CONFIRMED', 'CONFIRMED AT LEVEL 2'],
+      'Cold-Start Recoverability': ['CONFIRMED'],
+      'CR-S0 Authorization': ['WITHHELD'],
+      'Modularity & Replaceability Doctrine': ['CONFIRMED'],
+      'Prior-Art Discovery Plan': ['CONFIRMED FOR PLANNING SCOPE'],
+      'Prior-Art E1/E2 Survey': ['CONFIRMED FOR E1/E2 SURVEY SCOPE'],
+      'E3 Probe Queue': ['UNDER OUTSIDE REVIEW'],
+      'Knowledge Projection Provider Comparison': ['CONFIRMED FOR E1/E2 COMPARISON SCOPE'],
+      'Astro-Han Knowledge E3': ['AUTHORIZED'],
+      'base-llm-wiki': ['E2']
+    }
+  },
   {
     id: 'KNOWLEDGE_PROVIDER_COMPARISON',
     phaseIncludes: ['knowledge'],
@@ -460,6 +479,11 @@ function verifyRepository(targetRoot, options = {}) {
         rawLogs.push(`  NOTE: Acceptance is bounded to queue structure and evidence boundary; Knowledge-slot selection remains open.`);
         if (fullyAccepted !== 'no' || currentAuthority !== 'no' || acceptedScope === 'None' || rejectedScope === 'None') {
           fail(`CONFIRMED FOR QUEUE-STRUCTURE AND EVIDENCE-BOUNDARY SCOPE schema rules violated for milestone "${rawMilestone}"!`);
+        }
+      } else if (verdict === 'CONFIRMED FOR E1/E2 COMPARISON SCOPE') {
+        rawLogs.push(`  NOTE: Acceptance is bounded to the E1/E2 comparison scope; runtime behavior and provider selection remain unconfirmed.`);
+        if (fullyAccepted !== 'yes' || currentAuthority !== 'yes' || acceptedScope === 'None' || rejectedScope === 'None') {
+          fail(`CONFIRMED FOR E1/E2 COMPARISON SCOPE schema rules violated for milestone "${rawMilestone}"!`);
         }
       }
 

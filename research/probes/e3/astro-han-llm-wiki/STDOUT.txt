@@ -1,0 +1,27 @@
+# Evidence check (upstream scripts/check_evidence.py) — stdout
+
+Command:
+```
+python F:\nexus-probes\knowledge\astro-han-e3\work\scripts\check_evidence.py F:\nexus-probes\knowledge\astro-han-e3\work
+```
+
+Exit code: 0
+
+```
+# Evidence check
+
+## Fidelity suspects
+
+(none)
+
+## Evidence errors
+(none)
+
+## Unreferenced raw files
+(none)
+
+## Summary
+0 fidelity suspect(s), 0 evidence error(s), 0 unreferenced raw file(s)
+```
+
+This is the primary program output of the probe's native operation. The full file is in `RAW_OUTPUT/lint_stdout.txt`.

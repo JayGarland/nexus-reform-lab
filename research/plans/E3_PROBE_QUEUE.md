@@ -47,7 +47,7 @@ Marten            — adjacent Deterministic State Projection substrate; not an 
 | Probe 1 | Beads | Coordination | Narrow scope: dependency graph, ready/claim/close; small-wheel; low risk of pulling a full workflow runtime into Nexus (E2 `PROMISING`). | Narrowest Coordination candidate; earliest to prove install + native claim/ready cycle. |
 | Probe 2 | OPA | Protocol Governance | Single Go binary, no server needed for E3; `opa eval` / `opa test`; fail-closed and decision-trace semantics (E2 `PROMISING`). | Cleanest policy-loading + decision + trace proof; no credentials required. |
 | Probe 3 | DVC | Experiment / Evaluation | Local Git-native experiment runner with `dvc exp run` / metrics; no cloud account or paid credentials (E2 `PROMISING`). | Proves fixed-workload replay + metric comparison with the smallest footprint; promptfoo/MLflow deferred. |
-| Probe 4 | (EMPTY) | Knowledge Projection | Left empty. The four public LLM-wiki implementations (Astro-Han, SamurAIGPT, ussumant, atomicstrata) are E2 but have not yet received a dedicated outside comparison verdict. Local base-llm-wiki remains E1 / CLAIMED-NOT-EVIDENCED. Marten is Deterministic State Projection (adjacent substrate), NOT an LLM Current-Knowledge compiler. | A Knowledge-slot E3 candidate is selected ONLY after an outside comparison verdict on the four public LLM-wiki implementations. |
+| Probe 4 | Astro-Han/karpathy-llm-wiki | Knowledge Projection | Smallest public LLM-wiki implementation; file-first, no server/DB/autostart (E2 `PROMISING`). | Authorized for one isolated upstream-native E3 probe (Foundation 1.0); executed; verdict `E3 PASSED` (E3 scope only). base-llm-wiki is E2 (architecture inspected) control candidate, NOT promoted to E3. |
 | Probe 5 | (EMPTY) | Runtime / Re-entry | Left empty. Temporal / Inngest / Hatchet / Restate carry service and internal-state models that would turn E3 into a large deployment task. | No E3 yet; revisit only if a minimal, cleanable local boundary can be defined and separately authorized. |
 
 Each candidate fills its slot's per-candidate card (Section 5). Empty slots are NOT filled by lowering E3 admission criteria.
@@ -62,7 +62,8 @@ Each candidate fills its slot's per-candidate card (Section 5). Empty slots are 
 Coordination:          Restate, go-workflows (luno/workflow)
 Knowledge Projection:  Marten (adjacent projection substrate — Deferred / Architectural Comparison),
                        KurrentDB (Deterministic State Projection),
-                       LLM-wiki candidates (Astro-Han, SamurAIGPT, ussumant, atomicstrata — E2, awaiting outside comparison verdict; base-llm-wiki — E1 / LOCAL INSPECTION CLAIMED-NOT-EVIDENCED)
+                       SamurAIGPT, ussumant, atomicstrata (LLM-wiki implementations awaiting dedicated probes),
+                       base-llm-wiki (E2 control candidate — NOT promoted to E3)
 Protocol Governance:   Cedar
 Experiment/Evaluation: promptfoo, MLflow
 Runtime/Re-entry:      Temporal, Inngest, Hatchet, Restate
@@ -71,11 +72,10 @@ Runtime/Re-entry:      Temporal, Inngest, Hatchet, Restate
 ### Empty Provider slots
 
 ```text
-Knowledge Projection        — EMPTY this batch (pending LLM-wiki comparison + outside review)
 Runtime / Re-entry Provider — EMPTY this batch
 ```
 
-No candidate was promoted to fill an empty slot by lowering E3 admission criteria.
+Knowledge Projection is no longer empty: `Astro-Han` was authorized and executed as the Knowledge E3 probe (Foundation 1.0). No candidate was promoted to fill an empty slot by lowering E3 admission criteria.
 
 ---
 
@@ -153,22 +153,22 @@ cleanup method           Remove probe dir; deactivate/remove isolated env; verif
 stop conditions          Fails to install/run in isolated env; pipeline/exp run fails; cannot clean up
 ```
 
-### Probe 4 — (EMPTY) Knowledge Projection
+### Probe 4 — Astro-Han/karpathy-llm-wiki (Knowledge Projection)
 
 ```text
-candidate                (EMPTY)
+candidate                Astro-Han/karpathy-llm-wiki
 provider slot            Knowledge Projection
-why this candidate       No candidate yet. Four public LLM-wiki implementations are E2 but await an outside comparison verdict; base-llm-wiki is E1 / LOCAL INSPECTION CLAIMED-NOT-EVIDENCED; Marten is Deterministic State Projection (adjacent substrate), not an LLM Current-Knowledge compiler.
-why now                  Knowledge-slot E3 candidate selected ONLY after an outside comparison verdict on the public LLM-wiki implementations.
-what E3 can prove        n/a
-what E3 cannot prove     n/a
-installation method      n/a
-runtime process model    n/a
-network requirements     n/a
-credentials requirements n/a
-filesystem mutation scope n/a
-cleanup method           n/a
-stop conditions          Do not fill this slot by lowering E3 admission criteria.
+why this candidate       Smallest public LLM-wiki implementation; file-first, no server/DB/autostart (E2)
+why now                  Authorized for one isolated upstream-native E3 probe (Foundation 1.0)
+what E3 can prove        Upstream Agent Skill obtained, loaded in isolation, minimal raw→Markdown wiki operation per native instructions
+what E3 cannot prove     Nexus fit; superiority over base-llm-wiki; provenance sufficiency; replaceability; incremental-update reliability
+installation method      git clone into isolated dir; load skill as local files (SKILL.md + references/ + scripts/)
+runtime process model    Agent-driven ingest/compile (SKILL.md) + foreground python lint (check_evidence.py)
+network requirements     None for the executed operation (clone used network once)
+credentials requirements None
+filesystem mutation scope Isolated probe dir only
+cleanup method           Remove isolated dir; verify no leftover processes/files
+stop conditions          Global Skills write; credential requirement; undeclared background process; out-of-dir writes; raw fixture modification; cleanup failure
 ```
 
 ### Probe 5 — (EMPTY) Runtime / Re-entry
