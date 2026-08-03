@@ -75,3 +75,15 @@
 - **Based-on Commit**: `31fda2f54a2346e791e63352a236824db9f17ae5`
 - **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
 - **Actions**: Enforced strict `allowedVerdicts` whitelist, refactored `getVerdictRows` to enforce subject uniqueness in `CURRENT_VERDICT.md`, added strict case-insensitive milestone duplicate detection in `EXTERNAL_VERDICT_HISTORY.md`, refactored verifier into exportable core function `verifyRepository(targetRoot, options)`, created automated test suite `verify_state_consistency_negative_tests.js` executing 12 negative fixtures and 1 positive fixture, and recorded test log to `state_consistency_negative_tests.log`.
+
+### Milestone 0.4: Read-Only Repository-wide Persistent Artifact World Audit
+- **Date**: 2026-08-03T21:35:00+02:00
+- **Based-on Commit**: `a2d2434d38b33c67dd3535375621ae9523b6fbd7`
+- **Resulting Commit**: `4ceea271d7ce5ea5aa22a5015af0c3a54f2ffb26`
+- **Actions**: Executed strictly read-only repository-wide World audit across ten dimensions. Created audit evidence under `research/audit/world-audit/` (FILE_ROLE_INVENTORY, ten-dimension reports, WORLDHOOD_VERDICT, raw logs). 108 tracked files, 70 markdown, 44 broken links (all in one HISTORICAL-FAILURE evidence file), 50 orphans, 3 authority findings. Ruling: PARTIAL — Level 1 confirmed, Level 2 structure present, empirical cold-start untested. Did not modify existing files.
+
+### Milestone 0.4.1: Outside Audit Write-Back & Cold-Start Authorization
+- **Date**: 2026-08-03T21:45:00+02:00
+- **Based-on Commit**: `4ceea271d7ce5ea5aa22a5015af0c3a54f2ffb26`
+- **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
+- **Actions**: Closed Foundation 0.3.2f as `CONFIRMED FOR REVIEWED SCOPE` (commit `a2d2434d38b33c67dd3535375621ae9523b6fbd7`) and recorded Foundation 0.4 World Audit as `PARTIAL PASS` (commit `4ceea271d7ce5ea5aa22a5015af0c3a54f2ffb26`) in `EXTERNAL_VERDICT_HISTORY.md`. Updated `CURRENT_VERDICT.md` (State Consistency CONFIRMED; World PARTIAL; four NOT YET IMPLEMENTED rows; Cold-Start AUTHORIZED—NOT YET EXECUTED; CR-S0 WITHHELD), `CURRENT_PHASE.md` (Fresh-Instance Cold-Start Recovery Test), `NEXT_ACTION.md` (authorize exactly one fresh-instance read-only cold-start test), and `HELLO.md` pointers. Re-ran `verify_state_consistency.js`; documented expected exit code in `state/logs/state_consistency_verification.log`.

@@ -6,9 +6,9 @@
 
 ## 1. Handoff Pointers & Baseline Status
 
-- **Last Externally Accepted Repair**: `Foundation 0.3.2c strict SHA and verdict accuracy repair` (Reviewed Commit: `8ddabe908e62d748081b587f6fa55a6c87e6db91`)
-- **Latest Partial Pass Attempt**: `Foundation 0.3.2e verdict-verifier regression repair` (Reviewed Commit: `31fda2f54a2346e791e63352a236824db9f17ae5`)
-- **Next Pending Evaluation**: `Foundation 0.3.2f fail-closed verifier & negative-fixture proof`
+- **Last Externally Accepted Repair**: `Foundation 0.3.2f Fail-Closed Verifier` (Reviewed Commit: `a2d2434d38b33c67dd3535375621ae9523b6fbd7`)
+- **Latest Outside Audit**: `Foundation 0.4 Repository-wide World Audit — PARTIAL PASS` (Reviewed Commit: `4ceea271d7ce5ea5aa22a5015af0c3a54f2ffb26`)
+- **Next Authorized Evaluation**: `Fresh-Instance Cold-Start Recovery Test`
 - **Current Operational Phase**: See [`../state/CURRENT_PHASE.md`](../state/CURRENT_PHASE.md)
 - **Current Ratified Verdicts**: See [`../state/CURRENT_VERDICT.md`](../state/CURRENT_VERDICT.md)
 - **External Verdict History**: See [`../state/EXTERNAL_VERDICT_HISTORY.md`](../state/EXTERNAL_VERDICT_HISTORY.md)
@@ -18,11 +18,11 @@
 ---
 
 ## 2. Session Summary
-- Conducted fail-closed verifier & negative-fixture proof (Foundation 0.3.2f).
-- Recorded Foundation 0.3.2e as `PARTIAL PASS` in [`state/EXTERNAL_VERDICT_HISTORY.md`](../state/EXTERNAL_VERDICT_HISTORY.md).
-- Updated [`state/CURRENT_VERDICT.md`](../state/CURRENT_VERDICT.md) to set State Consistency to `PARTIAL`.
-- Refactored [`state/verify_state_consistency.js`](../state/verify_state_consistency.js) into an exportable core verification engine `verifyRepository(targetRoot, options)` with strict verdict whitelist (`allowedVerdicts`), exact table row parser `getVerdictRows` enforcing subject uniqueness, and strict case-insensitive milestone duplicate detection.
-- Created automated negative test suite [`state/tests/verify_state_consistency_negative_tests.js`](../state/tests/verify_state_consistency_negative_tests.js) executing 12 negative fixtures and 1 positive fixture, writing structured test logs to [`state/logs/state_consistency_negative_tests.log`](../state/logs/state_consistency_negative_tests.log).
+- Recorded outside acceptance of Foundation 0.3.2f fail-closed verifier as `CONFIRMED FOR REVIEWED SCOPE` in [`state/EXTERNAL_VERDICT_HISTORY.md`](../state/EXTERNAL_VERDICT_HISTORY.md).
+- Recorded Foundation 0.4 read-only Repository-wide World Audit as `PARTIAL PASS` in [`state/EXTERNAL_VERDICT_HISTORY.md`](../state/EXTERNAL_VERDICT_HISTORY.md).
+- Updated [`state/CURRENT_VERDICT.md`](../state/CURRENT_VERDICT.md): State Consistency → `CONFIRMED`; Repository-wide Persistent Artifact World → `PARTIAL`; added four `NOT YET IMPLEMENTED` rows; Cold-Start Recoverability → `AUTHORIZED — NOT YET EXECUTED`; CR-S0 stays `WITHHELD`.
+- Updated [`state/CURRENT_PHASE.md`](../state/CURRENT_PHASE.md) to `Fresh-Instance Cold-Start Recovery Test`.
+- Updated [`state/NEXT_ACTION.md`](../state/NEXT_ACTION.md) to authorize exactly one fresh-instance read-only cold-start test.
 
 ---
 

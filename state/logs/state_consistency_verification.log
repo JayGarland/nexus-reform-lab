@@ -1,16 +1,16 @@
 ================================================================================
 FAIL-CLOSED VERIFIER & STATE CONSISTENCY ENGINE LOG
-Timestamp: 2026-08-03T19:30:55.319Z
+Timestamp: 2026-08-03T19:48:03.674Z
 Target Repository Root: F:\nexus-reform-lab
 Git Resolution Root: F:\nexus-reform-lab
 ================================================================================
 [Check 1] CURRENT_VERDICT.md Exact Subject Uniqueness & Verdict Parsing...
   Subject [State Consistency]: Matching Rows Count = 1
-  PASS: Subject [State Consistency] verified (PARTIAL — state sources align and major verifier rules exist, but fail-closed behavior is awaiting negative-fixture proof.).
+FAILED: Subject [State Consistency] verdict prefix mismatch! ExpectedPrefix="PARTIAL — state sources align and major verifier rules exist, but fail-closed behavior is awaiting negative-fixture proof.", Got="CONFIRMED — fail-closed verifier and negative-fixture proof externally accepted."
   Subject [Repository-wide Persistent Artifact World]: Matching Rows Count = 1
-  PASS: Subject [Repository-wide Persistent Artifact World] verified (NOT YET AUDITED).
+FAILED: Subject [Repository-wide Persistent Artifact World] verdict mismatch! Expected="NOT YET AUDITED", Got="PARTIAL — Level 1 Re-entry Scaffold confirmed; Level 2 structural recovery path present but empirical fresh-instance cold-start remains untested."
   Subject [Cold-Start Recoverability]: Matching Rows Count = 1
-  PASS: Subject [Cold-Start Recoverability] verified (NOT YET TESTED).
+FAILED: Subject [Cold-Start Recoverability] verdict mismatch! Expected="NOT YET TESTED", Got="AUTHORIZED — NOT YET EXECUTED"
   Subject [CR-S0 Authorization]: Matching Rows Count = 1
   PASS: Subject [CR-S0 Authorization] verified (WITHHELD).
 
@@ -81,6 +81,12 @@ Git Resolution Root: F:\nexus-reform-lab
     Actual Git Parent (~1): 295d743d79f391034e98b6565a33b63e1353fb24
     Strict 40-Char Equality: YES
   PASS: Strict 40-char parent SHA equality verified.
+  Milestone: 0.4: Read-Only Repository-wide Persistent Artifact World Audit
+    Resulting Commit (40-char): 4ceea271d7ce5ea5aa22a5015af0c3a54f2ffb26
+    Recorded Based-on (40-char): a2d2434d38b33c67dd3535375621ae9523b6fbd7
+    Actual Git Parent (~1): a2d2434d38b33c67dd3535375621ae9523b6fbd7
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
 
 [Check 3] EXTERNAL_VERDICT_HISTORY.md Table Header & Schema Integrity...
   PASS: Table header structure and 9-column layout verified.
@@ -124,22 +130,26 @@ Git Resolution Root: F:\nexus-reform-lab
   Reviewed Commit: 31fda2f54a2346e791e63352a236824db9f17ae5
   Outside Verdict: PARTIAL PASS
 --- Milestone Schema Check: Foundation 0.3.2f ---
-  Reviewed Commit: RESOLVE_FROM_GIT
-  Outside Verdict: UNDER OUTSIDE REVIEW
-  PASS: Active UNDER OUTSIDE REVIEW entry correctly isolated to Foundation 0.3.2f.
+  Reviewed Commit: a2d2434d38b33c67dd3535375621ae9523b6fbd7
+  Outside Verdict: CONFIRMED FOR REVIEWED SCOPE
+  NOTE: Fully accepted refers only to the bounded milestone repair, not to the unreviewed repository-wide World or cold-start capability.
+--- Milestone Schema Check: Foundation 0.4 Repository-wide Persistent Artifact World Audit ---
+  Reviewed Commit: 4ceea271d7ce5ea5aa22a5015af0c3a54f2ffb26
+  Outside Verdict: PARTIAL PASS
+FAILED: Active UNDER OUTSIDE REVIEW entry count/name mismatch! Got unresolvedCount=0, activeMilestone=NONE
 
 [Check 4] CURRENT_PHASE.md Alignment...
-  PASS: CURRENT_PHASE.md correctly set to Foundation 0.3.2f.
+FAILED: CURRENT_PHASE.md content mismatch!
 
 [Check 5] NEXT_ACTION.md Blockquote Parsing & Strict Text Verification...
-  Parsed Blockquote Action Text: "Submit Foundation 0.3.2f fail-closed verifier and negative-fixture proof for outside review. Do not run the repository-wide World audit, cold-start test, or CR-S0 yet."
-  PASS: NEXT_ACTION.md single authorized action text strictly verified.
+  Parsed Blockquote Action Text: "Run exactly one fresh-instance, read-only Cold-Start Recovery Test against commit produced by this write-back. The fresh instance must receive only the repository location and the test prompt. Do not provide prior chat reports or explanatory context."
+FAILED: NEXT_ACTION.md blockquote text mismatch or forbidden phrases detected!
 ================================================================================
 Verification Summary:
   Target Repository Root: F:\nexus-reform-lab
   Git Resolution Root: F:\nexus-reform-lab
-  Verified History Entries Count: 13
-  Active UNDER OUTSIDE REVIEW Milestone: Foundation 0.3.2f
-  Total Failures: 0
-  Script Exit Code: 0
+  Verified History Entries Count: 14
+  Active UNDER OUTSIDE REVIEW Milestone: NONE
+  Total Failures: 6
+  Script Exit Code: 1
 ================================================================================

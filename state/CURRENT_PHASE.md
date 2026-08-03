@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Fail-Closed Verifier & Negative-Fixture Proof / Foundation 0.3.2f`
-- **Current Focus**: Prove that invalid repository states are mechanically rejected before the read-only World audit.
-- **External Audit Status**: `FOUNDATION 0.3.2e PARTIAL PASS — FAIL-CLOSED PROOF REQUIRED`
-- **Started At**: `2026-08-03T21:28:00+02:00`
+- **Current Phase**: `Fresh-Instance Cold-Start Recovery Test`
+- **Current Focus**: Empirically test whether a new zero-memory instance can recover the correct repository state from WAKE.md and canonical files alone.
+- **External Audit Status**: `FOUNDATION 0.4 PARTIAL PASS — LEVEL 1 CONFIRMED, LEVEL 2 EMPIRICAL TEST AUTHORIZED`
+- **Started At**: `2026-08-03T21:45:00+02:00`
 
 ---
 
