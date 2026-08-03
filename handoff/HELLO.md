@@ -1,7 +1,8 @@
 # Inter-Instance Handoff — HELLO.md
 
-> **Session Focus**: Persistent Memory Structure Build / Re-entry Foundation 0.3 & Consistency Fix 0.3.1  
-> **Repository Commit**: `10928fd0284721538aec9b7bd4575f24ed8232cf` (Foundation 0.3) / `experiment/memory-structure-foundation-0.3.1`  
+> **Current Commit**: `61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34`  
+> **Parent / Foundation 0.3 Commit**: `10928fd0284721538aec9b7bd4575f24ed8232cf`  
+> **Branch**: `experiment/memory-structure-foundation-0.3.1a`  
 > **Status**: Cold-start persistent memory structure ready for audit.  
 
 ---
@@ -14,7 +15,7 @@
 - Established handoff records in `handoff/` (`HELLO.md`, `SESSION_LOG.md`).
 - Updated status headers on superseded files to prevent cold-start misreading.
 - Defined cold-start recovery test specification [`research/audit/COLD_START_RECOVERY_TEST.md`](../research/audit/COLD_START_RECOVERY_TEST.md).
-- Applied Consistency Fix 0.3.1: closed commit SHA in handoff logs, fixed timezone formatting (`+02:00`), reclassified Citation Exam status to `HALTED — HISTORICAL FAILURE / EVIDENCE ONLY`, and relaxed cold-start test to permit read-only inspection commands.
+- Applied State Closure 0.3.1a: closed commit SHA `61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34` in handoff logs, updated `CURRENT_PHASE.md` focus, and updated `NEXT_ACTION.md` to authorize cold-start recovery validation.
 
 ---
 

@@ -26,5 +26,10 @@
 
 ### Milestone 0.3.1: Foundation 0.3.1 Memory Consistency Fix
 - **Date**: 2026-08-03T21:04:00+02:00
-- **Commit**: Pending Commit (Foundation 0.3.1)
+- **Commit**: `61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34`
 - **Actions**: Closed commit SHA in handoff logs (`10928fd0284721538aec9b7bd4575f24ed8232cf`), fixed timezone to `+02:00`, reclassified Citation Exam status to `HALTED — HISTORICAL FAILURE / EVIDENCE ONLY`, narrowed audit overclaims, relaxed cold-start test for read-only inspection commands.
+
+### Milestone 0.3.1a: Foundation 0.3.1a State Closure
+- **Date**: 2026-08-03T21:06:00+02:00
+- **Commit**: Pending Commit (Foundation 0.3.1a)
+- **Actions**: Closed commit SHA `61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34` in `SESSION_LOG.md` and `HELLO.md`, updated `CURRENT_PHASE.md` focus status, and updated `NEXT_ACTION.md` to authorize cold-start recovery validation.

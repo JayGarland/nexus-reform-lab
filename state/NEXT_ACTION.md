@@ -1,6 +1,6 @@
 # Authorized Next Action
 
-> **Single Authorized Action**: Complete the persistent memory structure build (Foundation 0.3) and accept cold-start recovery audit.
+> **Single Authorized Action**: Execute authorized cold-start recovery validation against commit `61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34` (or current closed branch HEAD).
 
 ---
 
