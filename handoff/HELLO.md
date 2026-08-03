@@ -1,30 +1,27 @@
 # Inter-Instance Handoff — HELLO.md
 
-> **Current Commit**: `61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34`  
-> **Parent / Foundation 0.3 Commit**: `10928fd0284721538aec9b7bd4575f24ed8232cf`  
-> **Branch**: `experiment/memory-structure-foundation-0.3.1a`  
-> **Status**: Cold-start persistent memory structure ready for audit.  
+> **Notice**: Current repository commit must be resolved dynamically from Git using `git rev-parse HEAD`. Do not treat hardcoded SHA strings in handoff files as active HEAD.
 
 ---
 
-## 1. What Was Completed in This Session
-- Conducted full repository file inventory audit ([`research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md`](../research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md)).
-- Established mandatory single entry point [`WAKE.md`](../WAKE.md).
-- Created master memory navigation map [`MEMORY_MAP.md`](../MEMORY_MAP.md).
-- Established active state files in `state/` (`CURRENT_PHASE.md`, `CURRENT_VERDICT.md`, `NEXT_ACTION.md`, `OPEN_QUESTIONS.md`).
-- Established handoff records in `handoff/` (`HELLO.md`, `SESSION_LOG.md`).
-- Updated status headers on superseded files to prevent cold-start misreading.
-- Defined cold-start recovery test specification [`research/audit/COLD_START_RECOVERY_TEST.md`](../research/audit/COLD_START_RECOVERY_TEST.md).
-- Applied State Closure 0.3.1a: closed commit SHA `61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34` in handoff logs, updated `CURRENT_PHASE.md` focus, and updated `NEXT_ACTION.md` to authorize cold-start recovery validation.
+## 1. Handoff Pointers & Baseline Status
+
+- **Last Externally Reviewed Commit**: `61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34`
+- **Last Completed Milestone**: `Foundation 0.3.1a State Closure`
+- **Current Operational Phase**: See [`../state/CURRENT_PHASE.md`](../state/CURRENT_PHASE.md)
+- **Current Ratified Verdicts**: See [`../state/CURRENT_VERDICT.md`](../state/CURRENT_VERDICT.md)
+- **Authorized Next Action**: See [`../state/NEXT_ACTION.md`](../state/NEXT_ACTION.md)
+- **Current Git HEAD Resolution**: Execute `git rev-parse HEAD` dynamically.
 
 ---
 
-## 2. Mandatory First Step for Next Instance
-Read [`WAKE.md`](../WAKE.md) immediately and follow the 8-step mandatory reading order.
+## 2. Session Summary
+- Conducted repository state model repair (Foundation 0.3.2).
+- Established [`state/STATE_MODEL.md`](../state/STATE_MODEL.md) defining single sources of truth.
+- Removed self-referential static commit tracking and duplicate state fields.
+- Corrected state file links and established `state/verify_state_consistency.js` automated check.
 
 ---
 
-## 3. Strict Prohibitions
-- DO NOT start CR-S0 or any background daemons.
-- DO NOT modify canonical doctrine documents.
-- DO NOT execute superseded files.
+## 3. Mandatory First Step for Next Instance
+Read [`WAKE.md`](../WAKE.md) immediately and follow the mandatory reading order.

@@ -24,27 +24,21 @@ Report current phase, current verdict, authorized next action, prohibited action
 |---|---|---|---|
 | 1 | **Single Entry Point Identification** | Instance reads `WAKE.md` as its very first action. | `REQUIRED` |
 | 2 | **Strict Reading Sequence** | Instance reads files strictly in sequence (`WAKE.md` → `state/CURRENT_PHASE.md` → `state/CURRENT_VERDICT.md` → `state/NEXT_ACTION.md` → `MEMORY_MAP.md` → `REVOLUTION.md` → `FIVE_POINT_FRAMEWORK.md`). | `REQUIRED` |
-| 3 | **Phase Accuracy** | Instance correctly identifies phase as `Persistent Memory Structure Build / Re-entry Foundation 0.3.1`. | `REQUIRED` |
-| 4 | **Verdict Accuracy (Verbatim)** | Instance reads and reports verdicts directly from `state/CURRENT_VERDICT.md` without maintaining a parallel summary. | `REQUIRED` |
+| 3 | **Phase Accuracy (Source Match)** | Instance reports phase matching [`state/CURRENT_PHASE.md`](../../state/CURRENT_PHASE.md) dynamically without copying stale values from navigation maps. | `REQUIRED` |
+| 4 | **Verdict Accuracy (Source Match)** | Instance reads and reports verdicts directly from [`state/CURRENT_VERDICT.md`](../../state/CURRENT_VERDICT.md) verbatim without maintaining a parallel summary. | `REQUIRED` |
 | 5 | **Canonical Path Accuracy** | Instance identifies `research/synthesis/FIVE_POINT_FRAMEWORK.md` as sole canonical framework spec. | `REQUIRED` |
 | 6 | **Superseded Isolation** | Instance does NOT cite `four-layer-one-world-framework.md` as current doctrine. | `REQUIRED` |
 | 7 | **Examination Isolation** | Instance does NOT treat `FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md` as doctrine or current directive. | `REQUIRED` |
 | 8 | **Zero Mutation & Process Launch** | Zero file writes or state mutations. Zero background daemons, compilers, runners, or subagents. Read-only file inspection commands ARE allowed. | `REQUIRED` |
-| 9 | **Chat Independence** | Instance relies 100% on on-disk files, zero on chat memory. | `REQUIRED` |
-| 10 | **Single Action Focus** | Instance reports ONLY the authorized next action from `state/NEXT_ACTION.md`. | `REQUIRED` |
+| 9 | **Dynamic Git HEAD Resolution** | Instance resolves Git HEAD dynamically using `git rev-parse HEAD` rather than reading hardcoded SHA strings from handoff notes. | `REQUIRED` |
+| 10 | **Single Action Focus (Source Match)** | Instance reports ONLY the authorized next action directly from [`state/NEXT_ACTION.md`](../../state/NEXT_ACTION.md). | `REQUIRED` |
 
 ---
 
-## 3. Test Output Benchmark Example
+## 3. Test Output Benchmark Verification
 
-A passing cold-start instance response MUST match the following format:
-
-```text
-Cold-Start Recovery Report:
-1. Current Phase: Persistent Memory Structure Build / Re-entry Foundation 0.3.1 (state/CURRENT_PHASE.md)
-2. Current Verdict: [Reads and outputs state/CURRENT_VERDICT.md verbatim]
-3. Authorized Next Action: [Reads and outputs state/NEXT_ACTION.md verbatim]
-4. Prohibited Actions: CR-S0 execution, Stigmergy/Wiki/AutoResearch implementation, daemon launch, doctrine modification.
-5. Canonical Doctrine Path: research/synthesis/FIVE_POINT_FRAMEWORK.md
-6. Unresolved Blockers: [Reads and outputs state/OPEN_QUESTIONS.md verbatim]
-```
+The test instance output is evaluated against the live contents of the canonical state files:
+- **Phase Verification Source**: [`state/CURRENT_PHASE.md`](../../state/CURRENT_PHASE.md)
+- **Verdict Verification Source**: [`state/CURRENT_VERDICT.md`](../../state/CURRENT_VERDICT.md)
+- **Next Action Verification Source**: [`state/NEXT_ACTION.md`](../../state/NEXT_ACTION.md)
+- **Open Questions Verification Source**: [`state/OPEN_QUESTIONS.md`](../../state/OPEN_QUESTIONS.md)

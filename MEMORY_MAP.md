@@ -1,6 +1,6 @@
 # MEMORY_MAP.md — Project Persistent Memory Structure Map
 
-> **Purpose**: Master navigation map organizing project memory categories across identity, working state, knowledge, history, procedures, handoffs, and evolution.
+> **Purpose**: Master navigation map organizing project memory categories across identity, working state, knowledge, history, procedures, handoffs, and evolution. Dynamic state values must not be duplicated in navigation or doctrine files.
 
 ---
 
@@ -24,13 +24,6 @@
 8. Chat Summaries & Transcripts                [Lowest Authority / Navigation Only]
 ```
 
-### Precedence Constraints
-- `state/` files CANNOT modify Canonical Doctrine.
-- Canonical Doctrine CANNOT alter or fabricate Raw Evidence.
-- Raw Evidence does NOT automatically become Current Knowledge without compilation.
-- Handoff notes CANNOT override `state/` files.
-- Chat summaries CANNOT override repository files.
-
 ---
 
 ## 2. Memory Category Map
@@ -49,10 +42,11 @@
 ### B. Current Working Memory
 *Preserves active operational state, current phase, verdicts, and immediate next action.*
 
-- [`state/CURRENT_PHASE.md`](state/CURRENT_PHASE.md): Active phase status (`Re-entry Foundation 0.3`).
+- [`state/CURRENT_PHASE.md`](state/CURRENT_PHASE.md): Current operational phase status.
 - [`state/CURRENT_VERDICT.md`](state/CURRENT_VERDICT.md): Confirmed vs withheld adjudications.
 - [`state/NEXT_ACTION.md`](state/NEXT_ACTION.md): Single authorized next action.
 - [`state/OPEN_QUESTIONS.md`](state/OPEN_QUESTIONS.md): Pending design questions.
+- [`state/STATE_MODEL.md`](state/STATE_MODEL.md): Single sources of truth and anti-duplication rules.
 
 ---
 
@@ -60,8 +54,7 @@
 *Compiled current truth, entity pages, topic breakdowns, and indices.*
 
 > ⚠️ **STATUS**: **STRUCTURAL PLACEHOLDER / NOT YET IMPLEMENTED**  
-> Compiled LLM Wiki runtime pages do NOT exist yet in this repository.  
-> Do NOT assume a compiled knowledge engine is active.
+> Compiled LLM Wiki runtime pages do NOT exist yet in this repository.
 
 ---
 
@@ -95,5 +88,5 @@
 ### G. Evolution Memory
 *Git commit history, version tags, and decision audit logs.*
 
-- **Git Commit History**: `git log --oneline` tracks explicit change lineage.
-- **Decision Lineage**: Recorded in `handoff/SESSION_LOG.md` and `state/CURRENT_VERDICT.md`.
+- **Git Commit History**: Resolved dynamically via `git log --oneline` or `git rev-parse HEAD`.
+- **Decision Lineage**: Recorded in [`handoff/SESSION_LOG.md`](handoff/SESSION_LOG.md) and [`state/CURRENT_VERDICT.md`](state/CURRENT_VERDICT.md).

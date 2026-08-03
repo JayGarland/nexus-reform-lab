@@ -1,5 +1,9 @@
 # Current Ratified Verdicts Register
 
+> **Notice**: This file is the single canonical source for all ratified adjudications and status ratings. No other file in the repository may maintain a parallel verdict table.
+
+---
+
 | Item / Subsystem | Current Verdict | Evidence / Source Document | Notes |
 |---|---|---|---|
 | **Clean-Room Laboratory Bootstrap** | `CONFIRMED` | [`CHARTER.md`](../CHARTER.md) | Independent repo `JayGarland/nexus-reform-lab` |
@@ -7,8 +11,10 @@
 | **LLM Wiki Doctrine** | `CONFIRMED` | [`LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md`](../research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md) | Incremental knowledge compilation |
 | **Software 3.0 Doctrine** | `CONFIRMED` | [`FIVE_POINT_FRAMEWORK.md`](../research/synthesis/FIVE_POINT_FRAMEWORK.md) | Governed natural language protocols |
 | **Controlled AutoResearch Doctrine** | `CONFIRMED` | [`FIVE_POINT_FRAMEWORK.md`](../research/synthesis/FIVE_POINT_FRAMEWORK.md) | Closed-loop metric evaluation |
-| **Migration Normalized Payload Fidelity** | `CONFIRMED` | [`MIGRATION_GAP_AUDIT.md`](../research/audit/MIGRATION_GAP_AUDIT.md) | `verify_migration.js` exit code 0 (31/31 payload SHA match) |
+| **Migration Normalized Payload Fidelity** | `CONFIRMED — 31/31 normalized text-equivalent after deterministic frontmatter and newline normalization. Exact byte equality is not claimed.` | [`MIGRATION_GAP_AUDIT.md`](../research/audit/MIGRATION_GAP_AUDIT.md) | `verify_migration.js` exit code 0 |
+| **Persistent Memory Skeleton** | `CONFIRMED` | [`MEMORY_MAP.md`](../MEMORY_MAP.md) | File tree skeleton & entry structure built |
+| **State Consistency** | `REJECTED / UNDER REPAIR` | [`STATE_MODEL.md`](STATE_MODEL.md) | Repairing duplicate state & self-referential commit tracking |
+| **Cold-Start Recoverability** | `NOT YET TESTED` | [`COLD_START_RECOVERY_TEST.md`](../research/audit/COLD_START_RECOVERY_TEST.md) | Pending empirical cold-start test run |
 | **Citation Examination** | `HALTED — HISTORICAL FAILURE / EVIDENCE ONLY` | [`research/examinations/`](../research/examinations/) | Preserved as capability-boundary evidence |
+| **Operational Process Isolation Claims** | `CLAIMED-NOT-EVIDENCED` | Internal Assertions | Runtime claims lack external system log evidence |
 | **CR-S0 Authorization** | `WITHHELD` | Outside Reviewer Rulings | CR-S0 strictly stopped until authorized |
-| **Persistent Memory Structure (0.3)** | `PARTIAL PASS (Fix 0.3.1 Applied)` | [`WAKE.md`](../WAKE.md), [`MEMORY_MAP.md`](../MEMORY_MAP.md) | Skeleton confirmed; consistency fix applied |
-| **Cold-Start Recoverability** | `NOT YET CONFIRMED` | [`research/audit/COLD_START_RECOVERY_TEST.md`](../research/audit/COLD_START_RECOVERY_TEST.md) | Pending empirical cold-start test run |
