@@ -91,7 +91,7 @@ function runFixtureTest(name, expectedSuccess, mutatorFn) {
 runFixtureTest('1_unknown_verdict', false, (dir) => {
   const p = path.join(dir, 'state/EXTERNAL_VERDICT_HISTORY.md');
   let content = fs.readFileSync(p, 'utf8');
-  content = content.replace('UNDER OUTSIDE REVIEW', 'CONFIRMED-ish');
+  content = content.replace('CONFIRMED FOR REVIEWED SCOPE', 'CONFIRMED-ish');
   fs.writeFileSync(p, content, 'utf8');
 });
 
@@ -135,11 +135,11 @@ runFixtureTest('6_multiple_unresolved_entries', false, (dir) => {
   fs.writeFileSync(p, content, 'utf8');
 });
 
-// 7. Negative Fixture 7: Active under review milestone is 0.4.1z instead of 0.4.1a
-runFixtureTest('7_wrong_active_milestone', false, (dir) => {
+// 7. Negative Fixture 7: Active under review milestone exists in released gate phase (must be zero)
+runFixtureTest('7_unexpected_under_review_in_released_phase', false, (dir) => {
   const p = path.join(dir, 'state/EXTERNAL_VERDICT_HISTORY.md');
   let content = fs.readFileSync(p, 'utf8');
-  content = content.replace('Foundation 0.4.1a Cold-Start Gate Consistency Repair', 'Foundation 0.4.1z Cold-Start Gate Consistency Repair');
+  content += '| **Foundation 0.4.2 Unexpected Review** | `RESOLVE_FROM_GIT` | `UNDER OUTSIDE REVIEW` | `no` | None | Whole milestone under review | `no` | 2026-08-03 | Extra unresolved |\n';
   fs.writeFileSync(p, content, 'utf8');
 });
 
@@ -163,7 +163,7 @@ runFixtureTest('9_session_log_parent_mismatch', false, (dir) => {
 runFixtureTest('10_multiple_next_action_blockquotes', false, (dir) => {
   const p = path.join(dir, 'state/NEXT_ACTION.md');
   let content = fs.readFileSync(p, 'utf8');
-  const targetStr = '> Submit Foundation 0.4.1a Cold-Start gate consistency repair for outside review. Do not run the Cold-Start Test until the production verifier returns exit code 0.';
+  const targetStr = '> Run exactly one fresh-instance, read-only Cold-Start Recovery Test. The test instance must receive only the repository path and the canonical test prompt. Do not provide previous chat reports, summaries, model evaluations, or explanatory context.';
   content = content.replace(targetStr, `${targetStr}\n> Execute forbidden world modification now!`);
   fs.writeFileSync(p, content, 'utf8');
 });

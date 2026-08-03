@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Cold-Start Gate Consistency Repair / Foundation 0.4.1a`
-- **Current Focus**: Align the fail-closed state verifier and historical lineage with the externally authorized fresh-instance Cold-Start gate.
-- **External Audit Status**: `FOUNDATION 0.4.1 PARTIAL PASS — VERIFIER ALIGNMENT REQUIRED BEFORE TEST EXECUTION`
-- **Started At**: `2026-08-03T21:50:00+02:00`
+- **Current Phase**: `Fresh-Instance Cold-Start Recovery Test`
+- **Current Focus**: Empirically test whether a zero-memory instance can recover the correct repository state from WAKE.md and canonical files alone.
+- **External Audit Status**: `FOUNDATION 0.4.1a CONFIRMED FOR REVIEWED SCOPE — COLD-START TEST RELEASED`
+- **Started At**: `2026-08-03T21:55:00+02:00`
 
 ---
 

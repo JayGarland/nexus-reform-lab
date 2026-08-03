@@ -91,5 +91,11 @@
 ### Milestone 0.4.1a: Cold-Start Gate Consistency Repair
 - **Date**: 2026-08-03T21:50:00+02:00
 - **Based-on Commit**: `7da89114dea74e34d359533684577badfdb0da74`
-- **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
+- **Resulting Commit**: `d970a85aea7c879f29689f019b3250f3438db370`
 - **Actions**: Closed Foundation 0.3.2f SESSION_LOG lineage to `a2d2434d38b33c67dd3535375621ae9523b6fbd7` (removed RESOLVE_FROM_GIT_HISTORY). Refactored `state/verify_state_consistency.js` to remove hardcoded 0.3.2f-era phase-state values and replaced them with a legal gate-stage registry (`GATE_STAGES`: BEFORE_WORLD_AUDIT, AFTER_WORLD_AUDIT_PRE_COLD_START) driven by `CURRENT_PHASE.md`, validating state relationships and legal transitions instead of fixed phase text. Recorded Foundation 0.4.1 as `PARTIAL PASS` (commit `7da89114dea74e34d359533684577badfdb0da74`) and added Foundation 0.4.1a as active `UNDER OUTSIDE REVIEW` in `EXTERNAL_VERDICT_HISTORY.md`. Updated `CURRENT_PHASE.md` (Cold-Start Gate Consistency Repair), `CURRENT_VERDICT.md` (State Consistency PARTIAL pending verifier alignment; Cold-Start AUTHORIZED—EXECUTION BLOCKED UNTIL VERIFIER RETURNS 0), and `NEXT_ACTION.md` (submit repair; do not run cold-start until verifier exit 0). Synced negative fixtures 7 & 10 to the new active milestone and action text. Production verifier exit code 0; negative fixtures 12/12; positive fixture 1/1.
+
+### Milestone 0.4.1b: 0.4.1a Acceptance Write-Back & Cold-Start Test Release
+- **Date**: 2026-08-03T21:55:00+02:00
+- **Based-on Commit**: `d970a85aea7c879f29689f019b3250f3438db370`
+- **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
+- **Actions**: Closed Foundation 0.4.1a as `CONFIRMED FOR REVIEWED SCOPE` (commit `d970a85aea7c879f29689f019b3250f3438db370`) in `EXTERNAL_VERDICT_HISTORY.md` (no new UNDER OUTSIDE REVIEW stage). Updated `CURRENT_PHASE.md` to `Fresh-Instance Cold-Start Recovery Test`, `CURRENT_VERDICT.md` (State Consistency CONFIRMED; Cold-Start AUTHORIZED—NOT YET EXECUTED; CR-S0 WITHHELD), `NEXT_ACTION.md` (authorize exactly one fresh-instance read-only cold-start test), and `HELLO.md` pointers. No new preparation or repair phase created. Production verifier exit code 0; negative fixtures 12/12; positive fixture 1/1.

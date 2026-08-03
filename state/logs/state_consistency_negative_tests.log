@@ -1,6 +1,6 @@
 ================================================================================
 STATE CONSISTENCY NEGATIVE & POSITIVE FIXTURE TEST SUITE LOG
-Timestamp: 2026-08-03T20:05:15.173Z
+Timestamp: 2026-08-03T20:13:14.202Z
 Real Repository Root: F:\nexus-reform-lab
 ================================================================================
 
@@ -8,7 +8,7 @@ Real Repository Root: F:\nexus-reform-lab
 Fixture Name: 1_unknown_verdict
 Expected Verifier Success: NO (FAIL)
   Actual Verifier Success: NO
-  Detected Failure Reasons Count: 2
+  Detected Failure Reasons Count: 1
   Test Case Result: PASSED
 
 --------------------------------------------------------------------------------
@@ -47,7 +47,7 @@ Expected Verifier Success: NO (FAIL)
   Test Case Result: PASSED
 
 --------------------------------------------------------------------------------
-Fixture Name: 7_wrong_active_milestone
+Fixture Name: 7_unexpected_under_review_in_released_phase
 Expected Verifier Success: NO (FAIL)
   Actual Verifier Success: NO
   Detected Failure Reasons Count: 1

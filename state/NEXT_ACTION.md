@@ -6,15 +6,15 @@
 
 ## Single Authorized Action
 
-> Submit Foundation 0.4.1a Cold-Start gate consistency repair for outside review. Do not run the Cold-Start Test until the production verifier returns exit code 0.
+> Run exactly one fresh-instance, read-only Cold-Start Recovery Test. The test instance must receive only the repository path and the canonical test prompt. Do not provide previous chat reports, summaries, model evaluations, or explanatory context.
 
 ---
 
 ## Prohibited Next Actions
 
-1. **DO NOT** request or attempt execution of `CR-S0`.
+1. **DO NOT** run the cold-start test within this same execution instance.
 2. **DO NOT** modify any existing repository files during the cold-start test.
-3. **DO NOT** launch background daemons, runners, compilers, OpenClaw, or subagents.
-4. **DO NOT** implement Current Knowledge, Stigmergy, Protocol Runtime, or AutoResearch.
-5. **DO NOT** run the cold-start test within this same execution instance.
-6. **DO NOT** run the Cold-Start Test until the production verifier (`state/verify_state_consistency.js`) returns exit code 0.
+3. **DO NOT** request or attempt execution of `CR-S0`.
+4. **DO NOT** launch background daemons, runners, compilers, OpenClaw, or subagents.
+5. **DO NOT** implement Current Knowledge, Stigmergy, Protocol Runtime, or AutoResearch.
+6. **DO NOT** create any additional preparation or repair phase before the cold-start test; the next step after this write-back is the fresh-instance test execution.

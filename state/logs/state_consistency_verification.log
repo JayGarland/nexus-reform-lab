@@ -1,17 +1,17 @@
 ================================================================================
 FAIL-CLOSED VERIFIER & STATE CONSISTENCY ENGINE LOG
-Timestamp: 2026-08-03T20:05:13.498Z
+Timestamp: 2026-08-03T20:13:12.283Z
 Target Repository Root: F:\nexus-reform-lab
 Git Resolution Root: F:\nexus-reform-lab
 ================================================================================
 
 [Check 4] CURRENT_PHASE.md Gate-Stage Selection...
-  Current Phase: Cold-Start Gate Consistency Repair / Foundation 0.4.1a
+  Current Phase: Fresh-Instance Cold-Start Recovery Test
   Selected Gate Stage: AFTER_WORLD_AUDIT_PRE_COLD_START
 
 [Check 1] CURRENT_VERDICT.md Gate-Subject Validation...
   Subject [State Consistency]: Matching Rows Count = 1
-  PASS: Subject [State Consistency] category "PARTIAL" legal for stage "AFTER_WORLD_AUDIT_PRE_COLD_START".
+  PASS: Subject [State Consistency] category "CONFIRMED" legal for stage "AFTER_WORLD_AUDIT_PRE_COLD_START".
   Subject [Repository-wide Persistent Artifact World]: Matching Rows Count = 1
   PASS: Subject [Repository-wide Persistent Artifact World] category "PARTIAL" legal for stage "AFTER_WORLD_AUDIT_PRE_COLD_START".
   Subject [Cold-Start Recoverability]: Matching Rows Count = 1
@@ -104,6 +104,12 @@ Git Resolution Root: F:\nexus-reform-lab
     Actual Git Parent (~1): 4ceea271d7ce5ea5aa22a5015af0c3a54f2ffb26
     Strict 40-Char Equality: YES
   PASS: Strict 40-char parent SHA equality verified.
+  Milestone: 0.4.1a: Cold-Start Gate Consistency Repair
+    Resulting Commit (40-char): d970a85aea7c879f29689f019b3250f3438db370
+    Recorded Based-on (40-char): 7da89114dea74e34d359533684577badfdb0da74
+    Actual Git Parent (~1): 7da89114dea74e34d359533684577badfdb0da74
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
 
 [Check 3] EXTERNAL_VERDICT_HISTORY.md Table Header & Schema Integrity...
   PASS: Table header structure and 9-column layout verified.
@@ -157,12 +163,13 @@ Git Resolution Root: F:\nexus-reform-lab
   Reviewed Commit: 7da89114dea74e34d359533684577badfdb0da74
   Outside Verdict: PARTIAL PASS
 --- Milestone Schema Check: Foundation 0.4.1a Cold-Start Gate Consistency Repair ---
-  Reviewed Commit: RESOLVE_FROM_GIT
-  Outside Verdict: UNDER OUTSIDE REVIEW
-  PASS: Active UNDER OUTSIDE REVIEW entry correctly isolated (Foundation 0.4.1a Cold-Start Gate Consistency Repair).
+  Reviewed Commit: d970a85aea7c879f29689f019b3250f3438db370
+  Outside Verdict: CONFIRMED FOR REVIEWED SCOPE
+  NOTE: Fully accepted refers only to the bounded milestone repair, not to the unreviewed repository-wide World or cold-start capability.
+  PASS: No active UNDER OUTSIDE REVIEW entry in released gate phase.
 
 [Check 5] NEXT_ACTION.md Blockquote Parsing & Strict Validation...
-  Parsed Blockquote Action Text: "Submit Foundation 0.4.1a Cold-Start gate consistency repair for outside review. Do not run the Cold-Start Test until the production verifier returns exit code 0."
+  Parsed Blockquote Action Text: "Run exactly one fresh-instance, read-only Cold-Start Recovery Test. The test instance must receive only the repository path and the canonical test prompt. Do not provide previous chat reports, summaries, model evaluations, or explanatory context."
   PASS: NEXT_ACTION.md single authorized action references current phase and contains no forbidden phrases.
 ================================================================================
 Verification Summary:
@@ -170,7 +177,7 @@ Verification Summary:
   Git Resolution Root: F:\nexus-reform-lab
   Active Gate Stage: AFTER_WORLD_AUDIT_PRE_COLD_START
   Verified History Entries Count: 16
-  Active UNDER OUTSIDE REVIEW Milestone: Foundation 0.4.1a Cold-Start Gate Consistency Repair
+  Active UNDER OUTSIDE REVIEW Milestone: NONE
   Total Failures: 0
   Script Exit Code: 0
 ================================================================================

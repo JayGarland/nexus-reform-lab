@@ -352,16 +352,24 @@ function verifyRepository(targetRoot, options = {}) {
       }
     });
 
-    // Active Under-Review Entry Rule: must be EXACTLY 1 and correspond to the
-    // current phase's milestone token (when the phase carries a Foundation token).
-    if (unresolvedCount !== 1) {
-      fail(`Active UNDER OUTSIDE REVIEW entry count must be exactly 1! Got unresolvedCount=${unresolvedCount}`);
-    } else {
-      const phaseToken = extractPhaseToken(phaseValue);
-      if (phaseToken && !activeUnresolvedMilestone.includes(phaseToken)) {
+    // Active Under-Review Entry Rule: a milestone phase (one carrying a
+    // "Foundation <version>" token) must have exactly one active UNDER OUTSIDE
+    // REVIEW entry referencing that token. A released test-execution phase
+    // (no token) must have zero active entries.
+    const phaseToken = extractPhaseToken(phaseValue);
+    if (phaseToken) {
+      if (unresolvedCount !== 1) {
+        fail(`Active UNDER OUTSIDE REVIEW entry count must be exactly 1 for milestone phase "${phaseToken}"! Got unresolvedCount=${unresolvedCount}`);
+      } else if (!activeUnresolvedMilestone.includes(phaseToken)) {
         fail(`Active UNDER OUTSIDE REVIEW milestone "${activeUnresolvedMilestone}" does not reference current phase token "${phaseToken}"!`);
       } else {
         rawLogs.push(`  PASS: Active UNDER OUTSIDE REVIEW entry correctly isolated (${activeUnresolvedMilestone}).`);
+      }
+    } else {
+      if (unresolvedCount !== 0) {
+        fail(`Released gate phase must have zero active UNDER OUTSIDE REVIEW entries! Got unresolvedCount=${unresolvedCount} (${activeUnresolvedMilestone})`);
+      } else {
+        rawLogs.push(`  PASS: No active UNDER OUTSIDE REVIEW entry in released gate phase.`);
       }
     }
   }
