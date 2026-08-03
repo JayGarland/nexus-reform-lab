@@ -97,5 +97,11 @@
 ### Milestone 0.4.1b: 0.4.1a Acceptance Write-Back & Cold-Start Test Release
 - **Date**: 2026-08-03T21:55:00+02:00
 - **Based-on Commit**: `d970a85aea7c879f29689f019b3250f3438db370`
-- **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
+- **Resulting Commit**: `98f17cedfffd6ad8d042d0bcd70fe66a2b13bc78`
 - **Actions**: Closed Foundation 0.4.1a as `CONFIRMED FOR REVIEWED SCOPE` (commit `d970a85aea7c879f29689f019b3250f3438db370`) in `EXTERNAL_VERDICT_HISTORY.md` (no new UNDER OUTSIDE REVIEW stage). Updated `CURRENT_PHASE.md` to `Fresh-Instance Cold-Start Recovery Test`, `CURRENT_VERDICT.md` (State Consistency CONFIRMED; Cold-Start AUTHORIZED—NOT YET EXECUTED; CR-S0 WITHHELD), `NEXT_ACTION.md` (authorize exactly one fresh-instance read-only cold-start test), and `HELLO.md` pointers. No new preparation or repair phase created. Production verifier exit code 0; negative fixtures 12/12; positive fixture 1/1.
+
+### Maintenance: Cold-Start Benchmark Reading-Sequence Alignment Patch
+- **Date**: 2026-08-03T22:00:00+02:00
+- **Based-on Commit**: `98f17cedfffd6ad8d042d0bcd70fe66a2b13bc78`
+- **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
+- **Actions**: Aligned the cold-start benchmark input and acceptance criteria by adding `state/OPEN_QUESTIONS.md` to the `WAKE.md` mandatory cold-start reading sequence (step 5, after `NEXT_ACTION.md`) and to the `COLD_START_RECOVERY_TEST.md` strict reading sequence. Explicitly required `Unresolved Blockers` to be reported from `state/OPEN_QUESTIONS.md` with no background context. No Foundation stage created; no verifier logic changes. Re-ran `verify_state_consistency.js` (exit 0) and negative/positive fixture suite (12/12, 1/1, exit 0).

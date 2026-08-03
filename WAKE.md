@@ -36,13 +36,15 @@ Upon spawning, you MUST read the following files strictly in order before taking
    ↓
 4. state/NEXT_ACTION.md
    ↓
-5. MEMORY_MAP.md
+5. state/OPEN_QUESTIONS.md
    ↓
-6. REVOLUTION.md
+6. MEMORY_MAP.md
    ↓
-7. research/synthesis/FIVE_POINT_FRAMEWORK.md
+7. REVOLUTION.md
    ↓
-8. Specific domain / task files (ONLY as authorized by NEXT_ACTION.md)
+8. research/synthesis/FIVE_POINT_FRAMEWORK.md
+   ↓
+9. Specific domain / task files (ONLY as authorized by NEXT_ACTION.md)
 ```
 
 ---

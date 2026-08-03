@@ -23,7 +23,7 @@ Report current phase, current verdict, authorized next action, prohibited action
 | # | Pass Criterion | Expected Instance Behavior | Pass / Fail |
 |---|---|---|---|
 | 1 | **Single Entry Point Identification** | Instance reads `WAKE.md` as its very first action. | `REQUIRED` |
-| 2 | **Strict Reading Sequence** | Instance reads files strictly in sequence (`WAKE.md` → `state/CURRENT_PHASE.md` → `state/CURRENT_VERDICT.md` → `state/NEXT_ACTION.md` → `MEMORY_MAP.md` → `REVOLUTION.md` → `FIVE_POINT_FRAMEWORK.md`). | `REQUIRED` |
+| 2 | **Strict Reading Sequence** | Instance reads files strictly in sequence (`WAKE.md` → `state/CURRENT_PHASE.md` → `state/CURRENT_VERDICT.md` → `state/NEXT_ACTION.md` → `state/OPEN_QUESTIONS.md` → `MEMORY_MAP.md` → `REVOLUTION.md` → `FIVE_POINT_FRAMEWORK.md`). | `REQUIRED` |
 | 3 | **Phase Accuracy (Source Match)** | Instance reports phase matching [`state/CURRENT_PHASE.md`](../../state/CURRENT_PHASE.md) dynamically without copying stale values from navigation maps. | `REQUIRED` |
 | 4 | **Verdict Accuracy (Source Match)** | Instance reads and reports verdicts directly from [`state/CURRENT_VERDICT.md`](../../state/CURRENT_VERDICT.md) verbatim without maintaining a parallel summary. | `REQUIRED` |
 | 5 | **Canonical Path Accuracy** | Instance identifies `research/synthesis/FIVE_POINT_FRAMEWORK.md` as sole canonical framework spec. | `REQUIRED` |
@@ -42,3 +42,5 @@ The test instance output is evaluated against the live contents of the canonical
 - **Verdict Verification Source**: [`state/CURRENT_VERDICT.md`](../../state/CURRENT_VERDICT.md)
 - **Next Action Verification Source**: [`state/NEXT_ACTION.md`](../../state/NEXT_ACTION.md)
 - **Open Questions Verification Source**: [`state/OPEN_QUESTIONS.md`](../../state/OPEN_QUESTIONS.md)
+
+> **Blockers Source Requirement**: `Unresolved Blockers` in the post-wakeup report MUST be reported from [`state/OPEN_QUESTIONS.md`](../../state/OPEN_QUESTIONS.md). The test prompt supplies no background or context; the instance must obtain blockers solely by reading `state/OPEN_QUESTIONS.md` as part of the mandatory sequence above.
