@@ -191,11 +191,11 @@ runFixtureTest('13_valid_positive_fixture', true, (dir) => {
   // Unmodified copy of live valid repo files
 });
 
-// 14. Negative Fixture 14: Registry summary E2 count mismatch (summary claims E2=14 while registry contains E2=13)
+// 14. Negative Fixture 14: Registry summary E2 count mismatch (summary claims E2=19 while registry contains E2=18)
 runFixtureTest('14_registry_e2_count_mismatch', false, (dir) => {
   const p = path.join(dir, 'research/prior-art/e1-e2/CANDIDATE_REGISTRY.md');
   let content = fs.readFileSync(p, 'utf8');
-  content = content.replace('- Reached E2: 13', '- Reached E2: 14');
+  content = content.replace('- Reached E2: 18', '- Reached E2: 19');
   fs.writeFileSync(p, content, 'utf8');
 });
 

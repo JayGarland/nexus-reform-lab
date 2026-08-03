@@ -33,9 +33,9 @@ Cleanup path documented
 Excluded this batch (do NOT lower the bar):
 
 ```text
-karpathy llm-wiki — E0
-base-llm-wiki     — E1-only
 Oso               — E1 / ARCHITECTURAL REFERENCE ONLY
+karpathy llm-wiki — E1 pattern/idea file (not packaged software)
+Marten            — adjacent Deterministic State Projection substrate; not an LLM Current-Knowledge compiler (Deferred / Architectural Comparison)
 ```
 
 ---
@@ -45,12 +45,12 @@ Oso               — E1 / ARCHITECTURAL REFERENCE ONLY
 | # | candidate | provider slot | why this candidate | why now |
 |---|---|---|---|---|
 | Probe 1 | Beads | Coordination | Narrow scope: dependency graph, ready/claim/close; small-wheel; low risk of pulling a full workflow runtime into Nexus (E2 `PROMISING`). | Narrowest Coordination candidate; earliest to prove install + native claim/ready cycle. |
-| Probe 2 | Marten | Knowledge Projection | Library with user-defined event-stream projections; maps directly to the Knowledge Projection slot (E2 `PROMISING`). | Only Marten or KurrentDB is selected for this slot; Marten's library-in-app + single Postgres dependency is more controllable than a full event-store server. |
-| Probe 3 | OPA | Protocol Governance | Single Go binary, no server needed for E3; `opa eval` / `opa test`; fail-closed and decision-trace semantics (E2 `PROMISING`). | Cleanest policy-loading + decision + trace proof; no credentials required. |
-| Probe 4 | DVC | Experiment / Evaluation | Local Git-native experiment runner with `dvc exp run` / metrics; no cloud account or paid credentials (E2 `PROMISING`). | Proves fixed-workload replay + metric comparison with the smallest footprint; promptfoo/MLflow deferred. |
+| Probe 2 | OPA | Protocol Governance | Single Go binary, no server needed for E3; `opa eval` / `opa test`; fail-closed and decision-trace semantics (E2 `PROMISING`). | Cleanest policy-loading + decision + trace proof; no credentials required. |
+| Probe 3 | DVC | Experiment / Evaluation | Local Git-native experiment runner with `dvc exp run` / metrics; no cloud account or paid credentials (E2 `PROMISING`). | Proves fixed-workload replay + metric comparison with the smallest footprint; promptfoo/MLflow deferred. |
+| Probe 4 | (EMPTY) | Knowledge Projection | Left empty pending LLM-wiki E1/E2 comparison. Marten is Deterministic State Projection (adjacent substrate), NOT an LLM Current-Knowledge compiler; it is deferred. | A Knowledge-slot E3 candidate is selected ONLY after the LLM-wiki candidates (Astro-Han, SamurAIGPT, ussumant, atomicstrata, local base-llm-wiki) complete E1/E2 comparison and pass outside review. |
 | Probe 5 | (EMPTY) | Runtime / Re-entry | Left empty. Temporal / Inngest / Hatchet / Restate carry service and internal-state models that would turn E3 into a large deployment task. | No E3 yet; revisit only if a minimal, cleanable local boundary can be defined and separately authorized. |
 
-Each candidate fills its slot's per-candidate card (Section 5).
+Each candidate fills its slot's per-candidate card (Section 5). Empty slots are NOT filled by lowering E3 admission criteria.
 
 ---
 
@@ -60,7 +60,9 @@ Each candidate fills its slot's per-candidate card (Section 5).
 
 ```text
 Coordination:          Restate, go-workflows (luno/workflow)
-Knowledge Projection:  KurrentDB
+Knowledge Projection:  Marten (adjacent projection substrate — Deferred / Architectural Comparison),
+                       KurrentDB (Deterministic State Projection),
+                       LLM-wiki candidates (Astro-Han, SamurAIGPT, ussumant, atomicstrata, base-llm-wiki) — pending E1/E2 comparison
 Protocol Governance:   Cedar
 Experiment/Evaluation: promptfoo, MLflow
 Runtime/Re-entry:      Temporal, Inngest, Hatchet, Restate
@@ -69,7 +71,8 @@ Runtime/Re-entry:      Temporal, Inngest, Hatchet, Restate
 ### Empty Provider slots
 
 ```text
-Runtime / Re-entry Provider   — EMPTY this batch
+Knowledge Projection        — EMPTY this batch (pending LLM-wiki comparison + outside review)
+Runtime / Re-entry Provider — EMPTY this batch
 ```
 
 No candidate was promoted to fill an empty slot by lowering E3 admission criteria.
@@ -114,7 +117,7 @@ cleanup method           Stop and remove PostgreSQL container/instance; remove p
 stop conditions          Cannot run disposable Postgres; projection fails to build; cannot clean up
 ```
 
-### Probe 3 — OPA (Protocol Governance)
+### Probe 2 — OPA (Protocol Governance)
 
 ```text
 candidate                OPA
@@ -132,7 +135,7 @@ cleanup method           Remove probe dir; verify no processes or global config 
 stop conditions          Binary fails to run; policy load/test fails; decision result wrong vs docs; cannot clean up
 ```
 
-### Probe 4 — DVC (Experiment / Evaluation)
+### Probe 3 — DVC (Experiment / Evaluation)
 
 ```text
 candidate                DVC
@@ -150,19 +153,57 @@ cleanup method           Remove probe dir; deactivate/remove isolated env; verif
 stop conditions          Fails to install/run in isolated env; pipeline/exp run fails; cannot clean up
 ```
 
+### Probe 4 — (EMPTY) Knowledge Projection
+
+```text
+candidate                (EMPTY)
+provider slot            Knowledge Projection
+why this candidate       No candidate yet. Marten is Deterministic State Projection (adjacent substrate), not an LLM Current-Knowledge compiler.
+why now                  Knowledge-slot E3 candidate selected ONLY after LLM-wiki candidates complete E1/E2 comparison + outside review.
+what E3 can prove        n/a
+what E3 cannot prove     n/a
+installation method      n/a
+runtime process model    n/a
+network requirements     n/a
+credentials requirements n/a
+filesystem mutation scope n/a
+cleanup method           n/a
+stop conditions          Do not fill this slot by lowering E3 admission criteria.
+```
+
+### Probe 5 — (EMPTY) Runtime / Re-entry
+
+```text
+candidate                (EMPTY)
+provider slot            Runtime / Re-entry
+why this candidate       No candidate yet. Temporal / Inngest / Hatchet / Restate carry service + internal-state models.
+why now                  Revisit only if a minimal, cleanable local boundary can be defined and separately authorized.
+what E3 can prove        n/a
+what E3 cannot prove     n/a
+installation method      n/a
+runtime process model    n/a
+network requirements     n/a
+credentials requirements n/a
+filesystem mutation scope n/a
+cleanup method           n/a
+stop conditions          Do not fill this slot by lowering E3 admission criteria.
+```
+
 ---
 
 ## 6. Selection Rationale
 
 - Chosen candidates are the smallest, most controllable E2 candidates per slot (installation/cleanup, minimal native example, no cloud credentials, no long-lived background service).
-- Diversity of architecture samples: CLI small-wheel (Beads), .NET library + Postgres (Marten), single-binary policy engine (OPA), Git-native Python experiment runner (DVC).
+- Diversity of architecture samples: CLI small-wheel (Beads), single-binary policy engine (OPA), Git-native Python experiment runner (DVC).
+- Marten was NOT selected for the Knowledge slot: it tests event-stream projection infrastructure, not the LLM-maintained Current Knowledge Wiki capability required by Nexus.
 - Candidates that expose Provider-boundary or coupling risk were favored over popularity/stars.
 - Star count, marketing, or model benchmarks were NOT used as selection criteria.
 
 ## 7. Coupling-Risk Rationale
 
-- Beads, OPA, DVC, Marten each expose a narrow surface; adopting them does not force Nexus to accept a central world-model at E3.
+- Beads, OPA, DVC each expose a narrow surface; adopting them does not force Nexus to accept a central world-model at E3.
 - The engine-class candidates (Temporal, Restate, Inngest, Hatchet, MLflow, KurrentDB) were deferred because their service + internal-state models risk turning E3 into a large deployment and binding Nexus to a central engine.
+- Marten and KurrentDB are Deterministic State Projection substrates; they are not candidates for the LLM Current-Knowledge Compilation slot at E3.
 
 ## 8. Required Execution Order
 

@@ -10,13 +10,13 @@
 
 | # | Check | Requirement | Result |
 |---|---|---|---|
-| 1 | Five-Provider coverage | All five Provider slots have concrete candidates and survey files. | `PASS` — Coordination (3), Knowledge Projection (4), Protocol Governance (3), Experiment/Evaluation (3), Runtime/Re-entry (3) registered. |
+| 1 | Five-Provider coverage | All five Provider slots have concrete candidates and survey files. | `PASS` — Coordination (3), Knowledge Projection (8: karpathy gist pattern + base-llm-wiki + 4 LLM-wiki implementations + KurrentDB + Marten), Protocol Governance (3), Experiment/Evaluation (3), Runtime/Re-entry (3) registered. |
 | 2 | E1/E2 ceiling | Survey stops at documentation/source inspection; no E3 claimed. | `PASS` — No `OBSERVED` runtime fact used; no local execution performed. |
 | 3 | Evidence classification | Every fact tagged DOCUMENTED / INFERRED / NOT VERIFIED. | `PASS` — Tags applied throughout Evidence Cards. |
-| 4 | Official-source discipline | Official repos/docs are primary; no third-party-only core evidence. | `PASS WITH LIMITATION` — Sources are official repositories; the attempted Karpathy repository URL returned 404, the authoritative source remains unresolved, and the candidate stays E0. |
-| 5 | No selection labels | No ADOPT / KEEP / SELECTED / BOUND / IMPLEMENTED used. | `PASS` — Conclusion labels restricted to the allowed five plus ARCHITECTURAL REFERENCE ONLY for deprecated/not-found candidates. |
-| 6 | Concrete candidates per category | Knowledge Projection has 2+ concrete event-store/projection implementations; Protocol/Experiment/Runtime have 3+ concrete projects. | `PASS` — KurrentDB + Marten; OPA + Cedar (+ Oso reference); MLflow + DVC + promptfoo; Temporal + Inngest + Hatchet. |
-| 7 | Stop conditions honored | Candidates without official source or with deprecated status handled. | `PASS` — karpathy llm-wiki → INSUFFICIENT EVIDENCE; Oso → ARCHITECTURAL REFERENCE ONLY. |
+| 4 | Official-source discipline | Official repos/docs are primary; no third-party-only core evidence. | `PASS` — The Karpathy gist (gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) was located and read (E1); other candidates use official repositories. |
+| 5 | No selection labels | No ADOPT / KEEP / SELECTED / BOUND / IMPLEMENTED used. | `PASS` — Conclusion labels restricted to the allowed five plus ARCHITECTURAL REFERENCE ONLY for deprecated candidates. |
+| 6 | Concrete candidates per category | Knowledge Projection has concrete LLM-wiki implementations; Protocol/Experiment/Runtime have 3+ concrete projects. | `PASS` — LLM-wiki implementations: Astro-Han, SamurAIGPT, ussumant, atomicstrata, base-llm-wiki (+ Marten/KurrentDB as deterministic substrates); OPA + Cedar (+ Oso reference); MLflow + DVC + promptfoo; Temporal + Inngest + Hatchet. |
+| 7 | Stop conditions honored | Candidates without usable implementation or with deprecated status handled. | `PASS` — karpathy llm-wiki → E1 pattern/idea file (implementations are the real candidates); Oso → ARCHITECTURAL REFERENCE ONLY; Marten → adjacent projection substrate (Deferred). |
 | 8 | Model neutrality | No model profile altered any rating or evidence gate. | `PASS` — Ratings are tool-capability based; no model profile used. |
 
 ---
@@ -30,8 +30,12 @@
 | Restate | E2 | yes | export NOT VERIFIED | yes |
 | KurrentDB | E2 | yes | export NOT VERIFIED | yes |
 | Marten | E2 | yes | partial | yes |
-| karpathy llm-wiki | E0 | yes | n/a | yes (attempted URL returned 404; authoritative source unresolved) |
-| base-llm-wiki | E1 (local) | yes | n/a | yes (local content not inspected) |
+| karpathy llm-wiki | E1 (gist read) | yes | n/a | yes (pattern file; implementations are the candidates) |
+| base-llm-wiki | E2 (local artifacts) | yes | n/a | yes (local AGENTS.md + wiki/ + templates/ inspected) |
+| Astro-Han/karpathy-llm-wiki | E2 | yes | partial | yes |
+| SamurAIGPT/llm-wiki-agent | E2 | yes | partial | yes |
+| ussumant/llm-wiki-compiler | E2 | yes | partial | yes (autostart surface flagged for assessment) |
+| atomicstrata/llm-wiki-compiler | E2 | yes | partial | yes (credential/MCP surface flagged for assessment) |
 | OPA | E2 | yes | yes (file/bundle portability) | yes |
 | Cedar | E2 | yes | yes (file portability) | yes |
 | Oso | E1 | yes | n/a | yes (deprecated) |
@@ -47,12 +51,14 @@
 ## Evidence-Level Summary (consistent with Registry)
 
 ```text
-E2:            13
-E1 only:       2   (base-llm-wiki, Oso)
-E0:            1   (karpathy llm-wiki)
-Reached at least E1: 15
-Registered:    16
+E2:            18
+E1 only:       2   (karpathy llm-wiki gist, Oso)
+E0:            0
+Reached at least E1: 20
+Registered:    20
 ```
+
+> Updated under the Foundation 0.8 queue correction: karpathy llm-wiki re-evaluated E0 → E1 (gist read); base-llm-wiki E1 → E2 (local artifacts); four LLM-wiki implementation candidates added (all E2); Marten reclassified as adjacent Deterministic State Projection substrate (E2 retained).
 
 ---
 
@@ -60,8 +66,8 @@ Registered:    16
 
 - No local execution; export/import/rollback claims are often `NOT VERIFIED`.
 - KurrentDB projections engine and Marten projection-rebuild specifics need an E2 docs follow-up.
-- Local `base-llm-wiki` content requires a separate local-inspection pass.
-- `karpathy llm-wiki`: the attempted repository URL returned 404; the authoritative source remains unresolved in this pass (this does not establish that no authoritative source exists).
+- Local `base-llm-wiki` content requires a deeper local review of `wiki/`, `raw/`, `templates/`, and `workflows/`.
+- `karpathy llm-wiki` is the located pattern gist (E1); it is an idea file, not packaged software — the implementation candidates carry the E3 potential.
 
 ---
 

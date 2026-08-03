@@ -10,9 +10,9 @@
 
 | # | Check | Requirement | Result |
 |---|---|---|---|
-| 1 | Queue size | At most 5 candidates; at most 1 per Provider slot. | `PENDING` — 4 proposed (Beads, Marten, OPA, DVC); Runtime/Re-entry empty. |
-| 2 | E3 admission criteria | Every queued candidate is E2 with confirmed identity, license, documented install, minimal native example, no Nexus modification, no uncontrolled background behavior, documented cleanup. | `PENDING` |
-| 3 | No threshold lowering | Empty slots are not filled by lowering E3 admission criteria; karpathy llm-wiki (E0), base-llm-wiki (E1-only), Oso (E1) excluded. | `PENDING` |
+| 1 | Queue size | At most 5 candidates; at most 1 per Provider slot. | `PENDING` — 3 proposed (Beads, OPA, DVC); Knowledge Projection and Runtime/Re-entry empty. |
+| 2 | E3 admission criteria | Every queued candidate is E2 with confirmed identity, license, documented install, minimal native example, no Nexus modification, no uncontrolled background behavior, documented cleanup. | `PENDING` — Beads, OPA, DVC are E2. |
+| 3 | No threshold lowering | Empty slots are not filled by lowering E3 admission criteria. Excluded: karpathy llm-wiki (E1 pattern/idea file), Oso (E1 / ARCHITECTURAL REFERENCE ONLY), Marten (adjacent Deterministic State Projection substrate — Deferred). | `PENDING` — Knowledge slot stays empty until LLM-wiki candidates (Astro-Han, SamurAIGPT, ussumant, atomicstrata, base-llm-wiki) complete E1/E2 comparison + outside review. |
 | 4 | Serial execution + separate authorization | Strictly serial; evidence → cleanup → cleanup verification → outside review between Probes; no auto-continuation. | `PENDING` |
 | 5 | No execution this round | This round defines the queue only; no candidate installed, started, or executed. | `PENDING` |
 | 6 | Per-candidate stop conditions | Every candidate has explicit stop conditions and cleanup boundary. | `PENDING` |

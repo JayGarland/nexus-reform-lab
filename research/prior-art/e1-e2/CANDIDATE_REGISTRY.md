@@ -11,9 +11,13 @@
 | go-workflows (luno/workflow) | Coordination | E2 | `PARTIAL FIT` | github.com/luno/workflow | Go type-safe event-driven state-machine orchestration, durable events, retries, adapters | E3; verify outbox exactly-once and schema portability |
 | Restate | Coordination (+ Runtime) | E2 | `PROMISING` | github.com/restatedev/restate | Durable execution, exactly-once messaging, durable promises/timers, K/V entity state | E3; assess server dependency and state export |
 | KurrentDB (EventStoreDB) | Knowledge Projection | E2 | `PARTIAL FIT` | github.com/kurrent-io/KurrentDB | Event-native store with streaming engine; projection lineage; evidence-grade raw events | E2 projections docs; E3; export/import |
-| Marten | Knowledge Projection | E2 | `PROMISING` | github.com/JasperFx/marten | Event store on PostgreSQL with user-defined projections; rebuildable projections | E3; projection rebuild and deletion test |
-| karpathy llm-wiki | Knowledge Projection | E0 | `INSUFFICIENT EVIDENCE` | github.com/karpathy/llm-wiki (attempted URL returned 404) | Named candidate from plan | Identify the exact original source referred to as "Karpathy LLM Wiki" before conducting E1 inspection |
-| base-llm-wiki (local) | Knowledge Projection | E1 (local structure) | `INSUFFICIENT EVIDENCE` | local `F:\subwikis\base-llm-wiki` | Existing local in-house wiki system | local content/source inspection of `wiki/`, `raw/`, `templates/`, `workflows/` |
+| Marten | Knowledge Projection | E2 | `PARTIAL FIT` — adjacent projection substrate | github.com/JasperFx/marten | Event-store / deterministic read-model projection infrastructure; adjacent to LLM-maintained wiki capability | E3 (if ever re-entered as bottom projection); LLM-wiki capability must come from a Current-Knowledge compiler |
+| karpathy llm-wiki | Knowledge Projection | E1 | `PARTIAL FIT` — pattern / idea file | gist.github.com/karpathy/442a6bf555914893e9891c11519de94f (llm-wiki.md, read in this pass) | Andrej Karpathy — LLM Wiki pattern; designed to be copied to a coding agent for implementation; not a packaged software product | Compare implementations (Astro-Han, SamurAIGPT, ussumant, atomicstrata, base-llm-wiki) before any E3 |
+| base-llm-wiki (local) | Knowledge Projection | E2 | `PROMISING` | local `F:\subwikis\base-llm-wiki` (AGENTS.md + wiki/ + templates/ inspected) | Existing local in-house LLM-wiki pattern instantiation; raw/ immutable, wiki/ LLM-maintained, no external tooling | Local content review of `wiki/`, `raw/`, `templates/`, `workflows/`; compare against external LLM-wiki candidates |
+| Astro-Han/karpathy-llm-wiki | Knowledge Projection | E2 | `PROMISING` | github.com/Astro-Han/karpathy-llm-wiki | Agent Skills-compatible LLM wiki skill; raw/ + wiki/ + index.md + log.md; ingest/query/lint; no MCP or vector DB | E1/E2 comparison vs other LLM-wiki candidates; outside review before any E3 |
+| SamurAIGPT/llm-wiki-agent | Knowledge Projection | E2 | `PROMISING` | github.com/SamurAIGPT/llm-wiki-agent | Coding agent skill; entities/concepts/syntheses pages; graph.json/html; contradiction flags at ingest; multi-format ingest (markitdown) | E1/E2 comparison; assess optional Python conversion deps before E3 |
+| ussumant/llm-wiki-compiler | Knowledge Projection | E2 | `PROMISING` | github.com/ussumant/llm-wiki-compiler | Claude Code/Codex plugin; incremental /wiki-compile; schema.md; coverage indicators; opt-in macOS launchd autostart for /fetch-bookmarks schedule | E1/E2 comparison; assess autostart/background-job surface before any E3 |
+| atomicstrata/llm-wiki-compiler | Knowledge Projection | E2 | `PROMISING` | github.com/atomicstrata/llm-wiki-compiler | npm compiler (llmwiki); Configurable Lifecycle Profiles, review gates, OKF export/import, MCP server, TS SDK; Node 24 + provider credentials | E1/E2 comparison; assess MCP/server + credential dependency before any E3 |
 | OPA | Protocol Governance | E2 | `PROMISING` | github.com/open-policy-agent/opa | General-purpose policy engine (Rego), policy-as-code, `opa test`, bundles, fail-closed | E3; NL-protocol adapter assessment |
 | Cedar | Protocol Governance | E2 | `PROMISING` | github.com/cedar-policy/cedar | Authorization policy language with validator/analyzer, CLI, WASM | E3; schema-driven policy validation fit |
 | Oso | Protocol Governance | E1 | `ARCHITECTURAL REFERENCE ONLY` | github.com/osohq/oso | Declared deprecated in official README | none (deprecated); reuse Polar concepts only |
@@ -26,15 +30,16 @@
 
 ## Summary Counts
 
-- Candidates registered: 16
-- Reached at least E1: 15
-- Reached E2: 13
-- E0: 1
-- INSUFFICIENT EVIDENCE: 2
+- Candidates registered: 20
+- Reached at least E1: 20
+- Reached E2: 18
+- E0: 0
+- INSUFFICIENT EVIDENCE: 0
 - ARCHITECTURAL REFERENCE ONLY: 1
 - Selected or bound: 0
 
-> Arithmetic (registry-internal): registered 16 = E0 1 + E1-only 2 + E2 13; at-least-E1 15 = E1-only 2 + E2 13.
+> Arithmetic (registry-internal): registered 20 = E0 0 + E1-only 2 + E2 18; at-least-E1 20 = E1-only 2 + E2 18.
+> Note: karpathy llm-wiki re-evaluated E0 → E1 (gist `442a6bf555914893e9891c11519de94f` read); Marten reclassified as adjacent projection substrate (PARTIAL FIT), E2 evidence retained.
 
 ---
 
