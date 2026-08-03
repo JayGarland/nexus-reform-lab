@@ -21,5 +21,10 @@
 
 ### Milestone 0.3: Persistent Memory Structure Build & Re-entry Foundation 0.3
 - **Date**: 2026-08-03
-- **Commit**: Pending Commit
+- **Commit**: `10928fd0284721538aec9b7bd4575f24ed8232cf`
 - **Actions**: Created `WAKE.md`, `MEMORY_MAP.md`, `state/` files, `handoff/` files, repository structure audit, cold-start recovery test spec, updated status headers on superseded files.
+
+### Milestone 0.3.1: Foundation 0.3.1 Memory Consistency Fix
+- **Date**: 2026-08-03T21:04:00+02:00
+- **Commit**: Pending Commit (Foundation 0.3.1)
+- **Actions**: Closed commit SHA in handoff logs (`10928fd0284721538aec9b7bd4575f24ed8232cf`), fixed timezone to `+02:00`, reclassified Citation Exam status to `HALTED — HISTORICAL FAILURE / EVIDENCE ONLY`, narrowed audit overclaims, relaxed cold-start test for read-only inspection commands.

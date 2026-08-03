@@ -1,7 +1,7 @@
 # Persistent Memory Structure Audit
 
 > **Laboratory Root**: `F:\nexus-reform-lab`  
-> **Phase**: `Re-entry Foundation 0.3`  
+> **Phase**: `Re-entry Foundation 0.3.1`  
 > **Audit Purpose**: Evaluate repository structure, authority relationships, superseded risks, and cold-start recoverability.  
 
 ---
@@ -9,9 +9,9 @@
 ## 1. Executive Summary & Audit Answers
 
 ### 1. Is there currently a single entry point?
-- **Status**: `NO (Prior to Foundation 0.3)`.
+- **Status**: `RESOLVED`.
 - **Finding**: Fresh AI instances previously relied on prompt instructions or chat summary transcripts.
-- **Action**: Creating `WAKE.md` at the repository root as the mandatory single entry point for all transient instances.
+- **Action**: Created `WAKE.md` at the repository root as the mandatory single entry point for all transient instances.
 
 ### 2. Are there competing doctrines?
 - **Status**: `RESOLVED`.
@@ -24,7 +24,7 @@
 - **Action**: Added explicit YAML frontmatter and warning banners to all superseded and historical failure documents.
 
 ### 4. Are current phase, verdict, and next action independently logged on disk?
-- **Status**: `NO (Prior to Foundation 0.3)`.
+- **Status**: `RESOLVED`.
 - **Finding**: Operational state lived in chat responses rather than dedicated disk files.
 - **Action**: Created dedicated state files in `state/` (`CURRENT_PHASE.md`, `CURRENT_VERDICT.md`, `NEXT_ACTION.md`, `OPEN_QUESTIONS.md`).
 
@@ -39,12 +39,13 @@
 
 ### 7. Are there isolated files unreachable from root?
 - **Status**: `RESOLVED`.
-- **Finding**: Some synthesis and evidence files lacked structural navigation links from the root directory.
-- **Action**: Created `MEMORY_MAP.md` as the master associative navigation map linking every file in the repository.
+- **Finding**: Key entry points previously lacked structural navigation links from the root directory.
+- **Action**: Created `MEMORY_MAP.md` as the master navigation map linking every authoritative memory category and principal entry point across the repository.
 
 ### 8. Does the current structure express "files are memory, structure is gene"?
-- **Status**: `ESTABLISHED`.
+- **Status**: `STRUCTURE ESTABLISHED (RECOVERABILITY NOT YET EMPIRICALLY VALIDATED)`.
 - **Finding**: Root entry (`WAKE.md`), memory navigation (`MEMORY_MAP.md`), working state (`state/`), procedures (`AGENTS.md`), and historical lineage (`research/legacy-evidence/`) form an explicit, structured persistent memory runtime.
+- **Precision Correction**: Persistent memory structure established; re-entry recoverability not yet empirically validated.
 
 ---
 
@@ -74,8 +75,8 @@
 | `research/migration/verify_migration.js` | Verification Fix 0.2.2 Script | `CANONICAL` | `OPERATOR_ONLY` | **NO** | Supersedes draft verifier | Executable node script |
 | `research/migration/logs/migration_verification_raw.log` | Raw Execution Log (Fix 0.2.2) | `CANONICAL` | `EVIDENCE` | **CONDITIONAL** | N/A | Log exit code 0 |
 | `research/migration/logs/hash_comparison.txt` | Hash Comparison Table | `CANONICAL` | `EVIDENCE` | **CONDITIONAL** | N/A | Audit table of 31 payload hashes |
-| `research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md` | Citation Remediation Exam v2.0 | `HISTORICAL` | `EVIDENCE` | **NO** | Supersedes v1.0 exam | Evidence artifact for citation audit |
-| `research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json` | Source Register Schema 2.0 | `HISTORICAL` | `EVIDENCE` | **NO** | Supersedes v1.0 register | Evidence artifact for citation audit |
+| `research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md` | Citation Remediation Exam v2.0 | `HISTORICAL` | `EVIDENCE` | **NO** | Reclassified as HISTORICAL_FAILURE | Evidence artifact for citation audit |
+| `research/examinations/FOUR_LAYER_ONE_WORLD_SOURCE_REGISTER.json` | Source Register Schema 2.0 | `HISTORICAL` | `EVIDENCE` | **NO** | Reclassified as HISTORICAL_FAILURE | Evidence artifact for citation audit |
 | `research/examinations/verify_source_register.js` | Source Register Verifier Script | `HISTORICAL` | `OPERATOR_ONLY` | **NO** | N/A | Executable node script |
 | `research/examinations/logs/source_register_verification.log` | Raw Verification Log (v2.0) | `HISTORICAL` | `EVIDENCE` | **NO** | N/A | Log exit code 0 |
 | `research/examinations/evidence/` | Saved Evidence Files | `HISTORICAL` | `EVIDENCE` | **NO** | N/A | Primary public & local raw files |
