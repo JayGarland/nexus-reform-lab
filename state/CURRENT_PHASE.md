@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Prior-Art Discovery Planning / Foundation 0.6`
-- **Current Focus**: Author a bounded Prior-Art Discovery Plan defining evidence collection and comparison methodology for the five replaceable Provider capability slots, without installing, running, selecting, adapting, or binding any Provider.
-- **External Audit Status**: `FOUNDATION 0.6 PRIOR-ART DISCOVERY PLAN SUBMITTED — UNDER OUTSIDE REVIEW`
-- **Started At**: `2026-08-03T22:25:00+02:00`
+- **Current Phase**: `Prior-Art Discovery E1/E2 Survey / Foundation 0.7`
+- **Current Focus**: Inspect upstream documentation and source architecture for candidate wheels across the five replaceable Provider boundaries.
+- **External Audit Status**: `FOUNDATION 0.6 CONFIRMED FOR PLANNING SCOPE — E1/E2 SURVEY AUTHORIZED`
+- **Started At**: `2026-08-03T22:30:00+02:00`
 
 ---
 
