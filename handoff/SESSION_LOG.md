@@ -61,5 +61,11 @@
 ### Milestone 0.3.2d: Current-State Closure & Verdict-Register Hardening 0.3.2d
 - **Date**: 2026-08-03T21:23:00+02:00
 - **Based-on Commit**: `8ddabe908e62d748081b587f6fa55a6c87e6db91`
-- **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
+- **Resulting Commit**: `295d743d79f391034e98b6565a33b63e1353fb24`
 - **Actions**: Closed Foundation 0.3.2c as `CONFIRMED FOR REVIEWED SCOPE` in `EXTERNAL_VERDICT_HISTORY.md` (commit `8ddabe908e62d748081b587f6fa55a6c87e6db91`), set State Consistency to `CONFIRMED` and World to `NOT YET AUDITED` in `CURRENT_VERDICT.md`, updated `CURRENT_PHASE.md`, closed silent bypass leak for historical reviewed commits in `verify_state_consistency.js`, and added phase/verdict state alignment checks.
+
+### Milestone 0.3.2e: Verdict Verifier Regression Repair 0.3.2e
+- **Date**: 2026-08-03T21:25:00+02:00
+- **Based-on Commit**: `295d743d79f391034e98b6565a33b63e1353fb24`
+- **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
+- **Actions**: Dynamically resolved repository root via `path.resolve(__dirname, '..')`, implemented row-based `getVerdictRow` parser for `CURRENT_VERDICT.md`, restored full milestone schema checks for `PARTIAL PASS`, `REJECTED`, `CONFIRMED`, `CONFIRMED FOR REVIEWED SCOPE`, and `UNDER OUTSIDE REVIEW` entries in `EXTERNAL_VERDICT_HISTORY.md`, verified table headers & 9-column count integrity, enforced 0.3.2a REJECTED and Doctrine 0.2.1 4-scope verifications, enforced `unresolvedCount === 1` for Foundation 0.3.2e, and strictly verified blockquote text in `NEXT_ACTION.md`.

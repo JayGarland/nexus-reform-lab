@@ -1,9 +1,19 @@
 ================================================================================
-STATE HARDENING & VERDICT REGISTER AUTOMATED VERIFICATION LOG (0.3.2d)
-Timestamp: 2026-08-03T19:24:23.387Z
-Laboratory Root: F:\nexus-reform-lab
+VERDICT VERIFIER REGRESSION & STATE CONSISTENCY LOG (0.3.2e)
+Timestamp: 2026-08-03T19:26:19.962Z
+Resolved Laboratory Root: F:\nexus-reform-lab
 ================================================================================
-[Check A] Strict 40-character SHA & dynamic Git parent verification...
+[Check 1] CURRENT_VERDICT.md Exact Table Row Verification...
+  Parsed Row [State Consistency]: PARTIAL — state sources are aligned, but verifier completeness is under repair.
+  PASS: State Consistency row verdict verified.
+  Parsed Row [Repository-wide Persistent Artifact World]: NOT YET AUDITED
+  PASS: Persistent Artifact World row verdict verified.
+  Parsed Row [Cold-Start Recoverability]: NOT YET TESTED
+  PASS: Cold-Start Recoverability row verdict verified.
+  Parsed Row [CR-S0 Authorization]: WITHHELD
+  PASS: CR-S0 Authorization row verdict verified.
+
+[Check 2] Dynamic Git parent lineage verification from SESSION_LOG.md...
   Milestone: 0.1: Clean-Room Laboratory Bootstrap & Manifest Repair
     Resulting Commit (40-char): a78709e9bf07c14d46276d60da978bfedaf2f5c4
     Recorded Based-on (40-char): 30f73ae08804efb890f3e7721e7f629cc8166f8d
@@ -58,92 +68,116 @@ Laboratory Root: F:\nexus-reform-lab
     Actual Git Parent (~1): 5ac021c9ae3a362243a2f442316310ff0b065e27
     Strict 40-Char Equality: YES
   PASS: Strict 40-char parent SHA equality verified.
+  Milestone: 0.3.2d: Current-State Closure & Verdict-Register Hardening 0.3.2d
+    Resulting Commit (40-char): 295d743d79f391034e98b6565a33b63e1353fb24
+    Recorded Based-on (40-char): 8ddabe908e62d748081b587f6fa55a6c87e6db91
+    Actual Git Parent (~1): 8ddabe908e62d748081b587f6fa55a6c87e6db91
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
 
-[Check B] EXTERNAL_VERDICT_HISTORY.md Schema & Unresolved Leak Prevention...
---- Milestone: **Clean-Room Bootstrap** ---
+[Check 3] EXTERNAL_VERDICT_HISTORY.md Table Header & Column Count Integrity...
+  PASS: Table header structure and 9-column layout verified.
+--- Milestone Schema Check: Clean-Room Bootstrap ---
   Reviewed Commit: a78709e9bf07c14d46276d60da978bfedaf2f5c4
   Outside Verdict: CONFIRMED
   Fully Accepted: yes
-  Milestone Current Authority: yes
-  Git Commit Existence Check (a78709e9bf07c14d46276d60da978bfedaf2f5c4): EXISTS
---- Milestone: **Doctrine Repair 0.2.1** ---
+  Accepted Scope: Clean-Room Lab Setup, Charter, Invariants, Drive Manifest
+  Rejected Scope: None
+  Current Authority: yes
+--- Milestone Schema Check: Doctrine Repair 0.2.1 ---
   Reviewed Commit: 57b5aa59ef0b0285f051de3ce18980bac02cc91e
   Outside Verdict: PARTIAL PASS
   Fully Accepted: no
-  Milestone Current Authority: no
-  Git Commit Existence Check (57b5aa59ef0b0285f051de3ce18980bac02cc91e): EXISTS
---- Milestone: **Migration Verification Fix 0.2.2** ---
+  Accepted Scope: Four-Layer One-World Doctrine, LLM Wiki Doctrine, Software 3.0 Doctrine, Controlled AutoResearch Doctrine
+  Rejected Scope: Migration byte-integrity verifier, Exact destination/source verification
+  Current Authority: no
+  PASS: Doctrine Repair 0.2.1 specific verdict check passed (4 scopes confirmed).
+--- Milestone Schema Check: Migration Verification Fix 0.2.2 ---
   Reviewed Commit: 4e7fe457bb25eb5e9d13a8f01f16edb55714e6d5
   Outside Verdict: CONFIRMED
   Fully Accepted: yes
-  Milestone Current Authority: yes
-  Git Commit Existence Check (4e7fe457bb25eb5e9d13a8f01f16edb55714e6d5): EXISTS
---- Milestone: **Foundation 0.3** ---
+  Accepted Scope: 31/31 normalized text equivalence after frontmatter/newline normalization
+  Rejected Scope: Exact payload byte equality
+  Current Authority: yes
+--- Milestone Schema Check: Foundation 0.3 ---
   Reviewed Commit: 10928fd0284721538aec9b7bd4575f24ed8232cf
   Outside Verdict: PARTIAL PASS
   Fully Accepted: no
-  Milestone Current Authority: no
-  Git Commit Existence Check (10928fd0284721538aec9b7bd4575f24ed8232cf): EXISTS
---- Milestone: **Foundation 0.3.1** ---
+  Accepted Scope: Persistent Memory Skeleton
+  Rejected Scope: Handoff commit closure, State consistency, Cold-start recoverability
+  Current Authority: no
+--- Milestone Schema Check: Foundation 0.3.1 ---
   Reviewed Commit: 61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34
   Outside Verdict: PARTIAL PASS
   Fully Accepted: no
-  Milestone Current Authority: no
-  Git Commit Existence Check (61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34): EXISTS
---- Milestone: **Foundation 0.3.1a** ---
+  Accepted Scope: Consistency Fix Content
+  Rejected Scope: 0.3.1 commit self-embedding pending
+  Current Authority: no
+--- Milestone Schema Check: Foundation 0.3.1a ---
   Reviewed Commit: f0027bcd5d0600b753a9b91b730fa9a46870b261
   Outside Verdict: REJECTED
   Fully Accepted: no
-  Milestone Current Authority: no
-  Git Commit Existence Check (f0027bcd5d0600b753a9b91b730fa9a46870b261): EXISTS
---- Milestone: **Foundation 0.3.2** ---
+  Accepted Scope: None
+  Rejected Scope: Entire milestone rejected
+  Current Authority: no
+--- Milestone Schema Check: Foundation 0.3.2 ---
   Reviewed Commit: fc209ffd4d7a6046ab75532f2a9c61fd41255ee6
   Outside Verdict: PARTIAL PASS
   Fully Accepted: no
-  Milestone Current Authority: no
-  Git Commit Existence Check (fc209ffd4d7a6046ab75532f2a9c61fd41255ee6): EXISTS
---- Milestone: **Foundation 0.3.2a** ---
+  Accepted Scope: State Model Repair
+  Rejected Scope: Parent commit SHA & milestone classification fix
+  Current Authority: no
+--- Milestone Schema Check: Foundation 0.3.2a ---
   Reviewed Commit: 03a98d7bf6787f44fa823a18cbf165ceb5aee307
   Outside Verdict: REJECTED
   Fully Accepted: no
-  Milestone Current Authority: no
-  Git Commit Existence Check (03a98d7bf6787f44fa823a18cbf165ceb5aee307): EXISTS
---- Milestone: **Foundation 0.3.2b** ---
+  Accepted Scope: None
+  Rejected Scope: Verifier logic produced a false pass, External verdict history remained untrustworthy, Repository-wide World Audit authorization remained withheld
+  Current Authority: no
+  PASS: Foundation 0.3.2a specific verdict check passed.
+--- Milestone Schema Check: Foundation 0.3.2b ---
   Reviewed Commit: 5ac021c9ae3a362243a2f442316310ff0b065e27
   Outside Verdict: PARTIAL PASS
   Fully Accepted: no
-  Milestone Current Authority: no
-  Git Commit Existence Check (5ac021c9ae3a362243a2f442316310ff0b065e27): EXISTS
---- Milestone: **Foundation 0.3.2c** ---
+  Accepted Scope: Dynamic Parent Lineage Verification
+  Rejected Scope: Verdict schema accuracy & strict 40-char SHA enforcement
+  Current Authority: no
+--- Milestone Schema Check: Foundation 0.3.2c ---
   Reviewed Commit: 8ddabe908e62d748081b587f6fa55a6c87e6db91
   Outside Verdict: CONFIRMED FOR REVIEWED SCOPE
   Fully Accepted: yes
-  Milestone Current Authority: yes
-  Git Commit Existence Check (8ddabe908e62d748081b587f6fa55a6c87e6db91): EXISTS
-  PASS: Foundation 0.3.2c accurately closed as CONFIRMED FOR REVIEWED SCOPE.
---- Milestone: **Foundation 0.3.2d** ---
+  Accepted Scope: Strict 40-character SHA parsing, Exact Git parent equality, External verdict schema accuracy, Partial milestone / accepted-scope separation
+  Rejected Scope: Repository-wide Persistent Artifact World implementation, Cold-start recoverability, Runtime process-isolation claims
+  Current Authority: yes
+  NOTE: Fully accepted refers only to the bounded milestone repair, not to the unreviewed repository-wide World or cold-start capability.
+--- Milestone Schema Check: Foundation 0.3.2d ---
+  Reviewed Commit: 295d743d79f391034e98b6565a33b63e1353fb24
+  Outside Verdict: PARTIAL PASS
+  Fully Accepted: no
+  Accepted Scope: Current phase transition, State Consistency current verdict closure, Foundation 0.3.2c historical closure, Historical unresolved-entry restriction
+  Rejected Scope: Verdict verifier completeness, due to regression of schema checks, Repository-wide Persistent Artifact World, Cold-start recoverability
+  Current Authority: no
+--- Milestone Schema Check: Foundation 0.3.2e ---
   Reviewed Commit: RESOLVE_FROM_GIT
   Outside Verdict: UNDER OUTSIDE REVIEW
   Fully Accepted: no
-  Milestone Current Authority: no
-  NOTICE: Active milestone under review unresolved (permitted max 1).
+  Accepted Scope: None
+  Rejected Scope: Whole milestone under review
+  Current Authority: no
+  PASS: Active UNDER OUTSIDE REVIEW entry correctly isolated to Foundation 0.3.2e.
 
-Unresolved Reviewed Commit Count (Active Under Review): 1
-Historical Unresolved/Invalid Count: 0
-PASS: Exactly <= 1 unresolved entry under active review.
+[Check 4] CURRENT_PHASE.md Alignment...
+  PASS: CURRENT_PHASE.md correctly set to Foundation 0.3.2e.
 
-[Check C] CURRENT_PHASE.md Alignment...
-PASS: CURRENT_PHASE.md aligned to World Audit Preparation.
-
-[Check D] CURRENT_VERDICT.md Alignment...
-  State Consistency Verdict Confirmed: YES
-  World Audit Status Not Yet Audited: YES
-  Cold-Start Status Not Yet Tested: YES
-  CR-S0 Status Withheld: YES
-PASS: CURRENT_VERDICT.md state alignment confirmed.
-
-[Check E] NEXT_ACTION.md Alignment...
-PASS: NEXT_ACTION.md specifies single authorized submission action.
+[Check 5] NEXT_ACTION.md Blockquote Parsing & Strict Text Verification...
+  Parsed Blockquote Action Text: "Submit Foundation 0.3.2e verdict-verifier regression repair for outside review. Do not run the repository-wide World Audit, cold-start test, or CR-S0 yet."
+  PASS: NEXT_ACTION.md single authorized action text strictly verified.
 ================================================================================
-Final Verification Result: Total Failures = 0
-Script Exit Code: 0
+Verification Summary:
+  Parsed Repository Root: F:\nexus-reform-lab
+  Verified History Entries Count: 12
+  Active UNDER OUTSIDE REVIEW Milestone: Foundation 0.3.2e
+  Foundation 0.3.2d Verdict: PARTIAL PASS
+  Total Failures: 0
+  Script Exit Code: 0
+================================================================================

@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Repository-wide Persistent Artifact World Audit Preparation / Foundation 0.3.2d`
-- **Current Focus**: Close the state-model repair, preserve the outside verdict for Foundation 0.3.2c, and prepare a read-only repository-wide World audit.
-- **External Audit Status**: `FOUNDATION 0.3.2c ACCEPTED FOR ITS REVIEWED SCOPE`
-- **Started At**: `2026-08-03T21:23:00+02:00`
+- **Current Phase**: `Verdict Verifier Regression Repair / Foundation 0.3.2e`
+- **Current Focus**: Restore complete milestone-verdict schema validation before repository-wide World audit.
+- **External Audit Status**: `FOUNDATION 0.3.2d PARTIAL PASS — VERIFIER REGRESSION UNDER REPAIR`
+- **Started At**: `2026-08-03T21:25:00+02:00`
 
 ---
 

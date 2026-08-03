@@ -2,7 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const reformLabRoot = 'F:\\nexus-reform-lab';
+// Dynamic repository root resolution (no hardcoded absolute paths)
+const reformLabRoot = path.resolve(__dirname, '..');
 const stateDir = path.join(reformLabRoot, 'state');
 const logsDir = path.join(stateDir, 'logs');
 
@@ -10,9 +11,9 @@ fs.mkdirSync(logsDir, { recursive: true });
 
 const rawLogs = [];
 rawLogs.push(`================================================================================`);
-rawLogs.push(`STATE HARDENING & VERDICT REGISTER AUTOMATED VERIFICATION LOG (0.3.2d)`);
+rawLogs.push(`VERDICT VERIFIER REGRESSION & STATE CONSISTENCY LOG (0.3.2e)`);
 rawLogs.push(`Timestamp: ${new Date().toISOString()}`);
-rawLogs.push(`Laboratory Root: ${reformLabRoot}`);
+rawLogs.push(`Resolved Laboratory Root: ${reformLabRoot}`);
 rawLogs.push(`================================================================================`);
 
 let totalFailures = 0;
@@ -27,8 +28,72 @@ function checkFileExists(relPath) {
   return fs.readFileSync(abs, 'utf8');
 }
 
-// Check A: Strict 40-Character SHA & Dynamic Git Parent Verification from SESSION_LOG.md
-rawLogs.push(`[Check A] Strict 40-character SHA & dynamic Git parent verification...`);
+function getVerdictRow(content, subject) {
+  const lines = content.split(/\r?\n/);
+  const row = lines.find(line =>
+    line.startsWith('|') &&
+    line.includes(`**${subject}**`)
+  );
+
+  if (!row) return null;
+
+  const columns = row.split('|').map(value => value.trim());
+  return {
+    subject: columns[1].replace(/\*\*/g, ''),
+    verdict: columns[2].replace(/`/g, ''),
+    evidence: columns[3],
+    note: columns[4]
+  };
+}
+
+// 1. Check CURRENT_VERDICT.md exact row parsing
+rawLogs.push(`[Check 1] CURRENT_VERDICT.md Exact Table Row Verification...`);
+const verdictContent = checkFileExists('state/CURRENT_VERDICT.md');
+
+if (verdictContent) {
+  // State Consistency
+  const scRow = getVerdictRow(verdictContent, 'State Consistency');
+  rawLogs.push(`  Parsed Row [State Consistency]: ${scRow ? scRow.verdict : 'NOT_FOUND'}`);
+  if (!scRow || !scRow.verdict.startsWith('PARTIAL — state sources are aligned, but verifier completeness is under repair.')) {
+    rawLogs.push(`  FAILED: State Consistency row verdict mismatch! Got="${scRow ? scRow.verdict : 'NULL'}"`);
+    totalFailures++;
+  } else {
+    rawLogs.push(`  PASS: State Consistency row verdict verified.`);
+  }
+
+  // Repository-wide Persistent Artifact World
+  const worldRow = getVerdictRow(verdictContent, 'Repository-wide Persistent Artifact World');
+  rawLogs.push(`  Parsed Row [Repository-wide Persistent Artifact World]: ${worldRow ? worldRow.verdict : 'NOT_FOUND'}`);
+  if (!worldRow || worldRow.verdict !== 'NOT YET AUDITED') {
+    rawLogs.push(`  FAILED: Persistent Artifact World row verdict mismatch! Got="${worldRow ? worldRow.verdict : 'NULL'}"`);
+    totalFailures++;
+  } else {
+    rawLogs.push(`  PASS: Persistent Artifact World row verdict verified.`);
+  }
+
+  // Cold-Start Recoverability
+  const coldRow = getVerdictRow(verdictContent, 'Cold-Start Recoverability');
+  rawLogs.push(`  Parsed Row [Cold-Start Recoverability]: ${coldRow ? coldRow.verdict : 'NOT_FOUND'}`);
+  if (!coldRow || coldRow.verdict !== 'NOT YET TESTED') {
+    rawLogs.push(`  FAILED: Cold-Start Recoverability row verdict mismatch! Got="${coldRow ? coldRow.verdict : 'NULL'}"`);
+    totalFailures++;
+  } else {
+    rawLogs.push(`  PASS: Cold-Start Recoverability row verdict verified.`);
+  }
+
+  // CR-S0 Authorization
+  const crs0Row = getVerdictRow(verdictContent, 'CR-S0 Authorization');
+  rawLogs.push(`  Parsed Row [CR-S0 Authorization]: ${crs0Row ? crs0Row.verdict : 'NOT_FOUND'}`);
+  if (!crs0Row || crs0Row.verdict !== 'WITHHELD') {
+    rawLogs.push(`  FAILED: CR-S0 Authorization row verdict mismatch! Got="${crs0Row ? crs0Row.verdict : 'NULL'}"`);
+    totalFailures++;
+  } else {
+    rawLogs.push(`  PASS: CR-S0 Authorization row verdict verified.`);
+  }
+}
+
+// 2. Strict 40-Character SHA & Dynamic Parent Lineage Verification from SESSION_LOG.md
+rawLogs.push(`\n[Check 2] Dynamic Git parent lineage verification from SESSION_LOG.md...`);
 const sessionContent = checkFileExists('handoff/SESSION_LOG.md');
 
 if (sessionContent) {
@@ -73,139 +138,209 @@ if (sessionContent) {
   });
 }
 
-// Check B: EXTERNAL_VERDICT_HISTORY.md Validation & Unresolved Leak Prevention
-rawLogs.push(`\n[Check B] EXTERNAL_VERDICT_HISTORY.md Schema & Unresolved Leak Prevention...`);
+// 3. Table Header & Column Count Verification for EXTERNAL_VERDICT_HISTORY.md
+rawLogs.push(`\n[Check 3] EXTERNAL_VERDICT_HISTORY.md Table Header & Column Count Integrity...`);
 const extVerdictContent = checkFileExists('state/EXTERNAL_VERDICT_HISTORY.md');
 
+let verifiedHistoryEntriesCount = 0;
+let activeUnresolvedMilestone = 'NONE';
 let unresolvedCount = 0;
-let historicalUnresolvedCount = 0;
 
 if (extVerdictContent) {
-  const rows = extVerdictContent.split(/\r?\n/).filter(line => line.startsWith('| **'));
+  const lines = extVerdictContent.split(/\r?\n/);
+  const headerLine = lines.find(l => l.includes('Milestone') && l.includes('Reviewed Commit'));
+
+  if (!headerLine) {
+    rawLogs.push(`  FAILED: Table header missing in EXTERNAL_VERDICT_HISTORY.md!`);
+    totalFailures++;
+  } else {
+    const requiredCols = [
+      'Milestone', 'Reviewed Commit', 'Outside Verdict', 'Milestone Fully Accepted',
+      'Accepted Scope', 'Rejected / Unconfirmed Scope', 'Milestone Accepted as Current Authority',
+      'Review Date', 'Notes'
+    ];
+    const headerCols = headerLine.split('|').map(c => c.trim()).filter(Boolean);
+    const hasAllHeaders = requiredCols.every(c => headerCols.includes(c));
+
+    if (!hasAllHeaders || headerCols.length !== 9) {
+      rawLogs.push(`  FAILED: Header column mismatch in EXTERNAL_VERDICT_HISTORY.md!`);
+      totalFailures++;
+    } else {
+      rawLogs.push(`  PASS: Table header structure and 9-column layout verified.`);
+    }
+  }
+
+  const rows = lines.filter(line => line.startsWith('| **'));
+  const seenMilestones = new Set();
 
   rows.forEach((row) => {
     const cols = row.split('|').map(c => c.trim());
-    if (cols.length >= 8) {
-      const milestone = cols[1];
-      const commitMatch = cols[2].match(/`([a-f0-9]{40})`/);
-      const isResolveFromGit = cols[2].includes('RESOLVE_FROM_GIT');
-      const verdict = cols[3].replace(/`/g, '');
-      const fullyAccepted = cols[4].replace(/`/g, '');
-      const acceptedScope = cols[5];
-      const rejectedScope = cols[6];
-      const currentAuthority = cols[7].replace(/`/g, '');
+    if (cols.length !== 11) { // 11 elements split by | including leading and trailing empty elements
+      rawLogs.push(`  FAILED: Data row column count mismatch! Expected 9 internal columns.`);
+      totalFailures++;
+      return;
+    }
 
-      const isUnderReview = (verdict === 'UNDER OUTSIDE REVIEW');
+    verifiedHistoryEntriesCount++;
+    const milestone = cols[1].replace(/\*\*/g, '');
+    if (seenMilestones.has(milestone)) {
+      rawLogs.push(`  FAILED: Duplicate milestone entry detected: ${milestone}`);
+      totalFailures++;
+    }
+    seenMilestones.add(milestone);
 
-      rawLogs.push(`--- Milestone: ${milestone} ---`);
-      rawLogs.push(`  Reviewed Commit: ${commitMatch ? commitMatch[1] : (isResolveFromGit ? 'RESOLVE_FROM_GIT' : 'INVALID')}`);
-      rawLogs.push(`  Outside Verdict: ${verdict}`);
-      rawLogs.push(`  Fully Accepted: ${fullyAccepted}`);
-      rawLogs.push(`  Milestone Current Authority: ${currentAuthority}`);
+    const commitMatch = cols[2].match(/`([a-f0-9]{40})`/);
+    const isResolveFromGit = cols[2].includes('RESOLVE_FROM_GIT');
+    const verdict = cols[3].replace(/`/g, '');
+    const fullyAccepted = cols[4].replace(/`/g, '');
+    const acceptedScope = cols[5];
+    const rejectedScope = cols[6];
+    const currentAuthority = cols[7].replace(/`/g, '');
 
-      if (!commitMatch) {
-        if (!isUnderReview || !isResolveFromGit) {
-          rawLogs.push(`  FAILED: Historical reviewed commit missing, invalid, or improperly unresolved!`);
-          historicalUnresolvedCount++;
-          totalFailures++;
-        } else {
-          unresolvedCount++;
-          rawLogs.push(`  NOTICE: Active milestone under review unresolved (permitted max 1).`);
-        }
+    rawLogs.push(`--- Milestone Schema Check: ${milestone} ---`);
+    rawLogs.push(`  Reviewed Commit: ${commitMatch ? commitMatch[1] : (isResolveFromGit ? 'RESOLVE_FROM_GIT' : 'INVALID')}`);
+    rawLogs.push(`  Outside Verdict: ${verdict}`);
+    rawLogs.push(`  Fully Accepted: ${fullyAccepted}`);
+    rawLogs.push(`  Accepted Scope: ${acceptedScope}`);
+    rawLogs.push(`  Rejected Scope: ${rejectedScope}`);
+    rawLogs.push(`  Current Authority: ${currentAuthority}`);
+
+    // Commit Existence & Leak Check
+    if (!commitMatch) {
+      if (verdict !== 'UNDER OUTSIDE REVIEW' || !isResolveFromGit) {
+        rawLogs.push(`  FAILED: Historical reviewed commit missing, invalid, or improperly unresolved!`);
+        totalFailures++;
       } else {
-        const cSha = commitMatch[1];
-        let exists = false;
-        try {
-          const type = execSync(`git -C "${reformLabRoot}" cat-file -t ${cSha}`, { encoding: 'utf8' }).trim();
-          exists = (type === 'commit');
-        } catch (e) {
-          exists = false;
-        }
-        rawLogs.push(`  Git Commit Existence Check (${cSha}): ${exists ? 'EXISTS' : 'NOT_FOUND'}`);
-        if (!exists) {
-          rawLogs.push(`  FAILED: Reviewed commit ${cSha} does not exist in git history!`);
-          totalFailures++;
-        }
+        unresolvedCount++;
+        activeUnresolvedMilestone = milestone;
       }
+    } else {
+      const cSha = commitMatch[1];
+      let exists = false;
+      try {
+        const type = execSync(`git -C "${reformLabRoot}" cat-file -t ${cSha}`, { encoding: 'utf8' }).trim();
+        exists = (type === 'commit');
+      } catch (e) {
+        exists = false;
+      }
+      if (!exists) {
+        rawLogs.push(`  FAILED: Reviewed commit ${cSha} does not exist in git history!`);
+        totalFailures++;
+      }
+    }
 
-      // 0.3.2c verification check
-      if (milestone.includes('Foundation 0.3.2c')) {
-        if (!commitMatch || commitMatch[1] !== '8ddabe908e62d748081b587f6fa55a6c87e6db91' || verdict !== 'CONFIRMED FOR REVIEWED SCOPE' || fullyAccepted !== 'yes' || currentAuthority !== 'yes') {
-          rawLogs.push(`  FAILED: Foundation 0.3.2c verdict entry inaccurate!`);
-          totalFailures++;
-        } else {
-          rawLogs.push(`  PASS: Foundation 0.3.2c accurately closed as CONFIRMED FOR REVIEWED SCOPE.`);
-        }
+    // Schema Validation Rules
+    if (verdict === 'PARTIAL PASS') {
+      if (fullyAccepted !== 'no' || currentAuthority !== 'no' || acceptedScope === 'None' || rejectedScope === 'None') {
+        rawLogs.push(`  FAILED: PARTIAL PASS schema rules violated for ${milestone}!`);
+        totalFailures++;
+      }
+    } else if (verdict === 'REJECTED') {
+      if (fullyAccepted !== 'no' || acceptedScope !== 'None' || currentAuthority !== 'no' || rejectedScope === 'None') {
+        rawLogs.push(`  FAILED: REJECTED schema rules violated for ${milestone}!`);
+        totalFailures++;
+      }
+    } else if (verdict === 'UNDER OUTSIDE REVIEW') {
+      if (fullyAccepted !== 'no' || acceptedScope !== 'None' || currentAuthority !== 'no' || !isResolveFromGit) {
+        rawLogs.push(`  FAILED: UNDER OUTSIDE REVIEW schema rules violated for ${milestone}!`);
+        totalFailures++;
+      }
+    } else if (verdict === 'CONFIRMED') {
+      if (fullyAccepted !== 'yes' || currentAuthority !== 'yes' || acceptedScope === 'None') {
+        rawLogs.push(`  FAILED: CONFIRMED schema rules violated for ${milestone}!`);
+        totalFailures++;
+      }
+    } else if (verdict === 'CONFIRMED FOR REVIEWED SCOPE') {
+      rawLogs.push(`  NOTE: Fully accepted refers only to the bounded milestone repair, not to the unreviewed repository-wide World or cold-start capability.`);
+      if (fullyAccepted !== 'yes' || currentAuthority !== 'yes' || acceptedScope === 'None' || rejectedScope === 'None') {
+        rawLogs.push(`  FAILED: CONFIRMED FOR REVIEWED SCOPE schema rules violated for ${milestone}!`);
+        totalFailures++;
+      }
+    }
+
+    // Foundation 0.3.2a Specific Check
+    if (milestone.includes('Foundation 0.3.2a')) {
+      if (verdict !== 'REJECTED' || fullyAccepted !== 'no' || acceptedScope !== 'None' || currentAuthority !== 'no') {
+        rawLogs.push(`  FAILED: Foundation 0.3.2a specific verdict check failed!`);
+        totalFailures++;
+      } else {
+        rawLogs.push(`  PASS: Foundation 0.3.2a specific verdict check passed.`);
+      }
+    }
+
+    // Doctrine Repair 0.2.1 Specific Check
+    if (milestone.includes('Doctrine Repair 0.2.1')) {
+      const requiredScopes = ['Four-Layer One-World Doctrine', 'LLM Wiki Doctrine', 'Software 3.0 Doctrine', 'Controlled AutoResearch Doctrine'];
+      const hasAllScopes = requiredScopes.every(sc => acceptedScope.includes(sc));
+      if (verdict !== 'PARTIAL PASS' || fullyAccepted !== 'no' || currentAuthority !== 'no' || !hasAllScopes) {
+        rawLogs.push(`  FAILED: Doctrine Repair 0.2.1 specific verdict check failed!`);
+        totalFailures++;
+      } else {
+        rawLogs.push(`  PASS: Doctrine Repair 0.2.1 specific verdict check passed (4 scopes confirmed).`);
       }
     }
   });
 
-  rawLogs.push(`\nUnresolved Reviewed Commit Count (Active Under Review): ${unresolvedCount}`);
-  rawLogs.push(`Historical Unresolved/Invalid Count: ${historicalUnresolvedCount}`);
-
-  if (unresolvedCount > 1) {
-    rawLogs.push(`FAILED: More than one unresolved current review entry in EXTERNAL_VERDICT_HISTORY.md!`);
+  // Active Under Review Entry Rule
+  if (unresolvedCount !== 1 || !activeUnresolvedMilestone.includes('Foundation 0.3.2e')) {
+    rawLogs.push(`  FAILED: Active UNDER OUTSIDE REVIEW entry count mismatch! Got unresolvedCount=${unresolvedCount}, activeMilestone=${activeUnresolvedMilestone}`);
     totalFailures++;
   } else {
-    rawLogs.push(`PASS: Exactly <= 1 unresolved entry under active review.`);
+    rawLogs.push(`  PASS: Active UNDER OUTSIDE REVIEW entry correctly isolated to Foundation 0.3.2e.`);
   }
 }
 
-// Check C: CURRENT_PHASE.md Alignment
-rawLogs.push(`\n[Check C] CURRENT_PHASE.md Alignment...`);
+// 4. Check CURRENT_PHASE.md Alignment
+rawLogs.push(`\n[Check 4] CURRENT_PHASE.md Alignment...`);
 const phaseContent = checkFileExists('state/CURRENT_PHASE.md');
 
 if (phaseContent) {
-  if (phaseContent.includes('Persistent Memory State Model Repair') || phaseContent.includes('Foundation 0.3.2 /')) {
-    rawLogs.push(`FAILED: CURRENT_PHASE.md still contains stale 0.3.2 repair phase!`);
-    totalFailures++;
-  } else if (phaseContent.includes('Repository-wide Persistent Artifact World Audit Preparation')) {
-    rawLogs.push(`PASS: CURRENT_PHASE.md aligned to World Audit Preparation.`);
+  if (phaseContent.includes('Verdict Verifier Regression Repair / Foundation 0.3.2e') && phaseContent.includes('FOUNDATION 0.3.2d PARTIAL PASS')) {
+    rawLogs.push(`  PASS: CURRENT_PHASE.md correctly set to Foundation 0.3.2e.`);
   } else {
-    rawLogs.push(`FAILED: CURRENT_PHASE.md focus text mismatch.`);
+    rawLogs.push(`  FAILED: CURRENT_PHASE.md content mismatch!`);
     totalFailures++;
   }
 }
 
-// Check D: CURRENT_VERDICT.md Alignment
-rawLogs.push(`\n[Check D] CURRENT_VERDICT.md Alignment...`);
-const verdictContent = checkFileExists('state/CURRENT_VERDICT.md');
-
-if (verdictContent) {
-  const hasStateConsistencyConfirmed = verdictContent.includes('State Consistency') && verdictContent.includes('CONFIRMED');
-  const hasWorldNotAudited = verdictContent.includes('Repository-wide Persistent Artifact World') && verdictContent.includes('NOT YET AUDITED');
-  const hasColdStartNotTested = verdictContent.includes('Cold-Start Recoverability') && verdictContent.includes('NOT YET TESTED');
-  const hasCrS0Withheld = verdictContent.includes('CR-S0 Authorization') && verdictContent.includes('WITHHELD');
-
-  rawLogs.push(`  State Consistency Verdict Confirmed: ${hasStateConsistencyConfirmed ? 'YES' : 'NO'}`);
-  rawLogs.push(`  World Audit Status Not Yet Audited: ${hasWorldNotAudited ? 'YES' : 'NO'}`);
-  rawLogs.push(`  Cold-Start Status Not Yet Tested: ${hasColdStartNotTested ? 'YES' : 'NO'}`);
-  rawLogs.push(`  CR-S0 Status Withheld: ${hasCrS0Withheld ? 'YES' : 'NO'}`);
-
-  if (!hasStateConsistencyConfirmed || !hasWorldNotAudited || !hasColdStartNotTested || !hasCrS0Withheld) {
-    rawLogs.push(`FAILED: CURRENT_VERDICT.md state alignment check failed!`);
-    totalFailures++;
-  } else {
-    rawLogs.push(`PASS: CURRENT_VERDICT.md state alignment confirmed.`);
-  }
-}
-
-// Check E: NEXT_ACTION.md Alignment
-rawLogs.push(`\n[Check E] NEXT_ACTION.md Alignment...`);
+// 5. Check NEXT_ACTION.md Blockquote Parsing
+rawLogs.push(`\n[Check 5] NEXT_ACTION.md Blockquote Parsing & Strict Text Verification...`);
 const nextActionContent = checkFileExists('state/NEXT_ACTION.md');
 
 if (nextActionContent) {
-  if (nextActionContent.includes('Submit Foundation 0.3.2d current-state closure for outside review') && !nextActionContent.includes('Execute World Audit now')) {
-    rawLogs.push(`PASS: NEXT_ACTION.md specifies single authorized submission action.`);
-  } else {
-    rawLogs.push(`FAILED: NEXT_ACTION.md authorizes unapproved execution or modification.`);
+  const actionSection = nextActionContent.split(/## Single Authorized Action/)[1];
+  if (!actionSection) {
+    rawLogs.push(`  FAILED: Missing ## Single Authorized Action header in NEXT_ACTION.md!`);
     totalFailures++;
+  } else {
+    const blockquoteMatch = actionSection.match(/^>\s*([^\r\n]+)/m);
+    const parsedActionText = blockquoteMatch ? blockquoteMatch[1].trim() : '';
+
+    rawLogs.push(`  Parsed Blockquote Action Text: "${parsedActionText}"`);
+
+    const expectedText = 'Submit Foundation 0.3.2e verdict-verifier regression repair for outside review. Do not run the repository-wide World Audit, cold-start test, or CR-S0 yet.';
+    const forbiddenPhrases = ['execute the World audit now', 'modify World files', 'run cold-start', 'start CR-S0', 'launch agents'];
+
+    const hasForbidden = forbiddenPhrases.some(p => parsedActionText.toLowerCase().includes(p.toLowerCase()));
+
+    if (parsedActionText !== expectedText || hasForbidden) {
+      rawLogs.push(`  FAILED: NEXT_ACTION.md blockquote text mismatch or forbidden phrases detected!`);
+      totalFailures++;
+    } else {
+      rawLogs.push(`  PASS: NEXT_ACTION.md single authorized action text strictly verified.`);
+    }
   }
 }
 
 rawLogs.push(`================================================================================`);
-rawLogs.push(`Final Verification Result: Total Failures = ${totalFailures}`);
-rawLogs.push(`Script Exit Code: ${totalFailures === 0 ? 0 : 1}`);
+rawLogs.push(`Verification Summary:`);
+rawLogs.push(`  Parsed Repository Root: ${reformLabRoot}`);
+rawLogs.push(`  Verified History Entries Count: ${verifiedHistoryEntriesCount}`);
+rawLogs.push(`  Active UNDER OUTSIDE REVIEW Milestone: ${activeUnresolvedMilestone}`);
+rawLogs.push(`  Foundation 0.3.2d Verdict: PARTIAL PASS`);
+rawLogs.push(`  Total Failures: ${totalFailures}`);
+rawLogs.push(`  Script Exit Code: ${totalFailures === 0 ? 0 : 1}`);
+rawLogs.push(`================================================================================`);
 
 const logPath = path.join(logsDir, 'state_consistency_verification.log');
 fs.writeFileSync(logPath, rawLogs.join('\n'), 'utf8');
@@ -216,6 +351,6 @@ if (totalFailures > 0) {
   console.error(`ERROR: ${totalFailures} state consistency checks failed!`);
   process.exit(1);
 } else {
-  console.log(`SUCCESS: All state hardening, lineage & verdict alignment checks passed!`);
+  console.log(`SUCCESS: All verdict verifier regression & state consistency checks passed!`);
   process.exit(0);
 }
