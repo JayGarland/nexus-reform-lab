@@ -22,9 +22,10 @@ let totalTestFailures = 0;
 function createTempFixtureRepo(mutatorFn) {
   const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'reform-lab-fixture-'));
   
-  // Copy state/, handoff/, WAKE.md, MEMORY_MAP.md
+  // Copy state/, handoff/, WAKE.md, MEMORY_MAP.md, and survey registry
   fs.mkdirSync(path.join(tmpDir, 'state'), { recursive: true });
   fs.mkdirSync(path.join(tmpDir, 'handoff'), { recursive: true });
+  fs.mkdirSync(path.join(tmpDir, 'research/prior-art/e1-e2'), { recursive: true });
 
   const filesToCopy = [
     'state/CURRENT_PHASE.md',
@@ -35,7 +36,8 @@ function createTempFixtureRepo(mutatorFn) {
     'handoff/HELLO.md',
     'handoff/SESSION_LOG.md',
     'WAKE.md',
-    'MEMORY_MAP.md'
+    'MEMORY_MAP.md',
+    'research/prior-art/e1-e2/CANDIDATE_REGISTRY.md'
   ];
 
   filesToCopy.forEach((rel) => {
@@ -189,9 +191,17 @@ runFixtureTest('13_valid_positive_fixture', true, (dir) => {
   // Unmodified copy of live valid repo files
 });
 
+// 14. Negative Fixture 14: Registry summary E2 count mismatch (summary claims E2=14 while registry contains E2=13)
+runFixtureTest('14_registry_e2_count_mismatch', false, (dir) => {
+  const p = path.join(dir, 'research/prior-art/e1-e2/CANDIDATE_REGISTRY.md');
+  let content = fs.readFileSync(p, 'utf8');
+  content = content.replace('- Reached E2: 13', '- Reached E2: 14');
+  fs.writeFileSync(p, content, 'utf8');
+});
+
 testLogs.push(`\n================================================================================`);
 testLogs.push(`Test Suite Summary:`);
-testLogs.push(`  negative fixtures passed: ${negativePassed}/12`);
+testLogs.push(`  negative fixtures passed: ${negativePassed}/13`);
 testLogs.push(`  positive fixtures passed: ${positivePassed}/1`);
 testLogs.push(`  test process exit code: ${totalTestFailures === 0 ? 0 : 1}`);
 testLogs.push(`================================================================================`);

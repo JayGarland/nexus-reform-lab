@@ -1,6 +1,6 @@
 ================================================================================
 FAIL-CLOSED VERIFIER & STATE CONSISTENCY ENGINE LOG
-Timestamp: 2026-08-03T21:02:30.457Z
+Timestamp: 2026-08-03T21:07:37.386Z
 Target Repository Root: F:\nexus-reform-lab
 Git Resolution Root: F:\nexus-reform-lab
 ================================================================================
@@ -232,6 +232,11 @@ Git Resolution Root: F:\nexus-reform-lab
 [Check 5] NEXT_ACTION.md Blockquote Parsing & Strict Validation...
   Parsed Blockquote Action Text: "Submit the bounded E1/E2 Prior-Art Survey for outside review. Do not install candidates, run Probes, select Providers, or implement Adapters."
   PASS: NEXT_ACTION.md single authorized action references current phase and contains no forbidden phrases.
+
+[Check 6] CANDIDATE_REGISTRY.md Evidence-Level Arithmetic...
+  Table counts: E0=1, E1-only=2, E2=13, registered=16, at-least-E1=15
+  Summary counts: registered=16, at-least-E1=15, E2=13, E0=1
+  PASS: Registry evidence-level arithmetic and summary counts consistent.
 ================================================================================
 Verification Summary:
   Target Repository Root: F:\nexus-reform-lab

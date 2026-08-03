@@ -12,7 +12,7 @@
 | Restate | Coordination (+ Runtime) | E2 | `PROMISING` | github.com/restatedev/restate | Durable execution, exactly-once messaging, durable promises/timers, K/V entity state | E3; assess server dependency and state export |
 | KurrentDB (EventStoreDB) | Knowledge Projection | E2 | `PARTIAL FIT` | github.com/kurrent-io/KurrentDB | Event-native store with streaming engine; projection lineage; evidence-grade raw events | E2 projections docs; E3; export/import |
 | Marten | Knowledge Projection | E2 | `PROMISING` | github.com/JasperFx/marten | Event store on PostgreSQL with user-defined projections; rebuildable projections | E3; projection rebuild and deletion test |
-| karpathy llm-wiki | Knowledge Projection | E0 | `INSUFFICIENT EVIDENCE` | not found (404) | Named candidate from plan | locate official source; if none, ARCHITECTURAL REFERENCE ONLY |
+| karpathy llm-wiki | Knowledge Projection | E0 | `INSUFFICIENT EVIDENCE` | github.com/karpathy/llm-wiki (attempted URL returned 404) | Named candidate from plan | Identify the exact original source referred to as "Karpathy LLM Wiki" before conducting E1 inspection |
 | base-llm-wiki (local) | Knowledge Projection | E1 (local structure) | `INSUFFICIENT EVIDENCE` | local `F:\subwikis\base-llm-wiki` | Existing local in-house wiki system | local content/source inspection of `wiki/`, `raw/`, `templates/`, `workflows/` |
 | OPA | Protocol Governance | E2 | `PROMISING` | github.com/open-policy-agent/opa | General-purpose policy engine (Rego), policy-as-code, `opa test`, bundles, fail-closed | E3; NL-protocol adapter assessment |
 | Cedar | Protocol Governance | E2 | `PROMISING` | github.com/cedar-policy/cedar | Authorization policy language with validator/analyzer, CLI, WASM | E3; schema-driven policy validation fit |
@@ -27,11 +27,14 @@
 ## Summary Counts
 
 - Candidates registered: 16
-- Reached E1 (docs inspected): 16
-- Reached E2 (source/architecture inspected): 14
-- `INSUFFICIENT EVIDENCE`: 2 (karpathy llm-wiki; local base-llm-wiki)
-- `ARCHITECTURAL REFERENCE ONLY`: 1 (Oso)
+- Reached at least E1: 15
+- Reached E2: 13
+- E0: 1
+- INSUFFICIENT EVIDENCE: 2
+- ARCHITECTURAL REFERENCE ONLY: 1
 - Selected or bound: 0
+
+> Arithmetic (registry-internal): registered 16 = E0 1 + E1-only 2 + E2 13; at-least-E1 15 = E1-only 2 + E2 13.
 
 ---
 

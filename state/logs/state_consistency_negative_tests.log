@@ -1,6 +1,6 @@
 ================================================================================
 STATE CONSISTENCY NEGATIVE & POSITIVE FIXTURE TEST SUITE LOG
-Timestamp: 2026-08-03T21:02:38.580Z
+Timestamp: 2026-08-03T21:07:46.484Z
 Real Repository Root: F:\nexus-reform-lab
 ================================================================================
 
@@ -95,9 +95,16 @@ Expected Verifier Success: YES (PASS)
   Detected Failure Reasons Count: 0
   Test Case Result: PASSED
 
+--------------------------------------------------------------------------------
+Fixture Name: 14_registry_e2_count_mismatch
+Expected Verifier Success: NO (FAIL)
+  Actual Verifier Success: NO
+  Detected Failure Reasons Count: 1
+  Test Case Result: PASSED
+
 ================================================================================
 Test Suite Summary:
-  negative fixtures passed: 12/12
+  negative fixtures passed: 13/13
   positive fixtures passed: 1/1
   test process exit code: 0
 ================================================================================

@@ -509,6 +509,83 @@ function verifyRepository(targetRoot, options = {}) {
     }
   }
 
+  // -------------------------------------------------------------------------
+  // Check 6: CANDIDATE_REGISTRY.md evidence-level arithmetic.
+  //
+  // Verifies registry-internal consistency:
+  //   registered count = E0 + E1-only + E2
+  //   at-least-E1 count = E1-only + E2
+  // and that the declared Summary Counts match the table-derived counts.
+  // -------------------------------------------------------------------------
+  rawLogs.push(`\n[Check 6] CANDIDATE_REGISTRY.md Evidence-Level Arithmetic...`);
+  const registryRel = 'research/prior-art/e1-e2/CANDIDATE_REGISTRY.md';
+  const registryPath = path.join(targetRoot, registryRel);
+
+  if (!fs.existsSync(registryPath)) {
+    fail(`CANDIDATE_REGISTRY.md missing: ${registryRel}`);
+  } else {
+    const regContent = fs.readFileSync(registryPath, 'utf8');
+    const regLines = regContent.split(/\r?\n/);
+    let e0 = 0;
+    let e1Only = 0;
+    let e2 = 0;
+
+    regLines.forEach((line) => {
+      if (line.startsWith('| ')) {
+        const cols = line.split('|').map(v => v.trim());
+        if (cols.length >= 4 && cols[1] && cols[1] !== 'candidate' && !cols[1].startsWith('-')) {
+          const level = cols[3];
+          if (level.startsWith('E2')) e2++;
+          else if (level.startsWith('E1')) e1Only++;
+          else if (level.startsWith('E0')) e0++;
+        }
+      }
+    });
+
+    function readSummary(label) {
+      const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const m = regContent.match(new RegExp('- ' + escaped + ':\\s+(\\d+)'));
+      return m ? parseInt(m[1], 10) : null;
+    }
+
+    const sumRegistered = readSummary('Candidates registered');
+    const sumAtLeastE1 = readSummary('Reached at least E1');
+    const sumE2 = readSummary('Reached E2');
+    const sumE0 = readSummary('E0');
+
+    const tableRegistered = e0 + e1Only + e2;
+    const tableAtLeastE1 = e1Only + e2;
+
+    rawLogs.push(`  Table counts: E0=${e0}, E1-only=${e1Only}, E2=${e2}, registered=${tableRegistered}, at-least-E1=${tableAtLeastE1}`);
+    rawLogs.push(`  Summary counts: registered=${sumRegistered}, at-least-E1=${sumAtLeastE1}, E2=${sumE2}, E0=${sumE0}`);
+
+    if (sumRegistered === null || sumAtLeastE1 === null || sumE2 === null || sumE0 === null) {
+      fail(`CANDIDATE_REGISTRY.md summary counts missing or malformed!`);
+    } else {
+      if (tableRegistered !== e0 + e1Only + e2) {
+        fail(`Registry registered arithmetic broken: E0=${e0}, E1-only=${e1Only}, E2=${e2}.`);
+      }
+      if (tableAtLeastE1 !== e1Only + e2) {
+        fail(`Registry at-least-E1 arithmetic broken: E1-only=${e1Only}, E2=${e2}.`);
+      }
+      if (tableRegistered !== sumRegistered) {
+        fail(`Registry registered count mismatch: table=${tableRegistered}, summary=${sumRegistered}`);
+      }
+      if (tableAtLeastE1 !== sumAtLeastE1) {
+        fail(`Registry at-least-E1 count mismatch: table=${tableAtLeastE1}, summary=${sumAtLeastE1}`);
+      }
+      if (e2 !== sumE2) {
+        fail(`Registry E2 count mismatch: table=${e2}, summary=${sumE2}`);
+      }
+      if (e0 !== sumE0) {
+        fail(`Registry E0 count mismatch: table=${e0}, summary=${sumE0}`);
+      }
+      if (totalFailures === 0) {
+        rawLogs.push(`  PASS: Registry evidence-level arithmetic and summary counts consistent.`);
+      }
+    }
+  }
+
   rawLogs.push(`================================================================================`);
   rawLogs.push(`Verification Summary:`);
   rawLogs.push(`  Target Repository Root: ${targetRoot}`);

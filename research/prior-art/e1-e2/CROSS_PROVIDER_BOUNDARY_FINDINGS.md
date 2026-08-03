@@ -50,7 +50,7 @@ These expose narrow, file/CLI-oriented surfaces and are the most promising for t
 
 ```text
 Oso                 (deprecated upstream; reference only)
-karpathy llm-wiki   (official source not located; concept reference only)
+karpathy llm-wiki   (attempted repository URL returned 404; authoritative source unresolved in this pass — reference only)
 base-llm-wiki       (local in-house; content not yet inspected)
 ```
 

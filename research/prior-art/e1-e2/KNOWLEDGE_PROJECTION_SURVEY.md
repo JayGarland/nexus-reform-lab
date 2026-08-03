@@ -7,13 +7,13 @@
 
 ## Candidate: karpathy llm-wiki
 
-**Evidence Level**: E0 (named candidate; official source NOT found)
+**Evidence Level**: E0 (named candidate; the attempted repository URL github.com/karpathy/llm-wiki returned 404 and the authoritative source was not located in this pass)
 **Conclusion**: `INSUFFICIENT EVIDENCE`
 
 ```text
 candidate_id              karpathy-llm-wiki
 upstream_project          karpathy llm-wiki
-upstream_repository       github.com/karpathy/llm-wiki — NOT FOUND (404 in this pass) (DOCUMENTED)
+upstream_repository       The attempted repository URL github.com/karpathy/llm-wiki returned 404 (DOCUMENTED). The original or authoritative source was not located in this pass. This does not establish that no authoritative article, repository, gist, post, or other source exists.
 license                   NOT VERIFIED
 maintainer_status         NOT VERIFIED
 latest_release            NOT VERIFIED
@@ -32,11 +32,11 @@ security_boundary         NOT VERIFIED
 model_dependency          NOT VERIFIED
 removal_cost              NOT VERIFIED
 integration_surface       NOT VERIFIED
-known_limitations         Official upstream source not located in this pass; concept only (DOCUMENTED)
+known_limitations         The attempted URL returned 404; the authoritative source remains unresolved in this pass (DOCUMENTED)
 source_citations          none verified (third-party mentions not used as core evidence)
 ```
 
-**Stop-condition hit**: official source not found → `INSUFFICIENT EVIDENCE`. If a future pass locates an official repository, re-open the card.
+**Stop-condition hit**: the original or authoritative source was not located in this pass → `INSUFFICIENT EVIDENCE`; Evidence Level `E0 — Mention only`. Next evidence required: identify the exact original source referred to as "Karpathy LLM Wiki" before conducting E1 inspection. This does NOT establish that no authoritative article, repository, gist, post, or other source exists.
 
 ---
 
