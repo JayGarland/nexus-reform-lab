@@ -165,7 +165,7 @@ runFixtureTest('9_session_log_parent_mismatch', false, (dir) => {
 runFixtureTest('10_multiple_next_action_blockquotes', false, (dir) => {
   const p = path.join(dir, 'state/NEXT_ACTION.md');
   let content = fs.readFileSync(p, 'utf8');
-  const targetStr = '> Submit the bounded E3 Probe Queue and isolation protocol for outside review. Do not install or execute any candidate.';
+  const targetStr = '> Submit the LLM Wiki dedicated comparison and bounded base-llm-wiki evidence artifact for outside review. Do not execute E3.';
   content = content.replace(targetStr, `${targetStr}\n> Execute forbidden world modification now!`);
   fs.writeFileSync(p, content, 'utf8');
 });

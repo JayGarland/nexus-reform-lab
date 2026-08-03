@@ -1,0 +1,133 @@
+# Local base-llm-wiki — Evidence Manifest
+
+> Exact local path: `F:\subwikis\base-llm-wiki`
+> Inspection date: 2026-08-03T23:30:32+02:00
+> Purpose: Bounded, non-secret local inspection artifact for outside review (Foundation 0.9).
+
+## Directories present
+
+```
+F:\subwikis\base-llm-wiki\
+  raw\          (20 files)
+  raw1\         (2 files)
+  templates\    (4 files)
+  wiki\         (4 files) + concepts\ (13) + query-results\ (14) + source-summaries\ (23)
+  workflows\    (3 files)
+  AGENTS.md     (1 file)
+```
+
+Directories NOT present at this path: `none other` (no `.obsidian`, `meta-wiki`, `governance`, `manifests`, `99-archive`, or other top-level entries).
+
+## Top-level files
+
+```
+AGENTS.md | 1739 bytes
+```
+
+## Recursive file manifest (relative path | bytes)
+
+```
+.\AGENTS.md | 1739
+.\raw\Archive Aggregation Layer.md | 49065
+.\raw\Branch Return Policy Design.md | 9526
+.\raw\ChatGPT chat archive-king cobra feature review.md | 150654
+.\raw\Conversation Trace Protocol.md | 10408
+.\raw\Exposure Budget.md | 12922
+.\raw\Feedback Stability Check.md | 12799
+.\raw\High-Coupling Vector Set.md | 19082
+.\raw\High-Coupling-Vector-Set-Protocol.md | 33233
+.\raw\Integration Window.md | 40932
+.\raw\Layered Training Analogy.md | 21238
+.\raw\Noise Filter.md | 16666
+.\raw\Path Fork Monitor.md | 13877
+.\raw\Permission Layer.md | 39380
+.\raw\Randomness Source Map.md | 19191
+.\raw\Randomness-to-Learning Conversion.md | 13408
+.\raw\Sampling Strategy.md | 13397
+.\raw\Stochastic Exposure Archive Extract.md | 20890
+.\raw\Update Gate.md | 26511
+.\raw\Viable-Gradient-Path.md | 18453
+.\raw\Workflow-v2.1-branch-return-policy.md | 6565
+.\raw1\Emergent Design AI auto-reading Obsidian design-state idea.md | 10744
+.\raw1\LLM Wiki - from karpathy.md | 12058
+.\templates\concept-page.md | 188
+.\templates\lint-report.md | 211
+.\templates\query-result.md | 233
+.\templates\source-summary.md | 338
+.\wiki\concepts\Bounded Generated Wiki Ownership.md | 1395
+.\wiki\concepts\Git-backed Markdown.md | 621
+.\wiki\concepts\Index and Log.md | 586
+.\wiki\concepts\Ingest.md | 630
+.\wiki\concepts\Lint.md | 629
+.\wiki\concepts\Multi-Page Ingest.md | 1205
+.\wiki\concepts\Obsidian as IDE.md | 714
+.\wiki\concepts\Parent-Vault Semantic Boundary.md | 1256
+.\wiki\concepts\Persistent Wiki.md | 831
+.\wiki\concepts\Query.md | 572
+.\wiki\concepts\Raw Sources.md | 874
+.\wiki\concepts\Schema.md | 725
+.\wiki\concepts\Source-Claim Compilation.md | 1267
+.\wiki\index.md | 18202
+.\wiki\log.md | 18033
+.\wiki\overview.md | 2720
+.\wiki\query-results\Cognitive-Explosion-and-Branch-Governance.md | 4305
+.\wiki\query-results\Convergence-vs-Branching-Logic.md | 3133
+.\wiki\query-results\High-Coupling-Protocol-User-Guide.md | 3462
+.\wiki\query-results\Protocol-Boundary-and-Target-Definition.md | 3285
+.\wiki\query-results\SEC-与-HCVS-的关系.md | 3449
+.\wiki\query-results\Supervised LLM-Wiki Design-State Intake Pattern.md | 2630
+.\wiki\query-results\上下文熔炉：高维矢量对齐的操作指南.md | 3828
+.\wiki\query-results\协议实践轻量化指南-个人版.md | 9940
+.\wiki\query-results\协议实践轻量化指南.md | 12006
+.\wiki\query-results\实操指南：基于上下文熔炉的-HCVS-进化工作流.md | 3504
+.\wiki\query-results\实操指南：熔炉红线判定与信号化退出准则.md | 3244
+.\wiki\query-results\收敛优先：重新界定分支治理的边界.md | 3647
+.\wiki\query-results\架构决策：关于上下文熔炉与分支治理的深度评估.md | 3175
+.\wiki\query-results\深度辩证：Branch-Return-Policy-的存在意义与误区.md | 3042
+.\wiki\source-summaries\Archive Aggregation Layer.md | 2229
+.\wiki\source-summaries\Branch Return Policy Design.md | 1720
+.\wiki\source-summaries\ChatGPT chat archive-king cobra feature review.md | 3112
+.\wiki\source-summaries\Conversation Trace Protocol.md | 1748
+.\wiki\source-summaries\Emergent Design AI auto-reading Obsidian design-state idea.md | 2755
+.\wiki\source-summaries\Exposure Budget.md | 2267
+.\wiki\source-summaries\Feedback Stability Check.md | 2744
+.\wiki\source-summaries\High-Coupling Vector Set.md | 2938
+.\wiki\source-summaries\High-Coupling-Vector-Set-Protocol.md | 2358
+.\wiki\source-summaries\Integration Window.md | 2016
+.\wiki\source-summaries\Layered Training Analogy.md | 2274
+.\wiki\source-summaries\LLM Wiki - from karpathy.md | 1624
+.\wiki\source-summaries\Noise Filter.md | 1891
+.\wiki\source-summaries\Path Fork Monitor.md | 2713
+.\wiki\source-summaries\Permission Layer.md | 1585
+.\wiki\source-summaries\Randomness Source Map.md | 2167
+.\wiki\source-summaries\Randomness-to-Learning Conversion.md | 1753
+.\wiki\source-summaries\relation SEC HCVS.md | 2555
+.\wiki\source-summaries\Sampling Strategy.md | 2543
+.\wiki\source-summaries\Stochastic Exposure Archive Extract.md | 1799
+.\wiki\source-summaries\Update Gate.md | 1909
+.\wiki\source-summaries\Viable-Gradient-Path.md | 2265
+.\wiki\source-summaries\Workflow-v2.1-branch-return-policy.md | 1697
+.\wiki\用户手册.md | 7916
+.\workflows\ingest-source.md | 830
+.\workflows\lint-wiki.md | 712
+.\workflows\query-wiki.md | 884
+```
+
+## File count by directory
+
+```
+.\raw                 | 20 files
+.\raw1                | 2 files
+.\templates           | 4 files
+.\wiki                | 4 files
+.\workflows           | 3 files
+.\wiki\concepts       | 13 files
+.\wiki\query-results  | 14 files
+.\wiki\source-summaries | 23 files
+```
+
+Total files: 83. Total bytes: 907,093.
+
+---
+
+*End of manifest.*

@@ -26,4 +26,5 @@
 | **CR-S0 Authorization** | `WITHHELD` | Outside Reviewer Rulings | CR-S0 strictly stopped until authorized |
 | **Prior-Art Discovery Plan** | `CONFIRMED FOR PLANNING SCOPE` | [`PRIOR_ART_DISCOVERY_PLAN.md`](../research/plans/PRIOR_ART_DISCOVERY_PLAN.md) | Foundation 0.6 accepted for planning scope; E1/E2 survey authorized |
 | **Prior-Art E1/E2 Survey** | `CONFIRMED FOR E1/E2 SURVEY SCOPE` | [`research/prior-art/e1-e2/INDEX.md`](../research/prior-art/e1-e2/INDEX.md) | Foundation 0.7 accepted; E3 queue planning authorized |
-| **E3 Probe Queue** | `UNDER OUTSIDE REVIEW — queue and isolation protocol only; no candidate installed or executed.` | [`E3_PROBE_QUEUE.md`](../research/plans/E3_PROBE_QUEUE.md) | Foundation 0.8 queue; no Probe run |
+| **E3 Probe Queue** | `UNDER OUTSIDE REVIEW — queue and isolation protocol only; no candidate installed or executed.` | [`E3_PROBE_QUEUE.md`](../research/plans/E3_PROBE_QUEUE.md) | Foundation 0.8 queue structure accepted; Knowledge-slot selection remains open |
+| **Knowledge Projection Provider Comparison** | `UNDER OUTSIDE REVIEW — E1/E2 comparison and bounded local evidence only; no candidate selected or executed.` | [`LLM_WIKI_DEDICATED_COMPARISON.md`](../research/prior-art/e1-e2/LLM_WIKI_DEDICATED_COMPARISON.md) | Foundation 0.9 comparison; no E3 executed |

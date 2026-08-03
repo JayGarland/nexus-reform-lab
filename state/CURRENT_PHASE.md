@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `E3 Probe Queue Definition / Foundation 0.8`
-- **Current Focus**: Define the smallest isolated E3 execution queue from externally accepted E1/E2 evidence.
-- **External Audit Status**: `FOUNDATION 0.7 CONFIRMED FOR E1/E2 SURVEY SCOPE — E3 QUEUE PLANNING AUTHORIZED`
-- **Started At**: `2026-08-03T22:35:00+02:00`
+- **Current Phase**: `Knowledge Projection Provider Dedicated Comparison / Foundation 0.9`
+- **Current Focus**: Compare the Karpathy LLM Wiki pattern and five LLM-wiki implementation candidates (E1/E2) and capture bounded local evidence for base-llm-wiki.
+- **External Audit Status**: `FOUNDATION 0.8 CONFIRMED FOR QUEUE-STRUCTURE AND EVIDENCE-BOUNDARY SCOPE — KNOWLEDGE COMPARISON AUTHORIZED`
+- **Started At**: `2026-08-03T23:30:00+02:00`
 
 ---
 
