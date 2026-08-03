@@ -131,3 +131,9 @@
 - **Based-on Commit**: `715a6d5f96eaae44ec4822630e8a053e4344a14c`
 - **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
 - **Actions**: Closed Foundation 0.5.1 as `CONFIRMED FOR REVIEWED SCOPE` (commit `715a6d5f96eaae44ec4822630e8a053e4344a14c`) in `EXTERNAL_VERDICT_HISTORY.md`; no new `UNDER OUTSIDE REVIEW` entry created. Updated `CURRENT_PHASE.md` (Prior-Art Discovery & Provider Boundary Investigation), `NEXT_ACTION.md` (prepare bounded Prior-Art Discovery plan only), and `HELLO.md` pointers; removed the Active Ratification `UNDER OUTSIDE REVIEW` wording. Doctrine content unchanged; no Provider implemented or selected; CR-S0 remains WITHHELD. Production verifier exit code 0; negative fixtures 12/12; positive fixture 1/1.
+
+### Milestone 0.6: Prior-Art Discovery Plan — Submitted for Outside Review
+- **Date**: 2026-08-03T22:25:00+02:00
+- **Based-on Commit**: `94704de02852998a5a5df8ac7a9c31bdb865faff`
+- **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
+- **Actions**: Created the bounded Prior-Art Discovery Plan: `research/plans/PRIOR_ART_DISCOVERY_PLAN.md` (Scope, Provider Categories, Candidate Intake, Research Sequence, Evidence Requirements, Comparison Criteria, Probe Preconditions, Stop Conditions, Outside Review Boundary, Non-Goals), `research/plans/PROVIDER_COMPARISON_SCHEMA.md`, `research/plans/EVIDENCE_LEVELS.md`, `research/plans/FIXED_PROBE_FIXTURES.md`, and `research/audit/prior-art-discovery/PLAN_AUDIT_CHECKLIST.md`. Recorded Foundation 0.6 as active `UNDER OUTSIDE REVIEW` in `EXTERNAL_VERDICT_HISTORY.md`. Updated `CURRENT_PHASE.md` (Prior-Art Discovery Planning / Foundation 0.6), `CURRENT_VERDICT.md` (Prior-Art Discovery Plan UNDER OUTSIDE REVIEW), `NEXT_ACTION.md` (submit plan; do not begin research or probes), and `HELLO.md`. No candidate research, no install, no Probe executed, no Provider selected, adapted, or bound; CR-S0 remains WITHHELD. Production verifier exit code 0; negative fixtures 12/12; positive fixture 1/1.

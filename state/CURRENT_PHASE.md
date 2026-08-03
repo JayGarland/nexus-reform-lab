@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Prior-Art Discovery & Provider Boundary Investigation`
-- **Current Focus**: Investigate existing wheels against the five replaceable Provider capability boundaries without selecting or implementing any Provider.
-- **External Audit Status**: `FOUNDATION 0.5.1 CONFIRMED FOR REVIEWED SCOPE — MODULARITY & REPLACEABILITY DOCTRINE RATIFIED`
-- **Started At**: `2026-08-03T22:20:00+02:00`
+- **Current Phase**: `Prior-Art Discovery Planning / Foundation 0.6`
+- **Current Focus**: Author a bounded Prior-Art Discovery Plan defining evidence collection and comparison methodology for the five replaceable Provider capability slots, without installing, running, selecting, adapting, or binding any Provider.
+- **External Audit Status**: `FOUNDATION 0.6 PRIOR-ART DISCOVERY PLAN SUBMITTED — UNDER OUTSIDE REVIEW`
+- **Started At**: `2026-08-03T22:25:00+02:00`
 
 ---
 

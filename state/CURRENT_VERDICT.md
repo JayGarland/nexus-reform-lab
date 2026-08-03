@@ -24,3 +24,4 @@
 | **Operational Process Isolation Claims** | `CLAIMED-NOT-EVIDENCED` | Internal Assertions | Runtime claims lack external system log evidence |
 | **Modularity & Replaceability Doctrine** | `CONFIRMED — Stable Kernel and five replaceable capability Provider model externally accepted.` | [`MODULARITY_AND_REPLACEABILITY_DOCTRINE.md`](../research/synthesis/MODULARITY_AND_REPLACEABILITY_DOCTRINE.md) | Foundation 0.5.1 ratification; provider implementations not confirmed |
 | **CR-S0 Authorization** | `WITHHELD` | Outside Reviewer Rulings | CR-S0 strictly stopped until authorized |
+| **Prior-Art Discovery Plan** | `UNDER OUTSIDE REVIEW — planning artifacts only; no Provider selected, installed, executed, adapted, or bound.` | [`PRIOR_ART_DISCOVERY_PLAN.md`](../research/plans/PRIOR_ART_DISCOVERY_PLAN.md) | Foundation 0.6 planning phase; no Probe executed |

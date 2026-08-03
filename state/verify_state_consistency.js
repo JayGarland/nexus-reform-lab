@@ -38,6 +38,19 @@ const GATE_STAGES = [
     }
   },
   {
+    id: 'PRIOR_ART_PLANNING',
+    phaseIncludes: ['planning'],
+    actionReference: ['prior-art', 'plan'],
+    verdicts: {
+      'State Consistency': ['CONFIRMED', 'PARTIAL', 'REJECTED', 'WITHHELD'],
+      'Repository-wide Persistent Artifact World': ['CONFIRMED', 'CONFIRMED AT LEVEL 2'],
+      'Cold-Start Recoverability': ['CONFIRMED'],
+      'CR-S0 Authorization': ['WITHHELD'],
+      'Modularity & Replaceability Doctrine': ['CONFIRMED'],
+      'Prior-Art Discovery Plan': ['UNDER OUTSIDE REVIEW']
+    }
+  },
+  {
     id: 'PRIOR_ART_DISCOVERY',
     phaseIncludes: ['prior-art'],
     verdicts: {
