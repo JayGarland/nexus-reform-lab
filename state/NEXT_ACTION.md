@@ -6,7 +6,7 @@
 
 ## Single Authorized Action
 
-> Run exactly one fresh-instance, read-only Cold-Start Recovery Test against commit produced by this write-back. The fresh instance must receive only the repository location and the test prompt. Do not provide prior chat reports or explanatory context.
+> Submit Foundation 0.4.1a Cold-Start gate consistency repair for outside review. Do not run the Cold-Start Test until the production verifier returns exit code 0.
 
 ---
 
@@ -17,4 +17,4 @@
 3. **DO NOT** launch background daemons, runners, compilers, OpenClaw, or subagents.
 4. **DO NOT** implement Current Knowledge, Stigmergy, Protocol Runtime, or AutoResearch.
 5. **DO NOT** run the cold-start test within this same execution instance.
-6. **DO NOT** use this write-back instance as the cold-start test instance; the test MUST be run by a separate new model instance that receives only the repository path and the test prompt.
+6. **DO NOT** run the Cold-Start Test until the production verifier (`state/verify_state_consistency.js`) returns exit code 0.

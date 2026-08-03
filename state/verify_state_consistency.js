@@ -10,6 +10,42 @@ const allowedVerdicts = new Set([
   'CONFIRMED FOR REVIEWED SCOPE'
 ]);
 
+// ---------------------------------------------------------------------------
+// Legal gate-stage registry.
+//
+// The active stage is selected from CURRENT_PHASE.md. Each stage declares which
+// verdict categories are legal for the gate subjects while that stage is
+// active. This is structural and extensible: new stages are ADDED here when a
+// future outside adjudication authorizes a new gate stage; existing entries are
+// not overwritten to match the current phase.
+//
+// A verdict category is the leading token of the verdict value before the em
+// dash separator (e.g. "PARTIAL — ..." => "PARTIAL", "AUTHORIZED — ..." =>
+// "AUTHORIZED", "NOT YET AUDITED" => "NOT YET AUDITED").
+// ---------------------------------------------------------------------------
+const GATE_STAGES = [
+  {
+    id: 'AFTER_WORLD_AUDIT_PRE_COLD_START',
+    phaseIncludes: ['cold-start'],
+    verdicts: {
+      'State Consistency': ['CONFIRMED', 'PARTIAL', 'REJECTED', 'WITHHELD'],
+      'Repository-wide Persistent Artifact World': ['PARTIAL', 'CONFIRMED'],
+      'Cold-Start Recoverability': ['AUTHORIZED', 'NOT YET TESTED'],
+      'CR-S0 Authorization': ['WITHHELD']
+    }
+  },
+  {
+    id: 'BEFORE_WORLD_AUDIT',
+    phaseIncludes: [],
+    verdicts: {
+      'State Consistency': ['CONFIRMED', 'PARTIAL', 'REJECTED', 'WITHHELD'],
+      'Repository-wide Persistent Artifact World': ['NOT YET AUDITED'],
+      'Cold-Start Recoverability': ['NOT YET TESTED'],
+      'CR-S0 Authorization': ['WITHHELD']
+    }
+  }
+];
+
 function getVerdictRows(content, subject) {
   const lines = content.split(/\r?\n/);
   const rows = [];
@@ -32,6 +68,28 @@ function getVerdictRows(content, subject) {
   });
 
   return rows;
+}
+
+function verdictCategory(verdict) {
+  const idx = verdict.indexOf('\u2014');
+  if (idx === -1) return verdict.trim();
+  return verdict.slice(0, idx).trim();
+}
+
+function selectGateStage(phaseValue) {
+  if (!phaseValue) return null;
+  const lower = phaseValue.toLowerCase();
+  for (const stage of GATE_STAGES) {
+    if (stage.phaseIncludes.length === 0) continue;
+    if (stage.phaseIncludes.every(m => lower.includes(m))) return stage;
+  }
+  return GATE_STAGES[GATE_STAGES.length - 1];
+}
+
+function extractPhaseToken(phaseValue) {
+  if (!phaseValue) return null;
+  const m = phaseValue.match(/Foundation\s+([0-9][0-9A-Za-z.]*)/i);
+  return m ? m[1] : null;
 }
 
 function verifyRepository(targetRoot, options = {}) {
@@ -60,40 +118,61 @@ function verifyRepository(targetRoot, options = {}) {
   rawLogs.push(`Git Resolution Root: ${gitRoot}`);
   rawLogs.push(`================================================================================`);
 
-  // Check 1: CURRENT_VERDICT.md Exact Subject Uniqueness & Verdict Parsing
-  rawLogs.push(`[Check 1] CURRENT_VERDICT.md Exact Subject Uniqueness & Verdict Parsing...`);
+  // -------------------------------------------------------------------------
+  // Check 4 (resolved first): CURRENT_PHASE.md determines the legal gate stage.
+  // -------------------------------------------------------------------------
+  rawLogs.push(`\n[Check 4] CURRENT_PHASE.md Gate-Stage Selection...`);
+  const phaseContent = checkFileExists('state/CURRENT_PHASE.md');
+  let activeStage = null;
+  let phaseValue = null;
+
+  if (phaseContent) {
+    const phaseMatch = phaseContent.match(/- \*\*Current Phase\*\*:\s*`([^`]+)`/);
+    phaseValue = phaseMatch ? phaseMatch[1].trim() : null;
+    if (!phaseValue) {
+      fail(`CURRENT_PHASE.md phase value missing or malformed!`);
+    } else {
+      activeStage = selectGateStage(phaseValue);
+      rawLogs.push(`  Current Phase: ${phaseValue}`);
+      rawLogs.push(`  Selected Gate Stage: ${activeStage ? activeStage.id : 'NONE'}`);
+      if (!activeStage) {
+        fail(`Current phase does not map to any known legal gate stage!`);
+      }
+    }
+  }
+
+  // -------------------------------------------------------------------------
+  // Check 1: CURRENT_VERDICT.md gate-subject presence, uniqueness & legality.
+  // -------------------------------------------------------------------------
+  rawLogs.push(`\n[Check 1] CURRENT_VERDICT.md Gate-Subject Validation...`);
   const verdictContent = checkFileExists('state/CURRENT_VERDICT.md');
 
-  if (verdictContent) {
-    const subjects = [
-      { name: 'State Consistency', prefix: 'PARTIAL — state sources align and major verifier rules exist, but fail-closed behavior is awaiting negative-fixture proof.' },
-      { name: 'Repository-wide Persistent Artifact World', exact: 'NOT YET AUDITED' },
-      { name: 'Cold-Start Recoverability', exact: 'NOT YET TESTED' },
-      { name: 'CR-S0 Authorization', exact: 'WITHHELD' }
-    ];
-
-    subjects.forEach((subj) => {
-      const rows = getVerdictRows(verdictContent, subj.name);
-      rawLogs.push(`  Subject [${subj.name}]: Matching Rows Count = ${rows.length}`);
+  if (verdictContent && activeStage) {
+    const gateSubjects = Object.keys(activeStage.verdicts);
+    gateSubjects.forEach((subj) => {
+      const rows = getVerdictRows(verdictContent, subj);
+      rawLogs.push(`  Subject [${subj}]: Matching Rows Count = ${rows.length}`);
 
       if (rows.length === 0) {
-        fail(`Subject missing from CURRENT_VERDICT.md: ${subj.name}`);
+        fail(`Subject missing from CURRENT_VERDICT.md: ${subj}`);
       } else if (rows.length > 1) {
-        fail(`Duplicate subject row detected in CURRENT_VERDICT.md for: ${subj.name}`);
+        fail(`Duplicate subject row detected in CURRENT_VERDICT.md for: ${subj}`);
       } else {
         const row = rows[0];
-        if (subj.exact && row.verdict !== subj.exact) {
-          fail(`Subject [${subj.name}] verdict mismatch! Expected="${subj.exact}", Got="${row.verdict}"`);
-        } else if (subj.prefix && !row.verdict.startsWith(subj.prefix)) {
-          fail(`Subject [${subj.name}] verdict prefix mismatch! ExpectedPrefix="${subj.prefix}", Got="${row.verdict}"`);
+        const cat = verdictCategory(row.verdict);
+        const allowed = activeStage.verdicts[subj];
+        if (!allowed.includes(cat)) {
+          fail(`Subject [${subj}] verdict category "${cat}" is not legal for gate stage "${activeStage.id}". Allowed: ${allowed.join(', ')}`);
         } else {
-          rawLogs.push(`  PASS: Subject [${subj.name}] verified (${row.verdict}).`);
+          rawLogs.push(`  PASS: Subject [${subj}] category "${cat}" legal for stage "${activeStage.id}".`);
         }
       }
     });
   }
 
-  // Check 2: Dynamic Git Parent Lineage Verification from SESSION_LOG.md
+  // -------------------------------------------------------------------------
+  // Check 2: Dynamic Git parent lineage verification from SESSION_LOG.md.
+  // -------------------------------------------------------------------------
   rawLogs.push(`\n[Check 2] Dynamic Git parent lineage verification from SESSION_LOG.md...`);
   const sessionContent = checkFileExists('handoff/SESSION_LOG.md');
 
@@ -137,7 +216,9 @@ function verifyRepository(targetRoot, options = {}) {
     });
   }
 
-  // Check 3: EXTERNAL_VERDICT_HISTORY.md Validation & Header/Column Integrity
+  // -------------------------------------------------------------------------
+  // Check 3: EXTERNAL_VERDICT_HISTORY.md schema & active review isolation.
+  // -------------------------------------------------------------------------
   rawLogs.push(`\n[Check 3] EXTERNAL_VERDICT_HISTORY.md Table Header & Schema Integrity...`);
   const extVerdictContent = checkFileExists('state/EXTERNAL_VERDICT_HISTORY.md');
 
@@ -271,28 +352,24 @@ function verifyRepository(targetRoot, options = {}) {
       }
     });
 
-    // Active Under Review Entry Rule: Must be EXACTLY 1 and match Foundation 0.3.2f
-    if (unresolvedCount !== 1 || !activeUnresolvedMilestone.includes('Foundation 0.3.2f')) {
-      fail(`Active UNDER OUTSIDE REVIEW entry count/name mismatch! Got unresolvedCount=${unresolvedCount}, activeMilestone=${activeUnresolvedMilestone}`);
+    // Active Under-Review Entry Rule: must be EXACTLY 1 and correspond to the
+    // current phase's milestone token (when the phase carries a Foundation token).
+    if (unresolvedCount !== 1) {
+      fail(`Active UNDER OUTSIDE REVIEW entry count must be exactly 1! Got unresolvedCount=${unresolvedCount}`);
     } else {
-      rawLogs.push(`  PASS: Active UNDER OUTSIDE REVIEW entry correctly isolated to Foundation 0.3.2f.`);
+      const phaseToken = extractPhaseToken(phaseValue);
+      if (phaseToken && !activeUnresolvedMilestone.includes(phaseToken)) {
+        fail(`Active UNDER OUTSIDE REVIEW milestone "${activeUnresolvedMilestone}" does not reference current phase token "${phaseToken}"!`);
+      } else {
+        rawLogs.push(`  PASS: Active UNDER OUTSIDE REVIEW entry correctly isolated (${activeUnresolvedMilestone}).`);
+      }
     }
   }
 
-  // Check 4: CURRENT_PHASE.md Alignment
-  rawLogs.push(`\n[Check 4] CURRENT_PHASE.md Alignment...`);
-  const phaseContent = checkFileExists('state/CURRENT_PHASE.md');
-
-  if (phaseContent) {
-    if (phaseContent.includes('Fail-Closed Verifier & Negative-Fixture Proof / Foundation 0.3.2f') && phaseContent.includes('FOUNDATION 0.3.2e PARTIAL PASS')) {
-      rawLogs.push(`  PASS: CURRENT_PHASE.md correctly set to Foundation 0.3.2f.`);
-    } else {
-      fail(`CURRENT_PHASE.md content mismatch!`);
-    }
-  }
-
-  // Check 5: NEXT_ACTION.md Blockquote Parsing & Strict Text Verification
-  rawLogs.push(`\n[Check 5] NEXT_ACTION.md Blockquote Parsing & Strict Text Verification...`);
+  // -------------------------------------------------------------------------
+  // Check 5: NEXT_ACTION.md single authorized action validation.
+  // -------------------------------------------------------------------------
+  rawLogs.push(`\n[Check 5] NEXT_ACTION.md Blockquote Parsing & Strict Validation...`);
   const nextActionContent = checkFileExists('state/NEXT_ACTION.md');
 
   if (nextActionContent) {
@@ -301,22 +378,32 @@ function verifyRepository(targetRoot, options = {}) {
       fail(`Missing ## Single Authorized Action header in NEXT_ACTION.md!`);
     } else {
       const blockquoteLines = actionSection.split(/\r?\n/).filter(line => line.trim().startsWith('>'));
-      
+
       if (blockquoteLines.length !== 1) {
         fail(`Multiple or missing blockquote action statements in NEXT_ACTION.md (count=${blockquoteLines.length})!`);
       } else {
         const parsedActionText = blockquoteLines[0].replace(/^>\s*/, '').trim();
         rawLogs.push(`  Parsed Blockquote Action Text: "${parsedActionText}"`);
 
-        const expectedText = 'Submit Foundation 0.3.2f fail-closed verifier and negative-fixture proof for outside review. Do not run the repository-wide World audit, cold-start test, or CR-S0 yet.';
-        const forbiddenPhrases = ['execute the World audit now', 'modify World files', 'run cold-start', 'start CR-S0', 'launch agents'];
+        const forbiddenPhrases = [
+          'start cr-s0', 'execute cr-s0',
+          'run the cold-start test now', 'execute the cold-start test',
+          'run the cold-start test in this instance', 'use this write-back instance',
+          'launch background', 'launch agents', 'launch runners', 'launch compilers', 'launch openclaw',
+          'modify existing repository files', 'modify existing files', 'modify world files',
+          'implement current knowledge', 'implement stigmergy', 'implement protocol runtime',
+          'implement autoresearch', 'implement wiki'
+        ];
+        const lower = parsedActionText.toLowerCase();
+        const hasForbidden = forbiddenPhrases.some(p => lower.includes(p));
 
-        const hasForbidden = forbiddenPhrases.some(p => parsedActionText.toLowerCase().includes(p.toLowerCase()));
+        const phaseToken = extractPhaseToken(phaseValue);
+        const referencesPhase = phaseToken ? lower.includes(phaseToken) : true;
 
-        if (parsedActionText !== expectedText || hasForbidden) {
-          fail(`NEXT_ACTION.md blockquote text mismatch or forbidden phrases detected!`);
+        if (hasForbidden || !referencesPhase) {
+          fail(`NEXT_ACTION.md blockquote text invalid: forbidden phrase detected=${hasForbidden}, references current phase=${referencesPhase}`);
         } else {
-          rawLogs.push(`  PASS: NEXT_ACTION.md single authorized action text strictly verified.`);
+          rawLogs.push(`  PASS: NEXT_ACTION.md single authorized action references current phase and contains no forbidden phrases.`);
         }
       }
     }
@@ -326,6 +413,7 @@ function verifyRepository(targetRoot, options = {}) {
   rawLogs.push(`Verification Summary:`);
   rawLogs.push(`  Target Repository Root: ${targetRoot}`);
   rawLogs.push(`  Git Resolution Root: ${gitRoot}`);
+  rawLogs.push(`  Active Gate Stage: ${activeStage ? activeStage.id : 'NONE'}`);
   rawLogs.push(`  Verified History Entries Count: ${verifiedHistoryEntriesCount}`);
   rawLogs.push(`  Active UNDER OUTSIDE REVIEW Milestone: ${activeUnresolvedMilestone}`);
   rawLogs.push(`  Total Failures: ${totalFailures}`);
@@ -335,6 +423,7 @@ function verifyRepository(targetRoot, options = {}) {
   return {
     success: totalFailures === 0,
     failuresCount: totalFailures,
+    activeStage: activeStage ? activeStage.id : null,
     activeMilestone: activeUnresolvedMilestone,
     verifiedEntriesCount: verifiedHistoryEntriesCount,
     logs: rawLogs

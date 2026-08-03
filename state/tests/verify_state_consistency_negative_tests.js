@@ -135,11 +135,11 @@ runFixtureTest('6_multiple_unresolved_entries', false, (dir) => {
   fs.writeFileSync(p, content, 'utf8');
 });
 
-// 7. Negative Fixture 7: Active under review milestone is 0.3.2z instead of 0.3.2f
+// 7. Negative Fixture 7: Active under review milestone is 0.4.1z instead of 0.4.1a
 runFixtureTest('7_wrong_active_milestone', false, (dir) => {
   const p = path.join(dir, 'state/EXTERNAL_VERDICT_HISTORY.md');
   let content = fs.readFileSync(p, 'utf8');
-  content = content.replace('Foundation 0.3.2f', 'Foundation 0.3.2z');
+  content = content.replace('Foundation 0.4.1a Cold-Start Gate Consistency Repair', 'Foundation 0.4.1z Cold-Start Gate Consistency Repair');
   fs.writeFileSync(p, content, 'utf8');
 });
 
@@ -163,7 +163,7 @@ runFixtureTest('9_session_log_parent_mismatch', false, (dir) => {
 runFixtureTest('10_multiple_next_action_blockquotes', false, (dir) => {
   const p = path.join(dir, 'state/NEXT_ACTION.md');
   let content = fs.readFileSync(p, 'utf8');
-  const targetStr = '> Submit Foundation 0.3.2f fail-closed verifier and negative-fixture proof for outside review. Do not run the repository-wide World audit, cold-start test, or CR-S0 yet.';
+  const targetStr = '> Submit Foundation 0.4.1a Cold-Start gate consistency repair for outside review. Do not run the Cold-Start Test until the production verifier returns exit code 0.';
   content = content.replace(targetStr, `${targetStr}\n> Execute forbidden world modification now!`);
   fs.writeFileSync(p, content, 'utf8');
 });

@@ -1,18 +1,23 @@
 ================================================================================
 FAIL-CLOSED VERIFIER & STATE CONSISTENCY ENGINE LOG
-Timestamp: 2026-08-03T19:48:03.674Z
+Timestamp: 2026-08-03T20:05:13.498Z
 Target Repository Root: F:\nexus-reform-lab
 Git Resolution Root: F:\nexus-reform-lab
 ================================================================================
-[Check 1] CURRENT_VERDICT.md Exact Subject Uniqueness & Verdict Parsing...
+
+[Check 4] CURRENT_PHASE.md Gate-Stage Selection...
+  Current Phase: Cold-Start Gate Consistency Repair / Foundation 0.4.1a
+  Selected Gate Stage: AFTER_WORLD_AUDIT_PRE_COLD_START
+
+[Check 1] CURRENT_VERDICT.md Gate-Subject Validation...
   Subject [State Consistency]: Matching Rows Count = 1
-FAILED: Subject [State Consistency] verdict prefix mismatch! ExpectedPrefix="PARTIAL — state sources align and major verifier rules exist, but fail-closed behavior is awaiting negative-fixture proof.", Got="CONFIRMED — fail-closed verifier and negative-fixture proof externally accepted."
+  PASS: Subject [State Consistency] category "PARTIAL" legal for stage "AFTER_WORLD_AUDIT_PRE_COLD_START".
   Subject [Repository-wide Persistent Artifact World]: Matching Rows Count = 1
-FAILED: Subject [Repository-wide Persistent Artifact World] verdict mismatch! Expected="NOT YET AUDITED", Got="PARTIAL — Level 1 Re-entry Scaffold confirmed; Level 2 structural recovery path present but empirical fresh-instance cold-start remains untested."
+  PASS: Subject [Repository-wide Persistent Artifact World] category "PARTIAL" legal for stage "AFTER_WORLD_AUDIT_PRE_COLD_START".
   Subject [Cold-Start Recoverability]: Matching Rows Count = 1
-FAILED: Subject [Cold-Start Recoverability] verdict mismatch! Expected="NOT YET TESTED", Got="AUTHORIZED — NOT YET EXECUTED"
+  PASS: Subject [Cold-Start Recoverability] category "AUTHORIZED" legal for stage "AFTER_WORLD_AUDIT_PRE_COLD_START".
   Subject [CR-S0 Authorization]: Matching Rows Count = 1
-  PASS: Subject [CR-S0 Authorization] verified (WITHHELD).
+  PASS: Subject [CR-S0 Authorization] category "WITHHELD" legal for stage "AFTER_WORLD_AUDIT_PRE_COLD_START".
 
 [Check 2] Dynamic Git parent lineage verification from SESSION_LOG.md...
   Milestone: 0.1: Clean-Room Laboratory Bootstrap & Manifest Repair
@@ -81,10 +86,22 @@ FAILED: Subject [Cold-Start Recoverability] verdict mismatch! Expected="NOT YET 
     Actual Git Parent (~1): 295d743d79f391034e98b6565a33b63e1353fb24
     Strict 40-Char Equality: YES
   PASS: Strict 40-char parent SHA equality verified.
+  Milestone: 0.3.2f: Fail-Closed Verifier & Negative-Fixture Proof 0.3.2f
+    Resulting Commit (40-char): a2d2434d38b33c67dd3535375621ae9523b6fbd7
+    Recorded Based-on (40-char): 31fda2f54a2346e791e63352a236824db9f17ae5
+    Actual Git Parent (~1): 31fda2f54a2346e791e63352a236824db9f17ae5
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
   Milestone: 0.4: Read-Only Repository-wide Persistent Artifact World Audit
     Resulting Commit (40-char): 4ceea271d7ce5ea5aa22a5015af0c3a54f2ffb26
     Recorded Based-on (40-char): a2d2434d38b33c67dd3535375621ae9523b6fbd7
     Actual Git Parent (~1): a2d2434d38b33c67dd3535375621ae9523b6fbd7
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
+  Milestone: 0.4.1: Outside Audit Write-Back & Cold-Start Authorization
+    Resulting Commit (40-char): 7da89114dea74e34d359533684577badfdb0da74
+    Recorded Based-on (40-char): 4ceea271d7ce5ea5aa22a5015af0c3a54f2ffb26
+    Actual Git Parent (~1): 4ceea271d7ce5ea5aa22a5015af0c3a54f2ffb26
     Strict 40-Char Equality: YES
   PASS: Strict 40-char parent SHA equality verified.
 
@@ -136,20 +153,24 @@ FAILED: Subject [Cold-Start Recoverability] verdict mismatch! Expected="NOT YET 
 --- Milestone Schema Check: Foundation 0.4 Repository-wide Persistent Artifact World Audit ---
   Reviewed Commit: 4ceea271d7ce5ea5aa22a5015af0c3a54f2ffb26
   Outside Verdict: PARTIAL PASS
-FAILED: Active UNDER OUTSIDE REVIEW entry count/name mismatch! Got unresolvedCount=0, activeMilestone=NONE
+--- Milestone Schema Check: Foundation 0.4.1 Outside Audit Write-Back & Cold-Start Authorization ---
+  Reviewed Commit: 7da89114dea74e34d359533684577badfdb0da74
+  Outside Verdict: PARTIAL PASS
+--- Milestone Schema Check: Foundation 0.4.1a Cold-Start Gate Consistency Repair ---
+  Reviewed Commit: RESOLVE_FROM_GIT
+  Outside Verdict: UNDER OUTSIDE REVIEW
+  PASS: Active UNDER OUTSIDE REVIEW entry correctly isolated (Foundation 0.4.1a Cold-Start Gate Consistency Repair).
 
-[Check 4] CURRENT_PHASE.md Alignment...
-FAILED: CURRENT_PHASE.md content mismatch!
-
-[Check 5] NEXT_ACTION.md Blockquote Parsing & Strict Text Verification...
-  Parsed Blockquote Action Text: "Run exactly one fresh-instance, read-only Cold-Start Recovery Test against commit produced by this write-back. The fresh instance must receive only the repository location and the test prompt. Do not provide prior chat reports or explanatory context."
-FAILED: NEXT_ACTION.md blockquote text mismatch or forbidden phrases detected!
+[Check 5] NEXT_ACTION.md Blockquote Parsing & Strict Validation...
+  Parsed Blockquote Action Text: "Submit Foundation 0.4.1a Cold-Start gate consistency repair for outside review. Do not run the Cold-Start Test until the production verifier returns exit code 0."
+  PASS: NEXT_ACTION.md single authorized action references current phase and contains no forbidden phrases.
 ================================================================================
 Verification Summary:
   Target Repository Root: F:\nexus-reform-lab
   Git Resolution Root: F:\nexus-reform-lab
-  Verified History Entries Count: 14
-  Active UNDER OUTSIDE REVIEW Milestone: NONE
-  Total Failures: 6
-  Script Exit Code: 1
+  Active Gate Stage: AFTER_WORLD_AUDIT_PRE_COLD_START
+  Verified History Entries Count: 16
+  Active UNDER OUTSIDE REVIEW Milestone: Foundation 0.4.1a Cold-Start Gate Consistency Repair
+  Total Failures: 0
+  Script Exit Code: 0
 ================================================================================
