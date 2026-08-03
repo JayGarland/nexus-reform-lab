@@ -1,0 +1,5 @@
+Title: Software 2.0
+Author: Andrej Karpathy (2017)
+Canonical URL: https://karpathy.ai/software20.html
+Quoted Anchor: "Software 1.0 is code written explicitly by humans (C++, Python). Software 2.0 is neural network weights trained via data and loss functions."
+Summary: Defines Software 1.0 (explicit code) vs Software 2.0 (weights optimized via loss functions).

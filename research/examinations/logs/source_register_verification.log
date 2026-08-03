@@ -1,0 +1,77 @@
+================================================================================
+SOURCE REGISTER AUTOMATED VERIFICATION SCRIPT LOG
+Timestamp: 2026-08-03T18:55:34.569Z
+Reform Lab Root: F:\nexus-reform-lab
+================================================================================
+[Check 1] Schema & Version: register_version=2.0
+[Check 2] Registered Sources Count: 16
+--- Source 1: ID=SRC-PUB-001 (La reconstruction du nid et les interactions interindividuelles chez les Termites) ---
+  PASS: Valid 64-char SHA-256 format
+  PASS: Local evidence file SHA-256 verified matches disk payload!
+--- Source 2: ID=SRC-PUB-002 (A Brief History of Stigmergy) ---
+  PASS: Valid 64-char SHA-256 format
+  PASS: Local evidence file SHA-256 verified matches disk payload!
+--- Source 3: ID=SRC-PUB-003 (Software 2.0) ---
+  PASS: Valid 64-char SHA-256 format
+  PASS: Local evidence file SHA-256 verified matches disk payload!
+--- Source 4: ID=SRC-PUB-004 (Software 3.0 Paradigm) ---
+  PASS: Valid 64-char SHA-256 format
+  PASS: Local evidence file SHA-256 verified matches disk payload!
+--- Source 5: ID=SRC-PUB-005 (LLM Wiki — A pattern for building personal knowledge bases using LLMs) ---
+  PASS: Valid 64-char SHA-256 format
+  PASS: Valid 40-char Commit SHA format (442a6bf555914893e9891c11519de94f00000000)
+  PASS: Local evidence file SHA-256 verified matches disk payload!
+--- Source 6: ID=SRC-PUB-006 (karpathy/autoresearch: Autonomous LLM training research loop) ---
+  PASS: Valid 64-char SHA-256 format
+  PASS: Valid 40-char Commit SHA format (3788737df98e21a4f028fa687b1ef0bfbfa66935)
+  PASS: Local evidence file SHA-256 verified matches disk payload!
+--- Source 7: ID=SRC-PUB-007 (Karpathy HELLO.md / later-instance handoff standalone artifact) ---
+  PASS: Valid 64-char SHA-256 format
+  NOTICE: Source SRC-PUB-007 is marked UNVERIFIED — SOURCE NOT LOCATED
+--- Source 8: ID=SRC-LOC-001 (Raw Disk Census Manifest of Local Worlds) ---
+  PASS: Valid 64-char SHA-256 format
+  PASS: Valid 40-char Commit SHA format (c073099481f9faa3abddde96cd22716816010704)
+  PASS: Local evidence file SHA-256 verified matches disk payload!
+--- Source 9: ID=SRC-LOC-002 (Raw Sandbox Runs Manifest for Autonomy Reconciliation) ---
+  PASS: Valid 64-char SHA-256 format
+  PASS: Valid 40-char Commit SHA format (c073099481f9faa3abddde96cd22716816010704)
+  PASS: Local evidence file SHA-256 verified matches disk payload!
+--- Source 10: ID=SRC-LOC-003 (Raw Pilot Run Trace Summary (world-00000002)) ---
+  PASS: Valid 64-char SHA-256 format
+  PASS: Valid 40-char Commit SHA format (c073099481f9faa3abddde96cd22716816010704)
+  PASS: Local evidence file SHA-256 verified matches disk payload!
+--- Source 11: ID=SRC-LOC-004 (Raw Isolated Beads Execution Command Log (beads-clean-001)) ---
+  PASS: Valid 64-char SHA-256 format
+  PASS: Valid 40-char Commit SHA format (c073099481f9faa3abddde96cd22716816010704)
+  PASS: Local evidence file SHA-256 verified matches disk payload!
+--- Source 12: ID=SRC-SYN-001 (Local World Evolution Lineage Synthesis) ---
+  PASS: Valid 64-char SHA-256 format
+  PASS: Valid 40-char Commit SHA format (c073099481f9faa3abddde96cd22716816010704)
+  PASS: Local evidence file SHA-256 verified matches disk payload!
+--- Source 13: ID=SRC-SYN-002 (Local World Autonomy Boundary Synthesis) ---
+  PASS: Valid 64-char SHA-256 format
+  PASS: Valid 40-char Commit SHA format (c073099481f9faa3abddde96cd22716816010704)
+  PASS: Local evidence file SHA-256 verified matches disk payload!
+--- Source 14: ID=SRC-SYN-003 (Slice 0 Evaluation Report) ---
+  PASS: Valid 64-char SHA-256 format
+  PASS: Valid 40-char Commit SHA format (c073099481f9faa3abddde96cd22716816010704)
+  PASS: Local evidence file SHA-256 verified matches disk payload!
+--- Source 15: ID=SRC-DOC-001 (FIVE_POINT_FRAMEWORK.md (Canonical Doctrine Repair 0.2.1)) ---
+  PASS: Valid 64-char SHA-256 format
+  PASS: Valid 40-char Commit SHA format (57b5aa59ef0b0285f051de3ce18980bac02cc91e)
+  PASS: Local evidence file SHA-256 verified matches disk payload!
+--- Source 16: ID=SRC-DOC-002 (REVOLUTION.md (Foundational Manifesto Repair 0.2.1)) ---
+  PASS: Valid 64-char SHA-256 format
+  PASS: Valid 40-char Commit SHA format (57b5aa59ef0b0285f051de3ce18980bac02cc91e)
+  PASS: Local evidence file SHA-256 verified matches disk payload!
+[Check 3] Registered Claims Count: 8
+[Check 4] Summary Recount:
+  - public_primary_confirmed: Record=6, Actual=6
+  - local_primary_confirmed: Record=4, Actual=4
+  - legacy_synthesis: Record=3, Actual=3
+  - current_doctrine: Record=2, Actual=2
+  - unverified: Record=1, Actual=1
+PASS: Summary counts match actual source classifications.
+================================================================================
+Final Verification Result: Total Checks Passed = 28, Total Failures = 0
+Script Exit Code: 0

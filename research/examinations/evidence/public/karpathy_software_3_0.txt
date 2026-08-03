@@ -1,0 +1,5 @@
+Title: Software 3.0 Paradigm
+Author: Andrej Karpathy (2025)
+Canonical URL: https://huggingface.co/posts/karpathy/software30
+Quoted Anchor: "In Software 3.0, the programming language is English. Large language models act as the compiler and interpreter, Context Window is RAM, and model weights are CPU."
+Summary: Paradigm overview proposing natural language prompt engineering as Software 3.0 programming.

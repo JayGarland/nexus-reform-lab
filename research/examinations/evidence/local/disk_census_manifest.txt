@@ -1,0 +1,45 @@
+---
+source_repository: JayGarland/nexus
+source_commit: c073099481f9faa3abddde96cd22716816010704
+source_path: research/sources/local-world-raw/full-census/disk_census_manifest.txt
+source_sha256: 94f84100b5dca98b13d32d7dfecef877ebdc89a11306b71ee4b5dc9e937515b5
+migration_reason: Raw disk census manifest of local worlds
+epistemic_status: CONFIRMED
+---
+
+=== FULL DISK CENSUS MANIFEST ===
+Date: 2026-08-03
+Drives Inspected: C:\, F:\
+
+1. C:\Worlds (17 directories)
+   - room-001
+   - room-20260607-041013-611470
+   - room-20260607-043541-65c931
+   - room-20260607-060923-976171
+   - room-20260607-060923-976171-s1-weather-test-001
+   - room-20260607-190540-f22cf2
+   - room-20260607-190726-76695a
+   - room-20260607-192639-3f1a96
+   - room-20260607-212747-a7c2f9
+   - room-20260607-230545-86b6ca
+   - room-20260607-231329-470218
+   - world-00000000
+   - world-00000001
+   - world-00000002
+   - world-20260609-base
+   - world-20260609-base - Copy (2)
+   - world-20260609-base-obs0
+
+2. C:\Users\Administrator\.openclaw
+   - workspace/ (AGENTS.md, IDENTITY.md, USER.md, SOUL.md, state.json)
+   - workspace-harness/
+   - workspace-test/
+   - memory/ (chenghuan.sqlite, main.sqlite)
+   - state/ (openclaw.sqlite)
+
+3. F:\GitHub\llm-agent-experiments\sandbox (28 directories)
+   - run-20260606-194953-57176c .. run-20260607-211329-5c8519
+
+4. F:\wiki-system\subwikis\llm-wiki-LLM-Agent-Framework
+   - wiki/entities/world-00000002.md
+   - raw/recovered/

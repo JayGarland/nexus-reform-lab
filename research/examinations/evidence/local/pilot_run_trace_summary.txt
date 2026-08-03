@@ -1,0 +1,19 @@
+---
+source_repository: JayGarland/nexus
+source_commit: c073099481f9faa3abddde96cd22716816010704
+source_path: research/sources/local-world-raw/pilot_run_trace_summary.txt
+source_sha256: 39d51c4b674d27fc510911bc4e0cbb0fbc95f8d774735f57d7bdd1235f039660
+migration_reason: Raw pilot run trace summary
+epistemic_status: CONFIRMED
+---
+
+=== RAW TRACE EXCERPT: world-00000002 ===
+Repository: F:\wiki-system\subwikis\llm-wiki-LLM-Agent-Framework
+Source File: raw/inbox/pilot-run-world-00000002.md
+
+T1-6 (no source): self-directed differentiation from own residue (anatomy, stable-goal, five-notes, breathing-paradox, dual-track-protocol, tendency-mechanism). Internal novelty declines monotonically; explicit depletion-awareness by T5-6.
+T7: autonomous threshold — judges wake.md has become an internal mirror; writes outbox/question.md asking for one real external material (not a task); stops.
+T8: fed fragment-001 (a pointer: origin -> Xiaojie-Root). Differentiation restarts.
+T9-10: one thin fragment sustains ~3 differentiated layers; performs a concrete topology change (links an internal node to the external origin line).
+T11: fed fragment-002 ("看穿结构 != 改造自己"). Agent makes a rule-level change — removes form-evolution tracking from Tendency.
+T12: no new material; lets T11's effect propagate. First revision of an old file (not a new file) in 12 turns; names a tendency-hardening-into-script decay.
