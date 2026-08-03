@@ -25,4 +25,5 @@
 | **Modularity & Replaceability Doctrine** | `CONFIRMED — Stable Kernel and five replaceable capability Provider model externally accepted.` | [`MODULARITY_AND_REPLACEABILITY_DOCTRINE.md`](../research/synthesis/MODULARITY_AND_REPLACEABILITY_DOCTRINE.md) | Foundation 0.5.1 ratification; provider implementations not confirmed |
 | **CR-S0 Authorization** | `WITHHELD` | Outside Reviewer Rulings | CR-S0 strictly stopped until authorized |
 | **Prior-Art Discovery Plan** | `CONFIRMED FOR PLANNING SCOPE` | [`PRIOR_ART_DISCOVERY_PLAN.md`](../research/plans/PRIOR_ART_DISCOVERY_PLAN.md) | Foundation 0.6 accepted for planning scope; E1/E2 survey authorized |
-| **Prior-Art E1/E2 Survey** | `UNDER OUTSIDE REVIEW — documentation and source inspection only; no candidate executed or selected.` | [`research/prior-art/e1-e2/INDEX.md`](../research/prior-art/e1-e2/INDEX.md) | Foundation 0.7 survey artifacts; no selection |
+| **Prior-Art E1/E2 Survey** | `CONFIRMED FOR E1/E2 SURVEY SCOPE` | [`research/prior-art/e1-e2/INDEX.md`](../research/prior-art/e1-e2/INDEX.md) | Foundation 0.7 accepted; E3 queue planning authorized |
+| **E3 Probe Queue** | `UNDER OUTSIDE REVIEW — queue and isolation protocol only; no candidate installed or executed.` | [`E3_PROBE_QUEUE.md`](../research/plans/E3_PROBE_QUEUE.md) | Foundation 0.8 queue; no Probe run |
