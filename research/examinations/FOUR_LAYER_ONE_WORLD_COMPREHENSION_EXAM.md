@@ -1,3 +1,10 @@
+---
+status: HISTORICAL_FAILURE / EVIDENCE_ONLY
+authority: historical-evidence-only
+must_not_be_used_as_current_doctrine: true
+superseded_by: state/CURRENT_PHASE.md
+---
+
 # Four-Layer One-World Doctrine Comprehension Examination
 
 > **Examination Candidate**: Ephemeral Clean-Room Experimental Executor  
