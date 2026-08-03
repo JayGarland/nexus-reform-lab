@@ -55,5 +55,11 @@
 ### Milestone 0.3.2c: Strict SHA & External Verdict Accuracy Repair 0.3.2c
 - **Date**: 2026-08-03T21:22:00+02:00
 - **Based-on Commit**: `5ac021c9ae3a362243a2f442316310ff0b065e27`
-- **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
+- **Resulting Commit**: `8ddabe908e62d748081b587f6fa55a6c87e6db91`
 - **Actions**: Enforced strict 40-character SHA matching without `startsWith` or short SHA regex, corrected Foundation 0.3.2a to `REJECTED`, reclassified Doctrine Repair 0.2.1 milestone to `PARTIAL PASS` with 4 accepted doctrine scopes, updated column header in `EXTERNAL_VERDICT_HISTORY.md`, and updated `HELLO.md`.
+
+### Milestone 0.3.2d: Current-State Closure & Verdict-Register Hardening 0.3.2d
+- **Date**: 2026-08-03T21:23:00+02:00
+- **Based-on Commit**: `8ddabe908e62d748081b587f6fa55a6c87e6db91`
+- **Resulting Commit**: `RESOLVE_FROM_GIT_HISTORY`
+- **Actions**: Closed Foundation 0.3.2c as `CONFIRMED FOR REVIEWED SCOPE` in `EXTERNAL_VERDICT_HISTORY.md` (commit `8ddabe908e62d748081b587f6fa55a6c87e6db91`), set State Consistency to `CONFIRMED` and World to `NOT YET AUDITED` in `CURRENT_VERDICT.md`, updated `CURRENT_PHASE.md`, closed silent bypass leak for historical reviewed commits in `verify_state_consistency.js`, and added phase/verdict state alignment checks.

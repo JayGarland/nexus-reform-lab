@@ -6,10 +6,8 @@
 
 ## 1. Handoff Pointers & Baseline Status
 
-- **Last Externally Accepted Scope**: `Persistent Memory Skeleton` (from Foundation 0.3, commit `10928fd0284721538aec9b7bd4575f24ed8232cf`)
-- **Subsystem Authority Note**: Accepted subsystem doctrines are listed only in [`../state/CURRENT_VERDICT.md`](../state/CURRENT_VERDICT.md). No partial milestone is treated as fully accepted.
-- **Latest Rejected Attempt**: `Foundation 0.3.2a Lineage Parent SHA Fix (REJECTED due to false pass in verifier logic & untrustworthy history)`
-- **Current Work Under Review**: `Foundation 0.3.2c Strict SHA & External Verdict Accuracy Repair`
+- **Last Externally Accepted Repair**: `Foundation 0.3.2c strict SHA and verdict accuracy repair` (Reviewed Commit: `8ddabe908e62d748081b587f6fa55a6c87e6db91`)
+- **Next Pending Evaluation**: `Repository-wide Persistent Artifact World Audit`
 - **Current Operational Phase**: See [`../state/CURRENT_PHASE.md`](../state/CURRENT_PHASE.md)
 - **Current Ratified Verdicts**: See [`../state/CURRENT_VERDICT.md`](../state/CURRENT_VERDICT.md)
 - **External Verdict History**: See [`../state/EXTERNAL_VERDICT_HISTORY.md`](../state/EXTERNAL_VERDICT_HISTORY.md)
@@ -19,11 +17,11 @@
 ---
 
 ## 2. Session Summary
-- Conducted strict SHA and external verdict accuracy repair (Foundation 0.3.2c).
-- Completely eliminated `startsWith` and short SHA regex from verifier logic in [`state/verify_state_consistency.js`](../state/verify_state_consistency.js). Enforced strict 40-character SHA string equality.
-- Corrected Foundation 0.3.2a verdict in [`state/EXTERNAL_VERDICT_HISTORY.md`](../state/EXTERNAL_VERDICT_HISTORY.md) to `REJECTED`.
-- Reclassified Doctrine Repair 0.2.1 milestone in [`state/EXTERNAL_VERDICT_HISTORY.md`](../state/EXTERNAL_VERDICT_HISTORY.md) to `PARTIAL PASS` with 4 accepted doctrine scopes.
-- Renamed column header to `Milestone Accepted as Current Authority` and added schema rules banner in `EXTERNAL_VERDICT_HISTORY.md`.
+- Conducted current-state closure and verdict-register hardening (Foundation 0.3.2d).
+- Closed Foundation 0.3.2c in [`state/EXTERNAL_VERDICT_HISTORY.md`](../state/EXTERNAL_VERDICT_HISTORY.md) as `CONFIRMED FOR REVIEWED SCOPE` (commit `8ddabe908e62d748081b587f6fa55a6c87e6db91`).
+- Updated [`state/CURRENT_VERDICT.md`](../state/CURRENT_VERDICT.md) to set State Consistency to `CONFIRMED` and World to `NOT YET AUDITED`.
+- Updated [`state/CURRENT_PHASE.md`](../state/CURRENT_PHASE.md) to `Repository-wide Persistent Artifact World Audit Preparation`.
+- Expanded [`state/verify_state_consistency.js`](../state/verify_state_consistency.js) to enforce zero unresolved historical commits and align phase/verdict state files.
 
 ---
 

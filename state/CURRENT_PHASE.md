@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Persistent Memory State Model Repair / Foundation 0.3.2`
-- **Current Focus**: Eliminate duplicated state, self-referential commit tracking, and stale derived values before cold-start validation.
-- **External Audit Status**: `IN PROGRESS — NOT YET CONFIRMED`
-- **Started At**: `2026-08-03T21:09:00+02:00`
+- **Current Phase**: `Repository-wide Persistent Artifact World Audit Preparation / Foundation 0.3.2d`
+- **Current Focus**: Close the state-model repair, preserve the outside verdict for Foundation 0.3.2c, and prepare a read-only repository-wide World audit.
+- **External Audit Status**: `FOUNDATION 0.3.2c ACCEPTED FOR ITS REVIEWED SCOPE`
+- **Started At**: `2026-08-03T21:23:00+02:00`
 
 ---
 

@@ -1,6 +1,6 @@
 ================================================================================
-STRICT SHA & VERDICT ACCURACY AUTOMATED VERIFICATION LOG (0.3.2c)
-Timestamp: 2026-08-03T19:22:20.366Z
+STATE HARDENING & VERDICT REGISTER AUTOMATED VERIFICATION LOG (0.3.2d)
+Timestamp: 2026-08-03T19:24:23.387Z
 Laboratory Root: F:\nexus-reform-lab
 ================================================================================
 [Check A] Strict 40-character SHA & dynamic Git parent verification...
@@ -52,95 +52,98 @@ Laboratory Root: F:\nexus-reform-lab
     Actual Git Parent (~1): 03a98d7bf6787f44fa823a18cbf165ceb5aee307
     Strict 40-Char Equality: YES
   PASS: Strict 40-char parent SHA equality verified.
+  Milestone: 0.3.2c: Strict SHA & External Verdict Accuracy Repair 0.3.2c
+    Resulting Commit (40-char): 8ddabe908e62d748081b587f6fa55a6c87e6db91
+    Recorded Based-on (40-char): 5ac021c9ae3a362243a2f442316310ff0b065e27
+    Actual Git Parent (~1): 5ac021c9ae3a362243a2f442316310ff0b065e27
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
 
-[Check B/C/D] EXTERNAL_VERDICT_HISTORY.md Schema & Verdict Accuracy...
+[Check B] EXTERNAL_VERDICT_HISTORY.md Schema & Unresolved Leak Prevention...
 --- Milestone: **Clean-Room Bootstrap** ---
-  Reviewed Commit (40-char): a78709e9bf07c14d46276d60da978bfedaf2f5c4
+  Reviewed Commit: a78709e9bf07c14d46276d60da978bfedaf2f5c4
   Outside Verdict: CONFIRMED
   Fully Accepted: yes
-  Accepted Scope: Clean-Room Lab Setup, Charter, Invariants, Drive Manifest
-  Rejected Scope: None
   Milestone Current Authority: yes
   Git Commit Existence Check (a78709e9bf07c14d46276d60da978bfedaf2f5c4): EXISTS
 --- Milestone: **Doctrine Repair 0.2.1** ---
-  Reviewed Commit (40-char): 57b5aa59ef0b0285f051de3ce18980bac02cc91e
+  Reviewed Commit: 57b5aa59ef0b0285f051de3ce18980bac02cc91e
   Outside Verdict: PARTIAL PASS
   Fully Accepted: no
-  Accepted Scope: Four-Layer One-World Doctrine, LLM Wiki Doctrine, Software 3.0 Doctrine, Controlled AutoResearch Doctrine
-  Rejected Scope: Migration byte-integrity verifier, Exact destination/source verification
   Milestone Current Authority: no
   Git Commit Existence Check (57b5aa59ef0b0285f051de3ce18980bac02cc91e): EXISTS
-  PASS: Doctrine Repair 0.2.1 accurately classified as PARTIAL PASS with 4 scopes.
 --- Milestone: **Migration Verification Fix 0.2.2** ---
-  Reviewed Commit (40-char): 4e7fe457bb25eb5e9d13a8f01f16edb55714e6d5
+  Reviewed Commit: 4e7fe457bb25eb5e9d13a8f01f16edb55714e6d5
   Outside Verdict: CONFIRMED
   Fully Accepted: yes
-  Accepted Scope: 31/31 normalized text equivalence after frontmatter/newline normalization
-  Rejected Scope: Exact payload byte equality
   Milestone Current Authority: yes
   Git Commit Existence Check (4e7fe457bb25eb5e9d13a8f01f16edb55714e6d5): EXISTS
 --- Milestone: **Foundation 0.3** ---
-  Reviewed Commit (40-char): 10928fd0284721538aec9b7bd4575f24ed8232cf
+  Reviewed Commit: 10928fd0284721538aec9b7bd4575f24ed8232cf
   Outside Verdict: PARTIAL PASS
   Fully Accepted: no
-  Accepted Scope: Persistent Memory Skeleton
-  Rejected Scope: Handoff commit closure, State consistency, Cold-start recoverability
   Milestone Current Authority: no
   Git Commit Existence Check (10928fd0284721538aec9b7bd4575f24ed8232cf): EXISTS
 --- Milestone: **Foundation 0.3.1** ---
-  Reviewed Commit (40-char): 61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34
+  Reviewed Commit: 61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34
   Outside Verdict: PARTIAL PASS
   Fully Accepted: no
-  Accepted Scope: Consistency Fix Content
-  Rejected Scope: 0.3.1 commit self-embedding pending
   Milestone Current Authority: no
   Git Commit Existence Check (61ba6736d3e02f1b2e7b6a5e9f4d83ed3ce1cf34): EXISTS
 --- Milestone: **Foundation 0.3.1a** ---
-  Reviewed Commit (40-char): f0027bcd5d0600b753a9b91b730fa9a46870b261
+  Reviewed Commit: f0027bcd5d0600b753a9b91b730fa9a46870b261
   Outside Verdict: REJECTED
   Fully Accepted: no
-  Accepted Scope: None
-  Rejected Scope: Entire milestone rejected
   Milestone Current Authority: no
   Git Commit Existence Check (f0027bcd5d0600b753a9b91b730fa9a46870b261): EXISTS
 --- Milestone: **Foundation 0.3.2** ---
-  Reviewed Commit (40-char): fc209ffd4d7a6046ab75532f2a9c61fd41255ee6
+  Reviewed Commit: fc209ffd4d7a6046ab75532f2a9c61fd41255ee6
   Outside Verdict: PARTIAL PASS
   Fully Accepted: no
-  Accepted Scope: State Model Repair
-  Rejected Scope: Parent commit SHA & milestone classification fix
   Milestone Current Authority: no
   Git Commit Existence Check (fc209ffd4d7a6046ab75532f2a9c61fd41255ee6): EXISTS
 --- Milestone: **Foundation 0.3.2a** ---
-  Reviewed Commit (40-char): 03a98d7bf6787f44fa823a18cbf165ceb5aee307
+  Reviewed Commit: 03a98d7bf6787f44fa823a18cbf165ceb5aee307
   Outside Verdict: REJECTED
   Fully Accepted: no
-  Accepted Scope: None
-  Rejected Scope: Verifier logic produced a false pass, External verdict history remained untrustworthy, Repository-wide World Audit authorization remained withheld
   Milestone Current Authority: no
   Git Commit Existence Check (03a98d7bf6787f44fa823a18cbf165ceb5aee307): EXISTS
-  PASS: Foundation 0.3.2a accurately classified as REJECTED.
 --- Milestone: **Foundation 0.3.2b** ---
-  Reviewed Commit (40-char): 5ac021c9ae3a362243a2f442316310ff0b065e27
+  Reviewed Commit: 5ac021c9ae3a362243a2f442316310ff0b065e27
   Outside Verdict: PARTIAL PASS
   Fully Accepted: no
-  Accepted Scope: Dynamic Parent Lineage Verification
-  Rejected Scope: Verdict schema accuracy & strict 40-char SHA enforcement
   Milestone Current Authority: no
   Git Commit Existence Check (5ac021c9ae3a362243a2f442316310ff0b065e27): EXISTS
 --- Milestone: **Foundation 0.3.2c** ---
-  Reviewed Commit (40-char): DYNAMIC/UNRESOLVED
+  Reviewed Commit: 8ddabe908e62d748081b587f6fa55a6c87e6db91
+  Outside Verdict: CONFIRMED FOR REVIEWED SCOPE
+  Fully Accepted: yes
+  Milestone Current Authority: yes
+  Git Commit Existence Check (8ddabe908e62d748081b587f6fa55a6c87e6db91): EXISTS
+  PASS: Foundation 0.3.2c accurately closed as CONFIRMED FOR REVIEWED SCOPE.
+--- Milestone: **Foundation 0.3.2d** ---
+  Reviewed Commit: RESOLVE_FROM_GIT
   Outside Verdict: UNDER OUTSIDE REVIEW
   Fully Accepted: no
-  Accepted Scope: None
-  Rejected Scope: Whole milestone under review
   Milestone Current Authority: no
+  NOTICE: Active milestone under review unresolved (permitted max 1).
 
-[Check E] HELLO.md Authority Alignment...
-PASS: HELLO.md precisely aligns authority and scope.
+Unresolved Reviewed Commit Count (Active Under Review): 1
+Historical Unresolved/Invalid Count: 0
+PASS: Exactly <= 1 unresolved entry under active review.
 
-[Check Migration Wording] Precision verification...
-PASS: Migration wording precisely specifies normalized text equivalence.
+[Check C] CURRENT_PHASE.md Alignment...
+PASS: CURRENT_PHASE.md aligned to World Audit Preparation.
+
+[Check D] CURRENT_VERDICT.md Alignment...
+  State Consistency Verdict Confirmed: YES
+  World Audit Status Not Yet Audited: YES
+  Cold-Start Status Not Yet Tested: YES
+  CR-S0 Status Withheld: YES
+PASS: CURRENT_VERDICT.md state alignment confirmed.
+
+[Check E] NEXT_ACTION.md Alignment...
+PASS: NEXT_ACTION.md specifies single authorized submission action.
 ================================================================================
 Final Verification Result: Total Failures = 0
 Script Exit Code: 0
