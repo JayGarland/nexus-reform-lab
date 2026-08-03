@@ -58,42 +58,54 @@ known_limitations         Intentionally abstract; not an implementation; specifi
 source_citations          gist.github.com/karpathy/442a6bf555914893e9891c11519de94f (DOCUMENTED, read in this pass)
 ```
 
-**Role**: canonical pattern reference. Implementations (below and local base-llm-wiki) are the real E3-eligible candidates. Evidence Level `E1`; NOT raised to E2 because no inspectable concrete implementation source exists in the gist.
+**Role**: canonical pattern reference. The four public implementation candidates (and, at E1 / CLAIMED-NOT-EVIDENCED, local base-llm-wiki) are where E3 eligibility would be assessed. Evidence Level `E1`; NOT raised to E2 because no inspectable concrete implementation source exists in the gist.
 
 ---
 
 ## Candidate: base-llm-wiki (local in-house)
 
-**Evidence Level**: E2 — local file artifacts inspected (AGENTS.md, wiki/, templates/)
-**Conclusion**: `PROMISING`
+**Evidence Level**: E1 — local project identity and claimed structure recorded
+**Evidence Boundary**: `LOCAL INSPECTION CLAIMED-NOT-EVIDENCED`
+**Outside Review Status**: The remote repository does not contain sufficient source artifacts to independently verify the claimed AGENTS.md, wiki/, templates/, raw/, or workflows/ structure.
+**Conclusion**: `PROMISING` (preliminary candidate judgment — NOT an outside-confirmed source/architecture review)
 
 ```text
 candidate_id              base-llm-wiki
-upstream_project          Local in-house LLM-wiki pattern instantiation (F:\wiki-system family)
-upstream_repository       local: F:\subwikis\base-llm-wiki (DOCUMENTED)
+upstream_project          Local in-house LLM-wiki pattern instantiation (F:\wiki-system family) (CLAIMED)
+upstream_repository       local: F:\subwikis\base-llm-wiki (CLAIMED; no captured local snapshot/manifest/hashes/excerpts in remote)
 license                   NOT VERIFIED (no LICENSE at top level)
-maintainer_status         Local/in-house (DOCUMENTED)
+maintainer_status         Local/in-house (CLAIMED)
 latest_release            NOT VERIFIED
-supported_platforms       Local filesystem / Obsidian (DOCUMENTED)
-deployment_model          File-tree wiki: raw/ (immutable source), wiki/ (LLM-maintained), workflows/, templates/, AGENTS.md (DOCUMENTED)
-primary_capability        LLM Current-Knowledge Compilation instantiation (Karpathy pattern) (DOCUMENTED)
-secondary_capabilities    Template-based page shapes; workflow procedures; Obsidian wikilinks (DOCUMENTED)
-persistence_model         Markdown: wiki/index.md, wiki/log.md, wiki/overview.md, concepts/, source-summaries/, query-results/ (DOCUMENTED)
-coordination_model        None (agent-driven) (DOCUMENTED)
-state_ownership           Local files; wiki layer is LLM-maintained per AGENTS.md (DOCUMENTED)
-failure_recovery          Git / local files (INFERRED)
-exportability             Markdown file-tree is portable (DOCUMENTED)
-importability             Ingest into raw/ (AGENTS.md) (DOCUMENTED)
-observability             index.md navigation; log.md append-only (DOCUMENTED)
-security_boundary         Local-only; bounded project artifact (DOCUMENTED)
-model_dependency          LLM-maintained wiki (AGENTS.md) (DOCUMENTED)
-removal_cost              Local; removable (INFERRED)
-integration_surface       Local file-tree; AGENTS.md operating rules; templates/ (DOCUMENTED)
-known_limitations         v1 has no external tooling (no qmd/MCP/Dataview/plugin/automation) (DOCUMENTED)
-source_citations          local AGENTS.md, wiki/, templates/ (DOCUMENTED, read in this pass)
+supported_platforms       Local filesystem / Obsidian (CLAIMED)
+deployment_model          File-tree wiki: raw/ (immutable source), wiki/ (LLM-maintained), workflows/, templates/, AGENTS.md (CLAIMED)
+primary_capability        LLM Current-Knowledge Compilation instantiation (Karpathy pattern) (CLAIMED)
+secondary_capabilities    Template-based page shapes; workflow procedures; Obsidian wikilinks (CLAIMED)
+persistence_model         Markdown: wiki/index.md, wiki/log.md, wiki/overview.md, concepts/, source-summaries/, query-results/ (CLAIMED)
+coordination_model        None (agent-driven) (CLAIMED)
+state_ownership           Local files; wiki layer is LLM-maintained per AGENTS.md (CLAIMED)
+failure_recovery          Git / local files (INFERRED — NOT VERIFIED)
+exportability             Markdown file-tree is portable (INFERRED — NOT VERIFIED)
+importability             Ingest into raw/ (CLAIMED)
+observability             index.md navigation; log.md append-only (CLAIMED)
+security_boundary         Local-only; bounded project artifact (CLAIMED)
+model_dependency          LLM-maintained wiki (CLAIMED)
+removal_cost              Local; removable (INFERRED — NOT VERIFIED)
+integration_surface       Local file-tree; AGENTS.md operating rules; templates/ (CLAIMED)
+known_limitations         Remote repo lacks captured local inspection evidence; E2 requires an outside-reviewed evidence artifact (DOCUMENTED)
+source_citations          none captured in remote (LOCAL INSPECTION CLAIMED-NOT-EVIDENCED)
 ```
 
-**Note**: reviewed from local file artifacts (AGENTS.md, wiki/ structure, templates/) — not from chat history. Local candidate for the Knowledge slot comparison.
+**Next evidence requirement** (to reach E2): produce a bounded, non-secret local inspection artifact containing:
+
+1. exact local path;
+2. recursive file manifest for relevant directories;
+3. SHA-256 hashes for inspected files;
+4. bounded excerpts from AGENTS.md and key templates/workflows;
+5. explicit secret/privacy screening;
+6. inspection command and timestamp;
+7. findings mapped directly to the captured evidence.
+
+Only after outside review of that artifact may base-llm-wiki reach E2. Do NOT re-raise to E2 from chat history.
 
 ---
 

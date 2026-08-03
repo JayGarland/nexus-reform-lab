@@ -15,7 +15,7 @@
 | 3 | Evidence classification | Every fact tagged DOCUMENTED / INFERRED / NOT VERIFIED. | `PASS` — Tags applied throughout Evidence Cards. |
 | 4 | Official-source discipline | Official repos/docs are primary; no third-party-only core evidence. | `PASS` — The Karpathy gist (gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) was located and read (E1); other candidates use official repositories. |
 | 5 | No selection labels | No ADOPT / KEEP / SELECTED / BOUND / IMPLEMENTED used. | `PASS` — Conclusion labels restricted to the allowed five plus ARCHITECTURAL REFERENCE ONLY for deprecated candidates. |
-| 6 | Concrete candidates per category | Knowledge Projection has concrete LLM-wiki implementations; Protocol/Experiment/Runtime have 3+ concrete projects. | `PASS` — LLM-wiki implementations: Astro-Han, SamurAIGPT, ussumant, atomicstrata, base-llm-wiki (+ Marten/KurrentDB as deterministic substrates); OPA + Cedar (+ Oso reference); MLflow + DVC + promptfoo; Temporal + Inngest + Hatchet. |
+| 6 | Concrete candidates per category | Knowledge Projection has concrete LLM-wiki implementations; Protocol/Experiment/Runtime have 3+ concrete projects. | `PASS` — LLM-wiki implementations: Astro-Han, SamurAIGPT, ussumant, atomicstrata (all E2); base-llm-wiki (E1 / CLAIMED-NOT-EVIDENCED); Marten/KurrentDB as deterministic projection substrates; OPA + Cedar (+ Oso reference); MLflow + DVC + promptfoo; Temporal + Inngest + Hatchet. |
 | 7 | Stop conditions honored | Candidates without usable implementation or with deprecated status handled. | `PASS` — karpathy llm-wiki → E1 pattern/idea file (implementations are the real candidates); Oso → ARCHITECTURAL REFERENCE ONLY; Marten → adjacent projection substrate (Deferred). |
 | 8 | Model neutrality | No model profile altered any rating or evidence gate. | `PASS` — Ratings are tool-capability based; no model profile used. |
 
@@ -31,7 +31,7 @@
 | KurrentDB | E2 | yes | export NOT VERIFIED | yes |
 | Marten | E2 | yes | partial | yes |
 | karpathy llm-wiki | E1 (gist read) | yes | n/a | yes (pattern file; implementations are the candidates) |
-| base-llm-wiki | E2 (local artifacts) | yes | n/a | yes (local AGENTS.md + wiki/ + templates/ inspected) |
+| base-llm-wiki | E1 (local identity + claimed structure; LOCAL INSPECTION CLAIMED-NOT-EVIDENCED) | yes | n/a | yes (E2 requires outside-reviewed local inspection artifact) |
 | Astro-Han/karpathy-llm-wiki | E2 | yes | partial | yes |
 | SamurAIGPT/llm-wiki-agent | E2 | yes | partial | yes |
 | ussumant/llm-wiki-compiler | E2 | yes | partial | yes (autostart surface flagged for assessment) |
@@ -51,14 +51,14 @@
 ## Evidence-Level Summary (consistent with Registry)
 
 ```text
-E2:            18
-E1 only:       2   (karpathy llm-wiki gist, Oso)
+E2:            17
+E1 only:       3   (karpathy llm-wiki gist, base-llm-wiki, Oso)
 E0:            0
 Reached at least E1: 20
 Registered:    20
 ```
 
-> Updated under the Foundation 0.8 queue correction: karpathy llm-wiki re-evaluated E0 → E1 (gist read); base-llm-wiki E1 → E2 (local artifacts); four LLM-wiki implementation candidates added (all E2); Marten reclassified as adjacent Deterministic State Projection substrate (E2 retained).
+> Updated under the Foundation 0.8 local evidence boundary correction: base-llm-wiki downgraded E2 → E1 (LOCAL INSPECTION CLAIMED-NOT-EVIDENCED — remote repo has no captured local source snapshot, file excerpts, manifest, hashes, or raw inspection log); karpathy llm-wiki E1 (pattern gist inspected); four public LLM-wiki implementation candidates E2; Marten PARTIAL FIT (adjacent deterministic projection substrate), E2 retained.
 
 ---
 
@@ -66,7 +66,7 @@ Registered:    20
 
 - No local execution; export/import/rollback claims are often `NOT VERIFIED`.
 - KurrentDB projections engine and Marten projection-rebuild specifics need an E2 docs follow-up.
-- Local `base-llm-wiki` content requires a deeper local review of `wiki/`, `raw/`, `templates/`, and `workflows/`.
+- Local `base-llm-wiki` is E1 / LOCAL INSPECTION CLAIMED-NOT-EVIDENCED: the remote repository does not contain sufficient source artifacts to independently verify the claimed AGENTS.md, wiki/, templates/, raw/, or workflows/ structure. An outside-reviewed local inspection artifact is required before E2.
 - `karpathy llm-wiki` is the located pattern gist (E1); it is an idea file, not packaged software — the implementation candidates carry the E3 potential.
 
 ---

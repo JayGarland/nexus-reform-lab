@@ -16,7 +16,7 @@
 | Hatchet | Runtime/Re-entry | Coordination (DAGs, task routing) | Fused (DOCUMENTED/INFERRED) |
 | KurrentDB | Knowledge Projection (Deterministic State Projection substrate) | Experiment/Evaluation (raw evidence store) | Genuine as a substrate; projection logic is separate (INFERRED) |
 | Marten | Knowledge Projection (Deterministic State Projection substrate) | n/a | Adjacent projection substrate; does NOT provide LLM Current-Knowledge Compilation (INFERRED) |
-| LLM-wiki implementations (Astro-Han, SamurAIGPT, ussumant, atomicstrata, base-llm-wiki) | Knowledge Projection (LLM Current-Knowledge Compilation) | n/a | Focused LLM-maintained wiki compilers; markdown/file-first (DOCUMENTED/INFERRED) |
+| LLM-wiki implementations (Astro-Han, SamurAIGPT, ussumant, atomicstrata — E2; base-llm-wiki — E1 / LOCAL INSPECTION CLAIMED-NOT-EVIDENCED) | Knowledge Projection (LLM Current-Knowledge Compilation) | n/a | Focused LLM-maintained wiki compilers; markdown/file-first (DOCUMENTED/INFERRED) |
 | MLflow | Experiment/Evaluation | Knowledge (prompt registry), Observability | Platform-wide; span reflects a full platform, not separable orthogonal slots (INFERRED) |
 | DVC | Experiment/Evaluation | Data versioning (Artifact-first lineage) | Genuine: versioning + experiment runner are separable (DOCUMENTED/INFERRED) |
 
@@ -59,7 +59,7 @@ Marten                    (adjacent Deterministic State Projection substrate; no
 ## 5. Capability gaps (no clear candidate this round)
 
 - **Natural-language protocol governance**: structured Policy-as-Code engines (OPA, Cedar) do not natively version/lint/test/rollout/deprecate natural-language protocol assets. No candidate directly provides NL-protocol versioning + deprecation + decision trace. INFERRED.
-- **LLM Current-Knowledge Compilation now HAS candidates**: the Karpathy pattern and its implementations (Astro-Han, SamurAIGPT, ussumant, atomicstrata, local base-llm-wiki) provide raw-source → semantic interlinked markdown wiki with contradiction handling, provenance, lint. They require an E1/E2 comparison and outside review before any E3 selection. Event-store projections (Marten, KurrentDB) are Deterministic State Projection only and do NOT fill this slot. INFERRED/DOCUMENTED.
+- **LLM Current-Knowledge Compilation now HAS candidates**: the Karpathy pattern (E1 gist) and four public implementations (Astro-Han, SamurAIGPT, ussumant, atomicstrata — E2) provide raw-source → semantic interlinked markdown wiki with contradiction handling, provenance, lint. They require a dedicated outside comparison verdict before any E3 selection. Local base-llm-wiki remains E1 / LOCAL INSPECTION CLAIMED-NOT-EVIDENCED. Event-store projections (Marten, KurrentDB) are Deterministic State Projection only and do NOT fill this slot. INFERRED/DOCUMENTED.
 - **Artifact-oriented re-entry / handoff**: durable-execution engines reconstruct from server history, not from Nexus artifact files. An artifact-oriented handoff surface must be built or adapted. INFERRED.
 - **Human-approval boundary in runtime**: no candidate exposes a governance gate for irreversible actions; it must be composed. INFERRED.
 

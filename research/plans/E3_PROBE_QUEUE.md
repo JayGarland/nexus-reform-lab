@@ -47,7 +47,7 @@ Marten            — adjacent Deterministic State Projection substrate; not an 
 | Probe 1 | Beads | Coordination | Narrow scope: dependency graph, ready/claim/close; small-wheel; low risk of pulling a full workflow runtime into Nexus (E2 `PROMISING`). | Narrowest Coordination candidate; earliest to prove install + native claim/ready cycle. |
 | Probe 2 | OPA | Protocol Governance | Single Go binary, no server needed for E3; `opa eval` / `opa test`; fail-closed and decision-trace semantics (E2 `PROMISING`). | Cleanest policy-loading + decision + trace proof; no credentials required. |
 | Probe 3 | DVC | Experiment / Evaluation | Local Git-native experiment runner with `dvc exp run` / metrics; no cloud account or paid credentials (E2 `PROMISING`). | Proves fixed-workload replay + metric comparison with the smallest footprint; promptfoo/MLflow deferred. |
-| Probe 4 | (EMPTY) | Knowledge Projection | Left empty pending LLM-wiki E1/E2 comparison. Marten is Deterministic State Projection (adjacent substrate), NOT an LLM Current-Knowledge compiler; it is deferred. | A Knowledge-slot E3 candidate is selected ONLY after the LLM-wiki candidates (Astro-Han, SamurAIGPT, ussumant, atomicstrata, local base-llm-wiki) complete E1/E2 comparison and pass outside review. |
+| Probe 4 | (EMPTY) | Knowledge Projection | Left empty. The four public LLM-wiki implementations (Astro-Han, SamurAIGPT, ussumant, atomicstrata) are E2 but have not yet received a dedicated outside comparison verdict. Local base-llm-wiki remains E1 / CLAIMED-NOT-EVIDENCED. Marten is Deterministic State Projection (adjacent substrate), NOT an LLM Current-Knowledge compiler. | A Knowledge-slot E3 candidate is selected ONLY after an outside comparison verdict on the four public LLM-wiki implementations. |
 | Probe 5 | (EMPTY) | Runtime / Re-entry | Left empty. Temporal / Inngest / Hatchet / Restate carry service and internal-state models that would turn E3 into a large deployment task. | No E3 yet; revisit only if a minimal, cleanable local boundary can be defined and separately authorized. |
 
 Each candidate fills its slot's per-candidate card (Section 5). Empty slots are NOT filled by lowering E3 admission criteria.
@@ -62,7 +62,7 @@ Each candidate fills its slot's per-candidate card (Section 5). Empty slots are 
 Coordination:          Restate, go-workflows (luno/workflow)
 Knowledge Projection:  Marten (adjacent projection substrate — Deferred / Architectural Comparison),
                        KurrentDB (Deterministic State Projection),
-                       LLM-wiki candidates (Astro-Han, SamurAIGPT, ussumant, atomicstrata, base-llm-wiki) — pending E1/E2 comparison
+                       LLM-wiki candidates (Astro-Han, SamurAIGPT, ussumant, atomicstrata — E2, awaiting outside comparison verdict; base-llm-wiki — E1 / LOCAL INSPECTION CLAIMED-NOT-EVIDENCED)
 Protocol Governance:   Cedar
 Experiment/Evaluation: promptfoo, MLflow
 Runtime/Re-entry:      Temporal, Inngest, Hatchet, Restate
@@ -158,8 +158,8 @@ stop conditions          Fails to install/run in isolated env; pipeline/exp run 
 ```text
 candidate                (EMPTY)
 provider slot            Knowledge Projection
-why this candidate       No candidate yet. Marten is Deterministic State Projection (adjacent substrate), not an LLM Current-Knowledge compiler.
-why now                  Knowledge-slot E3 candidate selected ONLY after LLM-wiki candidates complete E1/E2 comparison + outside review.
+why this candidate       No candidate yet. Four public LLM-wiki implementations are E2 but await an outside comparison verdict; base-llm-wiki is E1 / LOCAL INSPECTION CLAIMED-NOT-EVIDENCED; Marten is Deterministic State Projection (adjacent substrate), not an LLM Current-Knowledge compiler.
+why now                  Knowledge-slot E3 candidate selected ONLY after an outside comparison verdict on the public LLM-wiki implementations.
 what E3 can prove        n/a
 what E3 cannot prove     n/a
 installation method      n/a
