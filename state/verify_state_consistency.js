@@ -36,6 +36,36 @@ const allowedVerdicts = new Set([
 // ---------------------------------------------------------------------------
 const GATE_STAGES = [
   {
+    id: 'LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION',
+    phaseIncludes: ['layered', 'room model'],
+    actionReference: ['layered', 'room model'],
+    verdicts: {
+      'State Consistency': ['CONFIRMED', 'PARTIAL', 'REJECTED', 'WITHHELD'],
+      'Repository-wide Persistent Artifact World': ['CONFIRMED', 'CONFIRMED AT LEVEL 2'],
+      'Cold-Start Recoverability': ['CONFIRMED'],
+      'CR-S0 Authorization': ['WITHHELD'],
+      'Modularity & Replaceability Doctrine': ['CONFIRMED'],
+      'Prior-Art Discovery Plan': ['CONFIRMED FOR PLANNING SCOPE'],
+      'Prior-Art E1/E2 Survey': ['CONFIRMED FOR E1/E2 SURVEY SCOPE'],
+      'E3 Probe Queue': ['UNDER OUTSIDE REVIEW'],
+      'Knowledge Projection Provider Comparison': ['CONFIRMED FOR E1/E2 COMPARISON SCOPE'],
+      'Astro-Han Knowledge E3': ['CONFIRMED FOR E3 SCOPE'],
+      'base-llm-wiki': ['E2'],
+      'Knowledge Provider Selected': ['NO'],
+      'base-llm-wiki E3 Comparison Plan': ['CONFIRMED FOR E3 EXECUTION-PLAN SCOPE'],
+      'base-llm-wiki Knowledge E3': ['CONFIRMED FOR E3 SCOPE'],
+      'Knowledge E3 Segment': ['CLOSED'],
+      'Stigmergy Carrier & Artifact Taxonomy': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Four-Layer One-World Minimum Landing Roadmap': ['CONFIRMED FOR ROADMAP SCOPE'],
+      'Work Item Minimum Contract': ['CONFIRMED FOR SEMANTIC CONTRACT SCOPE'],
+      'Seeded Instance Continuity': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Persistent World Object Model': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Layered World Runtime Model': ['UNDER OUTSIDE REVIEW'],
+      'Persistent Room and Workspace Binding': ['UNDER OUTSIDE REVIEW'],
+      'Two-Leg Asynchronous Operating Model': ['UNDER OUTSIDE REVIEW']
+    }
+  },
+  {
     id: 'PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION',
     phaseIncludes: ['object model'],
     actionReference: ['object model'],

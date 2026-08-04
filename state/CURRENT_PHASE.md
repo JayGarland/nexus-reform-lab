@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Persistent World Object Model Clarification`
-- **Current Focus**: Establish the unified relation model of Concept, Protocol, Provider, Artifact, Work Item, Carrier, History, and Stigmergy inside the Persistent World, without implementing any Runtime, selecting a Provider or carrier, or connecting the official Nexus.
-- **External Audit Status**: `SEEDED INSTANCE CONTINUITY CONFIRMED FOR CONCEPTUAL SCOPE — PERSISTENT WORLD OBJECT MODEL UNDER OUTSIDE REVIEW`
-- **Started At**: `2026-08-04T08:30:00+02:00`
+- **Current Phase**: `Layered Persistent World and Room Model Clarification`
+- **Current Focus**: Establish the layered separation of Concept, Contract, Engine, Runtime, World Instance, and Outside Governance, and clarify Persistent World, Persistent Room, Runtime Session, Workspace Binding, and the two-leg asynchronous operating model, without implementing any Runtime, creating a Room engine, resolving real Workspace paths, selecting a Provider or carrier, or connecting the official Nexus.
+- **External Audit Status**: `PERSISTENT WORLD OBJECT MODEL CONFIRMED FOR CONCEPTUAL SCOPE — LAYERED RUNTIME / ROOM / TWO-LEG MODELS UNDER OUTSIDE REVIEW`
+- **Started At**: `2026-08-04T08:45:00+02:00`
 
 ---
 

@@ -1,55 +1,61 @@
 ================================================================================
 FAIL-CLOSED VERIFIER & STATE CONSISTENCY ENGINE LOG
-Timestamp: 2026-08-04T06:14:01.365Z
+Timestamp: 2026-08-04T07:07:41.597Z
 Target Repository Root: F:\nexus-reform-lab
 Git Resolution Root: F:\nexus-reform-lab
 ================================================================================
 
 [Check 4] CURRENT_PHASE.md Gate-Stage Selection...
-  Current Phase: Persistent World Object Model Clarification
-  Selected Gate Stage: PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION
+  Current Phase: Layered Persistent World and Room Model Clarification
+  Selected Gate Stage: LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION
 
 [Check 1] CURRENT_VERDICT.md Gate-Subject Validation...
   Subject [State Consistency]: Matching Rows Count = 1
-  PASS: Subject [State Consistency] category "CONFIRMED" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [State Consistency] category "CONFIRMED" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [Repository-wide Persistent Artifact World]: Matching Rows Count = 1
-  PASS: Subject [Repository-wide Persistent Artifact World] category "CONFIRMED AT LEVEL 2" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [Repository-wide Persistent Artifact World] category "CONFIRMED AT LEVEL 2" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [Cold-Start Recoverability]: Matching Rows Count = 1
-  PASS: Subject [Cold-Start Recoverability] category "CONFIRMED" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [Cold-Start Recoverability] category "CONFIRMED" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [CR-S0 Authorization]: Matching Rows Count = 1
-  PASS: Subject [CR-S0 Authorization] category "WITHHELD" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [CR-S0 Authorization] category "WITHHELD" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [Modularity & Replaceability Doctrine]: Matching Rows Count = 1
-  PASS: Subject [Modularity & Replaceability Doctrine] category "CONFIRMED" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [Modularity & Replaceability Doctrine] category "CONFIRMED" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [Prior-Art Discovery Plan]: Matching Rows Count = 1
-  PASS: Subject [Prior-Art Discovery Plan] category "CONFIRMED FOR PLANNING SCOPE" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [Prior-Art Discovery Plan] category "CONFIRMED FOR PLANNING SCOPE" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [Prior-Art E1/E2 Survey]: Matching Rows Count = 1
-  PASS: Subject [Prior-Art E1/E2 Survey] category "CONFIRMED FOR E1/E2 SURVEY SCOPE" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [Prior-Art E1/E2 Survey] category "CONFIRMED FOR E1/E2 SURVEY SCOPE" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [E3 Probe Queue]: Matching Rows Count = 1
-  PASS: Subject [E3 Probe Queue] category "UNDER OUTSIDE REVIEW" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [E3 Probe Queue] category "UNDER OUTSIDE REVIEW" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [Knowledge Projection Provider Comparison]: Matching Rows Count = 1
-  PASS: Subject [Knowledge Projection Provider Comparison] category "CONFIRMED FOR E1/E2 COMPARISON SCOPE" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [Knowledge Projection Provider Comparison] category "CONFIRMED FOR E1/E2 COMPARISON SCOPE" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [Astro-Han Knowledge E3]: Matching Rows Count = 1
-  PASS: Subject [Astro-Han Knowledge E3] category "CONFIRMED FOR E3 SCOPE" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [Astro-Han Knowledge E3] category "CONFIRMED FOR E3 SCOPE" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [base-llm-wiki]: Matching Rows Count = 1
-  PASS: Subject [base-llm-wiki] category "E2" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [base-llm-wiki] category "E2" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [Knowledge Provider Selected]: Matching Rows Count = 1
-  PASS: Subject [Knowledge Provider Selected] category "NO" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [Knowledge Provider Selected] category "NO" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [base-llm-wiki E3 Comparison Plan]: Matching Rows Count = 1
-  PASS: Subject [base-llm-wiki E3 Comparison Plan] category "CONFIRMED FOR E3 EXECUTION-PLAN SCOPE" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [base-llm-wiki E3 Comparison Plan] category "CONFIRMED FOR E3 EXECUTION-PLAN SCOPE" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [base-llm-wiki Knowledge E3]: Matching Rows Count = 1
-  PASS: Subject [base-llm-wiki Knowledge E3] category "CONFIRMED FOR E3 SCOPE" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [base-llm-wiki Knowledge E3] category "CONFIRMED FOR E3 SCOPE" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [Knowledge E3 Segment]: Matching Rows Count = 1
-  PASS: Subject [Knowledge E3 Segment] category "CLOSED" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [Knowledge E3 Segment] category "CLOSED" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [Stigmergy Carrier & Artifact Taxonomy]: Matching Rows Count = 1
-  PASS: Subject [Stigmergy Carrier & Artifact Taxonomy] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [Stigmergy Carrier & Artifact Taxonomy] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [Four-Layer One-World Minimum Landing Roadmap]: Matching Rows Count = 1
-  PASS: Subject [Four-Layer One-World Minimum Landing Roadmap] category "CONFIRMED FOR ROADMAP SCOPE" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [Four-Layer One-World Minimum Landing Roadmap] category "CONFIRMED FOR ROADMAP SCOPE" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [Work Item Minimum Contract]: Matching Rows Count = 1
-  PASS: Subject [Work Item Minimum Contract] category "CONFIRMED FOR SEMANTIC CONTRACT SCOPE" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [Work Item Minimum Contract] category "CONFIRMED FOR SEMANTIC CONTRACT SCOPE" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [Seeded Instance Continuity]: Matching Rows Count = 1
-  PASS: Subject [Seeded Instance Continuity] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [Seeded Instance Continuity] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
   Subject [Persistent World Object Model]: Matching Rows Count = 1
-  PASS: Subject [Persistent World Object Model] category "UNDER OUTSIDE REVIEW" legal for stage "PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION".
+  PASS: Subject [Persistent World Object Model] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
+  Subject [Layered World Runtime Model]: Matching Rows Count = 1
+  PASS: Subject [Layered World Runtime Model] category "UNDER OUTSIDE REVIEW" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
+  Subject [Persistent Room and Workspace Binding]: Matching Rows Count = 1
+  PASS: Subject [Persistent Room and Workspace Binding] category "UNDER OUTSIDE REVIEW" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
+  Subject [Two-Leg Asynchronous Operating Model]: Matching Rows Count = 1
+  PASS: Subject [Two-Leg Asynchronous Operating Model] category "UNDER OUTSIDE REVIEW" legal for stage "LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION".
 
 [Check 2] Dynamic Git parent lineage verification from SESSION_LOG.md...
   Milestone: 0.1: Clean-Room Laboratory Bootstrap & Manifest Repair
@@ -232,6 +238,12 @@ Git Resolution Root: F:\nexus-reform-lab
     Actual Git Parent (~1): 0882f57ccc2d153e3d36519e3a70509d53add30a
     Strict 40-Char Equality: YES
   PASS: Strict 40-char parent SHA equality verified.
+  Milestone: 1.6: Seeded Instance Continuity Ratification and Persistent World Object Model
+    Resulting Commit (40-char): 5f2f7aede05093101be7bd536849b5085e047ee9
+    Recorded Based-on (40-char): 877b3ddbe6eb21da8d7250b5b3a30e88fae5ad5d
+    Actual Git Parent (~1): 877b3ddbe6eb21da8d7250b5b3a30e88fae5ad5d
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
 
 [Check 3] EXTERNAL_VERDICT_HISTORY.md Table Header & Schema Integrity...
   PASS: Table header structure and 9-column layout verified.
@@ -340,10 +352,14 @@ Git Resolution Root: F:\nexus-reform-lab
   Reviewed Commit: 877b3ddbe6eb21da8d7250b5b3a30e88fae5ad5d
   Outside Verdict: CONFIRMED FOR CONCEPTUAL SCOPE
   NOTE: Acceptance is bounded to the conceptual scope; no implementation or product is confirmed.
+--- Milestone Schema Check: Persistent World Object Model Ratification ---
+  Reviewed Commit: 5f2f7aede05093101be7bd536849b5085e047ee9
+  Outside Verdict: CONFIRMED FOR CONCEPTUAL SCOPE
+  NOTE: Acceptance is bounded to the conceptual scope; no implementation or product is confirmed.
   PASS: No active UNDER OUTSIDE REVIEW entry in released gate phase.
 
 [Check 5] NEXT_ACTION.md Blockquote Parsing & Strict Validation...
-  Parsed Blockquote Action Text: "Submit the Persistent World Object Model for outside review. Do not implement Runtime, select a Provider or carrier, run a Probe, or connect official Nexus."
+  Parsed Blockquote Action Text: "Submit the Layered World Runtime Model, Persistent Room and Workspace Binding model, and Two-Leg Asynchronous Operating Model for outside review. Do not implement Runtime, create an operational Room engine, resolve real Workspace paths, select a Provider/carrier, run a Probe, or connect official Nexus."
   PASS: NEXT_ACTION.md single authorized action references current phase and contains no forbidden phrases.
 
 [Check 6] CANDIDATE_REGISTRY.md Evidence-Level Arithmetic...
@@ -354,8 +370,8 @@ Git Resolution Root: F:\nexus-reform-lab
 Verification Summary:
   Target Repository Root: F:\nexus-reform-lab
   Git Resolution Root: F:\nexus-reform-lab
-  Active Gate Stage: PERSISTENT_WORLD_OBJECT_MODEL_CLARIFICATION
-  Verified History Entries Count: 29
+  Active Gate Stage: LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION
+  Verified History Entries Count: 30
   Active UNDER OUTSIDE REVIEW Milestone: NONE
   Total Failures: 0
   Script Exit Code: 0

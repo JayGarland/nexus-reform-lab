@@ -4,7 +4,7 @@
 > **Reviewed Commit**: `64642bf3e601030c5c4a19c376a34d1e420890ec`
 > **Purpose**: Answer, at the global level: without connecting the official Nexus, what minimum runnable capabilities does the Four-Layer One-World still lack, and what threshold must be reached before entering Nexus Shadow Integration.
 > **Prohibition**: This roadmap does NOT authorize any Probe, Provider selection, or Nexus connection. Confirmation for roadmap scope does NOT authorize automatic execution of any follow-on stage.
-> **Related**: [`PERSISTENT_WORLD_OBJECT_MODEL.md`](../synthesis/PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`)
+> **Related**: [`PERSISTENT_WORLD_OBJECT_MODEL.md`](../synthesis/PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`LAYERED_WORLD_RUNTIME_MODEL.md`](../synthesis/LAYERED_WORLD_RUNTIME_MODEL.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`)
 
 ## Capability State Model
 

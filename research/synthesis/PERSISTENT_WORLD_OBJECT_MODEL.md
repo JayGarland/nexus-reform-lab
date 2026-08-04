@@ -1,9 +1,10 @@
 # Persistent World Object Model
 
-> **Document Status**: `CONCEPT MODEL — UNDER OUTSIDE REVIEW`
+> **Document Status**: `CONCEPT MODEL — CONFIRMED FOR CONCEPTUAL SCOPE`
+> **Reviewed Commit**: `5f2f7aede05093101be7bd536849b5085e047ee9`
 > **Purpose**: Clarify the categories, relations, and replaceable boundaries of the different objects inside the Persistent World, so that Provider, Artifact, Work Item, file, and pheromone are not all conflated into a generic `item`.
-> **Scope**: Conceptual model only. This is a semantic classification, not an implementation schema; it does not require a corresponding physical directory layout or database table design.
-> **Related**: [`STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md`](STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`SEEDED_INSTANCE_CONTINUITY.md`](SEEDED_INSTANCE_CONTINUITY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`WORK_ITEM_MINIMUM_CONTRACT.md`](../contracts/WORK_ITEM_MINIMUM_CONTRACT.md) (`CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md`](../plans/FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md) (`CONFIRMED FOR ROADMAP SCOPE`)
+> **Scope**: Conceptual model only. This is a semantic classification, not an implementation schema; it does not require a corresponding physical directory layout or database table design. Confirmed for conceptual scope; no directory schema, database schema, Runtime, Room engine, Session launcher, Workspace resolver, Provider or carrier selection, official Nexus integration, or production readiness is confirmed.
+> **Related**: [`STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md`](STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`SEEDED_INSTANCE_CONTINUITY.md`](SEEDED_INSTANCE_CONTINUITY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`WORK_ITEM_MINIMUM_CONTRACT.md`](../contracts/WORK_ITEM_MINIMUM_CONTRACT.md) (`CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md`](../plans/FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md) (`CONFIRMED FOR ROADMAP SCOPE`), [`LAYERED_WORLD_RUNTIME_MODEL.md`](LAYERED_WORLD_RUNTIME_MODEL.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`), [`PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md`](PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`)
 
 ---
 

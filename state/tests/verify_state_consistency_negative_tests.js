@@ -165,7 +165,7 @@ runFixtureTest('9_session_log_parent_mismatch', false, (dir) => {
 runFixtureTest('10_multiple_next_action_blockquotes', false, (dir) => {
   const p = path.join(dir, 'state/NEXT_ACTION.md');
   let content = fs.readFileSync(p, 'utf8');
-  const targetStr = '> Submit the Persistent World Object Model for outside review. Do not implement Runtime, select a Provider or carrier, run a Probe, or connect official Nexus.';
+  const targetStr = '> Submit the Layered World Runtime Model, Persistent Room and Workspace Binding model, and Two-Leg Asynchronous Operating Model for outside review. Do not implement Runtime, create an operational Room engine, resolve real Workspace paths, select a Provider/carrier, run a Probe, or connect official Nexus.';
   content = content.replace(targetStr, `${targetStr}\n> Execute forbidden world modification now!`);
   fs.writeFileSync(p, content, 'utf8');
 });
