@@ -37,16 +37,6 @@
       "canonical_branch": "repair/wiki-projection-boundary-20260804",
       "canonical_commit": "b0556583f330201dc64c3cca9415b0de8571264f",
       "mirrored_at": "2026-08-04T15:44:00+02:00"
-    },
-    {
-      "drive_file_id": "139lDfAT3vqpvnoBLkb0nVrDMTxQVus-q",
-      "drive_path": "Current/MIRROR_MANIFEST.txt",
-      "role": "mirror-manifest",
-      "canonical_repository": "JayGarland/nexus-reform-lab",
-      "canonical_path": "external-artifacts/drive-manifest.json",
-      "canonical_branch": "repair/mainline-reconciliation-20260804",
-      "canonical_commit": "pending-final-branch-head",
-      "mirrored_at": "2026-08-04T15:44:00+02:00"
     }
   ]
 }
