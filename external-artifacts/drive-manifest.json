@@ -5,7 +5,48 @@
     "folder_id": "1CdkiOeZNsQ9HAMXXbZHSjMi_oUuRvKf2",
     "local_sync_path": "G:\\My Drive\\ChatGPT-Bridge",
     "canonical_identity": "folder_id",
-    "policy": "All Google Drive artifacts for this laboratory must be descendants of this folder."
+    "policy": "Google Drive is a non-canonical review mirror. GitHub repository commits remain the sole authoritative audit source."
   },
-  "entries": []
+  "entries": [
+    {
+      "drive_file_id": "159Pw_8E99ALsg7MeoyQMMqAaybK6BK9U",
+      "drive_path": "Current/NEXUS_REFORM_MAINLINE_MIRROR.txt",
+      "role": "mirror",
+      "canonical_repository": "JayGarland/nexus-reform-lab",
+      "canonical_path": "MAINLINE.md",
+      "canonical_branch": "repair/mainline-reconciliation-20260804",
+      "canonical_commit": "0299a80f24832da8f6545add145f123f88a22934",
+      "mirrored_at": "2026-08-04T15:44:00+02:00"
+    },
+    {
+      "drive_file_id": "1e9yj7m8ADGHAebZ8yiYoNTYcS2vqYk8G",
+      "drive_path": "Current/NEXUS_REFORM_CURRENT_MIRROR.txt",
+      "role": "mirror",
+      "canonical_repository": "JayGarland/nexus-reform-lab",
+      "canonical_path": "state/CURRENT.md",
+      "canonical_branch": "repair/mainline-reconciliation-20260804",
+      "canonical_commit": "0299a80f24832da8f6545add145f123f88a22934",
+      "mirrored_at": "2026-08-04T15:44:00+02:00"
+    },
+    {
+      "drive_file_id": "1zRdvwH5PvD0Rnldzeut4ba0z1WZaBaSW",
+      "drive_path": "Current/LLM_WIKI_PROJECTION_MIRROR.txt",
+      "role": "mirror",
+      "canonical_repository": "JayGarland/llm-wiki-nexus",
+      "canonical_path": "wiki/syntheses/Nexus Mainline Long-term Baseline.md",
+      "canonical_branch": "repair/wiki-projection-boundary-20260804",
+      "canonical_commit": "b0556583f330201dc64c3cca9415b0de8571264f",
+      "mirrored_at": "2026-08-04T15:44:00+02:00"
+    },
+    {
+      "drive_file_id": "139lDfAT3vqpvnoBLkb0nVrDMTxQVus-q",
+      "drive_path": "Current/MIRROR_MANIFEST.txt",
+      "role": "mirror-manifest",
+      "canonical_repository": "JayGarland/nexus-reform-lab",
+      "canonical_path": "external-artifacts/drive-manifest.json",
+      "canonical_branch": "repair/mainline-reconciliation-20260804",
+      "canonical_commit": "pending-final-branch-head",
+      "mirrored_at": "2026-08-04T15:44:00+02:00"
+    }
+  ]
 }
