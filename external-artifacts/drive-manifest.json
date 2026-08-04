@@ -14,9 +14,9 @@
       "role": "mirror",
       "canonical_repository": "JayGarland/nexus-reform-lab",
       "canonical_path": "MAINLINE.md",
-      "canonical_branch": "repair/mainline-reconciliation-20260804",
-      "canonical_commit": "0299a80f24832da8f6545add145f123f88a22934",
-      "mirrored_at": "2026-08-04T15:44:00+02:00"
+      "canonical_branch": "main",
+      "canonical_commit": "f28e92e93873ec7b752de26e1514eaf6dafa0fab",
+      "mirrored_at": "2026-08-04T16:02:00+02:00"
     },
     {
       "drive_file_id": "1e9yj7m8ADGHAebZ8yiYoNTYcS2vqYk8G",
@@ -24,9 +24,9 @@
       "role": "mirror",
       "canonical_repository": "JayGarland/nexus-reform-lab",
       "canonical_path": "state/CURRENT.md",
-      "canonical_branch": "repair/mainline-reconciliation-20260804",
-      "canonical_commit": "0299a80f24832da8f6545add145f123f88a22934",
-      "mirrored_at": "2026-08-04T15:44:00+02:00"
+      "canonical_branch": "main",
+      "canonical_commit": "88bb6a7985f0c903a3f52ace7e030c647def727b",
+      "mirrored_at": "2026-08-04T16:02:00+02:00"
     },
     {
       "drive_file_id": "1zRdvwH5PvD0Rnldzeut4ba0z1WZaBaSW",
@@ -34,9 +34,9 @@
       "role": "mirror",
       "canonical_repository": "JayGarland/llm-wiki-nexus",
       "canonical_path": "wiki/syntheses/Nexus Mainline Long-term Baseline.md",
-      "canonical_branch": "repair/wiki-projection-boundary-20260804",
+      "canonical_branch": "main",
       "canonical_commit": "b0556583f330201dc64c3cca9415b0de8571264f",
-      "mirrored_at": "2026-08-04T15:44:00+02:00"
+      "mirrored_at": "2026-08-04T16:02:00+02:00"
     }
   ]
 }
