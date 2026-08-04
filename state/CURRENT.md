@@ -1,79 +1,73 @@
 # state/CURRENT.md — Single Authoritative Current State
 
-> **Notice**: This file is the ONLY canonical source for current operational state.
-> A phase / state update edits THIS file and no other file. All historical and
-> drift-period registers are preserved read-only under [`archive/`](../archive/ARCHIVE_INDEX.md)
-> and are NOT part of the current-state reading chain.
+> **Notice**: This file is the ONLY canonical source for current operational state within the Nexus Reform Lab.
+> Doctrine is defined by [`MAINLINE.md`](../MAINLINE.md), [`REVOLUTION.md`](../REVOLUTION.md), and the linked canonical synthesis files.
+> Historical and drift-period records remain preserved under [`archive/`](../archive/ARCHIVE_INDEX.md) and are not current directives.
 
 ---
 
 ## 1. Current Phase
 
-- **Current Phase**: `Three E3 Probes Integrated — Minimal Composition Comparison`
-- **Current Focus**: Compare the minimal viable composition of the three integrated Coordination / Durable Runtime wheels (Beads, go-workflows, Restate) against the confirmed capability needs, using the committed E3 evidence, without selecting or binding a final Provider and without implementing any Engine or Runtime.
-- **External Audit Status**: `EXTERNAL VERDICTS RECORDED — Beads CONFIRMED FOR E3 COORDINATION SCOPE; go-workflows PARTIAL (prototype durable runtime confirmed; production durability and native coordination fit not confirmed); Restate CONFIRMED FOR E3 DURABLE RUNTIME SCOPE (operational fit costly; artifact-world fit unresolved)`
-- **Started At**: `2026-08-04T11:05:49+02:00`
+- **Wider Reform Phase**: `Prior-Art Discovery & Composition`
+- **Current Authorized Subproject Phase**: `LLM Wiki Real Usage & Content Quality Validation`
+- **Scope**: Validate the `llm-wiki-nexus` subproject with real material ingestion inside the wider reform phase. This does not declare the whole Nexus reform or runtime engineering complete.
+- **Current Focus**: Test whether a user can enter the Wiki directory, launch an AI, paste real material, request absorption, and obtain correct raw preservation, existing-page retrieval, deduplication, scoped Current Knowledge updates, validation, and auditable Git artifacts.
+- **External Reconciliation Status**: `MAINLINE RECONCILIATION IN PROGRESS`
+- **Started At**: `2026-08-04T15:44:00+02:00`
 
 ---
 
 ## 2. Authorized Next Action
 
-> Compare the minimal composition of the three integrated wheels (Beads, go-workflows, Restate) against the confirmed capability needs. Do not select or bind a final Provider.
+> Complete the bounded mainline reconciliation: restore the mandatory doctrine entry and cold-start chain, enforce the LLM Wiki knowledge-projection boundary, establish Google Drive as a non-canonical mirror, obtain box-out review, then run one limited real-material ingestion test.
 
 ---
 
 ## 3. Active Prohibitions
 
-1. **DO NOT** select, adopt, adapt, or bind a final Provider or carrier.
-2. **DO NOT** implement any Engine or Runtime, evaluator, benchmark harness, scheduler, worker, or execution / orchestration mechanism.
-3. **DO NOT** add any new Concept Model, Minimum Contract, state machine, or topology layer (Concept and Contract Expansion Freeze is ACTIVE).
-4. **DO NOT** connect or modify the official Nexus, or run, modify, or authorize `CR-S0`.
-5. **DO NOT** enable autonomous loops, unbounded self-modification, automatic approval, or unattended dispatch.
+1. **DO NOT** start or continue Minimal Composition Comparison, new E3 probes, CR-S0, Provider selection, adoption, binding, or implementation.
+2. **DO NOT** implement a new Engine, Runtime, workflow system, evaluator platform, scheduler, worker, orchestration mechanism, Concept Model, or Contract layer.
+3. **DO NOT** expand authority levels, verification receipt types, schemas, approval tickets, speculative attack tests, or governance machinery.
+4. **DO NOT** delete, rewrite, or downgrade existing Beads, go-workflows, Restate, LLM Wiki, or base-llm-wiki evidence.
+5. **DO NOT** treat LLM Wiki pages or Google Drive mirrors as canonical runtime state or as independent authorization surfaces.
 
 ---
 
-## 4. Open Questions
+## 4. Completion Gates
 
-1. **CR-S0 Authorization Criteria**: What specific verification gates must pass before outside reviewers grant authorization to execute Slice 0 in clean-room environment?
-2. **External Evaluator Interface Specification**: What specific wire format and isolation boundary will be mandated for Controlled AutoResearch external evaluators when CR-S0 is eventually authorized?
-3. **Incremental Wiki Compilation Trigger**: Should incremental Wiki compilation be triggered by task completion trace events, or scheduled as an offline batch compiler?
+1. Reform Lab cold-start chain requires `WAKE.md → state/CURRENT.md → MAINLINE.md → required doctrine → authorized task files`.
+2. Structural validation checks all mandatory entry and doctrine files.
+3. `llm-wiki-nexus` states explicitly that Wiki pages are rebuildable knowledge projections, not runtime authority.
+4. Wiki phase/status descriptions are scoped, sourced, and non-authorizing.
+5. Google Drive mirrors identify canonical repository paths and commit SHAs.
+6. Box-out independently verifies GitHub and Drive before real ingestion resumes.
 
 ---
 
-## 5. Integrated Probe Evidence Register
+## 5. Preserved Evidence — Not Current Authorized Phase
 
-Raw evidence for every probe is preserved under [`research/probes/e3/`](../research/probes/e3/). No final Provider is selected or bound.
+The following E3 results remain valid preserved evidence. They do not authorize continued minimal-composition comparison, Provider selection, or implementation.
 
-| Probe | External verdict | Evidence status | Provider decision |
+| Probe | External verdict | Evidence status | Current authorization |
 |---|---|---|---|
-| Astro-Han / karpathy-llm-wiki (Knowledge) | `E3 PASSED` | `CONFIRMED FOR E3 SCOPE` (external) | none |
-| base-llm-wiki (Knowledge) | `E3 PASSED` | `CONFIRMED FOR E3 SCOPE` (external) | none |
-| Beads (Coordination / Work Lifecycle) | `CONFIRMED FOR E3 COORDINATION SCOPE` | integrated + externally adjudicated | none |
-| go-workflows (Coordination + Durable Runtime) | `PARTIAL` | prototype durable runtime confirmed; production durability and native coordination fit not confirmed | none |
-| Restate (Durable Runtime / Recovery) | `CONFIRMED FOR E3 DURABLE RUNTIME SCOPE` | operational fit costly; artifact-world fit unresolved | none |
+| Astro-Han / karpathy-llm-wiki | `E3 PASSED` | `CONFIRMED FOR E3 SCOPE` | preserved only |
+| base-llm-wiki | `E3 PASSED` | `CONFIRMED FOR E3 SCOPE` | preserved only |
+| Beads | `CONFIRMED FOR E3 COORDINATION SCOPE` | integrated + externally adjudicated | preserved only |
+| go-workflows | `PARTIAL` | prototype durability confirmed; production durability and native coordination fit unresolved | preserved only |
+| Restate | `CONFIRMED FOR E3 DURABLE RUNTIME SCOPE` | operational fit costly; artifact-world fit unresolved | preserved only |
 
-### go-workflows boundaries (recorded external verdict)
-
-- prototype durable-runtime evidence confirmed (isolated probe module, crash recovery by a NEW process from the same record store);
-- production durability NOT confirmed (upstream SQL adapter not exercised);
-- native coordination fit NOT confirmed (no Nexus fit, no superiority comparison, no `COMPOSE` verdict).
-
-### Restate boundary notes
-
-- operational fit costly (server + service + export tooling footprint);
-- artifact-world fit unresolved.
+Raw evidence remains under [`research/probes/e3/`](../research/probes/e3/). No final Provider is selected or bound.
 
 ---
 
-## 6. Canonical State Links
+## 6. Canonical Links
 
-- **Current doctrine (canonical)**: [`research/synthesis/FIVE_POINT_FRAMEWORK.md`](../research/synthesis/FIVE_POINT_FRAMEWORK.md)
-- **Memory navigation map**: [`MEMORY_MAP.md`](../MEMORY_MAP.md)
+- **Mandatory doctrine entry**: [`MAINLINE.md`](../MAINLINE.md)
+- **Reform charter**: [`REVOLUTION.md`](../REVOLUTION.md)
+- **Canonical five-point framework**: [`research/synthesis/FIVE_POINT_FRAMEWORK.md`](../research/synthesis/FIVE_POINT_FRAMEWORK.md)
+- **LLM Wiki subsystem definition**: [`research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md`](../research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md)
 - **Re-entry entrance**: [`WAKE.md`](../WAKE.md)
-- **Active governance boundary**: [`research/governance/CONCEPT_AND_CONTRACT_EXPANSION_FREEZE.md`](../research/governance/CONCEPT_AND_CONTRACT_EXPANSION_FREEZE.md)
-- **Active probe plan**: [`research/probes/COORDINATION_AND_DURABLE_RUNTIME_PROBE_PLAN.md`](../research/probes/COORDINATION_AND_DURABLE_RUNTIME_PROBE_PLAN.md)
-- **Active prior-art refresh**: [`research/prior-art/CANDIDATE_REFRESH_COORDINATION_AND_DURABLE_RUNTIME.md`](../research/prior-art/CANDIDATE_REFRESH_COORDINATION_AND_DURABLE_RUNTIME.md)
-- **Archive index (history)**: [`archive/ARCHIVE_INDEX.md`](../archive/ARCHIVE_INDEX.md)
+- **Archive index**: [`archive/ARCHIVE_INDEX.md`](../archive/ARCHIVE_INDEX.md)
 
 ---
 
