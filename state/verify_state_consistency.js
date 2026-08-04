@@ -15,7 +15,8 @@ const allowedVerdicts = new Set([
   'CONFIRMED FOR QUEUE-STRUCTURE AND EVIDENCE-BOUNDARY SCOPE',
   'CONFIRMED FOR E1/E2 COMPARISON SCOPE',
   'CONFIRMED FOR E3 SCOPE',
-  'CONFIRMED FOR E3 EXECUTION-PLAN SCOPE'
+  'CONFIRMED FOR E3 EXECUTION-PLAN SCOPE',
+  'CONFIRMED FOR CONCEPTUAL SCOPE'
 ]);
 
 // ---------------------------------------------------------------------------
@@ -32,6 +33,29 @@ const allowedVerdicts = new Set([
 // "AUTHORIZED", "NOT YET AUDITED" => "NOT YET AUDITED").
 // ---------------------------------------------------------------------------
 const GATE_STAGES = [
+  {
+    id: 'GLOBAL_ROADMAP_PREP',
+    phaseIncludes: ['roadmap'],
+    actionReference: ['roadmap'],
+    verdicts: {
+      'State Consistency': ['CONFIRMED', 'PARTIAL', 'REJECTED', 'WITHHELD'],
+      'Repository-wide Persistent Artifact World': ['CONFIRMED', 'CONFIRMED AT LEVEL 2'],
+      'Cold-Start Recoverability': ['CONFIRMED'],
+      'CR-S0 Authorization': ['WITHHELD'],
+      'Modularity & Replaceability Doctrine': ['CONFIRMED'],
+      'Prior-Art Discovery Plan': ['CONFIRMED FOR PLANNING SCOPE'],
+      'Prior-Art E1/E2 Survey': ['CONFIRMED FOR E1/E2 SURVEY SCOPE'],
+      'E3 Probe Queue': ['UNDER OUTSIDE REVIEW'],
+      'Knowledge Projection Provider Comparison': ['CONFIRMED FOR E1/E2 COMPARISON SCOPE'],
+      'Astro-Han Knowledge E3': ['CONFIRMED FOR E3 SCOPE'],
+      'base-llm-wiki': ['E2'],
+      'Knowledge Provider Selected': ['NO'],
+      'base-llm-wiki E3 Comparison Plan': ['CONFIRMED FOR E3 EXECUTION-PLAN SCOPE'],
+      'base-llm-wiki Knowledge E3': ['CONFIRMED FOR E3 SCOPE'],
+      'Knowledge E3 Segment': ['CLOSED'],
+      'Stigmergy Carrier & Artifact Taxonomy': ['CONFIRMED FOR CONCEPTUAL SCOPE']
+    }
+  },
   {
     id: 'KNOWLEDGE_E3_SEGMENT_CLOSURE',
     phaseIncludes: ['closure'],
@@ -558,6 +582,11 @@ function verifyRepository(targetRoot, options = {}) {
         rawLogs.push(`  NOTE: Acceptance is bounded to the E3 execution plan; the probe result remains subject to outside review.`);
         if (fullyAccepted !== 'yes' || currentAuthority !== 'yes' || acceptedScope === 'None' || rejectedScope === 'None') {
           fail(`CONFIRMED FOR E3 EXECUTION-PLAN SCOPE schema rules violated for milestone "${rawMilestone}"!`);
+        }
+      } else if (verdict === 'CONFIRMED FOR CONCEPTUAL SCOPE') {
+        rawLogs.push(`  NOTE: Acceptance is bounded to the conceptual scope; no implementation or product is confirmed.`);
+        if (fullyAccepted !== 'yes' || currentAuthority !== 'yes' || acceptedScope === 'None' || rejectedScope === 'None') {
+          fail(`CONFIRMED FOR CONCEPTUAL SCOPE schema rules violated for milestone "${rawMilestone}"!`);
         }
       }
 

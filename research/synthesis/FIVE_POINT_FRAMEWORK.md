@@ -84,4 +84,4 @@ The **Persistent Artifact World Runtime** is not a plain filesystem directory, n
 
 ## Related Concept Clarification
 
-- [`STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md`](STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md) — `CONCEPT CLARIFICATION — UNDER OUTSIDE REVIEW`. Not canonical Doctrine. Clarifies Stigmergy (environment-mediated coordination concept/capability boundary), carriers, artifact types, stigmergic signals, optional extensions, and the Nexus boundary. Does not amend this framework.
+- [`STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md`](STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md) — `CONCEPT CLARIFICATION — CONFIRMED FOR CONCEPTUAL SCOPE`. Not immutable permanent architecture; may evolve through a formal proposal. Clarifies Stigmergy (environment-mediated coordination concept/capability boundary), carriers, artifact types, stigmergic signals, optional extensions, and the Nexus boundary. Does not amend this framework.

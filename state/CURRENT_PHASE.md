@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Knowledge E3 Segment Closure and Cross-Cutting Doctrine Write-Back`
-- **Current Focus**: Close the Knowledge E3 segment (Astro-Han and base-llm-wiki both CONFIRMED FOR E3 SCOPE) and record the Stigmergy Carrier & Artifact Taxonomy as a concept clarification.
-- **External Audit Status**: `KNOWLEDGE E3 SEGMENT CLOSED — STIGMERGY TAXONOMY SUBMITTED FOR OUTSIDE REVIEW`
-- **Started At**: `2026-08-04T07:30:00+02:00`
+- **Current Phase**: `Global Minimum Landing Roadmap Preparation`
+- **Current Focus**: Establish the global Four-Layer One-World minimum landing roadmap without running any Probe, selecting a Provider, or connecting the official Nexus.
+- **External Audit Status**: `STIGMERGY TAXONOMY CONFIRMED FOR CONCEPTUAL SCOPE — KNOWLEDGE E3 SEGMENT CLOSED`
+- **Started At**: `2026-08-04T07:40:00+02:00`
 
 ---
 

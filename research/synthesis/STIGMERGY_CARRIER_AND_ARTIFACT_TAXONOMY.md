@@ -1,7 +1,7 @@
 # Stigmergy Carrier & Artifact Taxonomy
 
-> **Document Status**: `CONCEPT CLARIFICATION — UNDER OUTSIDE REVIEW`
-> **Scope**: Conceptual clarification of Stigmergy, its carriers, artifact types, signals, optional extensions, and the Nexus boundary. NOT canonical Doctrine until an outside verdict ratifies it.
+> **Document Status**: `CONCEPT CLARIFICATION — CONFIRMED FOR CONCEPTUAL SCOPE`
+> **Scope**: Conceptual clarification of Stigmergy, its carriers, artifact types, signals, optional extensions, and the Nexus boundary. Confirmed as a concept boundary by outside review; it is NOT immutable permanent architecture and MAY evolve through a formal proposal.
 > **Related**: [`MODULARITY_AND_REPLACEABILITY_DOCTRINE.md`](MODULARITY_AND_REPLACEABILITY_DOCTRINE.md), [`FIVE_POINT_FRAMEWORK.md`](FIVE_POINT_FRAMEWORK.md)
 
 ---
