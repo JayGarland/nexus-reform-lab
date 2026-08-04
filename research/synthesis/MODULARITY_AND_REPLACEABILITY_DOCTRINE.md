@@ -221,4 +221,10 @@ This Doctrine does NOT:
 
 ---
 
+## Related Concept Clarification
+
+- [`STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md`](STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md) — `CONCEPT CLARIFICATION — UNDER OUTSIDE REVIEW`. Not canonical Doctrine. Clarifies that Stigmergy is an environment-mediated coordination concept/capability boundary, that carriers and artifact types are replaceable (not `Stigmergy = Files`), and that optional extensions and legacy Nexus adapters attach only through stable interfaces. Does not amend this Doctrine.
+
+---
+
 *Canonical Doctrine — ratified by box-outside review (Foundation 0.5).*

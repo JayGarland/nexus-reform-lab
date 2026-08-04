@@ -6,16 +6,16 @@
 
 ## Single Authorized Action
 
-> Submit the isolated base-llm-wiki E3 evidence for outside review. Do not run any other Probe or select a Knowledge Provider.
+> Submit the Knowledge E3 closure and Stigmergy Carrier & Artifact Taxonomy for outside review. Do not run another Probe, select a Knowledge Provider, or connect official Nexus.
 
 ---
 
 ## Prohibited Next Actions
 
-1. **DO NOT** run any other Probe or re-run base-llm-wiki / Astro-Han.
-2. **DO NOT** execute E4/E5 or write any Nexus Adapter.
-3. **DO NOT** select, adopt, adapt, or bind any Knowledge Provider.
-4. **DO NOT** run, modify, or attempt to authorize `CR-S0`.
-5. **DO NOT** modify the original `base-llm-wiki` or treat any Wiki product's scheduler, MCP, database, or UI as Nexus Canonical Truth.
-6. **DO NOT** self-close or self-confirm the base-llm-wiki E3.
-7. **DO NOT** modify the Stable Kernel, the official Nexus, or count any model profile into candidate capability ratings.
+1. **DO NOT** run another Probe or re-run Astro-Han / base-llm-wiki.
+2. **DO NOT** add new LLM Wiki candidates.
+3. **DO NOT** execute E4/E5 or write any Nexus Adapter.
+4. **DO NOT** select, adopt, adapt, or bind any Knowledge Provider.
+5. **DO NOT** connect or modify the official Nexus.
+6. **DO NOT** promote the Stigmergy Carrier & Artifact Taxonomy to canonical Doctrine.
+7. **DO NOT** run, modify, or attempt to authorize `CR-S0`.

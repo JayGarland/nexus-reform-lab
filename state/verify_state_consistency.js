@@ -33,6 +33,27 @@ const allowedVerdicts = new Set([
 // ---------------------------------------------------------------------------
 const GATE_STAGES = [
   {
+    id: 'KNOWLEDGE_E3_SEGMENT_CLOSURE',
+    phaseIncludes: ['closure'],
+    actionReference: ['stigmergy', 'taxonomy'],
+    verdicts: {
+      'State Consistency': ['CONFIRMED', 'PARTIAL', 'REJECTED', 'WITHHELD'],
+      'Repository-wide Persistent Artifact World': ['CONFIRMED', 'CONFIRMED AT LEVEL 2'],
+      'Cold-Start Recoverability': ['CONFIRMED'],
+      'CR-S0 Authorization': ['WITHHELD'],
+      'Modularity & Replaceability Doctrine': ['CONFIRMED'],
+      'Prior-Art Discovery Plan': ['CONFIRMED FOR PLANNING SCOPE'],
+      'Prior-Art E1/E2 Survey': ['CONFIRMED FOR E1/E2 SURVEY SCOPE'],
+      'E3 Probe Queue': ['UNDER OUTSIDE REVIEW'],
+      'Knowledge Projection Provider Comparison': ['CONFIRMED FOR E1/E2 COMPARISON SCOPE'],
+      'Astro-Han Knowledge E3': ['CONFIRMED FOR E3 SCOPE'],
+      'base-llm-wiki': ['E2'],
+      'Knowledge Provider Selected': ['NO'],
+      'base-llm-wiki E3 Comparison Plan': ['CONFIRMED FOR E3 EXECUTION-PLAN SCOPE'],
+      'base-llm-wiki Knowledge E3': ['CONFIRMED FOR E3 SCOPE']
+    }
+  },
+  {
     id: 'BASE_LLM_WIKI_KNOWLEDGE_E3',
     phaseIncludes: ['base-llm-wiki'],
     actionReference: ['base-llm-wiki', 'e3'],

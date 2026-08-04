@@ -2,6 +2,16 @@
 
 > Purpose: Map each E3 claim to its reviewable artifact. All artifacts live in this probe directory; actual outputs are in `CAPTURED_WORKTREE/`.
 
+## Outside Review Verdict
+
+```text
+base-llm-wiki Knowledge E3
+CONFIRMED FOR E3 SCOPE
+Reviewed Commit: 915836bb1fff4535cc5f3a21927098721580aa64
+```
+
+Accepted scope: isolated native-protocol execution; original project zero modification; fixed fixture fidelity; raw preservation; current / superseded distinction; provenance; index; append-only log; no unsupported fixture facts; no fixture fact omissions; no network / credential / global-config dependency; cleanup completion. Not established: Nexus fit, superiority, semantic compilation completeness, information-loss rate, incremental update reliability, production provenance sufficiency, E4/E5, Provider selection or binding.
+
 ## Claim → Artifact mapping
 
 | Claim | Required artifact | Result |

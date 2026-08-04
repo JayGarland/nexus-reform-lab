@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `base-llm-wiki Knowledge Provider E3 Probe`
-- **Current Focus**: Execute one isolated native-protocol E3 probe of the local base-llm-wiki against the Astro-Han E3 evidence.
-- **External Audit Status**: `BASE-LLM-WIKI E3 EXECUTION PLAN CONFIRMED — PROBE EXECUTED, SUBMITTED`
-- **Started At**: `2026-08-04T07:20:00+02:00`
+- **Current Phase**: `Knowledge E3 Segment Closure and Cross-Cutting Doctrine Write-Back`
+- **Current Focus**: Close the Knowledge E3 segment (Astro-Han and base-llm-wiki both CONFIRMED FOR E3 SCOPE) and record the Stigmergy Carrier & Artifact Taxonomy as a concept clarification.
+- **External Audit Status**: `KNOWLEDGE E3 SEGMENT CLOSED — STIGMERGY TAXONOMY SUBMITTED FOR OUTSIDE REVIEW`
+- **Started At**: `2026-08-04T07:30:00+02:00`
 
 ---
 

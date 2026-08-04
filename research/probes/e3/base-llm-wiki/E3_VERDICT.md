@@ -3,8 +3,18 @@
 ## Verdict
 
 ```text
-E3 PASSED
+E3 PASSED — CONFIRMED FOR E3 SCOPE
 ```
+
+## Outside Review Acceptance
+
+```text
+base-llm-wiki Knowledge E3
+CONFIRMED FOR E3 SCOPE
+Reviewed Commit: 915836bb1fff4535cc5f3a21927098721580aa64
+```
+
+Accepted scope: isolated native-protocol execution; original project zero modification; fixed fixture fidelity; raw preservation; current / superseded distinction; provenance; index; append-only log; no unsupported fixture facts; no fixture fact omissions; no network / credential / global-config dependency; cleanup completion.
 
 ## Basis
 
@@ -27,9 +37,7 @@ E3 PASSED means: the local `base-llm-wiki` ran in an isolated copy per its own n
 - incremental update reliability
 - production provenance sufficiency
 - E4 / E5
-- Provider selection or binding
+- Knowledge Provider selection or binding
 ```
 
 ADOPT / KEEP / SELECTED / BOUND / SUPERIOR / NEXUS FIT CONFIRMED are not used.
-
-Verdict recorded per `E3_EXECUTION_PROTOCOL.md` allowed values: `E3 PASSED`. Final status: `SUBMITTED FOR OUTSIDE REVIEW`.

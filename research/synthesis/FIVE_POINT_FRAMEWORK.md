@@ -79,3 +79,9 @@ The **Persistent Artifact World Runtime** is not a plain filesystem directory, n
    - An LLM Wiki is a multi-page, hyperlinked knowledge graph. A single `CURRENT_STATE.md` file is merely a projected view.
 5. **Current State is Lossy but Traceable**:
    - Current State projections summarize state for efficiency; Raw History is preserved separately in append-only format.
+
+---
+
+## Related Concept Clarification
+
+- [`STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md`](STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md) — `CONCEPT CLARIFICATION — UNDER OUTSIDE REVIEW`. Not canonical Doctrine. Clarifies Stigmergy (environment-mediated coordination concept/capability boundary), carriers, artifact types, stigmergic signals, optional extensions, and the Nexus boundary. Does not amend this framework.
