@@ -1,75 +1,77 @@
 ================================================================================
 FAIL-CLOSED VERIFIER & STATE CONSISTENCY ENGINE LOG
-Timestamp: 2026-08-04T08:40:19.397Z
+Timestamp: 2026-08-04T08:55:31.912Z
 Target Repository Root: F:\nexus-reform-lab
 Git Resolution Root: F:\nexus-reform-lab
 ================================================================================
 
 [Check 4] CURRENT_PHASE.md Gate-Stage Selection...
-  Current Phase: Global Roadmap Reconciliation and Contract Freeze
-  Selected Gate Stage: GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE
+  Current Phase: Verifier Negation-Scope Repair and Milestone 2.2 Closure
+  Selected Gate Stage: VERIFIER_NEGATION_SCOPE_REPAIR
 
 [Check 1] CURRENT_VERDICT.md Gate-Subject Validation...
   Subject [State Consistency]: Matching Rows Count = 1
-  PASS: Subject [State Consistency] category "CONFIRMED" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [State Consistency] category "CONFIRMED" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Repository-wide Persistent Artifact World]: Matching Rows Count = 1
-  PASS: Subject [Repository-wide Persistent Artifact World] category "CONFIRMED AT LEVEL 2" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Repository-wide Persistent Artifact World] category "CONFIRMED AT LEVEL 2" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Cold-Start Recoverability]: Matching Rows Count = 1
-  PASS: Subject [Cold-Start Recoverability] category "CONFIRMED" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Cold-Start Recoverability] category "CONFIRMED" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [CR-S0 Authorization]: Matching Rows Count = 1
-  PASS: Subject [CR-S0 Authorization] category "WITHHELD" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [CR-S0 Authorization] category "WITHHELD" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Modularity & Replaceability Doctrine]: Matching Rows Count = 1
-  PASS: Subject [Modularity & Replaceability Doctrine] category "CONFIRMED" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Modularity & Replaceability Doctrine] category "CONFIRMED" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Prior-Art Discovery Plan]: Matching Rows Count = 1
-  PASS: Subject [Prior-Art Discovery Plan] category "CONFIRMED FOR PLANNING SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Prior-Art Discovery Plan] category "CONFIRMED FOR PLANNING SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Prior-Art E1/E2 Survey]: Matching Rows Count = 1
-  PASS: Subject [Prior-Art E1/E2 Survey] category "CONFIRMED FOR E1/E2 SURVEY SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Prior-Art E1/E2 Survey] category "CONFIRMED FOR E1/E2 SURVEY SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [E3 Probe Queue]: Matching Rows Count = 1
-  PASS: Subject [E3 Probe Queue] category "UNDER OUTSIDE REVIEW" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [E3 Probe Queue] category "UNDER OUTSIDE REVIEW" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Knowledge Projection Provider Comparison]: Matching Rows Count = 1
-  PASS: Subject [Knowledge Projection Provider Comparison] category "CONFIRMED FOR E1/E2 COMPARISON SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Knowledge Projection Provider Comparison] category "CONFIRMED FOR E1/E2 COMPARISON SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Astro-Han Knowledge E3]: Matching Rows Count = 1
-  PASS: Subject [Astro-Han Knowledge E3] category "CONFIRMED FOR E3 SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Astro-Han Knowledge E3] category "CONFIRMED FOR E3 SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [base-llm-wiki]: Matching Rows Count = 1
-  PASS: Subject [base-llm-wiki] category "E2" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [base-llm-wiki] category "E2" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Knowledge Provider Selected]: Matching Rows Count = 1
-  PASS: Subject [Knowledge Provider Selected] category "NO" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Knowledge Provider Selected] category "NO" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [base-llm-wiki E3 Comparison Plan]: Matching Rows Count = 1
-  PASS: Subject [base-llm-wiki E3 Comparison Plan] category "CONFIRMED FOR E3 EXECUTION-PLAN SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [base-llm-wiki E3 Comparison Plan] category "CONFIRMED FOR E3 EXECUTION-PLAN SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [base-llm-wiki Knowledge E3]: Matching Rows Count = 1
-  PASS: Subject [base-llm-wiki Knowledge E3] category "CONFIRMED FOR E3 SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [base-llm-wiki Knowledge E3] category "CONFIRMED FOR E3 SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Knowledge E3 Segment]: Matching Rows Count = 1
-  PASS: Subject [Knowledge E3 Segment] category "CLOSED" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Knowledge E3 Segment] category "CLOSED" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Stigmergy Carrier & Artifact Taxonomy]: Matching Rows Count = 1
-  PASS: Subject [Stigmergy Carrier & Artifact Taxonomy] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Stigmergy Carrier & Artifact Taxonomy] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Four-Layer One-World Minimum Landing Roadmap]: Matching Rows Count = 1
-  PASS: Subject [Four-Layer One-World Minimum Landing Roadmap] category "CONFIRMED FOR ROADMAP SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Four-Layer One-World Minimum Landing Roadmap] category "CONFIRMED FOR ROADMAP SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Work Item Minimum Contract]: Matching Rows Count = 1
-  PASS: Subject [Work Item Minimum Contract] category "CONFIRMED FOR SEMANTIC CONTRACT SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Work Item Minimum Contract] category "CONFIRMED FOR SEMANTIC CONTRACT SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Seeded Instance Continuity]: Matching Rows Count = 1
-  PASS: Subject [Seeded Instance Continuity] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Seeded Instance Continuity] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Persistent World Object Model]: Matching Rows Count = 1
-  PASS: Subject [Persistent World Object Model] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Persistent World Object Model] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Layered World Runtime Model]: Matching Rows Count = 1
-  PASS: Subject [Layered World Runtime Model] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Layered World Runtime Model] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Two-Leg Asynchronous Operating Model]: Matching Rows Count = 1
-  PASS: Subject [Two-Leg Asynchronous Operating Model] category "CONFIRMED FOR OPERATING MODEL SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Two-Leg Asynchronous Operating Model] category "CONFIRMED FOR OPERATING MODEL SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Persistent Room and Workspace Binding]: Matching Rows Count = 1
-  PASS: Subject [Persistent Room and Workspace Binding] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Persistent Room and Workspace Binding] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Persistent Scope Topology]: Matching Rows Count = 1
-  PASS: Subject [Persistent Scope Topology] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Persistent Scope Topology] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Protocol Governance Minimum Contract]: Matching Rows Count = 1
-  PASS: Subject [Protocol Governance Minimum Contract] category "CONFIRMED FOR SEMANTIC CONTRACT SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Protocol Governance Minimum Contract] category "CONFIRMED FOR SEMANTIC CONTRACT SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Bounded Runtime Execution and Recovery Minimum Contract]: Matching Rows Count = 1
-  PASS: Subject [Bounded Runtime Execution and Recovery Minimum Contract] category "CONFIRMED FOR SEMANTIC CONTRACT SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Bounded Runtime Execution and Recovery Minimum Contract] category "CONFIRMED FOR SEMANTIC CONTRACT SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Evaluation Baseline and Verdict Loop Minimum Contract]: Matching Rows Count = 1
-  PASS: Subject [Evaluation Baseline and Verdict Loop Minimum Contract] category "CONFIRMED FOR SEMANTIC CONTRACT SCOPE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Evaluation Baseline and Verdict Loop Minimum Contract] category "CONFIRMED FOR SEMANTIC CONTRACT SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Concept and Contract Expansion Freeze]: Matching Rows Count = 1
-  PASS: Subject [Concept and Contract Expansion Freeze] category "ACTIVE" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Concept and Contract Expansion Freeze] category "CONFIRMED FOR GOVERNANCE BOUNDARY SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Global Roadmap Reconciliation]: Matching Rows Count = 1
-  PASS: Subject [Global Roadmap Reconciliation] category "UNDER OUTSIDE REVIEW" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Global Roadmap Reconciliation] category "CONFIRMED FOR ROADMAP SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
   Subject [Contract-to-Probe Matrix]: Matching Rows Count = 1
-  PASS: Subject [Contract-to-Probe Matrix] category "UNDER OUTSIDE REVIEW" legal for stage "GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE".
+  PASS: Subject [Contract-to-Probe Matrix] category "CONFIRMED FOR PROBE-PLANNING SCOPE" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
+  Subject [Negation-Aware Fail-Closed Guard]: Matching Rows Count = 1
+  PASS: Subject [Negation-Aware Fail-Closed Guard] category "UNDER OUTSIDE REVIEW" legal for stage "VERIFIER_NEGATION_SCOPE_REPAIR".
 
 [Check 2] Dynamic Git parent lineage verification from SESSION_LOG.md...
   Milestone: 0.1: Clean-Room Laboratory Bootstrap & Manifest Repair
@@ -288,6 +290,12 @@ Git Resolution Root: F:\nexus-reform-lab
     Actual Git Parent (~1): a35e80fd40eb1a35cc2282f436c00353dcb1155a
     Strict 40-Char Equality: YES
   PASS: Strict 40-char parent SHA equality verified.
+  Milestone: 2.2: Evaluation Contract Ratification, Concept and Contract Expansion Freeze, and Global Roadmap Reconciliation
+    Resulting Commit (40-char): 560aba51606084f027af34365f5d2c82b6fb3226
+    Recorded Based-on (40-char): f48dd7c1fb3ff0edf9337aa3a6e8a6cc3831530f
+    Actual Git Parent (~1): f48dd7c1fb3ff0edf9337aa3a6e8a6cc3831530f
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
 
 [Check 3] EXTERNAL_VERDICT_HISTORY.md Table Header & Schema Integrity...
   PASS: Table header structure and 9-column layout verified.
@@ -431,10 +439,22 @@ Git Resolution Root: F:\nexus-reform-lab
   Reviewed Commit: f48dd7c1fb3ff0edf9337aa3a6e8a6cc3831530f
   Outside Verdict: CONFIRMED FOR SEMANTIC CONTRACT SCOPE
   NOTE: Acceptance is bounded to the semantic contract scope; no carrier, schema, or Runtime is confirmed.
+--- Milestone Schema Check: Concept and Contract Expansion Freeze Content Confirmation ---
+  Reviewed Commit: 560aba51606084f027af34365f5d2c82b6fb3226
+  Outside Verdict: CONFIRMED FOR GOVERNANCE BOUNDARY SCOPE
+  NOTE: Acceptance is bounded to the governance boundary scope; the freeze content is confirmed, but no implementation, Probe, or Provider selection is confirmed.
+--- Milestone Schema Check: Global Roadmap Reconciliation Content Confirmation ---
+  Reviewed Commit: 560aba51606084f027af34365f5d2c82b6fb3226
+  Outside Verdict: CONFIRMED FOR ROADMAP SCOPE
+  NOTE: Acceptance is bounded to the roadmap scope; no Provider is selected, no capability is implemented, and every follow-on stage requires independent box-outside adjudication.
+--- Milestone Schema Check: Contract-to-Probe Matrix Content Confirmation ---
+  Reviewed Commit: 560aba51606084f027af34365f5d2c82b6fb3226
+  Outside Verdict: CONFIRMED FOR PROBE-PLANNING SCOPE
+  NOTE: Acceptance is bounded to the probe-planning scope; the matrix content is confirmed, but no Probe run, candidate refresh, or Provider selection is confirmed.
   PASS: No active UNDER OUTSIDE REVIEW entry in released gate phase.
 
 [Check 5] NEXT_ACTION.md Blockquote Parsing & Strict Validation...
-  Parsed Blockquote Action Text: "Submit the Global Roadmap Reconciliation, Concept and Contract Expansion Freeze, and Contract-to-Probe Matrix for outside review. Do not add new Concept Models or Minimum Contracts, implement any Engine or Runtime, run a Probe, select a Provider, connect official Nexus, or start CR-S0."
+  Parsed Blockquote Action Text: "Submit the negation-scope verifier repair and adversarial fixtures for outside review. Do not begin Prior-Art Candidate Refresh or run any Probe."
   PASS: NEXT_ACTION.md single authorized action references current phase and contains no forbidden phrases.
 
 [Check 6] CANDIDATE_REGISTRY.md Evidence-Level Arithmetic...
@@ -445,8 +465,8 @@ Git Resolution Root: F:\nexus-reform-lab
 Verification Summary:
   Target Repository Root: F:\nexus-reform-lab
   Git Resolution Root: F:\nexus-reform-lab
-  Active Gate Stage: GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE
-  Verified History Entries Count: 38
+  Active Gate Stage: VERIFIER_NEGATION_SCOPE_REPAIR
+  Verified History Entries Count: 41
   Active UNDER OUTSIDE REVIEW Milestone: NONE
   Total Failures: 0
   Script Exit Code: 0

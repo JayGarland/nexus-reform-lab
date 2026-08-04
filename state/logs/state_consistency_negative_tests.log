@@ -1,6 +1,6 @@
 ================================================================================
 STATE CONSISTENCY NEGATIVE & POSITIVE FIXTURE TEST SUITE LOG
-Timestamp: 2026-08-04T08:40:23.255Z
+Timestamp: 2026-08-04T08:55:40.398Z
 Real Repository Root: F:\nexus-reform-lab
 ================================================================================
 
@@ -102,9 +102,93 @@ Expected Verifier Success: NO (FAIL)
   Detected Failure Reasons Count: 1
   Test Case Result: PASSED
 
+--------------------------------------------------------------------------------
+Fixture Name: 15_negation_scope_comma_command
+Expected Verifier Success: NO (FAIL)
+  Actual Verifier Success: NO
+  Detected Failure Reasons Count: 1
+  Test Case Result: PASSED
+
+--------------------------------------------------------------------------------
+Fixture Name: 16_negation_scope_but_boundary
+Expected Verifier Success: NO (FAIL)
+  Actual Verifier Success: NO
+  Detected Failure Reasons Count: 1
+  Test Case Result: PASSED
+
+--------------------------------------------------------------------------------
+Fixture Name: 17_negation_scope_then_boundary
+Expected Verifier Success: NO (FAIL)
+  Actual Verifier Success: NO
+  Detected Failure Reasons Count: 1
+  Test Case Result: PASSED
+
+--------------------------------------------------------------------------------
+Fixture Name: 18_negation_scope_colon_boundary
+Expected Verifier Success: NO (FAIL)
+  Actual Verifier Success: NO
+  Detected Failure Reasons Count: 1
+  Test Case Result: PASSED
+
+--------------------------------------------------------------------------------
+Fixture Name: 19_negation_scope_and_later_boundary
+Expected Verifier Success: NO (FAIL)
+  Actual Verifier Success: NO
+  Detected Failure Reasons Count: 1
+  Test Case Result: PASSED
+
+--------------------------------------------------------------------------------
+Fixture Name: 20_negation_scope_semicolon_boundary
+Expected Verifier Success: NO (FAIL)
+  Actual Verifier Success: NO
+  Detected Failure Reasons Count: 1
+  Test Case Result: PASSED
+
+--------------------------------------------------------------------------------
+Fixture Name: 21_negation_scope_pass_do_not
+Expected Verifier Success: YES (PASS)
+  Actual Verifier Success: YES
+  Detected Failure Reasons Count: 0
+  Test Case Result: PASSED
+
+--------------------------------------------------------------------------------
+Fixture Name: 22_negation_scope_pass_never
+Expected Verifier Success: YES (PASS)
+  Actual Verifier Success: YES
+  Detected Failure Reasons Count: 0
+  Test Case Result: PASSED
+
+--------------------------------------------------------------------------------
+Fixture Name: 23_negation_scope_pass_must_not
+Expected Verifier Success: YES (PASS)
+  Actual Verifier Success: YES
+  Detected Failure Reasons Count: 0
+  Test Case Result: PASSED
+
+--------------------------------------------------------------------------------
+Fixture Name: 24_negation_scope_pass_is_prohibited
+Expected Verifier Success: YES (PASS)
+  Actual Verifier Success: YES
+  Detected Failure Reasons Count: 0
+  Test Case Result: PASSED
+
+--------------------------------------------------------------------------------
+Fixture Name: 25_negation_scope_pass_or_list
+Expected Verifier Success: YES (PASS)
+  Actual Verifier Success: YES
+  Detected Failure Reasons Count: 0
+  Test Case Result: PASSED
+
+--------------------------------------------------------------------------------
+Fixture Name: 26_negation_scope_pass_mixed
+Expected Verifier Success: YES (PASS)
+  Actual Verifier Success: YES
+  Detected Failure Reasons Count: 0
+  Test Case Result: PASSED
+
 ================================================================================
 Test Suite Summary:
-  negative fixtures passed: 13/13
-  positive fixtures passed: 1/1
+  negative fixtures passed: 19/19
+  positive fixtures passed: 7/7
   test process exit code: 0
 ================================================================================

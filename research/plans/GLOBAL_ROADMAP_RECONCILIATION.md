@@ -1,6 +1,6 @@
 # Global Roadmap Reconciliation
 
-> **Status**: `ROADMAP RECONCILIATION — UNDER OUTSIDE REVIEW`
+> **Status**: `CONFIRMED FOR ROADMAP SCOPE — content confirmed at commit 560aba51606084f027af34365f5d2c82b6fb3226; the negation-aware fail-closed verifier implementation in that commit is NOT confirmed`
 > **Purpose**: Explicitly align the early Prior-Art Discovery & Composition route with the later Minimum Landing Roadmap route, convert the completed Contracts into a survey matrix and acceptance questions, and return the next stage to real Prior-Art Discovery & Composition.
 > **Scope**: Roadmap reconciliation only. This document does not authorize implementation, Provider selection, or running Probes.
 > **Basis**: [`FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md`](FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md) (`CONFIRMED FOR ROADMAP SCOPE`), [`CONCEPT_AND_CONTRACT_EXPANSION_FREEZE.md`](../governance/CONCEPT_AND_CONTRACT_EXPANSION_FREEZE.md) (`ACTIVE GOVERNANCE BOUNDARY — OUTSIDE AUTHORIZED`), [`CONTRACT_TO_PROBE_MATRIX.md`](../probes/CONTRACT_TO_PROBE_MATRIX.md) (`PROBE MATRIX — UNDER OUTSIDE REVIEW`)

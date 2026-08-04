@@ -19,7 +19,9 @@ const allowedVerdicts = new Set([
   'CONFIRMED FOR CONCEPTUAL SCOPE',
   'CONFIRMED FOR ROADMAP SCOPE',
   'CONFIRMED FOR SEMANTIC CONTRACT SCOPE',
-  'CONFIRMED FOR OPERATING MODEL SCOPE'
+  'CONFIRMED FOR OPERATING MODEL SCOPE',
+  'CONFIRMED FOR GOVERNANCE BOUNDARY SCOPE',
+  'CONFIRMED FOR PROBE-PLANNING SCOPE'
 ]);
 
 // ---------------------------------------------------------------------------
@@ -71,6 +73,44 @@ const GATE_STAGES = [
       'Concept and Contract Expansion Freeze': ['ACTIVE'],
       'Global Roadmap Reconciliation': ['UNDER OUTSIDE REVIEW'],
       'Contract-to-Probe Matrix': ['UNDER OUTSIDE REVIEW']
+    }
+  },
+  {
+    id: 'VERIFIER_NEGATION_SCOPE_REPAIR',
+    phaseIncludes: ['verifier', 'negation-scope', 'repair', 'closure'],
+    actionReference: ['verifier', 'negation-scope', 'repair'],
+    verdicts: {
+      'State Consistency': ['CONFIRMED', 'PARTIAL', 'REJECTED', 'WITHHELD'],
+      'Repository-wide Persistent Artifact World': ['CONFIRMED', 'CONFIRMED AT LEVEL 2'],
+      'Cold-Start Recoverability': ['CONFIRMED'],
+      'CR-S0 Authorization': ['WITHHELD'],
+      'Modularity & Replaceability Doctrine': ['CONFIRMED'],
+      'Prior-Art Discovery Plan': ['CONFIRMED FOR PLANNING SCOPE'],
+      'Prior-Art E1/E2 Survey': ['CONFIRMED FOR E1/E2 SURVEY SCOPE'],
+      'E3 Probe Queue': ['UNDER OUTSIDE REVIEW'],
+      'Knowledge Projection Provider Comparison': ['CONFIRMED FOR E1/E2 COMPARISON SCOPE'],
+      'Astro-Han Knowledge E3': ['CONFIRMED FOR E3 SCOPE'],
+      'base-llm-wiki': ['E2'],
+      'Knowledge Provider Selected': ['NO'],
+      'base-llm-wiki E3 Comparison Plan': ['CONFIRMED FOR E3 EXECUTION-PLAN SCOPE'],
+      'base-llm-wiki Knowledge E3': ['CONFIRMED FOR E3 SCOPE'],
+      'Knowledge E3 Segment': ['CLOSED'],
+      'Stigmergy Carrier & Artifact Taxonomy': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Four-Layer One-World Minimum Landing Roadmap': ['CONFIRMED FOR ROADMAP SCOPE'],
+      'Work Item Minimum Contract': ['CONFIRMED FOR SEMANTIC CONTRACT SCOPE'],
+      'Seeded Instance Continuity': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Persistent World Object Model': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Layered World Runtime Model': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Two-Leg Asynchronous Operating Model': ['CONFIRMED FOR OPERATING MODEL SCOPE'],
+      'Persistent Room and Workspace Binding': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Persistent Scope Topology': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Protocol Governance Minimum Contract': ['CONFIRMED FOR SEMANTIC CONTRACT SCOPE'],
+      'Bounded Runtime Execution and Recovery Minimum Contract': ['CONFIRMED FOR SEMANTIC CONTRACT SCOPE'],
+      'Evaluation Baseline and Verdict Loop Minimum Contract': ['CONFIRMED FOR SEMANTIC CONTRACT SCOPE'],
+      'Concept and Contract Expansion Freeze': ['CONFIRMED FOR GOVERNANCE BOUNDARY SCOPE'],
+      'Global Roadmap Reconciliation': ['CONFIRMED FOR ROADMAP SCOPE'],
+      'Contract-to-Probe Matrix': ['CONFIRMED FOR PROBE-PLANNING SCOPE'],
+      'Negation-Aware Fail-Closed Guard': ['UNDER OUTSIDE REVIEW']
     }
   },
   {
@@ -881,6 +921,16 @@ function verifyRepository(targetRoot, options = {}) {
         if (fullyAccepted !== 'yes' || currentAuthority !== 'yes' || acceptedScope === 'None' || rejectedScope === 'None') {
           fail(`CONFIRMED FOR OPERATING MODEL SCOPE schema rules violated for milestone "${rawMilestone}"!`);
         }
+      } else if (verdict === 'CONFIRMED FOR GOVERNANCE BOUNDARY SCOPE') {
+        rawLogs.push(`  NOTE: Acceptance is bounded to the governance boundary scope; the freeze content is confirmed, but no implementation, Probe, or Provider selection is confirmed.`);
+        if (fullyAccepted !== 'yes' || currentAuthority !== 'yes' || acceptedScope === 'None' || rejectedScope === 'None') {
+          fail(`CONFIRMED FOR GOVERNANCE BOUNDARY SCOPE schema rules violated for milestone "${rawMilestone}"!`);
+        }
+      } else if (verdict === 'CONFIRMED FOR PROBE-PLANNING SCOPE') {
+        rawLogs.push(`  NOTE: Acceptance is bounded to the probe-planning scope; the matrix content is confirmed, but no Probe run, candidate refresh, or Provider selection is confirmed.`);
+        if (fullyAccepted !== 'yes' || currentAuthority !== 'yes' || acceptedScope === 'None' || rejectedScope === 'None') {
+          fail(`CONFIRMED FOR PROBE-PLANNING SCOPE schema rules violated for milestone "${rawMilestone}"!`);
+        }
       }
 
       // Foundation 0.3.2a Specific Check
@@ -955,33 +1005,110 @@ function verifyRepository(targetRoot, options = {}) {
           'implement autoresearch', 'implement wiki'
         ];
         const lower = parsedActionText.toLowerCase();
-        // A forbidden phrase is only an authorization when it appears in a
-        // non-negated clause. A phrase that appears inside a prohibition clause
-        // ("Do not ... start CR-S0") is NOT an authorization. This keeps the
-        // fail-closed guard: a genuine imperative ("Start CR-S0") still fails.
+
+        // ---------------------------------------------------------------------
+        // Negation-scope guard (fail closed).
+        //
+        // A forbidden phrase is only treated as a PROHIBITION when a negator
+        // directly governs THAT phrase. An earlier negator that targets a
+        // different action must NOT grant exemption to a subsequent independent
+        // command (e.g. "Do not add documentation, start CR-S0." must fail).
+        //
+        // Strategy (no NLP parser, small and explainable):
+        //   1. Split the action text into action segments at hard boundaries:
+        //      sentence punctuation (. ; ! ?), newline, colon, and transition /
+        //      continuation words (but, however, then, and then, instead, yet,
+        //      and later). A negator never distributes across a boundary.
+        //   2. Inside one segment a forbidden phrase is negated when:
+        //      a. a post-negator (prohibited / forbidden) directly follows the
+        //         phrase within a bounded window; or
+        //      b. a pre-negator appears before the phrase AND the phrase is part
+        //         of the negator's governed action: either the negator directly
+        //         governs it (short gap, no independent clause boundary), or the
+        //         phrase is the tail of a negated coordinate list (a trailing
+        //         "or" / "and" connects it to the list with no comma in between).
+        //   3. Everything else is treated as a forbidden authorization: fail
+        //      closed. Genuine imperatives ("Start CR-S0") still fail.
+        // ---------------------------------------------------------------------
+        const SEGMENT_DELIMITER = '\u0001';
+        const MAX_POST_DISTANCE = 48;
+        const MAX_DIRECT_GAP = 20;
+        const MAX_LIST_WINDOW = 10;
         const negators = [
           'do not', 'does not', 'did not', 'must not', 'should not',
           'shall not', 'never', 'without', 'forbidden', 'prohibited',
           'not allowed', 'no '
         ];
-        let hasForbidden = false;
-        for (const p of forbiddenPhrases) {
-          let idx = lower.indexOf(p);
-          while (idx !== -1) {
-            const segStart = Math.max(
-              lower.lastIndexOf('.', idx - 1) + 1,
-              lower.lastIndexOf(';', idx - 1) + 1,
-              lower.lastIndexOf('!', idx - 1) + 1,
-              lower.lastIndexOf('?', idx - 1) + 1,
-              0
-            );
-            const clause = lower.slice(segStart, idx);
-            const negated = negators.some(n => clause.includes(n));
-            if (!negated) {
-              hasForbidden = true;
-              break;
+        const postNegators = ['prohibited', 'forbidden'];
+
+        function splitActionSegments(text) {
+          let t = text;
+          t = t.replace(/[.;!?\n:]/g, SEGMENT_DELIMITER);
+          t = t.replace(
+            /\b(?:and later|and then|but|however|then|instead|yet)\b/g,
+            SEGMENT_DELIMITER
+          );
+          return t.split(SEGMENT_DELIMITER)
+            .map(s => s.trim())
+            .filter(s => s.length > 0);
+        }
+
+        function isNegatedOccurrence(segment, phraseIdx, phraseLen) {
+          const before = segment.slice(0, phraseIdx);
+          const after = segment.slice(phraseIdx + phraseLen);
+
+          // (a) Post-negation marker: "X is prohibited / forbidden".
+          for (const pn of postNegators) {
+            const pIdx = after.indexOf(pn);
+            if (pIdx !== -1 && pIdx <= MAX_POST_DISTANCE) return true;
+          }
+
+          // (b) Nearest pre-negator before the phrase.
+          let nearestIdx = -1;
+          let nearestEnd = -1;
+          for (const n of negators) {
+            const idx = before.lastIndexOf(n);
+            if (idx !== -1 && idx > nearestIdx) {
+              nearestIdx = idx;
+              nearestEnd = idx + n.length;
             }
-            idx = lower.indexOf(p, idx + 1);
+          }
+          if (nearestIdx === -1) return false;
+
+          const gap = segment.slice(nearestEnd, phraseIdx);
+
+          // (c) Direct governance: the negator directly governs the phrase with
+          //     a short gap and no independent clause boundary inside it.
+          if (gap.length <= MAX_DIRECT_GAP && !gap.includes(',') && !gap.includes(';')) {
+            return true;
+          }
+
+          // (d) Coordinate-list tail: the phrase is the tail of a negated list,
+          //     joined by a trailing "or" / "and" with no comma in between. A
+          //     comma alone is NOT enough to extend the negator's scope.
+          const tailConnector = before.match(
+            new RegExp('(?:or|and)\\b[^,;]{0,' + MAX_LIST_WINDOW + '}$')
+          );
+          if (tailConnector) return true;
+
+          return false;
+        }
+
+        let hasForbidden = false;
+        const segments = splitActionSegments(lower);
+        for (const segment of segments) {
+          for (const p of forbiddenPhrases) {
+            let idx = segment.indexOf(p);
+            while (idx !== -1) {
+              const negated = isNegatedOccurrence(segment, idx, p.length);
+              rawLogs.push(`    Forbidden phrase "${p}" in segment "${segment}": negated=${negated}`);
+              if (!negated) {
+                hasForbidden = true;
+                break;
+              }
+              idx = segment.indexOf(p, idx + 1);
+            }
+            if (hasForbidden) break;
           }
           if (hasForbidden) break;
         }

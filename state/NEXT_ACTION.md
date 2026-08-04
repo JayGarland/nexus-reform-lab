@@ -6,7 +6,7 @@
 
 ## Single Authorized Action
 
-> Submit the Global Roadmap Reconciliation, Concept and Contract Expansion Freeze, and Contract-to-Probe Matrix for outside review. Do not add new Concept Models or Minimum Contracts, implement any Engine or Runtime, run a Probe, select a Provider, connect official Nexus, or start CR-S0.
+> Submit the negation-scope verifier repair and adversarial fixtures for outside review. Do not begin Prior-Art Candidate Refresh or run any Probe.
 
 ---
 
@@ -24,3 +24,4 @@
 10. **DO NOT** treat the roadmap order, the taxonomy, the Contracts, the Continuity clarification, the Object Model, the layered / Room / Two-Leg models, the Scope Topology, the Protocol Contract, the Bounded Runtime Contract, the Evaluation Contract, or the Freeze as automatic authorization or immutable architecture.
 11. **DO NOT** enable autonomous loops, unbounded self-modification, automatic approval, or unattended dispatch.
 12. **DO NOT** run, modify, or attempt to authorize `CR-S0`.
+13. **DO NOT** begin Prior-Art Candidate Refresh or add any new Prior-Art candidate, Provider, or Probe plan.

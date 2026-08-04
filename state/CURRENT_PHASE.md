@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Global Roadmap Reconciliation and Contract Freeze`
-- **Current Focus**: Reconcile the early Prior-Art Discovery & Composition route with the later Minimum Landing Roadmap, activate the Concept and Contract Expansion Freeze, and convert the completed Contracts into a Contract-to-Probe Matrix for real Prior-Art wheel investigation, without adding new Concept Models or Minimum Contracts, implementing any Engine or Runtime, running a Probe, or selecting a Provider.
-- **External Audit Status**: `EVALUATION CONTRACT CONFIRMED — FREEZE ACTIVE — RECONCILIATION + PROBE MATRIX UNDER OUTSIDE REVIEW`
-- **Started At**: `2026-08-04T12:00:00+02:00`
+- **Current Phase**: `Verifier Negation-Scope Repair and Milestone 2.2 Closure`
+- **Current Focus**: Repair the negation-scope vulnerability in the fail-closed verifier's forbidden-phrase check, add adversarial negative fixtures, and submit the repair for outside review, without adding new Concept Models or Minimum Contracts, beginning Prior-Art Candidate Refresh, running a Probe, implementing any Engine or Runtime, selecting a Provider, connecting official Nexus, or starting CR-S0.
+- **External Audit Status**: `MILESTONE 2.2 CONTENT CONFIRMED — NEGATION-AWARE FAIL-CLOSED GUARD UNDER OUTSIDE REVIEW`
+- **Started At**: `2026-08-04T13:00:00+02:00`
 
 ---
 

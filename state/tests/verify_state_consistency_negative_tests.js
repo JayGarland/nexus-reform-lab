@@ -17,6 +17,8 @@ testLogs.push(`=================================================================
 
 let negativePassed = 0;
 let positivePassed = 0;
+let negativeTotal = 0;
+let positiveTotal = 0;
 let totalTestFailures = 0;
 
 function createTempFixtureRepo(mutatorFn) {
@@ -71,6 +73,12 @@ function runFixtureTest(name, expectedSuccess, mutatorFn) {
   // Pass gitRoot = realRepoRoot so git parent & commit existence queries execute against actual git repository
   const result = verifyRepository(tmpRepo, { gitRoot: realRepoRoot });
   cleanupTempRepo(tmpRepo);
+
+  if (expectedSuccess) {
+    positiveTotal++;
+  } else {
+    negativeTotal++;
+  }
 
   const testPassed = (result.success === expectedSuccess);
   testLogs.push(`  Actual Verifier Success: ${result.success ? 'YES' : 'NO'}`);
@@ -165,7 +173,7 @@ runFixtureTest('9_session_log_parent_mismatch', false, (dir) => {
 runFixtureTest('10_multiple_next_action_blockquotes', false, (dir) => {
   const p = path.join(dir, 'state/NEXT_ACTION.md');
   let content = fs.readFileSync(p, 'utf8');
-  const targetStr = '> Submit the Global Roadmap Reconciliation, Concept and Contract Expansion Freeze, and Contract-to-Probe Matrix for outside review. Do not add new Concept Models or Minimum Contracts, implement any Engine or Runtime, run a Probe, select a Provider, connect official Nexus, or start CR-S0.';
+  const targetStr = '> Submit the negation-scope verifier repair and adversarial fixtures for outside review. Do not begin Prior-Art Candidate Refresh or run any Probe.';
   content = content.replace(targetStr, `${targetStr}\n> Execute forbidden world modification now!`);
   fs.writeFileSync(p, content, 'utf8');
 });
@@ -199,10 +207,86 @@ runFixtureTest('14_registry_e2_count_mismatch', false, (dir) => {
   fs.writeFileSync(p, content, 'utf8');
 });
 
+// Helper: replace the single NEXT_ACTION.md blockquote with an adversarial action text.
+function replaceNextActionBlockquote(dir, newBlockquoteText) {
+  const p = path.join(dir, 'state/NEXT_ACTION.md');
+  let content = fs.readFileSync(p, 'utf8');
+  const targetStr = '> Submit the negation-scope verifier repair and adversarial fixtures for outside review. Do not begin Prior-Art Candidate Refresh or run any Probe.';
+  if (!content.includes(targetStr)) {
+    throw new Error(`NEXT_ACTION.md expected blockquote not found in fixture repo`);
+  }
+  content = content.replace(targetStr, `> ${newBlockquoteText}`);
+  fs.writeFileSync(p, content, 'utf8');
+}
+
+// 15. Negative Fixture 15: Negation-scope leak — an earlier negator for a different
+//     action must not exempt a later independent command ("start CR-S0" is NOT negated).
+runFixtureTest('15_negation_scope_comma_command', false, (dir) => {
+  replaceNextActionBlockquote(dir, 'Do not add another document, start CR-S0.');
+});
+
+// 16. Negative Fixture 16: "but" opens a new action segment; the earlier negator must not apply.
+runFixtureTest('16_negation_scope_but_boundary', false, (dir) => {
+  replaceNextActionBlockquote(dir, 'Do not run a Probe, but implement protocol runtime.');
+});
+
+// 17. Negative Fixture 17: "then" opens a new action segment; the earlier negator must not apply.
+runFixtureTest('17_negation_scope_then_boundary', false, (dir) => {
+  replaceNextActionBlockquote(dir, 'Never modify the roadmap, then launch OpenClaw.');
+});
+
+// 18. Negative Fixture 18: colon opens a new action segment; the earlier negator must not apply.
+runFixtureTest('18_negation_scope_colon_boundary', false, (dir) => {
+  replaceNextActionBlockquote(dir, 'Do not select a Provider: execute CR-S0.');
+});
+
+// 19. Negative Fixture 19: "and later" shifts the action forward in time; the earlier
+//     negator must not apply to the later command.
+runFixtureTest('19_negation_scope_and_later_boundary', false, (dir) => {
+  replaceNextActionBlockquote(dir, 'Do not implement wiki and later launch agents.');
+});
+
+// 20. Negative Fixture 20: semicolon opens a new action segment; "No new Contract" only
+//     negates its own clause.
+runFixtureTest('20_negation_scope_semicolon_boundary', false, (dir) => {
+  replaceNextActionBlockquote(dir, 'No new Contract; modify existing repository files.');
+});
+
+// 21. Positive Fixture: negator directly governs the forbidden action.
+runFixtureTest('21_negation_scope_pass_do_not', true, (dir) => {
+  replaceNextActionBlockquote(dir, 'Do not start CR-S0.');
+});
+
+// 22. Positive Fixture: "never" directly governs the forbidden action.
+runFixtureTest('22_negation_scope_pass_never', true, (dir) => {
+  replaceNextActionBlockquote(dir, 'Never execute CR-S0.');
+});
+
+// 23. Positive Fixture: passive prohibition of the forbidden action.
+runFixtureTest('23_negation_scope_pass_must_not', true, (dir) => {
+  replaceNextActionBlockquote(dir, 'Protocol runtime must not be implemented.');
+});
+
+// 24. Positive Fixture: post-negation marker after the forbidden action.
+runFixtureTest('24_negation_scope_pass_is_prohibited', true, (dir) => {
+  replaceNextActionBlockquote(dir, 'Launching OpenClaw is prohibited.');
+});
+
+// 25. Positive Fixture: coordinate "or" list under a single negator (no forbidden phrase present).
+runFixtureTest('25_negation_scope_pass_or_list', true, (dir) => {
+  replaceNextActionBlockquote(dir, 'Do not run a Probe or select a Provider.');
+});
+
+// 26. Positive Fixture: mixed case — the forbidden action is clearly negated in its own
+//     segment while a separate legal action follows.
+runFixtureTest('26_negation_scope_pass_mixed', true, (dir) => {
+  replaceNextActionBlockquote(dir, 'Do not start CR-S0; submit the Probe Matrix for outside review.');
+});
+
 testLogs.push(`\n================================================================================`);
 testLogs.push(`Test Suite Summary:`);
-testLogs.push(`  negative fixtures passed: ${negativePassed}/13`);
-testLogs.push(`  positive fixtures passed: ${positivePassed}/1`);
+testLogs.push(`  negative fixtures passed: ${negativePassed}/${negativeTotal}`);
+testLogs.push(`  positive fixtures passed: ${positivePassed}/${positiveTotal}`);
 testLogs.push(`  test process exit code: ${totalTestFailures === 0 ? 0 : 1}`);
 testLogs.push(`================================================================================`);
 
