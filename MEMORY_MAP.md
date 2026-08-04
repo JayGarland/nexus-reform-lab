@@ -1,27 +1,23 @@
 # MEMORY_MAP.md — Project Persistent Memory Structure Map
 
-> **Purpose**: Master navigation map organizing project memory categories across identity, working state, knowledge, history, procedures, handoffs, and evolution. Dynamic state values must not be duplicated in navigation or doctrine files.
+> **Purpose**: Master navigation map organizing project memory categories. Current state lives in exactly one file; history lives read-only under `archive/`.
 
 ---
 
 ## 1. Memory Hierarchy & Authority Precedence
 
 ```text
-1. Current State Files (state/)               [Highest Operational Authority]
+1. state/CURRENT.md                                       [Single Current-State Authority]
    ↓
-2. Canonical Doctrine Documents                [Architectural Authority]
+2. Canonical Doctrine Documents                           [Architectural Authority]
    ↓
-3. Ratified Protocols & Invariants             [Safety & Procedural Authority]
+3. Ratified Protocols & Invariants                        [Safety & Procedural Authority]
    ↓
-4. Compiled Knowledge Pages (Future Wiki)       [Domain Truth]
+4. Raw Evidence & Execution Logs                          [Historical Provenance]
    ↓
-5. Raw Evidence & Execution Logs               [Historical Provenance]
+5. Archive (archive/)                                     [Read-Only History]
    ↓
-6. Historical Synthesis Documents              [Derived Background]
-   ↓
-7. Superseded Files & Failure Archives         [Read-Only Audit Trail]
-   ↓
-8. Chat Summaries & Transcripts                [Lowest Authority / Navigation Only]
+6. Chat Summaries & Transcripts                           [Lowest Authority / Navigation Only]
 ```
 
 ---
@@ -29,7 +25,6 @@
 ## 2. Memory Category Map
 
 ### A. Identity & Doctrine Memory
-*Preserves non-transient definitions, architectural principles, and safety bounds.*
 
 - [`REVOLUTION.md`](REVOLUTION.md): Foundational manifesto terminating letter-centric governance.
 - [`research/synthesis/FIVE_POINT_FRAMEWORK.md`](research/synthesis/FIVE_POINT_FRAMEWORK.md): **Sole Canonical Specification** of One World Substrate + 4 Orthogonal Layers.
@@ -41,53 +36,49 @@
 ---
 
 ### B. Current Working Memory
-*Preserves active operational state, current phase, verdicts, and immediate next action.*
 
-- [`state/CURRENT_PHASE.md`](state/CURRENT_PHASE.md): Current operational phase status.
-- [`state/CURRENT_VERDICT.md`](state/CURRENT_VERDICT.md): Confirmed vs withheld adjudications.
-- [`state/NEXT_ACTION.md`](state/NEXT_ACTION.md): Single authorized next action.
-- [`state/OPEN_QUESTIONS.md`](state/OPEN_QUESTIONS.md): Pending design questions.
-- [`state/STATE_MODEL.md`](state/STATE_MODEL.md): Single sources of truth and anti-duplication rules.
+- [`state/CURRENT.md`](state/CURRENT.md): **The single authoritative current-state file** — phase, focus, audit status, authorized next action, active prohibitions, open questions, integrated probe evidence register, canonical links. A phase update edits ONLY this file.
 
 ---
 
-### C. Knowledge Memory
-*Compiled current truth, entity pages, topic breakdowns, and indices.*
+### C. Active Prior-Art & Probe Work
 
-> ⚠️ **STATUS**: **STRUCTURAL PLACEHOLDER / NOT YET IMPLEMENTED**  
-> Compiled LLM Wiki runtime pages do NOT exist yet in this repository.
+- [`research/prior-art/CANDIDATE_REFRESH_COORDINATION_AND_DURABLE_RUNTIME.md`](research/prior-art/CANDIDATE_REFRESH_COORDINATION_AND_DURABLE_RUNTIME.md): Active candidate refresh (under outside review).
+- [`research/probes/COORDINATION_AND_DURABLE_RUNTIME_PROBE_PLAN.md`](research/probes/COORDINATION_AND_DURABLE_RUNTIME_PROBE_PLAN.md): Active unified probe plan (under outside review).
+- [`research/governance/CONCEPT_AND_CONTRACT_EXPANSION_FREEZE.md`](research/governance/CONCEPT_AND_CONTRACT_EXPANSION_FREEZE.md): Active governance boundary.
+- [`research/probes/e3/`](research/probes/e3/): Raw E3 probe evidence (astro-han-llm-wiki, base-llm-wiki, beads, go-workflows, restate). Preserved, immutable, active evidence.
 
 ---
 
-### D. Episodic & Historical Memory
-*Raw evidence, historical runs, migration proofs, audit logs, and examination records.*
+### D. Episodic & Historical Memory (Archived)
 
-- [`research/legacy-evidence/`](research/legacy-evidence/): Immutable raw evidence from `JayGarland/nexus` commit `c073099481f9faa3...`.
-- [`research/migration/`](research/migration/): 31-file migration manifest, payload SHA hashes, and execution logs.
-- [`research/examinations/`](research/examinations/): Historical citation examination reports and raw evidence snapshots.
-- [`research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md`](research/audit/PERSISTENT_MEMORY_STRUCTURE_AUDIT.md): Repository file inventory and authority audit.
+All historical content is preserved read-only under [`archive/`](archive/ARCHIVE_INDEX.md):
+
+- Old split state registers (phase / verdict / next action / open questions / state model / external verdict history).
+- Drift-period verifier + tests + logs.
+- `handoff/SESSION_LOG.md` milestone log.
+- Citation examinations, old contracts, old roadmaps / E3 plans / E3 queue, Contract-to-Probe matrix, old E1/E2 surveys, old audits, findings, migration records, concept models, superseded drafts.
 
 ---
 
 ### E. Procedural Memory
-*Operating protocols, audit specifications, and agent behavioral rules.*
 
 - [`AGENTS.md`](AGENTS.md): Neutral clean-room agent operating instructions.
-- [`research/audit/REMOTE_FIRST_AUDIT_METHOD.md`](research/audit/REMOTE_FIRST_AUDIT_METHOD.md): 7-step mandatory remote-first push and audit protocol.
 
 ---
 
 ### F. Handoff & Re-entry Memory
-*Inter-instance communication, milestone handoffs, and wake-up entry.*
 
 - [`WAKE.md`](WAKE.md): **Mandatory single re-entry entrance**.
-- [`handoff/HELLO.md`](handoff/HELLO.md): Later-instance session handoff summary.
-- [`handoff/SESSION_LOG.md`](handoff/SESSION_LOG.md): Append-only session milestone log.
+- [`handoff/HELLO.md`](handoff/HELLO.md): Short inter-instance session handoff summary.
 
 ---
 
 ### G. Evolution Memory
-*Git commit history, version tags, and decision audit logs.*
 
 - **Git Commit History**: Resolved dynamically via `git log --oneline` or `git rev-parse HEAD`.
-- **Decision Lineage**: Recorded in [`handoff/SESSION_LOG.md`](handoff/SESSION_LOG.md) and [`state/CURRENT_VERDICT.md`](state/CURRENT_VERDICT.md).
+- **Archive Index**: [`archive/ARCHIVE_INDEX.md`](archive/ARCHIVE_INDEX.md).
+
+---
+
+*End of memory map.*

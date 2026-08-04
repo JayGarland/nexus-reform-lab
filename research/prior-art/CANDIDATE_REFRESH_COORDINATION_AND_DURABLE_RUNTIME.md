@@ -3,7 +3,7 @@
 > **Status**: `PRIOR-ART REFRESH — UNDER OUTSIDE REVIEW`
 > **Purpose**: Refresh the current upstream status of Coordination / Work Lifecycle and Durable Runtime / Recovery wheels, select at most three primary Probe candidates per capability domain, and prepare the candidates for the unified Probe plan. This is Prior-Art Discovery, not a Concept, Contract, or implementation phase.
 > **Scope**: Two capability domains only (A. Coordination / Work Lifecycle; B. Durable Runtime / Recovery). No other capability slot is refreshed this round. No candidate is installed, started, or executed. No `ADOPT / ADAPT / COMPOSE / REJECT` Verdict is issued.
-> **Basis**: [`CONTRACT_TO_PROBE_MATRIX.md`](../probes/CONTRACT_TO_PROBE_MATRIX.md) (`CONFIRMED FOR PROBE-PLANNING SCOPE`), [`E3_PROBE_QUEUE.md`](../plans/E3_PROBE_QUEUE.md), [`CANDIDATE_REGISTRY.md`](e1-e2/CANDIDATE_REGISTRY.md) and the E1/E2 surveys (`research/prior-art/e1-e2/`), [`GLOBAL_ROADMAP_RECONCILIATION.md`](../plans/GLOBAL_ROADMAP_RECONCILIATION.md) (`CONFIRMED FOR ROADMAP SCOPE`).
+> **Basis**: [`CONTRACT_TO_PROBE_MATRIX.md`](../../archive/research/probes/CONTRACT_TO_PROBE_MATRIX.md) (`CONFIRMED FOR PROBE-PLANNING SCOPE`), [`E3_PROBE_QUEUE.md`](../../archive/research/plans/E3_PROBE_QUEUE.md), [`CANDIDATE_REGISTRY.md`](../../archive/research/prior-art/e1-e2/CANDIDATE_REGISTRY.md) and the E1/E2 surveys (`archive/research/prior-art/e1-e2/`), [`GLOBAL_ROADMAP_RECONCILIATION.md`](../../archive/research/plans/GLOBAL_ROADMAP_RECONCILIATION.md) (`CONFIRMED FOR ROADMAP SCOPE`).
 > **checked_at**: `2026-08-04T11:05+02:00` (upstream facts below were inspected via the official GitHub API / upstream repos at this time)
 
 ---

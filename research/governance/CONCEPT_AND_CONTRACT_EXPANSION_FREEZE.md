@@ -3,7 +3,7 @@
 > **Status**: `CONFIRMED FOR GOVERNANCE BOUNDARY SCOPE — content confirmed at commit 560aba51606084f027af34365f5d2c82b6fb3226; the negation-aware fail-closed verifier implementation in that commit is NOT confirmed`
 > **Purpose**: Stop horizontal expansion of Concept Models, Minimum Contracts, state machines, future components, and topology layers, and redirect effort to real Prior-Art Probe verification, unless a real Probe exposes a blocking contradiction or a clear safety hole.
 > **Scope**: Governance boundary. This freeze does not delete existing models or Contracts, does not authorize implementation, and does not by itself run any Probe.
-> **Basis**: [`FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md`](../plans/FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md) (`CONFIRMED FOR ROADMAP SCOPE`), [`GLOBAL_ROADMAP_RECONCILIATION.md`](../plans/GLOBAL_ROADMAP_RECONCILIATION.md) (`ROADMAP RECONCILIATION — UNDER OUTSIDE REVIEW`), [`CONTRACT_TO_PROBE_MATRIX.md`](../probes/CONTRACT_TO_PROBE_MATRIX.md) (`PROBE MATRIX — UNDER OUTSIDE REVIEW`)
+> **Basis**: [`FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md`](../../archive/research/plans/FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md) (`CONFIRMED FOR ROADMAP SCOPE`), [`GLOBAL_ROADMAP_RECONCILIATION.md`](../../archive/research/plans/GLOBAL_ROADMAP_RECONCILIATION.md) (`ROADMAP RECONCILIATION — UNDER OUTSIDE REVIEW`), [`CONTRACT_TO_PROBE_MATRIX.md`](../../archive/research/probes/CONTRACT_TO_PROBE_MATRIX.md) (`PROBE MATRIX — UNDER OUTSIDE REVIEW`)
 
 ---
 

@@ -223,7 +223,7 @@ This Doctrine does NOT:
 
 ## Related Concept Clarification
 
-- [`STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md`](STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md) — `CONCEPT CLARIFICATION — CONFIRMED FOR CONCEPTUAL SCOPE`. Not immutable permanent architecture; may evolve through a formal proposal. Clarifies that Stigmergy is an environment-mediated coordination concept/capability boundary, that carriers and artifact types are replaceable (not `Stigmergy = Files`), and that optional extensions and legacy Nexus adapters attach only through stable interfaces. Does not amend this Doctrine.
+- [`STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md`](../../archive/research/synthesis/STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md) — `CONCEPT CLARIFICATION — CONFIRMED FOR CONCEPTUAL SCOPE` (archived as pre-probe hypothesis). Not immutable permanent architecture; may evolve through a formal proposal. Clarifies that Stigmergy is an environment-mediated coordination concept/capability boundary, that carriers and artifact types are replaceable (not `Stigmergy = Files`), and that optional extensions and legacy Nexus adapters attach only through stable interfaces. Does not amend this Doctrine.
 
 ---
 
