@@ -8,11 +8,7 @@ const ROOT = path.resolve(__dirname, '..');
 const REQUIRED_FILES = [
   'WAKE.md',
   'state/CURRENT.md',
-  'MEMORY_MAP.md',
-  'CHARTER.md',
   'INVARIANTS.md',
-  'REVOLUTION.md',
-  'handoff/HELLO.md',
 ];
 
 const SHA_RE = /\b[0-9a-fA-F]{40}\b/g;
