@@ -1,0 +1,144 @@
+[restate][2026-08-04T09:38:33.737Z] WARN: Accepting requests without validating request signatures; handler access must be restricted
+[restate][2026-08-04T09:49:00.278Z][WorkItem/D/runDurable][inv_14oeLsH8Kw6N4owacMzbpjkUzWQuQZDBqE] WARN: Error when processing a Restate context operation.
+ Error [ERR_STREAM_PREMATURE_CLOSE]: Premature close
+    at Http2ServerRequest.onclose (node:internal/streams/end-of-stream:166:30)
+    at Http2ServerRequest.emit (node:events:508:28)
+    at ServerHttp2Stream.onStreamAbortedRequest (node:internal/http2/compat:187:13)
+    at ServerHttp2Stream.emit (node:events:520:35)
+    at closeStream (node:internal/http2/core:2005:14)
+    at ServerHttp2Stream.close (node:internal/http2/core:2405:5)
+    at node:internal/http2/core:3520:46
+    at Map.forEach (<anonymous>)
+    at Socket.socketOnClose (node:internal/http2/core:3520:19)
+    at Socket.emit (node:events:508:28) {
+  code: 'ERR_STREAM_PREMATURE_CLOSE'
+}
+[restate][2026-08-04T09:49:00.280Z][WorkItem/D/runDurable][inv_14oeLsH8Kw6N4owacMzbpjkUzWQuQZDBqE] ERROR: Got abort error from connection: The stream has been destroyed
+This might indicate that:
+* The restate-server aborted the connection after hitting the 'abort-timeout'
+* The connection with the restate-server was lost
+
+Please check the invocation in the Restate UI for more details.
+[restate][2026-08-04T09:49:51.236Z][WorkItem/F/flaky][inv_1jGVIeUbpfj73LbilKxU3aXykiDTmSapyO] WARN: Error when processing ctx.run 'flaky-step'.
+ Error: transient failure
+    at ctx.run.maxRetryAttempts (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/service.js:104:17)
+    at async file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:179:13
+    at async doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:178:6)
+[restate][2026-08-04T09:49:51.238Z][WorkItem/F/flaky][inv_1jGVIeUbpfj73LbilKxU3aXykiDTmSapyO] WARN: Error when processing a Restate context operation.
+ RestateError: (500) transient failure
+Stacktrace: Error: transient failure
+    at ctx.run.maxRetryAttempts (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/service.js:104:17)
+    at async file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:179:13
+    at async doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:178:6)
+Related command: run [flaky-step]
+    at ensureError (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/types/errors.js:13:83)
+    at ContextImpl.abortAttempt (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:325:96)
+    at doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:214:11) {
+  code: 500,
+  [cause]: undefined
+}
+[restate][2026-08-04T09:49:51.297Z][WorkItem/F/flaky][inv_1jGVIeUbpfj73LbilKxU3aXykiDTmSapyO] WARN: Error when processing ctx.run 'flaky-step'.
+ Error: transient failure
+    at ctx.run.maxRetryAttempts (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/service.js:104:17)
+    at async file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:179:13
+    at async doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:178:6)
+[restate][2026-08-04T09:49:51.298Z][WorkItem/F/flaky][inv_1jGVIeUbpfj73LbilKxU3aXykiDTmSapyO] WARN: Error when processing a Restate context operation.
+ RestateError: (500) transient failure
+Stacktrace: Error: transient failure
+    at ctx.run.maxRetryAttempts (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/service.js:104:17)
+    at async file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:179:13
+    at async doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:178:6)
+Related command: run [flaky-step]
+    at ensureError (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/types/errors.js:13:83)
+    at ContextImpl.abortAttempt (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:325:96)
+    at doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:214:11) {
+  code: 500,
+  [cause]: undefined
+}
+[restate][2026-08-04T09:49:51.410Z][WorkItem/F/flaky][inv_1jGVIeUbpfj73LbilKxU3aXykiDTmSapyO] WARN: Error when processing ctx.run 'flaky-step'.
+ Error: transient failure
+    at ctx.run.maxRetryAttempts (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/service.js:104:17)
+    at async file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:179:13
+    at async doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:178:6)
+[restate][2026-08-04T09:49:51.410Z][WorkItem/F/flaky][inv_1jGVIeUbpfj73LbilKxU3aXykiDTmSapyO] WARN: Error when processing a Restate context operation.
+ RestateError: (500) transient failure
+Stacktrace: Error: transient failure
+    at ctx.run.maxRetryAttempts (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/service.js:104:17)
+    at async file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:179:13
+    at async doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:178:6)
+Related command: run [flaky-step]
+    at ensureError (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/types/errors.js:13:83)
+    at ContextImpl.abortAttempt (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:325:96)
+    at doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:214:11) {
+  code: 500,
+  [cause]: undefined
+}
+[restate][2026-08-04T09:51:17.516Z][WorkItem/P/runDurable][inv_1cD8TRkaTLCd4u4HEhqXRygQc7a2EVe5JV] WARN: Error when processing a Restate context operation.
+ RestateError: (500) Connection closed
+Stacktrace: Connection closed
+    at ensureError (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/types/errors.js:13:83)
+    at ContextImpl.abortAttempt (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:325:96)
+    at doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:214:11) {
+  code: 500,
+  [cause]: undefined
+}
+[restate][2026-08-04T09:51:17.516Z][WorkItem/P/runDurable][inv_1cD8TRkaTLCd4u4HEhqXRygQc7a2EVe5JV] ERROR: Got abort error from connection: The stream has been destroyed
+This might indicate that:
+* The restate-server aborted the connection after hitting the 'abort-timeout'
+* The connection with the restate-server was lost
+
+Please check the invocation in the Restate UI for more details.
+[restate][2026-08-04T09:52:38.542Z][WorkItem/G/flaky][inv_1fpiJ0ZiLXYp19ZOktVuaYImKzhusfKOjI] WARN: Error when processing ctx.run 'flaky-step'.
+ Error: transient failure
+    at ctx.run.maxRetryAttempts (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/service.js:104:17)
+    at async file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:179:13
+    at async doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:178:6)
+[restate][2026-08-04T09:52:38.542Z][WorkItem/G/flaky][inv_1fpiJ0ZiLXYp19ZOktVuaYImKzhusfKOjI] WARN: Error when processing a Restate context operation.
+ RestateError: (500) transient failure
+Stacktrace: Error: transient failure
+    at ctx.run.maxRetryAttempts (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/service.js:104:17)
+    at async file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:179:13
+    at async doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:178:6)
+Related command: run [flaky-step]
+    at ensureError (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/types/errors.js:13:83)
+    at ContextImpl.abortAttempt (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:325:96)
+    at doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:214:11) {
+  code: 500,
+  [cause]: undefined
+}
+[restate][2026-08-04T09:52:38.598Z][WorkItem/G/flaky][inv_1fpiJ0ZiLXYp19ZOktVuaYImKzhusfKOjI] WARN: Error when processing ctx.run 'flaky-step'.
+ Error: transient failure
+    at ctx.run.maxRetryAttempts (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/service.js:104:17)
+    at async file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:179:13
+    at async doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:178:6)
+[restate][2026-08-04T09:52:38.598Z][WorkItem/G/flaky][inv_1fpiJ0ZiLXYp19ZOktVuaYImKzhusfKOjI] WARN: Error when processing a Restate context operation.
+ RestateError: (500) transient failure
+Stacktrace: Error: transient failure
+    at ctx.run.maxRetryAttempts (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/service.js:104:17)
+    at async file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:179:13
+    at async doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:178:6)
+Related command: run [flaky-step]
+    at ensureError (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/types/errors.js:13:83)
+    at ContextImpl.abortAttempt (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:325:96)
+    at doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:214:11) {
+  code: 500,
+  [cause]: undefined
+}
+[restate][2026-08-04T09:52:38.704Z][WorkItem/G/flaky][inv_1fpiJ0ZiLXYp19ZOktVuaYImKzhusfKOjI] WARN: Error when processing ctx.run 'flaky-step'.
+ Error: transient failure
+    at ctx.run.maxRetryAttempts (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/service.js:104:17)
+    at async file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:179:13
+    at async doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:178:6)
+[restate][2026-08-04T09:52:38.704Z][WorkItem/G/flaky][inv_1fpiJ0ZiLXYp19ZOktVuaYImKzhusfKOjI] WARN: Error when processing a Restate context operation.
+ RestateError: (500) transient failure
+Stacktrace: Error: transient failure
+    at ctx.run.maxRetryAttempts (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/service.js:104:17)
+    at async file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:179:13
+    at async doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:178:6)
+Related command: run [flaky-step]
+    at ensureError (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/types/errors.js:13:83)
+    at ContextImpl.abortAttempt (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:325:96)
+    at doRun (file:///F:/nexus-lab-worktrees/nexus-lab-2/research/probes/e3/restate/FIXTURE/service/node_modules/@restatedev/restate-sdk/dist/context_impl.js:214:11) {
+  code: 500,
+  [cause]: undefined
+}

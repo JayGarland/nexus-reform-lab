@@ -1,0 +1,33 @@
+BEFORE_STATE — Restate E3 probe
+captured 2026-08-04T11:34+02:00 (host clock)
+
+git (worktree F:\nexus-lab-worktrees\nexus-lab-2)
+  branch cleanroom/worktree-nexus-lab-2
+  HEAD 2eb480345d21d0823815a1297456b93463b82f80 (main, clean tree)
+
+docker containers present (pre-existing, NOT started by this probe)
+  5da50cc21938 localdeepresearch/local-deep-research:latest  Exited
+  1e7bc4a91be6 searxng/searxng:latest                        Up (healthy)
+  551183a357a1 openclaw-sandbox:bookworm-slim                Exited
+  6faae4e10a90 stalwartlabs/stalwart:v0.15.5                 Up (healthy)
+  1d76890630ec freikin/dawarich:latest (sidekiq)             Up (healthy)
+  bbeda3835665 freikin/dawarich:latest (web)                 Up (healthy)
+  1bbf64a05d20 postgis/postgis:17-3.5-alpine                 Up (healthy)
+  05c8a25f62e6 redis:7.4-alpine                              Up (healthy)
+
+docker images present
+  localdeepresearch/local-deep-research:latest
+  searxng/searxng:latest
+  openclaw-sandbox:bookworm-slim
+  node:20-alpine
+  stalwartlabs/stalwart:v0.15.5
+  postgis/postgis:17-3.5-alpine
+  freikin/dawarich:latest
+  redis:7.4-alpine
+  (NO restate image)
+
+ports listening (relevant)
+  127.0.0.1:8080   (agenticmail-stalwart container)
+  (no 8090 / 9070 / 9080)
+
+No restate container, no restate image, no fixture process.

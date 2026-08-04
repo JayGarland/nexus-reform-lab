@@ -1,0 +1,1 @@
+{"attemptId":"att-1","status":"IN_PROGRESS","intermediate":"portion-1"}

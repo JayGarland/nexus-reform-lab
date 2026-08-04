@@ -1,0 +1,20 @@
+AFTER_STATE — Restate E3 probe (post-cleanup)
+captured 2026-08-04T11:54+02:00 (host clock)
+
+containers:      none matching restate (docker ps -a --filter name=restate-probe)
+images:          none matching restate (docker rmi removed ghcr.io/restatedev/restate:1.7.2)
+ports:           8090/9070/9080 no longer listening (Get-NetTCPConnection empty)
+fixture process: PID 36504 (node service.js) terminated
+runtime data:    SERVER_DATA (RocksDB) and WORKSPACE removed
+node_modules:    removed (package.json/package-lock/service.js retained as evidence)
+
+Remaining in probe dir (evidence only):
+  README.md, UPSTREAM_IDENTITY.md, SOURCE_IDENTITY.md, ENVIRONMENT.md,
+  COMMANDS.md, FINDINGS.md, OUTPUT_EVIDENCE.md, CLEANUP.md, E3_VERDICT.md,
+  BEFORE_STATE.txt, AFTER_STATE.txt,
+  FIXTURE/service/{package.json, package-lock.json, service.js},
+  RAW_OUTPUT/{10step, fixture, query-tools, export-*.json, server-*.log,
+             HUMAN_COST_RAW.md, ports-after.txt, processes-after.txt}
+
+No files written outside research/probes/e3/restate/.
+Pre-existing user containers/daemons were not started or modified by this probe.

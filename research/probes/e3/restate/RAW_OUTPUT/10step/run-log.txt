@@ -1,0 +1,22 @@
+===== STEP 1: create bounded work items A->B->C
+STEP1 A at 2026-08-04T11:45:11.935+02:00
+CMD: Invoke-RestMethod -Uri 'http://localhost:8090/WorkItem/A/init' -Method Post -ContentType 'application/json' -Body '{"id":"A","deps":[],"title":"Work A"}' -TimeoutSec 20 | ConvertTo-Json -Compress
+EXIT_CODE: 0
+STEP1 B at 2026-08-04T11:45:12.177+02:00
+CMD: Invoke-RestMethod -Uri 'http://localhost:8090/WorkItem/B/init' -Method Post -ContentType 'application/json' -Body '{"id":"B","deps":["A"],"title":"Work B"}' -TimeoutSec 20 | ConvertTo-Json -Compress
+EXIT_CODE: 0
+STEP1 C at 2026-08-04T11:45:12.206+02:00
+CMD: Invoke-RestMethod -Uri 'http://localhost:8090/WorkItem/C/init' -Method Post -ContentType 'application/json' -Body '{"id":"C","deps":["B"],"title":"Work C"}' -TimeoutSec 20 | ConvertTo-Json -Compress
+EXIT_CODE: 0
+===== STEP 2: Query Ready Work
+STEP2 state A at 2026-08-04T11:45:19.619+02:00
+STEP2 state B at 2026-08-04T11:45:19.789+02:00
+STEP2 state C at 2026-08-04T11:45:19.826+02:00
+===== STEP 3: claim B (atomic/exclusive) =====
+===== STEP 4: establish attempt + STEP 5: intermediate state =====
+===== STEP 7/8 recovery verification =====
+===== RETRY LINEAGE TEST (flaky durable step) =====
+invoke flaky at 2026-08-04T11:49:51.173+02:00
+===== PAUSE/CANCEL/RESUME TEST at 2026-08-04T11:50:26.055+02:00 =====
+===== STEP 9: submit output for B =====
+===== CENTRAL-SERVER REQUIREMENT TEST =====

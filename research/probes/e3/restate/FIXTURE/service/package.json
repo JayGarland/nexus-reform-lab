@@ -1,0 +1,13 @@
+{
+  "name": "restate-e3-fixture-service",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Disposable minimal test adapter driving Restate native primitives for the E3 Restate probe. Not a Work Item Engine.",
+  "dependencies": {
+    "@restatedev/restate-sdk": "1.16.2"
+  },
+  "scripts": {
+    "start": "node service.js"
+  }
+}
