@@ -1,0 +1,49 @@
+[restate][2026-08-04T09:38:33.735Z] INFO: Restate SDK started listening on 9080...
+[restate][2026-08-04T09:44:35.428Z][WorkItem/A/init][inv_14Lx7vJwbVjv40yJCKfZ7PqK2Fq6gJhS5h] INFO: Starting invocation.
+[restate][2026-08-04T09:44:35.433Z][WorkItem/A/init][inv_14Lx7vJwbVjv40yJCKfZ7PqK2Fq6gJhS5h] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:44:51.971Z][WorkItem/B/init][inv_168BQPq20T9h4vuJ09MbxwhFpIXpjg3vPk] INFO: Starting invocation.
+[restate][2026-08-04T09:44:51.972Z][WorkItem/B/init][inv_168BQPq20T9h4vuJ09MbxwhFpIXpjg3vPk] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:45:12.034Z][WorkItem/A/init][inv_14Lx7vJwbVjv47Ky5ppOTMKSgEKukgoGP2] INFO: Starting invocation.
+[restate][2026-08-04T09:45:12.035Z][WorkItem/A/init][inv_14Lx7vJwbVjv47Ky5ppOTMKSgEKukgoGP2] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:45:12.192Z][WorkItem/B/init][inv_168BQPq20T9h5AZ8gkm8skf9LfwgZH2uVU] INFO: Starting invocation.
+[restate][2026-08-04T09:45:12.193Z][WorkItem/B/init][inv_168BQPq20T9h5AZ8gkm8skf9LfwgZH2uVU] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:45:12.226Z][WorkItem/C/init][inv_1bh23XPvqpl73wKvDWNyV5T12OrpOWhojH] INFO: Starting invocation.
+[restate][2026-08-04T09:45:12.227Z][WorkItem/C/init][inv_1bh23XPvqpl73wKvDWNyV5T12OrpOWhojH] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:45:19.702Z][WorkItem/A/state][inv_14Lx7vJwbVjv03HF5PFy7hgRcc2MUbO130] INFO: Starting invocation.
+[restate][2026-08-04T09:45:19.709Z][WorkItem/A/state][inv_14Lx7vJwbVjv03HF5PFy7hgRcc2MUbO130] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:45:19.816Z][WorkItem/B/state][inv_168BQPq20T9h26SYI0DDLeoOUZeNqabH6w] INFO: Starting invocation.
+[restate][2026-08-04T09:45:19.819Z][WorkItem/B/state][inv_168BQPq20T9h26SYI0DDLeoOUZeNqabH6w] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:45:19.834Z][WorkItem/C/state][inv_1bh23XPvqpl76CfZtek0ncCnNzPJnBzRms] INFO: Starting invocation.
+[restate][2026-08-04T09:45:19.836Z][WorkItem/C/state][inv_1bh23XPvqpl76CfZtek0ncCnNzPJnBzRms] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:48:40.739Z][WorkItem/B/claim][inv_168BQPq20T9h24DMimjdTv9OwaXBSA25iO] INFO: Starting invocation.
+[restate][2026-08-04T09:48:40.740Z][WorkItem/B/claim][inv_168BQPq20T9h24DMimjdTv9OwaXBSA25iO] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:48:40.833Z][WorkItem/B/claim][inv_168BQPq20T9h5m4swfsSDC6ta4f2Klok0D] INFO: Starting invocation.
+[restate][2026-08-04T09:48:40.833Z][WorkItem/B/claim][inv_168BQPq20T9h5m4swfsSDC6ta4f2Klok0D] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:48:40.861Z][WorkItem/B/startAttempt][inv_168BQPq20T9h0ain63dsSgEuVn5pp5eewP] INFO: Starting invocation.
+[restate][2026-08-04T09:48:41.076Z][WorkItem/B/startAttempt][inv_168BQPq20T9h0ain63dsSgEuVn5pp5eewP] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:48:41.092Z][WorkItem/B/state][inv_168BQPq20T9h4ljdaapzrHQK9caLiFM8n7] INFO: Starting invocation.
+[restate][2026-08-04T09:48:41.095Z][WorkItem/B/state][inv_168BQPq20T9h4ljdaapzrHQK9caLiFM8n7] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:48:55.431Z][WorkItem/D/runDurable][inv_14oeLsH8Kw6N4owacMzbpjkUzWQuQZDBqE] INFO: Starting invocation.
+[restate][2026-08-04T09:49:11.547Z][WorkItem/D/runDurable][inv_14oeLsH8Kw6N4owacMzbpjkUzWQuQZDBqE] INFO: Replaying invocation.
+[restate][2026-08-04T09:49:21.222Z][WorkItem/D/runDurable][inv_14oeLsH8Kw6N4owacMzbpjkUzWQuQZDBqE] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:49:42.746Z][WorkItem/D/state][inv_14oeLsH8Kw6N62mJikvXRpuBGMHopLYBGg] INFO: Starting invocation.
+[restate][2026-08-04T09:49:42.748Z][WorkItem/D/state][inv_14oeLsH8Kw6N62mJikvXRpuBGMHopLYBGg] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:49:51.233Z][WorkItem/F/flaky][inv_1jGVIeUbpfj73LbilKxU3aXykiDTmSapyO] INFO: Starting invocation.
+[restate][2026-08-04T09:49:51.295Z][WorkItem/F/flaky][inv_1jGVIeUbpfj73LbilKxU3aXykiDTmSapyO] INFO: Replaying invocation.
+[restate][2026-08-04T09:49:51.406Z][WorkItem/F/flaky][inv_1jGVIeUbpfj73LbilKxU3aXykiDTmSapyO] INFO: Replaying invocation.
+[restate][2026-08-04T09:49:51.618Z][WorkItem/F/flaky][inv_1jGVIeUbpfj73LbilKxU3aXykiDTmSapyO] INFO: Replaying invocation.
+[restate][2026-08-04T09:49:51.623Z][WorkItem/F/flaky][inv_1jGVIeUbpfj73LbilKxU3aXykiDTmSapyO] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:50:26.131Z][WorkItem/P/runDurable][inv_1cD8TRkaTLCd4u4HEhqXRygQc7a2EVe5JV] INFO: Starting invocation.
+[restate][2026-08-04T09:51:31.298Z][WorkItem/W/touchWorkspace][inv_1kKhOKW4vYtR3OZG4lBsyTTOsOa5mwp8jF] INFO: Starting invocation.
+[restate][2026-08-04T09:51:31.299Z][WorkItem/W/touchWorkspace][inv_1kKhOKW4vYtR3OZG4lBsyTTOsOa5mwp8jF] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:52:17.701Z][WorkItem/B/finish][inv_168BQPq20T9h1FsjU0Y6iL0HuJtJaT47pU] INFO: Starting invocation.
+[restate][2026-08-04T09:52:17.701Z][WorkItem/B/finish][inv_168BQPq20T9h1FsjU0Y6iL0HuJtJaT47pU] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:52:17.788Z][WorkItem/B/state][inv_168BQPq20T9h75EGJUUfZhiUD8rd0kUOIG] INFO: Starting invocation.
+[restate][2026-08-04T09:52:17.790Z][WorkItem/B/state][inv_168BQPq20T9h75EGJUUfZhiUD8rd0kUOIG] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:52:38.540Z][WorkItem/G/flaky][inv_1fpiJ0ZiLXYp19ZOktVuaYImKzhusfKOjI] INFO: Starting invocation.
+[restate][2026-08-04T09:52:38.596Z][WorkItem/G/flaky][inv_1fpiJ0ZiLXYp19ZOktVuaYImKzhusfKOjI] INFO: Replaying invocation.
+[restate][2026-08-04T09:52:38.702Z][WorkItem/G/flaky][inv_1fpiJ0ZiLXYp19ZOktVuaYImKzhusfKOjI] INFO: Replaying invocation.
+[restate][2026-08-04T09:52:38.908Z][WorkItem/G/flaky][inv_1fpiJ0ZiLXYp19ZOktVuaYImKzhusfKOjI] INFO: Replaying invocation.
+[restate][2026-08-04T09:52:38.912Z][WorkItem/G/flaky][inv_1fpiJ0ZiLXYp19ZOktVuaYImKzhusfKOjI] INFO: Invocation completed successfully.
+[restate][2026-08-04T09:53:10.431Z][WorkItem/A/state][inv_14Lx7vJwbVjv1FA4pOzLT8dJUM974qzZzT] INFO: Starting invocation.
+[restate][2026-08-04T09:53:10.433Z][WorkItem/A/state][inv_14Lx7vJwbVjv1FA4pOzLT8dJUM974qzZzT] INFO: Invocation completed successfully.

@@ -1,0 +1,5 @@
+PROCESS_LIST_BEFORE — Restate E3 probe
+captured 2026-08-04T11:34+02:00 (host clock)
+
+No restate-specific processes existed before the probe.
+(no restate-probe container, no fixture node process)

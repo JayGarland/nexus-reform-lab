@@ -1,0 +1,1 @@
+{"deps":["A"],"title":"Work B","status":"IN_PROGRESS","claimant":"agent-1","attemptId":"att-1","intermediate":"portion-1","progress":null,"output":null,"flakyResult":null}
