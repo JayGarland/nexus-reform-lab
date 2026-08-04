@@ -37,6 +37,39 @@ const allowedVerdicts = new Set([
 // ---------------------------------------------------------------------------
 const GATE_STAGES = [
   {
+    id: 'BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT',
+    phaseIncludes: ['bounded', 'runtime', 'recovery'],
+    actionReference: ['bounded', 'runtime', 'recovery'],
+    verdicts: {
+      'State Consistency': ['CONFIRMED', 'PARTIAL', 'REJECTED', 'WITHHELD'],
+      'Repository-wide Persistent Artifact World': ['CONFIRMED', 'CONFIRMED AT LEVEL 2'],
+      'Cold-Start Recoverability': ['CONFIRMED'],
+      'CR-S0 Authorization': ['WITHHELD'],
+      'Modularity & Replaceability Doctrine': ['CONFIRMED'],
+      'Prior-Art Discovery Plan': ['CONFIRMED FOR PLANNING SCOPE'],
+      'Prior-Art E1/E2 Survey': ['CONFIRMED FOR E1/E2 SURVEY SCOPE'],
+      'E3 Probe Queue': ['UNDER OUTSIDE REVIEW'],
+      'Knowledge Projection Provider Comparison': ['CONFIRMED FOR E1/E2 COMPARISON SCOPE'],
+      'Astro-Han Knowledge E3': ['CONFIRMED FOR E3 SCOPE'],
+      'base-llm-wiki': ['E2'],
+      'Knowledge Provider Selected': ['NO'],
+      'base-llm-wiki E3 Comparison Plan': ['CONFIRMED FOR E3 EXECUTION-PLAN SCOPE'],
+      'base-llm-wiki Knowledge E3': ['CONFIRMED FOR E3 SCOPE'],
+      'Knowledge E3 Segment': ['CLOSED'],
+      'Stigmergy Carrier & Artifact Taxonomy': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Four-Layer One-World Minimum Landing Roadmap': ['CONFIRMED FOR ROADMAP SCOPE'],
+      'Work Item Minimum Contract': ['CONFIRMED FOR SEMANTIC CONTRACT SCOPE'],
+      'Seeded Instance Continuity': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Persistent World Object Model': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Layered World Runtime Model': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Two-Leg Asynchronous Operating Model': ['CONFIRMED FOR OPERATING MODEL SCOPE'],
+      'Persistent Room and Workspace Binding': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Persistent Scope Topology': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Protocol Governance Minimum Contract': ['CONFIRMED FOR SEMANTIC CONTRACT SCOPE'],
+      'Bounded Runtime Execution and Recovery Minimum Contract': ['UNDER OUTSIDE REVIEW']
+    }
+  },
+  {
     id: 'PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT',
     phaseIncludes: ['protocol governance', 'contract'],
     actionReference: ['protocol governance', 'contract'],

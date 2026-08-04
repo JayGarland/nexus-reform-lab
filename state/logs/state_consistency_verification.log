@@ -1,65 +1,67 @@
 ================================================================================
 FAIL-CLOSED VERIFIER & STATE CONSISTENCY ENGINE LOG
-Timestamp: 2026-08-04T07:38:46.535Z
+Timestamp: 2026-08-04T08:19:40.785Z
 Target Repository Root: F:\nexus-reform-lab
 Git Resolution Root: F:\nexus-reform-lab
 ================================================================================
 
 [Check 4] CURRENT_PHASE.md Gate-Stage Selection...
-  Current Phase: Protocol Governance Minimum Contract Draft
-  Selected Gate Stage: PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT
+  Current Phase: Bounded Runtime Execution and Recovery Minimum Contract Draft
+  Selected Gate Stage: BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT
 
 [Check 1] CURRENT_VERDICT.md Gate-Subject Validation...
   Subject [State Consistency]: Matching Rows Count = 1
-  PASS: Subject [State Consistency] category "CONFIRMED" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [State Consistency] category "CONFIRMED" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Repository-wide Persistent Artifact World]: Matching Rows Count = 1
-  PASS: Subject [Repository-wide Persistent Artifact World] category "CONFIRMED AT LEVEL 2" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Repository-wide Persistent Artifact World] category "CONFIRMED AT LEVEL 2" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Cold-Start Recoverability]: Matching Rows Count = 1
-  PASS: Subject [Cold-Start Recoverability] category "CONFIRMED" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Cold-Start Recoverability] category "CONFIRMED" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [CR-S0 Authorization]: Matching Rows Count = 1
-  PASS: Subject [CR-S0 Authorization] category "WITHHELD" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [CR-S0 Authorization] category "WITHHELD" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Modularity & Replaceability Doctrine]: Matching Rows Count = 1
-  PASS: Subject [Modularity & Replaceability Doctrine] category "CONFIRMED" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Modularity & Replaceability Doctrine] category "CONFIRMED" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Prior-Art Discovery Plan]: Matching Rows Count = 1
-  PASS: Subject [Prior-Art Discovery Plan] category "CONFIRMED FOR PLANNING SCOPE" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Prior-Art Discovery Plan] category "CONFIRMED FOR PLANNING SCOPE" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Prior-Art E1/E2 Survey]: Matching Rows Count = 1
-  PASS: Subject [Prior-Art E1/E2 Survey] category "CONFIRMED FOR E1/E2 SURVEY SCOPE" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Prior-Art E1/E2 Survey] category "CONFIRMED FOR E1/E2 SURVEY SCOPE" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [E3 Probe Queue]: Matching Rows Count = 1
-  PASS: Subject [E3 Probe Queue] category "UNDER OUTSIDE REVIEW" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [E3 Probe Queue] category "UNDER OUTSIDE REVIEW" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Knowledge Projection Provider Comparison]: Matching Rows Count = 1
-  PASS: Subject [Knowledge Projection Provider Comparison] category "CONFIRMED FOR E1/E2 COMPARISON SCOPE" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Knowledge Projection Provider Comparison] category "CONFIRMED FOR E1/E2 COMPARISON SCOPE" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Astro-Han Knowledge E3]: Matching Rows Count = 1
-  PASS: Subject [Astro-Han Knowledge E3] category "CONFIRMED FOR E3 SCOPE" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Astro-Han Knowledge E3] category "CONFIRMED FOR E3 SCOPE" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [base-llm-wiki]: Matching Rows Count = 1
-  PASS: Subject [base-llm-wiki] category "E2" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [base-llm-wiki] category "E2" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Knowledge Provider Selected]: Matching Rows Count = 1
-  PASS: Subject [Knowledge Provider Selected] category "NO" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Knowledge Provider Selected] category "NO" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [base-llm-wiki E3 Comparison Plan]: Matching Rows Count = 1
-  PASS: Subject [base-llm-wiki E3 Comparison Plan] category "CONFIRMED FOR E3 EXECUTION-PLAN SCOPE" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [base-llm-wiki E3 Comparison Plan] category "CONFIRMED FOR E3 EXECUTION-PLAN SCOPE" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [base-llm-wiki Knowledge E3]: Matching Rows Count = 1
-  PASS: Subject [base-llm-wiki Knowledge E3] category "CONFIRMED FOR E3 SCOPE" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [base-llm-wiki Knowledge E3] category "CONFIRMED FOR E3 SCOPE" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Knowledge E3 Segment]: Matching Rows Count = 1
-  PASS: Subject [Knowledge E3 Segment] category "CLOSED" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Knowledge E3 Segment] category "CLOSED" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Stigmergy Carrier & Artifact Taxonomy]: Matching Rows Count = 1
-  PASS: Subject [Stigmergy Carrier & Artifact Taxonomy] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Stigmergy Carrier & Artifact Taxonomy] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Four-Layer One-World Minimum Landing Roadmap]: Matching Rows Count = 1
-  PASS: Subject [Four-Layer One-World Minimum Landing Roadmap] category "CONFIRMED FOR ROADMAP SCOPE" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Four-Layer One-World Minimum Landing Roadmap] category "CONFIRMED FOR ROADMAP SCOPE" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Work Item Minimum Contract]: Matching Rows Count = 1
-  PASS: Subject [Work Item Minimum Contract] category "CONFIRMED FOR SEMANTIC CONTRACT SCOPE" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Work Item Minimum Contract] category "CONFIRMED FOR SEMANTIC CONTRACT SCOPE" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Seeded Instance Continuity]: Matching Rows Count = 1
-  PASS: Subject [Seeded Instance Continuity] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Seeded Instance Continuity] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Persistent World Object Model]: Matching Rows Count = 1
-  PASS: Subject [Persistent World Object Model] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Persistent World Object Model] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Layered World Runtime Model]: Matching Rows Count = 1
-  PASS: Subject [Layered World Runtime Model] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Layered World Runtime Model] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Two-Leg Asynchronous Operating Model]: Matching Rows Count = 1
-  PASS: Subject [Two-Leg Asynchronous Operating Model] category "CONFIRMED FOR OPERATING MODEL SCOPE" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Two-Leg Asynchronous Operating Model] category "CONFIRMED FOR OPERATING MODEL SCOPE" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Persistent Room and Workspace Binding]: Matching Rows Count = 1
-  PASS: Subject [Persistent Room and Workspace Binding] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Persistent Room and Workspace Binding] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Persistent Scope Topology]: Matching Rows Count = 1
-  PASS: Subject [Persistent Scope Topology] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Persistent Scope Topology] category "CONFIRMED FOR CONCEPTUAL SCOPE" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
   Subject [Protocol Governance Minimum Contract]: Matching Rows Count = 1
-  PASS: Subject [Protocol Governance Minimum Contract] category "UNDER OUTSIDE REVIEW" legal for stage "PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT".
+  PASS: Subject [Protocol Governance Minimum Contract] category "CONFIRMED FOR SEMANTIC CONTRACT SCOPE" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
+  Subject [Bounded Runtime Execution and Recovery Minimum Contract]: Matching Rows Count = 1
+  PASS: Subject [Bounded Runtime Execution and Recovery Minimum Contract] category "UNDER OUTSIDE REVIEW" legal for stage "BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT".
 
 [Check 2] Dynamic Git parent lineage verification from SESSION_LOG.md...
   Milestone: 0.1: Clean-Room Laboratory Bootstrap & Manifest Repair
@@ -260,6 +262,12 @@ Git Resolution Root: F:\nexus-reform-lab
     Actual Git Parent (~1): 8e05d6a8395edf3fb85a51be0c0fa5ea085383a5
     Strict 40-Char Equality: YES
   PASS: Strict 40-char parent SHA equality verified.
+  Milestone: 1.9: Persistent Scope Topology and Room Ratification, Protocol Governance Minimum Contract Draft
+    Resulting Commit (40-char): f09d1601c8624749933053dc65f33f1706432752
+    Recorded Based-on (40-char): 2cc39043519a307769e440de60f766df23031236
+    Actual Git Parent (~1): 2cc39043519a307769e440de60f766df23031236
+    Strict 40-Char Equality: YES
+  PASS: Strict 40-char parent SHA equality verified.
 
 [Check 3] EXTERNAL_VERDICT_HISTORY.md Table Header & Schema Integrity...
   PASS: Table header structure and 9-column layout verified.
@@ -391,10 +399,14 @@ Git Resolution Root: F:\nexus-reform-lab
   Reviewed Commit: 2cc39043519a307769e440de60f766df23031236
   Outside Verdict: CONFIRMED FOR CONCEPTUAL SCOPE
   NOTE: Acceptance is bounded to the conceptual scope; no implementation or product is confirmed.
+--- Milestone Schema Check: Protocol Governance Minimum Contract Ratification ---
+  Reviewed Commit: f09d1601c8624749933053dc65f33f1706432752
+  Outside Verdict: CONFIRMED FOR SEMANTIC CONTRACT SCOPE
+  NOTE: Acceptance is bounded to the semantic contract scope; no carrier, schema, or Runtime is confirmed.
   PASS: No active UNDER OUTSIDE REVIEW entry in released gate phase.
 
 [Check 5] NEXT_ACTION.md Blockquote Parsing & Strict Validation...
-  Parsed Blockquote Action Text: "Submit the Protocol Governance Minimum Contract for outside review. Do not implement a Protocol Engine, Runtime enforcement, Scope/Room Engine, real Workspace resolution, Provider/carrier selection, Probe, AutoResearch loop, or official Nexus integration."
+  Parsed Blockquote Action Text: "Submit the Bounded Runtime Execution and Recovery Minimum Contract for outside review. Do not implement Runtime, Session launcher, scheduler, worker, Scope/Room Engine, Workspace resolver, Claim/Lease Engine, Protocol Engine, Provider/carrier binding, Probe, official Nexus integration, or CR-S0."
   PASS: NEXT_ACTION.md single authorized action references current phase and contains no forbidden phrases.
 
 [Check 6] CANDIDATE_REGISTRY.md Evidence-Level Arithmetic...
@@ -405,8 +417,8 @@ Git Resolution Root: F:\nexus-reform-lab
 Verification Summary:
   Target Repository Root: F:\nexus-reform-lab
   Git Resolution Root: F:\nexus-reform-lab
-  Active Gate Stage: PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT_DRAFT
-  Verified History Entries Count: 35
+  Active Gate Stage: BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_CONTRACT_DRAFT
+  Verified History Entries Count: 36
   Active UNDER OUTSIDE REVIEW Milestone: NONE
   Total Failures: 0
   Script Exit Code: 0

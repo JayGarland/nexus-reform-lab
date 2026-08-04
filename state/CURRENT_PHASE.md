@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Protocol Governance Minimum Contract Draft`
-- **Current Focus**: Draft the Protocol Governance Minimum Contract defining the minimum identity, scope, authority, version, conflict handling, amendment, approval, deprecation, rollback, and evidence semantics for natural-language Protocols as Software 3.0, without implementing a Protocol Engine, Runtime enforcement, or any rule engine.
-- **External Audit Status**: `PERSISTENT SCOPE TOPOLOGY + ROOM/WS CONFIRMED — PROTOCOL GOVERNANCE MINIMUM CONTRACT UNDER OUTSIDE REVIEW`
-- **Started At**: `2026-08-04T09:15:00+02:00`
+- **Current Phase**: `Bounded Runtime Execution and Recovery Minimum Contract Draft`
+- **Current Focus**: Draft the Bounded Runtime Execution and Recovery Minimum Contract defining how a transient fresh instance wakes in an explicitly authorized Persistent Scope, restores context, claims or continues a Work Item, accesses a Workspace, performs bounded work, exits, writes back persistent traces, and recovers safely after failure or a stale attempt, without implementing a Runtime, Session launcher, scheduler, worker, Scope/Room Engine, Workspace resolver, Claim/Lease Engine, or automatic recovery mechanism.
+- **External Audit Status**: `PROTOCOL GOVERNANCE MINIMUM CONTRACT CONFIRMED — BOUNDED RUNTIME EXECUTION AND RECOVERY MINIMUM CONTRACT UNDER OUTSIDE REVIEW`
+- **Started At**: `2026-08-04T10:15:00+02:00`
 
 ---
 

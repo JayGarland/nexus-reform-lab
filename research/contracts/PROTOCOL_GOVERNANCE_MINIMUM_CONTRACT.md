@@ -1,9 +1,13 @@
 # Protocol Governance Minimum Contract
 
-> **Status**: `DRAFT SEMANTIC CONTRACT — UNDER OUTSIDE REVIEW`
+> **Status**: `SEMANTIC CONTRACT — CONFIRMED FOR SEMANTIC CONTRACT SCOPE`
+> **Reviewed Commit**: `f09d1601c8624749933053dc65f33f1706432752`
 > **Purpose**: Define the minimum identity, scope, authority, version, conflict handling, amendment, approval, deprecation, rollback, and evidence semantics that a natural-language Protocol must have as Software 3.0, without binding any concrete Protocol Engine or carrier.
-> **Scope**: Semantic contract only. This draft binds no Protocol Engine, no OPA or rule engine, no Registry implementation, no precedence resolver, and no Runtime enforcement.
+> **Scope**: Semantic contract only. This contract binds no Protocol Engine, no OPA or rule engine, no Registry implementation, no precedence resolver, and no Runtime enforcement.
 > **Basis**: [`PERSISTENT_SCOPE_TOPOLOGY.md`](../synthesis/PERSISTENT_SCOPE_TOPOLOGY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md`](../synthesis/PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`LAYERED_WORLD_RUNTIME_MODEL.md`](../synthesis/LAYERED_WORLD_RUNTIME_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`)
+> **Confirmed Scope**: Protocol as a persisted, versioned, Scoped, governed Software 3.0 Artifact; `protocol_id` / `protocol_version_id` separation; no silent version overwrite; Proposal / Ratification / Activation / Execution / Evaluation separation; Protocol status set; Scope, inheritance, local extension and explicit override; precedence and conflict blocking; authority and approval; Decision Trace; supersede / deprecate / revoke; rollback; executor / Provider / Runtime / box-AI governance boundary; cross-Scope Protocol; Protocol History / Registry / Current Active Protocol Set separation; Legacy Nexus Protocol as evidence and migration candidate only.
+> **Not Yet Confirmed**: Protocol schema; Protocol Registry implementation; Protocol Engine; rules DSL; precedence resolver; Runtime enforcement; automatic Protocol amendment; production readiness; official Nexus migration.
+> **Related**: [`WORK_ITEM_MINIMUM_CONTRACT.md`](WORK_ITEM_MINIMUM_CONTRACT.md) (`CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_MINIMUM_CONTRACT.md`](BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_MINIMUM_CONTRACT.md) (`DRAFT SEMANTIC CONTRACT — UNDER OUTSIDE REVIEW`)
 
 ---
 
@@ -551,4 +555,4 @@ A Protocol Engine, when it appears later, MUST be a replaceable Provider and MUS
 
 ---
 
-*End of contract draft.*
+*End of contract.*
