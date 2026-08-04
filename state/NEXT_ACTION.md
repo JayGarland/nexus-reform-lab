@@ -6,7 +6,7 @@
 
 ## Single Authorized Action
 
-> Submit the negation-scope verifier repair and adversarial fixtures for outside review. Do not begin Prior-Art Candidate Refresh or run any Probe.
+> Submit the Coordination and Durable Runtime candidate refresh and unified Probe plan for outside review. Do not install or run candidates yet, implement an Engine or Runtime, add a Concept Model or Minimum Contract, select a final Provider, connect official Nexus, or start CR-S0.
 
 ---
 
@@ -24,4 +24,5 @@
 10. **DO NOT** treat the roadmap order, the taxonomy, the Contracts, the Continuity clarification, the Object Model, the layered / Room / Two-Leg models, the Scope Topology, the Protocol Contract, the Bounded Runtime Contract, the Evaluation Contract, or the Freeze as automatic authorization or immutable architecture.
 11. **DO NOT** enable autonomous loops, unbounded self-modification, automatic approval, or unattended dispatch.
 12. **DO NOT** run, modify, or attempt to authorize `CR-S0`.
-13. **DO NOT** begin Prior-Art Candidate Refresh or add any new Prior-Art candidate, Provider, or Probe plan.
+13. **DO NOT** install, start, or run any Coordination or Durable Runtime candidate until each Probe is separately authorized; do not implement a self-made Engine or a test Adapter for the unified fixture.
+14. **DO NOT** select a final Provider, bind a carrier, or treat any `KEEP_FOR_PROBE` status as an `ADOPT / ADAPT / COMPOSE` Verdict.

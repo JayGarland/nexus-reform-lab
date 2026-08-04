@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Verifier Negation-Scope Repair and Milestone 2.2 Closure`
-- **Current Focus**: Repair the negation-scope vulnerability in the fail-closed verifier's forbidden-phrase check, add adversarial negative fixtures, and submit the repair for outside review, without adding new Concept Models or Minimum Contracts, beginning Prior-Art Candidate Refresh, running a Probe, implementing any Engine or Runtime, selecting a Provider, connecting official Nexus, or starting CR-S0.
-- **External Audit Status**: `MILESTONE 2.2 CONTENT CONFIRMED — NEGATION-AWARE FAIL-CLOSED GUARD UNDER OUTSIDE REVIEW`
-- **Started At**: `2026-08-04T13:00:00+02:00`
+- **Current Phase**: `Prior-Art Candidate Refresh for Coordination and Durable Runtime`
+- **Current Focus**: Refresh the current upstream status of Coordination / Work Lifecycle and Durable Runtime / Recovery wheels, select up to three primary Probe candidates per domain, and define the unified Probe scenario and Human Cost metrics, without installing or running any candidate, implementing any Engine or Runtime, adding a Concept Model or Minimum Contract, selecting a final Provider, connecting official Nexus, or starting CR-S0.
+- **External Audit Status**: `NEGATION-AWARE FAIL-CLOSED GUARD CONFIRMED FOR VERIFIER SCOPE — CANDIDATE REFRESH + PROBE PLAN UNDER OUTSIDE REVIEW`
+- **Started At**: `2026-08-04T11:05:49+02:00`
 
 ---
 

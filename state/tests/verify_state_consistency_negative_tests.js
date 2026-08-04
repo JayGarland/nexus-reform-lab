@@ -173,7 +173,7 @@ runFixtureTest('9_session_log_parent_mismatch', false, (dir) => {
 runFixtureTest('10_multiple_next_action_blockquotes', false, (dir) => {
   const p = path.join(dir, 'state/NEXT_ACTION.md');
   let content = fs.readFileSync(p, 'utf8');
-  const targetStr = '> Submit the negation-scope verifier repair and adversarial fixtures for outside review. Do not begin Prior-Art Candidate Refresh or run any Probe.';
+  const targetStr = '> Submit the Coordination and Durable Runtime candidate refresh and unified Probe plan for outside review. Do not install or run candidates yet, implement an Engine or Runtime, add a Concept Model or Minimum Contract, select a final Provider, connect official Nexus, or start CR-S0.';
   content = content.replace(targetStr, `${targetStr}\n> Execute forbidden world modification now!`);
   fs.writeFileSync(p, content, 'utf8');
 });
@@ -211,7 +211,7 @@ runFixtureTest('14_registry_e2_count_mismatch', false, (dir) => {
 function replaceNextActionBlockquote(dir, newBlockquoteText) {
   const p = path.join(dir, 'state/NEXT_ACTION.md');
   let content = fs.readFileSync(p, 'utf8');
-  const targetStr = '> Submit the negation-scope verifier repair and adversarial fixtures for outside review. Do not begin Prior-Art Candidate Refresh or run any Probe.';
+  const targetStr = '> Submit the Coordination and Durable Runtime candidate refresh and unified Probe plan for outside review. Do not install or run candidates yet, implement an Engine or Runtime, add a Concept Model or Minimum Contract, select a final Provider, connect official Nexus, or start CR-S0.';
   if (!content.includes(targetStr)) {
     throw new Error(`NEXT_ACTION.md expected blockquote not found in fixture repo`);
   }

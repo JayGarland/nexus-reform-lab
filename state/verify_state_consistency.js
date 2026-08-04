@@ -21,7 +21,8 @@ const allowedVerdicts = new Set([
   'CONFIRMED FOR SEMANTIC CONTRACT SCOPE',
   'CONFIRMED FOR OPERATING MODEL SCOPE',
   'CONFIRMED FOR GOVERNANCE BOUNDARY SCOPE',
-  'CONFIRMED FOR PROBE-PLANNING SCOPE'
+  'CONFIRMED FOR PROBE-PLANNING SCOPE',
+  'CONFIRMED FOR VERIFIER SCOPE'
 ]);
 
 // ---------------------------------------------------------------------------
@@ -931,6 +932,11 @@ function verifyRepository(targetRoot, options = {}) {
         if (fullyAccepted !== 'yes' || currentAuthority !== 'yes' || acceptedScope === 'None' || rejectedScope === 'None') {
           fail(`CONFIRMED FOR PROBE-PLANNING SCOPE schema rules violated for milestone "${rawMilestone}"!`);
         }
+      } else if (verdict === 'CONFIRMED FOR VERIFIER SCOPE') {
+        rawLogs.push(`  NOTE: Acceptance is bounded to the verifier scope; the negation-aware fail-closed guard behavior is confirmed, but no candidate install, Probe run, or Provider selection is confirmed.`);
+        if (fullyAccepted !== 'yes' || currentAuthority !== 'yes' || acceptedScope === 'None' || rejectedScope === 'None') {
+          fail(`CONFIRMED FOR VERIFIER SCOPE schema rules violated for milestone "${rawMilestone}"!`);
+        }
       }
 
       // Foundation 0.3.2a Specific Check
@@ -1017,8 +1023,13 @@ function verifyRepository(targetRoot, options = {}) {
         // Strategy (no NLP parser, small and explainable):
         //   1. Split the action text into action segments at hard boundaries:
         //      sentence punctuation (. ; ! ?), newline, colon, and transition /
-        //      continuation words (but, however, then, and then, instead, yet,
+        //      continuation words (but, however, then, and then, instead,
         //      and later). A negator never distributes across a boundary.
+        //      NOTE: "yet" is intentionally NOT a boundary word: as an adverb
+        //      ("do not ... yet") it must not cut off a prohibition. A
+        //      contrastive "yet" ("X, yet Y") still fails closed because it
+        //      introduces no "or"/"and" connector, so the phrase is treated as
+        //      unauthorized.
         //   2. Inside one segment a forbidden phrase is negated when:
         //      a. a post-negator (prohibited / forbidden) directly follows the
         //         phrase within a bounded window; or
@@ -1045,7 +1056,7 @@ function verifyRepository(targetRoot, options = {}) {
           let t = text;
           t = t.replace(/[.;!?\n:]/g, SEGMENT_DELIMITER);
           t = t.replace(
-            /\b(?:and later|and then|but|however|then|instead|yet)\b/g,
+            /\b(?:and later|and then|but|however|then|instead)\b/g,
             SEGMENT_DELIMITER
           );
           return t.split(SEGMENT_DELIMITER)
