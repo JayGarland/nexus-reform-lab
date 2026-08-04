@@ -1,9 +1,12 @@
 # Work Item Minimum Contract
 
-> **Status**: `CONTRACT DRAFT — UNDER OUTSIDE REVIEW`
+> **Status**: `CONTRACT — CONFIRMED FOR SEMANTIC CONTRACT SCOPE`
+> **Reviewed Commit**: `0882f57ccc2d153e3d36519e3a70509d53add30a`
 > **Purpose**: Define the minimum semantic contract by which Nexus World can identify, claim, execute, review, and recover a Work Item identically, regardless of whether the underlying carrier is Markdown, Beads, GitHub Issues, a database record, a Kanban board, or any other replaceable carrier.
-> **Scope**: Semantic contract only. This draft binds no concrete product, directory structure, database schema, or legacy Nexus field.
+> **Scope**: Semantic contract only. This contract binds no concrete product, directory structure, database schema, or legacy Nexus field.
 > **Basis**: Four-Layer One-World Minimum Landing Roadmap (`CONFIRMED FOR ROADMAP SCOPE`, reviewed commit `64642bf3e601030c5c4a19c376a34d1e420890ec`).
+> **Confirmed Scope**: stable Work Item identity; open Work Item type; carrier-neutral semantic state; Claim / Lease; execution attempt identity; executor declaration separated from external verdict; explicit blocked semantics; independent review; retry / recovery lineage; canonical work state separated from notification / mailbox / label; legacy Nexus as Adapter mapping clue only.
+> **Not Yet Confirmed**: concrete YAML / JSON schema; Markdown, Beads, GitHub Issues or database implementation; Runtime; scheduler; worker; concurrency model; official Nexus migration; production readiness.
 
 ---
 
@@ -300,6 +303,18 @@ Nexus migration
 
 Semantic contract first; representation later.
 
+## 13. Relation to Seed and Fresh Instance Continuity
+
+See [`SEEDED_INSTANCE_CONTINUITY.md`](../synthesis/SEEDED_INSTANCE_CONTINUITY.md) (`CONCEPT CLARIFICATION — UNDER OUTSIDE REVIEW`).
+
+- A Work Item is NOT a Seed. A Seed restores world context and the legal action space; a Work Item identifies a bounded unit of authorized work.
+- A Work Item can span multiple execution attempts and multiple fresh instances.
+- A fresh instance exit does NOT change the Work Item identity (`work_item_id` remains stable).
+- Handoff / Seed updates MUST NOT overwrite historical attempts; they become part of the next instance's Seed.
+- Stale claim recovery MUST rely on environment-visible evidence (claim / lease state, traces), not on an instance's internal memory.
+
+This section adds no concrete Runtime schema.
+
 ---
 
-*End of contract draft.*
+*End of contract.*

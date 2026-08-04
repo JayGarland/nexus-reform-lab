@@ -17,7 +17,8 @@ const allowedVerdicts = new Set([
   'CONFIRMED FOR E3 SCOPE',
   'CONFIRMED FOR E3 EXECUTION-PLAN SCOPE',
   'CONFIRMED FOR CONCEPTUAL SCOPE',
-  'CONFIRMED FOR ROADMAP SCOPE'
+  'CONFIRMED FOR ROADMAP SCOPE',
+  'CONFIRMED FOR SEMANTIC CONTRACT SCOPE'
 ]);
 
 // ---------------------------------------------------------------------------
@@ -34,6 +35,32 @@ const allowedVerdicts = new Set([
 // "AUTHORIZED", "NOT YET AUDITED" => "NOT YET AUDITED").
 // ---------------------------------------------------------------------------
 const GATE_STAGES = [
+  {
+    id: 'SEEDED_INSTANCE_CONTINUITY_WRITE_BACK',
+    phaseIncludes: ['seeded', 'continuity'],
+    actionReference: ['seeded', 'continuity'],
+    verdicts: {
+      'State Consistency': ['CONFIRMED', 'PARTIAL', 'REJECTED', 'WITHHELD'],
+      'Repository-wide Persistent Artifact World': ['CONFIRMED', 'CONFIRMED AT LEVEL 2'],
+      'Cold-Start Recoverability': ['CONFIRMED'],
+      'CR-S0 Authorization': ['WITHHELD'],
+      'Modularity & Replaceability Doctrine': ['CONFIRMED'],
+      'Prior-Art Discovery Plan': ['CONFIRMED FOR PLANNING SCOPE'],
+      'Prior-Art E1/E2 Survey': ['CONFIRMED FOR E1/E2 SURVEY SCOPE'],
+      'E3 Probe Queue': ['UNDER OUTSIDE REVIEW'],
+      'Knowledge Projection Provider Comparison': ['CONFIRMED FOR E1/E2 COMPARISON SCOPE'],
+      'Astro-Han Knowledge E3': ['CONFIRMED FOR E3 SCOPE'],
+      'base-llm-wiki': ['E2'],
+      'Knowledge Provider Selected': ['NO'],
+      'base-llm-wiki E3 Comparison Plan': ['CONFIRMED FOR E3 EXECUTION-PLAN SCOPE'],
+      'base-llm-wiki Knowledge E3': ['CONFIRMED FOR E3 SCOPE'],
+      'Knowledge E3 Segment': ['CLOSED'],
+      'Stigmergy Carrier & Artifact Taxonomy': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Four-Layer One-World Minimum Landing Roadmap': ['CONFIRMED FOR ROADMAP SCOPE'],
+      'Work Item Minimum Contract': ['CONFIRMED FOR SEMANTIC CONTRACT SCOPE'],
+      'Seeded Instance Continuity': ['UNDER OUTSIDE REVIEW']
+    }
+  },
   {
     id: 'WORK_ITEM_MINIMUM_CONTRACT_DRAFTING',
     phaseIncludes: ['coordination', 'contract'],
@@ -618,6 +645,11 @@ function verifyRepository(targetRoot, options = {}) {
         rawLogs.push(`  NOTE: Acceptance is bounded to the roadmap scope; no Provider is selected, no capability is implemented, and every follow-on stage requires independent box-outside adjudication.`);
         if (fullyAccepted !== 'yes' || currentAuthority !== 'yes' || acceptedScope === 'None' || rejectedScope === 'None') {
           fail(`CONFIRMED FOR ROADMAP SCOPE schema rules violated for milestone "${rawMilestone}"!`);
+        }
+      } else if (verdict === 'CONFIRMED FOR SEMANTIC CONTRACT SCOPE') {
+        rawLogs.push(`  NOTE: Acceptance is bounded to the semantic contract scope; no carrier, schema, or Runtime is confirmed.`);
+        if (fullyAccepted !== 'yes' || currentAuthority !== 'yes' || acceptedScope === 'None' || rejectedScope === 'None') {
+          fail(`CONFIRMED FOR SEMANTIC CONTRACT SCOPE schema rules violated for milestone "${rawMilestone}"!`);
         }
       }
 

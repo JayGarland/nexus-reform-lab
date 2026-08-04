@@ -131,7 +131,7 @@ Status: `CONCEPT DEFINED` (method defined; no closed-loop runtime).
 
 Current state: `Historical prototypes exist; reform runtime not implemented`.
 
-Minimum safe form:
+The following form is the MINIMUM SAFE VALIDATION FORM only:
 
 ```text
 Seed
@@ -141,6 +141,10 @@ Seed
 → external or protocol-governed review
 → stop
 ```
+
+See [`SEEDED_INSTANCE_CONTINUITY.md`](../synthesis/SEEDED_INSTANCE_CONTINUITY.md) (`CONCEPT CLARIFICATION — UNDER OUTSIDE REVIEW`) for the distinction between this minimum safe validation form and the final architecture.
+
+The final architecture permits a fresh instance to regrow world context from a Seed and complete ONE OR MORE authorized, bounded work stages before exiting at a valid boundary, externalizing transient state as stigmergic traces for the next fresh instance.
 
 MUST NOT be enabled from the start:
 
@@ -152,6 +156,8 @@ unattended automatic dispatch
 OpenClaw-style long-term autonomy
 direct writes to the official Nexus
 ```
+
+The final architecture MUST NOT permit infinite auto-expansion, auto-approval, or unbounded autonomy.
 
 Status: `CONCEPT DEFINED` (historical prototypes exist; no reform runtime).
 

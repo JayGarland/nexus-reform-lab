@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Coordination Work Item Minimum Contract Drafting`
-- **Current Focus**: Define the minimum semantic Contract for Work Item identification, claiming, execution, review, and recovery, without binding any carrier, product, database schema, or legacy Nexus field.
-- **External Audit Status**: `GLOBAL ROADMAP CONFIRMED FOR ROADMAP SCOPE — WORK ITEM MINIMUM CONTRACT UNDER OUTSIDE REVIEW`
-- **Started At**: `2026-08-04T08:00:00+02:00`
+- **Current Phase**: `Seeded Instance Continuity Concept Write-Back`
+- **Current Focus**: Record the conceptual clarification of Seed, Fresh Instance, pheromone handoff, and Persistent World continuity, without implementing any Runtime, selecting a carrier, or connecting the official Nexus.
+- **External Audit Status**: `WORK ITEM MINIMUM CONTRACT CONFIRMED FOR SEMANTIC CONTRACT SCOPE — SEEDED INSTANCE CONTINUITY UNDER OUTSIDE REVIEW`
+- **Started At**: `2026-08-04T08:15:00+02:00`
 
 ---
 
