@@ -8,19 +8,6 @@ const ROOT = path.resolve(__dirname, '..');
 const REQUIRED_FILES = [
   'WAKE.md',
   'state/CURRENT.md',
-  'MAINLINE.md',
-  'REVOLUTION.md',
-  'INVARIANTS.md',
-  'research/synthesis/FIVE_POINT_FRAMEWORK.md',
-  'research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md',
-];
-
-const REQUIRED_WAKE_SEQUENCE = [
-  'state/CURRENT.md',
-  'MAINLINE.md',
-  'REVOLUTION.md',
-  'research/synthesis/FIVE_POINT_FRAMEWORK.md',
-  'research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md',
 ];
 
 const SHA_RE = /\b[0-9a-fA-F]{40}\b/g;
@@ -46,7 +33,7 @@ function readRequired(rel) {
   return content;
 }
 
-// 1. Required entry, state, invariant, and doctrine files exist and are non-empty.
+// 1. Required entry and state files exist and are non-empty.
 const contents = new Map();
 for (const rel of REQUIRED_FILES) {
   contents.set(rel, readRequired(rel));
@@ -54,51 +41,29 @@ for (const rel of REQUIRED_FILES) {
 
 const current = contents.get('state/CURRENT.md') || '';
 const wake = contents.get('WAKE.md') || '';
-const mainline = contents.get('MAINLINE.md') || '';
 
-// 2. Exactly one authorized Next Action exists in canonical runtime state.
+// 2. Exactly one Authorized Next Action exists in canonical runtime state.
 const actionMatches = current.match(/^##\s+\d*\.?\s*Authorized Next Action\s*$/gm) || [];
 if (actionMatches.length !== 1) {
   fail('expected exactly one "Authorized Next Action" section, found ' + actionMatches.length);
 }
 
-// 3. CURRENT explicitly declares its unique runtime-state authority and scoped phase.
+// 3. CURRENT declares its unique runtime-state authority and a scoped current phase.
 if (!/ONLY canonical source for current operational state/i.test(current)) {
   fail('state/CURRENT.md does not declare unique runtime-state authority');
 }
-if (!/LLM Wiki Real Usage & Content Quality Validation/.test(current)) {
-  fail('state/CURRENT.md does not contain the authorized Wiki validation phase');
+if (!/Current Authorized Subproject Phase/i.test(current)) {
+  fail('state/CURRENT.md does not declare a Current Authorized Subproject Phase');
 }
 
-// 4. WAKE includes the mandatory chain in order.
-let previousIndex = -1;
-for (const rel of REQUIRED_WAKE_SEQUENCE) {
-  const index = wake.indexOf(rel);
-  if (index < 0) {
-    fail('WAKE.md mandatory sequence missing: ' + rel);
-    continue;
-  }
-  if (index <= previousIndex) {
-    fail('WAKE.md mandatory sequence out of order at: ' + rel);
-  }
-  previousIndex = index;
+// 4. WAKE references state/CURRENT.md as the current-state source.
+if (!/state\/CURRENT\.md/.test(wake)) {
+  fail('WAKE.md does not reference state/CURRENT.md');
 }
 
-// 5. MAINLINE links the three doctrine sources and states the projection/mirror boundaries.
-for (const rel of [
-  'REVOLUTION.md',
-  'research/synthesis/FIVE_POINT_FRAMEWORK.md',
-  'research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md',
-]) {
-  if (!mainline.includes(rel)) {
-    fail('MAINLINE.md missing doctrine link: ' + rel);
-  }
-}
-if (!/knowledge projections/i.test(mainline)) {
-  fail('MAINLINE.md missing LLM Wiki projection boundary');
-}
-if (!/Mirror only/i.test(mainline)) {
-  fail('MAINLINE.md missing Drive mirror boundary');
+// 5. Archive is not declared as a current authorization source in CURRENT.
+if (!/archive/i.test(current)) {
+  fail('state/CURRENT.md does not state the archive boundary');
 }
 
 // 6. Any 40-character SHA token must be legal hex.

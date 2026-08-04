@@ -1,52 +1,87 @@
 # state/CURRENT.md — Single Authoritative Current State
 
 > **Notice**: This file is the ONLY canonical source for current operational state within the Nexus Reform Lab.
-> Doctrine is defined by [`MAINLINE.md`](../MAINLINE.md), [`REVOLUTION.md`](../REVOLUTION.md), and the linked canonical synthesis files.
+> Doctrine files (such as [`MAINLINE.md`](../MAINLINE.md), [`REVOLUTION.md`](../REVOLUTION.md), and the linked synthesis files) explain stable architecture and boundaries; they do not independently authorize work.
 > Historical and drift-period records remain preserved under [`archive/`](../archive/ARCHIVE_INDEX.md) and are not current directives.
+> Archive is not declared as a current authorization source.
 
 ---
 
 ## 1. Current Phase
 
-- **Wider Reform Phase**: `Prior-Art Discovery & Composition`
-- **Current Authorized Subproject Phase**: `LLM Wiki Real Usage & Content Quality Validation`
-- **Scope**: Validate the `llm-wiki-nexus` subproject with real material ingestion inside the wider reform phase. This does not declare the whole Nexus reform or runtime engineering complete.
-- **Current Focus**: Test whether a user can enter the Wiki directory, launch an AI, paste real material, request absorption, and obtain correct raw preservation, existing-page retrieval, deduplication, scoped Current Knowledge updates, validation, and auditable Git artifacts.
-- **External Reconciliation Status**: `MAINLINE RECONCILED — AUTHORITY BOUNDARIES RESTORED`
-- **Operational Readiness**: `READY FOR REAL USAGE VALIDATION`
-- **Reconciled At**: `2026-08-04T16:02:00+02:00`
+```text
+Wider Reform Phase:
+Prior-Art Discovery & Composition
+
+Current Authorized Subproject Phase:
+Reform Lab Boundary Reconciliation
+```
+
+- **Scope**: Fix the responsibility boundaries between Reform Lab, LLM Wiki, and the product Workspace; compress the cold-start reading chain; stop real-material Wiki ingestion. This does not declare the whole Nexus reform or runtime engineering complete.
+- **Reconciled At**: `2026-08-04`
 
 ---
 
 ## 2. Authorized Next Action
 
-> Run one limited real-material ingestion test in `llm-wiki-nexus` using the shortest user operation: enter the Wiki directory, launch the AI, paste one bounded real source, and request “吸收这段材料”. Review whether the result preserves Raw, retrieves and updates the correct existing pages, deduplicates claims, avoids runtime-state or authorization leakage, passes Wiki validation, and leaves an auditable Git diff. Stop after this test for box-out review before any further ingestion or implementation.
+> Fix the responsibility boundaries between Reform Lab, LLM Wiki, and the product Workspace; compress the cold-start reading chain; stop Wiki real-material ingestion. Complete the changes, verify them, and commit to Git, then stop and wait for box-out review.
 
 ---
 
-## 3. Active Prohibitions
+## 3. Reform Lab's Responsibilities
 
-1. **DO NOT** start or continue Minimal Composition Comparison, new E3 probes, CR-S0, Provider selection, adoption, binding, or implementation.
-2. **DO NOT** implement a new Engine, Runtime, workflow system, evaluator platform, scheduler, worker, orchestration mechanism, Concept Model, or Contract layer.
-3. **DO NOT** expand authority levels, verification receipt types, schemas, approval tickets, speculative attack tests, or governance machinery.
-4. **DO NOT** delete, rewrite, or downgrade existing Beads, go-workflows, Restate, LLM Wiki, or base-llm-wiki evidence.
-5. **DO NOT** treat LLM Wiki pages or Google Drive mirrors as canonical runtime state or as independent authorization surfaces.
-6. **DO NOT** run more than one bounded ingestion before box-out review of the first result.
+`nexus-reform-lab` is responsible only for:
 
----
-
-## 4. Reconciliation Gates — Completed
-
-1. Reform Lab cold-start chain requires `WAKE.md → state/CURRENT.md → MAINLINE.md → required doctrine → authorized task files`.
-2. Structural validation checks all mandatory entry and doctrine files.
-3. `llm-wiki-nexus` states explicitly that Wiki pages are rebuildable knowledge projections, not runtime authority.
-4. Wiki phase/status descriptions are scoped, sourced, and non-authorizing.
-5. Google Drive mirrors identify canonical repository paths and immutable commit SHAs and are marked non-canonical.
-6. Box-out independently verified GitHub and Drive before real ingestion resumed.
+- Nexus reform research;
+- Bounded probes;
+- Raw Evidence;
+- Persistent records of external Verdicts;
+- The current reform phase and authorized work;
+- Historical failures and candidate approaches.
 
 ---
 
-## 5. Preserved Evidence — Not Current Authorized Phase
+## 4. Reform Lab's Non-Responsibilities
+
+It is NOT responsible for:
+
+- Being a common working directory for all Nexus products;
+- Holding all product runtime state;
+- Long-term management of the `llm-wiki-nexus` ingestion queue and page state;
+- Being the sole container of all Nexus knowledge;
+- Being a complete theoretical textbook for all future agents;
+- Being a synchronization management platform for GitHub, Google Drive, and local state.
+
+---
+
+## 5. LLM Wiki Boundary
+
+Wiki operation — Raw, page updates, and validation — is managed by `llm-wiki-nexus` itself in its own repository (`F:\wiki-system\subwikis\llm-wiki-nexus`). Reform Lab keeps only the test purpose, acceptance criteria, Evidence references, and external Verdict. Reform Lab is not the runtime-state source for the Wiki project.
+
+---
+
+## 5.1 User Role
+
+The user is a cross-box human operator: they can discuss, design, and adjudicate outside the box with web ChatGPT, and can also enter the box to observe the local environment and operate the terminal, files, Git, and services. Web ChatGPT reads synchronized information only; it cannot execute local commands or observe unsynchronized local state. Box-in agents can execute authorized tasks, but their self-reports do not constitute a final Verdict.
+
+---
+
+## 6. Active Prohibitions
+
+The following remain prohibited:
+
+1. **DO NOT** ingest real Wiki material.
+2. **DO NOT** start or continue Minimal Composition Comparison.
+3. **DO NOT** start new E3 probes.
+4. **DO NOT** start or continue CR-S0.
+5. **DO NOT** select, adopt, adapt, or bind a Provider.
+6. **DO NOT** implement a custom Engine, Runtime, scheduler, validation framework, or governance machinery.
+7. **DO NOT** modify the formal Nexus.
+8. **DO NOT** delete, rewrite, or downgrade existing Beads, go-workflows, Restate, or LLM Wiki Evidence; external Verdicts are not changed.
+
+---
+
+## 7. Preserved Evidence — Not Current Authorized Phase
 
 The following E3 results remain valid preserved evidence. They do not authorize continued minimal-composition comparison, Provider selection, or implementation.
 
@@ -62,13 +97,14 @@ Raw evidence remains under [`research/probes/e3/`](../research/probes/e3/). No f
 
 ---
 
-## 6. Canonical Links
+## 8. Canonical Links
 
-- **Mandatory doctrine entry**: [`MAINLINE.md`](../MAINLINE.md)
+- **Re-entry entrance**: [`WAKE.md`](../WAKE.md)
+- **Runtime state authority**: this file
+- **Stable doctrine navigation**: [`MAINLINE.md`](../MAINLINE.md)
 - **Reform charter**: [`REVOLUTION.md`](../REVOLUTION.md)
 - **Canonical five-point framework**: [`research/synthesis/FIVE_POINT_FRAMEWORK.md`](../research/synthesis/FIVE_POINT_FRAMEWORK.md)
 - **LLM Wiki subsystem definition**: [`research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md`](../research/synthesis/LLM_WIKI_CURRENT_KNOWLEDGE_SYSTEM.md)
-- **Re-entry entrance**: [`WAKE.md`](../WAKE.md)
 - **Archive index**: [`archive/ARCHIVE_INDEX.md`](../archive/ARCHIVE_INDEX.md)
 
 ---

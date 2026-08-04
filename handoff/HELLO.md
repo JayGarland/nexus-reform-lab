@@ -8,7 +8,7 @@
 
 1. Read [`WAKE.md`](../WAKE.md) first, then [`state/CURRENT.md`](../state/CURRENT.md).
 2. `state/CURRENT.md` is the single authoritative current state; all historical registers are archived under [`archive/ARCHIVE_INDEX.md`](../archive/ARCHIVE_INDEX.md).
-3. Current work: `Prior-Art Candidate Refresh for Coordination and Durable Runtime` — candidate refresh + unified probe plan are under outside review.
+3. Current work: `Reform Lab Boundary Reconciliation` — fixing responsibility boundaries, compressing the cold-start reading chain, and stopping Wiki real-material ingestion.
 4. Authorized next action is defined solely in `state/CURRENT.md`.
 
 ---

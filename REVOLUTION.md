@@ -52,9 +52,11 @@ graph TD
    - Existing open-source infrastructure (Beads, git, standard runners, established workflow tools) MUST be evaluated before writing custom engines.
    - The lab primarily builds **adapters**, **projections**, **bridges**, and **policy boundaries**.
 
-2. **Human Operator Role Shift**:
-   - Human operators intervene ONLY for genuine strategic decisions, policy choices, or irreversible real-world actions.
-   - Routinized dispatch, message passing, indexing, and state checks MUST be automated via clean projections.
+2. **User & Operator Roles**:
+   - The user is a cross-box human operator. The user can discuss, design, and adjudicate outside the box with the web ChatGPT, and can also enter the box to fully observe the local environment and operate the terminal, files, Git, and services.
+   - Web ChatGPT can read synchronized information through connected GitHub, Google Drive, and user-provided Artifacts, design instructions, and participate in review, but it cannot directly execute local commands or observe the full unsynchronized local state.
+   - Box-in agents can read a more complete local environment and execute authorized tasks, but their self-reports and self-acceptance do not constitute a final Verdict.
+   - Human operators intervene for genuine strategic decisions, policy choices, or irreversible real-world actions; routinized dispatch, message passing, indexing, and state checks MUST be automated via clean projections.
 
 3. **Legacy Nexus as Read-Only Research Subject**:
    - Legacy Nexus codebases, archives, and threads serve strictly as read-only fixtures and empirical evidence sources.
@@ -69,5 +71,12 @@ graph TD
    - Ephemeral agents operate under explicit, human-authorized execution boundaries.
 
 6. **Dual-Storage Evidence Rules (GitHub + Google Drive)**:
-   - **GitHub**: The sole authoritative audit source for text artifacts, code, configs, structured logs, and evaluation manifests.
-   - **Google Drive**: Used exclusively for heavy media assets (videos, large archives, raw traces), anchored strictly under the `ChatGPT-Bridge` root folder (`1CdkiOeZNsQ9HAMXXbZHSjMi_oUuRvKf2`) and registered in `external-artifacts/drive-manifest.json`.
+   - **GitHub**: The authoritative published record of already-committed, submitted, box-out-visible history. It is NOT declared to be the only authority for the computer's entire current reality.
+   - **Google Drive**: A readable mirror or channel for large artifacts; it is not necessarily limited to large media only. No more complex synchronization governance rules are established in this round.
+   - Every Drive artifact is anchored under the `ChatGPT-Bridge` root folder (`1CdkiOeZNsQ9HAMXXbZHSjMi_oUuRvKf2`) and registered in `external-artifacts/drive-manifest.json`.
+
+7. **Information Consistency**:
+   - When a local fact is not yet synchronized to a box-out-visible source, the box-out side MUST point out the information gap and ask the user to synchronize, relay, or perform forensics; it MUST NOT use stale remote state to replace local reality.
+
+8. **Reform Architecture vs Product Development**:
+   - The four-layer one-world framework describes the reform and capability architecture of the Nexus platform itself. When using Nexus to develop a product, product agents do not need to study the full reform history; they only need to read the minimal global Kernel, the product entry, the product's current state, and the current Work Item.
