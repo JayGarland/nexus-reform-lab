@@ -1,0 +1,26 @@
+# Before State — Beads E3 Probe
+
+Recorded `2026-08-04T11:35:23+02:00` (ISO 8601, +02:00) before any probe write.
+
+## Probe directory snapshot (before init)
+
+```text
+F:\nexus-lab-worktrees\beads-probe\
+  bin\
+    bd.exe                            (not yet downloaded at first env check; acquired + checksum-verified before init)
+    beads_1.1.2_windows_amd64.zip
+    CHANGELOG.md
+    LICENSE
+    README.md
+  work\                              (empty directory, created as store workdir)
+```
+
+## Processes (before)
+
+- No `bd`/`beads` process running. Only `GitHubDesktop` processes (pre-existing host apps, unrelated to probe).
+  - GitHubDesktop PIDs 2720, 7992, 14980, 18964 — present before and after probe (unchanged, not created by probe).
+
+## No global-config / system mutation before probe
+
+- No installers, no PATH changes, no registry writes, no autostart, no services registered by this probe.
+- `C:\Users\Administrator\go\bin\bd.exe` (a pre-existing dev build `1.1.2 (dev)`) was detected and NOT used for the probe; the probe used the isolated official release binary.
