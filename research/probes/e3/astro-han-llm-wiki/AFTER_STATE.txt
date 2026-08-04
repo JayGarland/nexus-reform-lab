@@ -1,0 +1,14 @@
+.\SKILL.md
+.\fixtures\source-a.md
+.\fixtures\source-b.md
+.\raw\atlas\2026-08-03-atlas-database-superseded.md
+.\raw\atlas\2026-08-03-project-atlas-versioned-state.md
+.\references\archive-template.md
+.\references\article-template.md
+.\references\index-template.md
+.\references\raw-template.md
+.\scripts\check_evidence.py
+.\wiki\index.md
+.\wiki\log.md
+.\wiki\atlas\canonical-state.md
+.\wiki\atlas\project-atlas.md

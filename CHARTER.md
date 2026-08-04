@@ -24,7 +24,13 @@ The laboratory should primarily build adapters, projections, bridges,
 and policy boundaries.
 
 All claims require committed evidence.
-GitHub is the authoritative audit source.
-Google Drive may hold large external attachments, but every Drive artifact
-must be registered in Git with its file ID, SHA-256, purpose, and associated
-commit.
+GitHub is the sole authoritative audit source.
+
+Google Drive bridge root:
+- **Folder Name**: `ChatGPT-Bridge`
+- **Folder ID**: `1CdkiOeZNsQ9HAMXXbZHSjMi_oUuRvKf2`
+- **Local Sync Path**: `G:\My Drive\ChatGPT-Bridge`
+
+Google Drive may hold large external attachments (such as videos, large archives, or raw traces), but every Drive artifact must be registered in Git with its file ID, SHA-256, purpose, and associated commit.
+
+Google Drive MUST NOT hold the sole copy of any conclusions, evaluation results, configuration, text evidence, or running state.

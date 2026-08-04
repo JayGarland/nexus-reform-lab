@@ -1,0 +1,14 @@
+---
+source_repository: JayGarland/nexus
+source_commit: c073099481f9faa3abddde96cd22716816010704
+source_path: probes/beads/package.json
+source_sha256: a56e1815b8ef1c6d94547df07182ae69bef6ab7770d3a5c1462d4cec621ed1cd
+migration_reason: Beads probe package metadata
+epistemic_status: CONFIRMED
+---
+
+{
+  "dependencies": {
+    "@beads/bd": "^1.1.2"
+  }
+}

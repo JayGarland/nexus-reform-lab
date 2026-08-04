@@ -1,0 +1,43 @@
+==================================================================================================================================================
+REPRODUCIBLE MIGRATION VERIFICATION AUDIT LOG
+Source Repository Commit: c073099481f9faa3abddde96cd22716816010704
+Legacy Repo Path: F:\nexus-p0-controlled-bootstrap
+Reform Lab Path: F:\nexus-reform-lab
+Execution Time: 2026-08-03T18:49:40.968Z
+==================================================================================================================================================
+
+Index | Source Path | Commit Blob SHA | Manifest SHA | Destination Path | Dest Full SHA | Dest Payload SHA | Source==Manifest | DestPayload==Source | Verdict
+--------------------------------------------------------------------------------------------------------------------------------------------------
+01 | research/sources/local-world-full-census.md | 9b2818a68824... | 9b2818a68824... | research/legacy-evidence/local-world/local-world-full-census.md | dff0305998b2... | 9b2818a68824... | YES | YES | VERIFIED-PAYLOAD-MATCH
+02 | research/sources/local-world-seed-inventory.md | 9560a2ee91df... | 9560a2ee91df... | research/legacy-evidence/local-world/local-world-seed-inventory.md | b71beb32fe5f... | 9560a2ee91df... | YES | YES | VERIFIED-PAYLOAD-MATCH
+03 | research/sources/local-world-openclaw-evidence.md | 8bb30d012801... | 8bb30d012801... | research/legacy-evidence/local-world/local-world-openclaw-evidence.md | 58123bb6a0d5... | 8bb30d012801... | YES | YES | VERIFIED-PAYLOAD-MATCH
+04 | research/sources/local-world-raw/full-census/disk_census_manifest.txt | 94f84100b5dc... | 94f84100b5dc... | research/legacy-evidence/local-world/raw/full-census/disk_census_manifest.txt | 67dbbda0745f... | 94f84100b5dc... | YES | YES | VERIFIED-PAYLOAD-MATCH
+05 | research/sources/local-world-raw/autonomy-reconciliation/sandbox_runs_manifest.txt | c793e0e22e23... | c793e0e22e23... | research/legacy-evidence/local-world/raw/autonomy-reconciliation/sandbox_runs_manifest.txt | bdddc5e08185... | c793e0e22e23... | YES | YES | VERIFIED-PAYLOAD-MATCH
+06 | research/sources/local-world-raw/pilot_run_trace_summary.txt | 39d51c4b674d... | 39d51c4b674d... | research/legacy-evidence/local-world/raw/pilot_run_trace_summary.txt | 324b773f1e68... | 39d51c4b674d... | YES | YES | VERIFIED-PAYLOAD-MATCH
+07 | research/findings/local-world-evolution-lineage.md | 4b65d62328c2... | 4b65d62328c2... | research/legacy-evidence/local-world/local-world-evolution-lineage.md | baa440c8d779... | 4b65d62328c2... | YES | YES | VERIFIED-PAYLOAD-MATCH
+08 | research/findings/local-world-seed-comparison.md | 1293bb8e2d01... | 1293bb8e2d01... | research/legacy-evidence/local-world/local-world-seed-comparison.md | a1776208b3f9... | 1293bb8e2d01... | YES | YES | VERIFIED-PAYLOAD-MATCH
+09 | research/findings/local-world-autonomy-boundary.md | 7494654a3e00... | 7494654a3e00... | research/legacy-evidence/local-world/local-world-autonomy-boundary.md | 0e14c5ee2c18... | 7494654a3e00... | YES | YES | VERIFIED-PAYLOAD-MATCH
+10 | research/findings/local-world-autonomous-growth.md | bb7f0361ed32... | bb7f0361ed32... | research/legacy-evidence/local-world/local-world-autonomous-growth.md | 5018af29d6f1... | bb7f0361ed32... | YES | YES | VERIFIED-PAYLOAD-MATCH
+11 | research/synthesis/local-world-project-current-understanding.md | 9e9548938aff... | 9e9548938aff... | research/legacy-evidence/local-world/local-world-project-current-understanding.md | 3c138a9ae449... | 9e9548938aff... | YES | YES | VERIFIED-PAYLOAD-MATCH
+12 | research/audit/local-world-census-completeness.md | 085bee17ae04... | 085bee17ae04... | research/legacy-evidence/local-world/local-world-census-completeness.md | aae477d7cfe6... | 085bee17ae04... | YES | YES | VERIFIED-PAYLOAD-MATCH
+13 | research/audit/local-world-safety-stop-status.md | 9dec9290323f... | 9dec9290323f... | research/legacy-evidence/local-world/local-world-safety-stop-status.md | eb9e1b1e4431... | 9dec9290323f... | YES | YES | VERIFIED-PAYLOAD-MATCH
+14 | research/findings/prior-art-probe-comparison.md | b6171a5657f0... | b6171a5657f0... | research/legacy-evidence/wheel-probes/prior-art-probe-comparison.md | bdf7bc843eb1... | b6171a5657f0... | YES | YES | VERIFIED-PAYLOAD-MATCH
+15 | research/audit/prior-art-probe-evidence-status.md | 7d9f9ca7f7c7... | 7d9f9ca7f7c7... | research/legacy-evidence/wheel-probes/prior-art-probe-evidence-status.md | 831eb378017d... | 7d9f9ca7f7c7... | YES | YES | VERIFIED-PAYLOAD-MATCH
+16 | probes/beads/package.json | a56e1815b8ef... | a56e1815b8ef... | research/legacy-evidence/wheel-probes/beads/package.json | e63cf9e28a14... | a56e1815b8ef... | YES | YES | VERIFIED-PAYLOAD-MATCH
+17 | probes/go-workflows/go.mod | 5ec733e3847f... | 5ec733e3847f... | research/legacy-evidence/wheel-probes/go-workflows/go.mod | 6e6bcb1a04df... | 5ec733e3847f... | YES | YES | VERIFIED-PAYLOAD-MATCH
+18 | probes/restate/package.json | f32dcb69aff8... | f32dcb69aff8... | research/legacy-evidence/wheel-probes/restate/package.json | be1fcc0b01a9... | f32dcb69aff8... | YES | YES | VERIFIED-PAYLOAD-MATCH
+19 | probes/shared_fixture.json | 4e5cae27787c... | 4e5cae27787c... | research/legacy-evidence/wheel-probes/shared_fixture.json | e3e509eb99b7... | 4e5cae27787c... | YES | YES | VERIFIED-PAYLOAD-MATCH
+20 | experiments/slice-0/CORRECTION_NOTE.md | 27f022ccc04e... | 27f022ccc04e... | research/legacy-evidence/failed-slice-0/CORRECTION_NOTE.md | db4c7ab43e1b... | 27f022ccc04e... | YES | YES | VERIFIED-PAYLOAD-MATCH
+21 | experiments/slice-0/audit/EVALUATION.md | 6dad1d65db65... | 6dad1d65db65... | research/legacy-evidence/failed-slice-0/EVALUATION.md | 55c8d15e306c... | 6dad1d65db65... | YES | YES | VERIFIED-PAYLOAD-MATCH
+22 | experiments/slice-0/logs/beads/beads_execution.log | 18f3b3228e73... | 18f3b3228e73... | research/legacy-evidence/failed-slice-0/beads_execution.log | be61f40eac82... | 18f3b3228e73... | YES | YES | VERIFIED-PAYLOAD-MATCH
+23 | experiments/slice-0/logs/beads/issue_graph.json | 8eb0bea59285... | 8eb0bea59285... | research/legacy-evidence/failed-slice-0/issue_graph.json | 7dac07f01803... | 8eb0bea59285... | YES | YES | VERIFIED-PAYLOAD-MATCH
+24 | experiments/slice-0/s0/S0_REPORT.md | cc0a7da6131f... | cc0a7da6131f... | research/legacy-evidence/failed-slice-0/S0_REPORT.md | 482b8884d894... | cc0a7da6131f... | YES | YES | VERIFIED-PAYLOAD-MATCH
+25 | experiments/slice-0/s1/compiler.js | 1eae30d10cba... | 1eae30d10cba... | research/legacy-evidence/failed-slice-0/compiler.js | 745c9947b0b2... | 1eae30d10cba... | YES | YES | VERIFIED-PAYLOAD-MATCH
+26 | experiments/slice-0/s1/real_parser.js | fa20349d8872... | fa20349d8872... | research/legacy-evidence/failed-slice-0/real_parser.js | f4e8def9bc36... | fa20349d8872... | YES | YES | VERIFIED-PAYLOAD-MATCH
+27 | experiments/slice-0/s1/generic_section_parser.js | 642b4af59485... | 642b4af59485... | research/legacy-evidence/failed-slice-0/generic_section_parser.js | 90642d9db0be... | 642b4af59485... | YES | YES | VERIFIED-PAYLOAD-MATCH
+28 | experiments/slice-0/s1/world/CURRENT_STATE.md | 32d333a2453a... | 32d333a2453a... | research/legacy-evidence/failed-slice-0/CURRENT_STATE.md | 182312302be1... | a7383edca8ec... | YES | YES | VERIFIED-PAYLOAD-MATCH
+29 | experiments/slice-0/runs/beads-clean-001/operator/command-log.jsonl | fa09d4ff7d0f... | fa09d4ff7d0f... | research/legacy-evidence/failed-slice-0/beads-clean-001/command-log.jsonl | 3bebd6556caf... | fa09d4ff7d0f... | YES | YES | VERIFIED-PAYLOAD-MATCH
+30 | experiments/slice-0/runs/beads-clean-001/operator/issue-graph-final.json | 5a738e37de29... | 5a738e37de29... | research/legacy-evidence/failed-slice-0/beads-clean-001/issue-graph-final.json | 767b4b0fad8c... | 5a738e37de29... | YES | YES | VERIFIED-PAYLOAD-MATCH
+31 | experiments/slice-0/runs/beads-clean-001/world/WORK_STATE.md | 8f7511b60887... | 8f7511b60887... | research/legacy-evidence/failed-slice-0/beads-clean-001/WORK_STATE.md | fa665a20c012... | 8f7511b60887... | YES | YES | VERIFIED-PAYLOAD-MATCH
+----------------------------------------------------------------------------------------------------------------------------------
+Verification Summary: Total Files = 31, Passed = 31, Failed = 0, Exit Code = 0

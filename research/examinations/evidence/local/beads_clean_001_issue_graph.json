@@ -1,0 +1,286 @@
+---
+source_repository: JayGarland/nexus
+source_commit: c073099481f9faa3abddde96cd22716816010704
+source_path: experiments/slice-0/runs/beads-clean-001/operator/issue-graph-final.json
+source_sha256: 5a738e37de296db977dda100dd202515d8f6c5a83adbb180d6d1b80f0d79c718
+migration_reason: Final 11-task graph from isolated beads run
+epistemic_status: HISTORICAL-FAILURE
+---
+
+[
+  {
+    "id": "TASK-1pt",
+    "title": "L-0768: Thread closure request",
+    "description": "Task for L-0768",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "pjie@presage.care",
+    "created_at": "2026-08-03T18:13:43Z",
+    "created_by": "jie",
+    "updated_at": "2026-08-03T18:13:43Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-1pt",
+        "depends_on_id": "TASK-2wm",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:14:15Z",
+        "created_by": "jie",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-2wm",
+    "title": "L-0767: Final documentation check",
+    "description": "Task for L-0767",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "pjie@presage.care",
+    "created_at": "2026-08-03T18:13:39Z",
+    "created_by": "jie",
+    "updated_at": "2026-08-03T18:13:39Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-2wm",
+        "depends_on_id": "TASK-jcl",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:14:12Z",
+        "created_by": "jie",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-jcl",
+    "title": "L-0680: Post-deployment boundary audit",
+    "description": "Task for L-0680",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "pjie@presage.care",
+    "created_at": "2026-08-03T18:13:36Z",
+    "created_by": "jie",
+    "updated_at": "2026-08-03T18:13:36Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-jcl",
+        "depends_on_id": "TASK-37s",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:14:08Z",
+        "created_by": "jie",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-37s",
+    "title": "L-0674: Production deployment check (Local committed, Un-pushed, Un-restarted)",
+    "description": "Task for L-0674",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "pjie@presage.care",
+    "created_at": "2026-08-03T18:13:33Z",
+    "created_by": "jie",
+    "updated_at": "2026-08-03T18:13:33Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-37s",
+        "depends_on_id": "TASK-2yl",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:14:05Z",
+        "created_by": "jie",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-2yl",
+    "title": "L-0759: Re-verification after multi-agent dispatch updates",
+    "description": "Task for L-0759",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "pjie@presage.care",
+    "created_at": "2026-08-03T18:13:30Z",
+    "created_by": "jie",
+    "updated_at": "2026-08-03T18:13:30Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-2yl",
+        "depends_on_id": "TASK-d0a",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:14:02Z",
+        "created_by": "jie",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-d0a",
+    "title": "L-0669: End-to-end integration verification (Not Live)",
+    "description": "Task for L-0669",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "pjie@presage.care",
+    "created_at": "2026-08-03T18:13:27Z",
+    "created_by": "jie",
+    "updated_at": "2026-08-03T18:13:27Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-d0a",
+        "depends_on_id": "TASK-jxu",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:13:59Z",
+        "created_by": "jie",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-jxu",
+    "title": "L-0667: Code refactoring \u0026 unit tests",
+    "description": "Task for L-0667",
+    "status": "closed",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "pjie@presage.care",
+    "created_at": "2026-08-03T18:13:23Z",
+    "created_by": "jie",
+    "updated_at": "2026-08-03T18:14:48Z",
+    "closed_at": "2026-08-03T18:14:48Z",
+    "close_reason": "Closed",
+    "dependencies": [
+      {
+        "issue_id": "TASK-jxu",
+        "depends_on_id": "TASK-tn8",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:13:56Z",
+        "created_by": "jie",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-tn8",
+    "title": "L-0666: Decoupling implementation plan",
+    "description": "Task for L-0666",
+    "status": "closed",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "pjie@presage.care",
+    "created_at": "2026-08-03T18:13:20Z",
+    "created_by": "jie",
+    "updated_at": "2026-08-03T18:14:41Z",
+    "closed_at": "2026-08-03T18:14:41Z",
+    "close_reason": "Closed",
+    "dependencies": [
+      {
+        "issue_id": "TASK-tn8",
+        "depends_on_id": "TASK-3xp",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:13:52Z",
+        "created_by": "jie",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-yyr",
+    "title": "L-0662: Session state ledger specification (superseded by L-0660)",
+    "description": "Task for L-0662",
+    "status": "closed",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "pjie@presage.care",
+    "created_at": "2026-08-03T18:13:16Z",
+    "created_by": "jie",
+    "updated_at": "2026-08-03T18:14:36Z",
+    "closed_at": "2026-08-03T18:14:36Z",
+    "close_reason": "Closed",
+    "dependencies": [
+      {
+        "issue_id": "TASK-yyr",
+        "depends_on_id": "TASK-3xp",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:13:49Z",
+        "created_by": "jie",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-3xp",
+    "title": "L-0660: Primordial protocol \u0026 Telegram Inline Keyboard selection",
+    "description": "Task for L-0660",
+    "status": "closed",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "pjie@presage.care",
+    "created_at": "2026-08-03T18:13:13Z",
+    "created_by": "jie",
+    "updated_at": "2026-08-03T18:14:30Z",
+    "closed_at": "2026-08-03T18:14:30Z",
+    "close_reason": "Closed",
+    "dependencies": [
+      {
+        "issue_id": "TASK-3xp",
+        "depends_on_id": "TASK-2lr",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:13:46Z",
+        "created_by": "jie",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 2,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-2lr",
+    "title": "L-0658: cc-connect control plane structural diagnosis",
+    "description": "Task for L-0658",
+    "status": "closed",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "pjie@presage.care",
+    "created_at": "2026-08-03T18:13:09Z",
+    "created_by": "jie",
+    "updated_at": "2026-08-03T18:14:22Z",
+    "closed_at": "2026-08-03T18:14:22Z",
+    "close_reason": "Closed",
+    "dependency_count": 0,
+    "dependent_count": 1,
+    "comment_count": 0
+  }
+]

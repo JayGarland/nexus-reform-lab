@@ -1,0 +1,3 @@
+NOT APPLICABLE — agent-driven file workflow.
+
+No stderr was produced. No commands emitted errors (all exit codes 0).

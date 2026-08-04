@@ -1,1 +1,4 @@
-/.tmp.driveupload
+*.exe
+node_modules/
+.tmp.driveupload/
+scratch/

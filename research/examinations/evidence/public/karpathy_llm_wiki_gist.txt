@@ -1,0 +1,5 @@
+Title: LLM Wiki — A pattern for building personal knowledge bases using LLMs
+Author: Andrej Karpathy (2026)
+Canonical URL: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+Quoted Anchor: "Instead of just retrieving from raw documents at query time, the LLM incrementally builds and maintains a persistent wiki — a structured, interlinked collection of markdown files that sits between you and the raw sources... The knowledge is compiled once and then kept current, not re-derived on every query."
+Summary: Proposes 3-layer LLM Wiki architecture (Raw sources, Wiki Markdown files, Schema rules) using Compile-Don't-Retrieve.

@@ -1,0 +1,63 @@
+Total md files: 70
+Orphans (no incoming markdown links): 50
+---ORPHANS---
+fixtures/legacy-nexus/slice-0-fixture/FIXTURE_METADATA.md
+fixtures/legacy-nexus/slice-0-fixture/L-0658.query.md
+fixtures/legacy-nexus/slice-0-fixture/L-0658.result.md
+fixtures/legacy-nexus/slice-0-fixture/L-0660.query.md
+fixtures/legacy-nexus/slice-0-fixture/L-0660.result.md
+fixtures/legacy-nexus/slice-0-fixture/L-0662.query.md
+fixtures/legacy-nexus/slice-0-fixture/L-0662.result.md
+fixtures/legacy-nexus/slice-0-fixture/L-0666.query.md
+fixtures/legacy-nexus/slice-0-fixture/L-0666.result.md
+fixtures/legacy-nexus/slice-0-fixture/L-0667.query.md
+fixtures/legacy-nexus/slice-0-fixture/L-0667.result.md
+fixtures/legacy-nexus/slice-0-fixture/L-0669.query.md
+fixtures/legacy-nexus/slice-0-fixture/L-0669.result.md
+fixtures/legacy-nexus/slice-0-fixture/L-0674.query.md
+fixtures/legacy-nexus/slice-0-fixture/L-0674.result.md
+fixtures/legacy-nexus/slice-0-fixture/L-0680.query.md
+fixtures/legacy-nexus/slice-0-fixture/L-0680.result.md
+fixtures/legacy-nexus/slice-0-fixture/L-0759.query.md
+fixtures/legacy-nexus/slice-0-fixture/L-0759.result.md
+fixtures/legacy-nexus/slice-0-fixture/L-0767.query.md
+fixtures/legacy-nexus/slice-0-fixture/L-0767.result.md
+fixtures/legacy-nexus/slice-0-fixture/L-0768.query.md
+fixtures/legacy-nexus/slice-0-fixture/L-0768.result.md
+research/audit/clean-room-bootstrap-verification.md
+research/audit/framework-verification-status.md
+research/examinations/FOUR_LAYER_ONE_WORLD_COMPREHENSION_EXAM.md
+research/examinations/evidence/public/karpathy_autoresearch_readme.md
+research/examinations/evidence/synthesis/local_world_autonomy_boundary.md
+research/examinations/evidence/synthesis/local_world_evolution_lineage.md
+research/examinations/evidence/synthesis/slice_0_evaluation.md
+research/findings/prior-art-audit-findings.md
+research/findings/slice-0-correction-note.md
+research/legacy-evidence/failed-slice-0/CORRECTION_NOTE.md
+research/legacy-evidence/failed-slice-0/CURRENT_STATE.md
+research/legacy-evidence/failed-slice-0/EVALUATION.md
+research/legacy-evidence/failed-slice-0/S0_REPORT.md
+research/legacy-evidence/failed-slice-0/beads-clean-001/WORK_STATE.md
+research/legacy-evidence/local-world/local-world-autonomous-growth.md
+research/legacy-evidence/local-world/local-world-autonomy-boundary.md
+research/legacy-evidence/local-world/local-world-census-completeness.md
+research/legacy-evidence/local-world/local-world-evolution-lineage.md
+research/legacy-evidence/local-world/local-world-full-census.md
+research/legacy-evidence/local-world/local-world-openclaw-evidence.md
+research/legacy-evidence/local-world/local-world-project-current-understanding.md
+research/legacy-evidence/local-world/local-world-safety-stop-status.md
+research/legacy-evidence/local-world/local-world-seed-comparison.md
+research/legacy-evidence/local-world/local-world-seed-inventory.md
+research/legacy-evidence/wheel-probes/prior-art-probe-comparison.md
+research/legacy-evidence/wheel-probes/prior-art-probe-evidence-status.md
+research/synthesis/four-layer-one-world-framework.md
+
+---INCOMING COUNTS (top level key files)---
+wake.md: 2 incoming links from: MEMORY_MAP.md, handoff/HELLO.md
+memory_map.md: 3 incoming links from: state/CURRENT_PHASE.md, state/CURRENT_VERDICT.md, state/STATE_MODEL.md
+state/current_phase.md: 5 incoming links from: MEMORY_MAP.md, handoff/HELLO.md, research/audit/COLD_START_RECOVERY_TEST.md, research/audit/COLD_START_RECOVERY_TEST.md, state/STATE_MODEL.md
+state/current_verdict.md: 10 incoming links from: MEMORY_MAP.md, MEMORY_MAP.md, handoff/HELLO.md, handoff/HELLO.md, research/audit/COLD_START_RECOVERY_TEST.md, research/audit/COLD_START_RECOVERY_TEST.md, state/CURRENT_PHASE.md, state/CURRENT_PHASE.md, state/EXTERNAL_VERDICT_HISTORY.md, state/STATE_MODEL.md
+state/next_action.md: 6 incoming links from: MEMORY_MAP.md, handoff/HELLO.md, research/audit/COLD_START_RECOVERY_TEST.md, research/audit/COLD_START_RECOVERY_TEST.md, state/CURRENT_PHASE.md, state/STATE_MODEL.md
+research/synthesis/five_point_framework.md: 5 incoming links from: MEMORY_MAP.md, research/synthesis/four-layer-one-world-framework.md, state/CURRENT_VERDICT.md, state/CURRENT_VERDICT.md, state/CURRENT_VERDICT.md
+handoff/hello.md: 2 incoming links from: MEMORY_MAP.md, state/STATE_MODEL.md
+handoff/session_log.md: 3 incoming links from: MEMORY_MAP.md, MEMORY_MAP.md, state/STATE_MODEL.md

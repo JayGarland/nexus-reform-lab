@@ -1,0 +1,7 @@
+Title: A Brief History of Stigmergy
+Authors: Guy Theraulaz & Eric Bonabeau (1999)
+Journal: Artificial Life, Volume 5, Issue 2, pp 97–116
+DOI: 10.1162/106454699568700
+Canonical URL: https://doi.org/10.1162/106454699568700
+Quoted Anchor: "Stigmergy is a mechanism of indirect coordination, mediated by the environment, between agents or actions. The principle is that the trace left in an environment by an action stimulates the performance of a next action."
+Summary: Formalized quantitative stigmergy (signal intensity reinforcement) vs qualitative stigmergy (discrete environmental structural triggers) for multi-agent computer systems.

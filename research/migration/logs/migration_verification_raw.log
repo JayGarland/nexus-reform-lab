@@ -1,0 +1,342 @@
+[Item 01/31]
+  Source Path: research/sources/local-world-full-census.md
+  Commit Blob SHA: 9b2818a68824b9121cd6b6afa460e57d43078189f34bcd124dfe11e118263749
+  Manifest Record SHA: 9b2818a68824b9121cd6b6afa460e57d43078189f34bcd124dfe11e118263749
+  Destination Path: research/legacy-evidence/local-world/local-world-full-census.md
+  Destination Full SHA: dff0305998b27c01a84c97f65a27395b29746ba8f40dc568995f9830d87f43ac
+  Destination Payload SHA: 9b2818a68824b9121cd6b6afa460e57d43078189f34bcd124dfe11e118263749
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 02/31]
+  Source Path: research/sources/local-world-seed-inventory.md
+  Commit Blob SHA: 9560a2ee91df9f2dfc160d2276580db1b241348f8bfc204b9fe76dd1105a80dc
+  Manifest Record SHA: 9560a2ee91df9f2dfc160d2276580db1b241348f8bfc204b9fe76dd1105a80dc
+  Destination Path: research/legacy-evidence/local-world/local-world-seed-inventory.md
+  Destination Full SHA: b71beb32fe5fb0c99cdc0df2493b9691e165d8944ef65522788f8c7584236bf6
+  Destination Payload SHA: 9560a2ee91df9f2dfc160d2276580db1b241348f8bfc204b9fe76dd1105a80dc
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 03/31]
+  Source Path: research/sources/local-world-openclaw-evidence.md
+  Commit Blob SHA: 8bb30d012801cb3926dcaf04f6a10d46acfa794ef58f951a31740c074761f507
+  Manifest Record SHA: 8bb30d012801cb3926dcaf04f6a10d46acfa794ef58f951a31740c074761f507
+  Destination Path: research/legacy-evidence/local-world/local-world-openclaw-evidence.md
+  Destination Full SHA: 58123bb6a0d5a52840c630cd652955cd0b2b37d8e0dc35fd8bb30cd0aa513c6c
+  Destination Payload SHA: 8bb30d012801cb3926dcaf04f6a10d46acfa794ef58f951a31740c074761f507
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 04/31]
+  Source Path: research/sources/local-world-raw/full-census/disk_census_manifest.txt
+  Commit Blob SHA: 94f84100b5dca98b13d32d7dfecef877ebdc89a11306b71ee4b5dc9e937515b5
+  Manifest Record SHA: 94f84100b5dca98b13d32d7dfecef877ebdc89a11306b71ee4b5dc9e937515b5
+  Destination Path: research/legacy-evidence/local-world/raw/full-census/disk_census_manifest.txt
+  Destination Full SHA: 67dbbda0745fe1d0ec5668c7654b49dc873b0f2b2b432671097d4f0ff2f27277
+  Destination Payload SHA: 94f84100b5dca98b13d32d7dfecef877ebdc89a11306b71ee4b5dc9e937515b5
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 05/31]
+  Source Path: research/sources/local-world-raw/autonomy-reconciliation/sandbox_runs_manifest.txt
+  Commit Blob SHA: c793e0e22e238e69aa667985a395fd6e77d2411b3a29dcd3578ecb0be6eb7000
+  Manifest Record SHA: c793e0e22e238e69aa667985a395fd6e77d2411b3a29dcd3578ecb0be6eb7000
+  Destination Path: research/legacy-evidence/local-world/raw/autonomy-reconciliation/sandbox_runs_manifest.txt
+  Destination Full SHA: bdddc5e0818522155427f3a166d85aa3c1dbae969dfb19773a25f9e3f010e74d
+  Destination Payload SHA: c793e0e22e238e69aa667985a395fd6e77d2411b3a29dcd3578ecb0be6eb7000
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 06/31]
+  Source Path: research/sources/local-world-raw/pilot_run_trace_summary.txt
+  Commit Blob SHA: 39d51c4b674d27fc510911bc4e0cbb0fbc95f8d774735f57d7bdd1235f039660
+  Manifest Record SHA: 39d51c4b674d27fc510911bc4e0cbb0fbc95f8d774735f57d7bdd1235f039660
+  Destination Path: research/legacy-evidence/local-world/raw/pilot_run_trace_summary.txt
+  Destination Full SHA: 324b773f1e680ae28de7bae7def457bda833966d074fa5d3008152615727687c
+  Destination Payload SHA: 39d51c4b674d27fc510911bc4e0cbb0fbc95f8d774735f57d7bdd1235f039660
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 07/31]
+  Source Path: research/findings/local-world-evolution-lineage.md
+  Commit Blob SHA: 4b65d62328c2cc5bd60f169c0c123feed0123bd45dadac7d8083840966150bb0
+  Manifest Record SHA: 4b65d62328c2cc5bd60f169c0c123feed0123bd45dadac7d8083840966150bb0
+  Destination Path: research/legacy-evidence/local-world/local-world-evolution-lineage.md
+  Destination Full SHA: baa440c8d77991e74f671bb5ea8183c5d808b523da6434c67c438c68a83d5709
+  Destination Payload SHA: 4b65d62328c2cc5bd60f169c0c123feed0123bd45dadac7d8083840966150bb0
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 08/31]
+  Source Path: research/findings/local-world-seed-comparison.md
+  Commit Blob SHA: 1293bb8e2d0182afe83adcdda44e135d4c66f932336acbdf3c699a46604eccc7
+  Manifest Record SHA: 1293bb8e2d0182afe83adcdda44e135d4c66f932336acbdf3c699a46604eccc7
+  Destination Path: research/legacy-evidence/local-world/local-world-seed-comparison.md
+  Destination Full SHA: a1776208b3f9d230dc706d2eaa3853e3c8f638db234e6eae6c872bece609605b
+  Destination Payload SHA: 1293bb8e2d0182afe83adcdda44e135d4c66f932336acbdf3c699a46604eccc7
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 09/31]
+  Source Path: research/findings/local-world-autonomy-boundary.md
+  Commit Blob SHA: 7494654a3e005b9b2c0418b497c52bd4e7d6d4becb1502e96543cfcde8114a58
+  Manifest Record SHA: 7494654a3e005b9b2c0418b497c52bd4e7d6d4becb1502e96543cfcde8114a58
+  Destination Path: research/legacy-evidence/local-world/local-world-autonomy-boundary.md
+  Destination Full SHA: 0e14c5ee2c183b2ab23df3c486e66b06b06454d07ba9931ac0ddb55d3e4cc0ec
+  Destination Payload SHA: 7494654a3e005b9b2c0418b497c52bd4e7d6d4becb1502e96543cfcde8114a58
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 10/31]
+  Source Path: research/findings/local-world-autonomous-growth.md
+  Commit Blob SHA: bb7f0361ed32f4460e8866fedda881bdea8b2dda92a3513602aadedb6f224ee9
+  Manifest Record SHA: bb7f0361ed32f4460e8866fedda881bdea8b2dda92a3513602aadedb6f224ee9
+  Destination Path: research/legacy-evidence/local-world/local-world-autonomous-growth.md
+  Destination Full SHA: 5018af29d6f108e0e3d548071aeddea29dffe6fc0304fe00148e7c09059db5d4
+  Destination Payload SHA: bb7f0361ed32f4460e8866fedda881bdea8b2dda92a3513602aadedb6f224ee9
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 11/31]
+  Source Path: research/synthesis/local-world-project-current-understanding.md
+  Commit Blob SHA: 9e9548938afffd6bd6b6878c64c15bd8593c71070731dee4bb1c6a8110058376
+  Manifest Record SHA: 9e9548938afffd6bd6b6878c64c15bd8593c71070731dee4bb1c6a8110058376
+  Destination Path: research/legacy-evidence/local-world/local-world-project-current-understanding.md
+  Destination Full SHA: 3c138a9ae449efef256418de8a64027128940208195aca468a5a3b07d2c2f8a9
+  Destination Payload SHA: 9e9548938afffd6bd6b6878c64c15bd8593c71070731dee4bb1c6a8110058376
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 12/31]
+  Source Path: research/audit/local-world-census-completeness.md
+  Commit Blob SHA: 085bee17ae04feff7cdaa37b97f3cf3a750e992b861cb8c5bb92baa4da63ab46
+  Manifest Record SHA: 085bee17ae04feff7cdaa37b97f3cf3a750e992b861cb8c5bb92baa4da63ab46
+  Destination Path: research/legacy-evidence/local-world/local-world-census-completeness.md
+  Destination Full SHA: aae477d7cfe665ff22e719150ec9be0871d0eb0aa462fe7c1a7bb5b459af6abf
+  Destination Payload SHA: 085bee17ae04feff7cdaa37b97f3cf3a750e992b861cb8c5bb92baa4da63ab46
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 13/31]
+  Source Path: research/audit/local-world-safety-stop-status.md
+  Commit Blob SHA: 9dec9290323f10a4177ee731595edce408e0dbf1384ca62669a4a36ec1e57468
+  Manifest Record SHA: 9dec9290323f10a4177ee731595edce408e0dbf1384ca62669a4a36ec1e57468
+  Destination Path: research/legacy-evidence/local-world/local-world-safety-stop-status.md
+  Destination Full SHA: eb9e1b1e44311a1c98326996ef50bf4877632382c8bf4adf023026ff531ff94f
+  Destination Payload SHA: 9dec9290323f10a4177ee731595edce408e0dbf1384ca62669a4a36ec1e57468
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 14/31]
+  Source Path: research/findings/prior-art-probe-comparison.md
+  Commit Blob SHA: b6171a5657f09cd4c4836cbb26022d59f63addec9c2bc5e38c113289907808e2
+  Manifest Record SHA: b6171a5657f09cd4c4836cbb26022d59f63addec9c2bc5e38c113289907808e2
+  Destination Path: research/legacy-evidence/wheel-probes/prior-art-probe-comparison.md
+  Destination Full SHA: bdf7bc843eb16de4b21651e93d82f453c2a5f28939e16dbdb8a2622b66ff4c87
+  Destination Payload SHA: b6171a5657f09cd4c4836cbb26022d59f63addec9c2bc5e38c113289907808e2
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 15/31]
+  Source Path: research/audit/prior-art-probe-evidence-status.md
+  Commit Blob SHA: 7d9f9ca7f7c7ad6a4b8546214b8be4ba347a06b88f9d8f5ab1cbf3c30e469551
+  Manifest Record SHA: 7d9f9ca7f7c7ad6a4b8546214b8be4ba347a06b88f9d8f5ab1cbf3c30e469551
+  Destination Path: research/legacy-evidence/wheel-probes/prior-art-probe-evidence-status.md
+  Destination Full SHA: 831eb378017d348161b9781ce0f4bf66fdd4d54dedfa55673d1129ea5f360149
+  Destination Payload SHA: 7d9f9ca7f7c7ad6a4b8546214b8be4ba347a06b88f9d8f5ab1cbf3c30e469551
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 16/31]
+  Source Path: probes/beads/package.json
+  Commit Blob SHA: a56e1815b8ef1c6d94547df07182ae69bef6ab7770d3a5c1462d4cec621ed1cd
+  Manifest Record SHA: a56e1815b8ef1c6d94547df07182ae69bef6ab7770d3a5c1462d4cec621ed1cd
+  Destination Path: research/legacy-evidence/wheel-probes/beads/package.json
+  Destination Full SHA: e63cf9e28a14c81921119f4c4fbce56febcddd2506737a484b8371263d89a149
+  Destination Payload SHA: a56e1815b8ef1c6d94547df07182ae69bef6ab7770d3a5c1462d4cec621ed1cd
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 17/31]
+  Source Path: probes/go-workflows/go.mod
+  Commit Blob SHA: 5ec733e3847f9ba0c058fd4886255a94130a466f4e9ef04c19835f26421c3a3e
+  Manifest Record SHA: 5ec733e3847f9ba0c058fd4886255a94130a466f4e9ef04c19835f26421c3a3e
+  Destination Path: research/legacy-evidence/wheel-probes/go-workflows/go.mod
+  Destination Full SHA: 6e6bcb1a04dfcaa4fff4b1fbe0fc33efbe72931894359e7aa15bf6839bc7eef8
+  Destination Payload SHA: 5ec733e3847f9ba0c058fd4886255a94130a466f4e9ef04c19835f26421c3a3e
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 18/31]
+  Source Path: probes/restate/package.json
+  Commit Blob SHA: f32dcb69aff856decffa406d50e6652f1469c000327f192b64d6dcc2f9ede160
+  Manifest Record SHA: f32dcb69aff856decffa406d50e6652f1469c000327f192b64d6dcc2f9ede160
+  Destination Path: research/legacy-evidence/wheel-probes/restate/package.json
+  Destination Full SHA: be1fcc0b01a9be22eb7e00ba7d44924e8522abedfe9ba54f06883d71d50690fa
+  Destination Payload SHA: f32dcb69aff856decffa406d50e6652f1469c000327f192b64d6dcc2f9ede160
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 19/31]
+  Source Path: probes/shared_fixture.json
+  Commit Blob SHA: 4e5cae27787c3127a0296f7fb645732927420a2c1a078f9a39b7c70f1effe3be
+  Manifest Record SHA: 4e5cae27787c3127a0296f7fb645732927420a2c1a078f9a39b7c70f1effe3be
+  Destination Path: research/legacy-evidence/wheel-probes/shared_fixture.json
+  Destination Full SHA: e3e509eb99b77b9ad63b11b820a06e2a04898ae91e1f683eb7284d5865d438b2
+  Destination Payload SHA: 4e5cae27787c3127a0296f7fb645732927420a2c1a078f9a39b7c70f1effe3be
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 20/31]
+  Source Path: experiments/slice-0/CORRECTION_NOTE.md
+  Commit Blob SHA: 27f022ccc04e6d622c7595ec494b092447c708cd1e53c609e086d15284daa5be
+  Manifest Record SHA: 27f022ccc04e6d622c7595ec494b092447c708cd1e53c609e086d15284daa5be
+  Destination Path: research/legacy-evidence/failed-slice-0/CORRECTION_NOTE.md
+  Destination Full SHA: db4c7ab43e1b2fbf6fce9bd81d69313739e7fb4a8cead63449a7125712206b3a
+  Destination Payload SHA: 27f022ccc04e6d622c7595ec494b092447c708cd1e53c609e086d15284daa5be
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 21/31]
+  Source Path: experiments/slice-0/audit/EVALUATION.md
+  Commit Blob SHA: 6dad1d65db65129450b6eb58796e16f1af005d4a97bb742d6eb74a0d07e1f60f
+  Manifest Record SHA: 6dad1d65db65129450b6eb58796e16f1af005d4a97bb742d6eb74a0d07e1f60f
+  Destination Path: research/legacy-evidence/failed-slice-0/EVALUATION.md
+  Destination Full SHA: 55c8d15e306c5b467b21e6a0c71b43653d5cb0892010c1319c51255a55de59e6
+  Destination Payload SHA: 6dad1d65db65129450b6eb58796e16f1af005d4a97bb742d6eb74a0d07e1f60f
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 22/31]
+  Source Path: experiments/slice-0/logs/beads/beads_execution.log
+  Commit Blob SHA: 18f3b3228e73b0b2ea66e9f8301c6e61621ab427f8855aa1b28f09eb8f604353
+  Manifest Record SHA: 18f3b3228e73b0b2ea66e9f8301c6e61621ab427f8855aa1b28f09eb8f604353
+  Destination Path: research/legacy-evidence/failed-slice-0/beads_execution.log
+  Destination Full SHA: be61f40eac827badc3c8515cff94e656a34e5303b230bd0660ec53d34606bff3
+  Destination Payload SHA: 18f3b3228e73b0b2ea66e9f8301c6e61621ab427f8855aa1b28f09eb8f604353
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 23/31]
+  Source Path: experiments/slice-0/logs/beads/issue_graph.json
+  Commit Blob SHA: 8eb0bea59285e6b37d60d7e84d4f67025016b1e2ae6c95487321fb6975c86b60
+  Manifest Record SHA: 8eb0bea59285e6b37d60d7e84d4f67025016b1e2ae6c95487321fb6975c86b60
+  Destination Path: research/legacy-evidence/failed-slice-0/issue_graph.json
+  Destination Full SHA: 7dac07f0180362d28f66e8793bd173d9d097435ef237a773ac81e3dff4b65082
+  Destination Payload SHA: 8eb0bea59285e6b37d60d7e84d4f67025016b1e2ae6c95487321fb6975c86b60
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 24/31]
+  Source Path: experiments/slice-0/s0/S0_REPORT.md
+  Commit Blob SHA: cc0a7da6131f6cb07971ef414512d9da95f2b183c0f68b2951e783b6d499b107
+  Manifest Record SHA: cc0a7da6131f6cb07971ef414512d9da95f2b183c0f68b2951e783b6d499b107
+  Destination Path: research/legacy-evidence/failed-slice-0/S0_REPORT.md
+  Destination Full SHA: 482b8884d894c429bc2b1b71a0fe1513e976506fabcf741b06f4f86e407c89a5
+  Destination Payload SHA: cc0a7da6131f6cb07971ef414512d9da95f2b183c0f68b2951e783b6d499b107
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 25/31]
+  Source Path: experiments/slice-0/s1/compiler.js
+  Commit Blob SHA: 1eae30d10cba534aebb8d0bc5a1d3e3f33057ae1b9dca0ae90e216e2bf307203
+  Manifest Record SHA: 1eae30d10cba534aebb8d0bc5a1d3e3f33057ae1b9dca0ae90e216e2bf307203
+  Destination Path: research/legacy-evidence/failed-slice-0/compiler.js
+  Destination Full SHA: 745c9947b0b2cf4f2354680b1dd0309cfa5a4e64f334b90b09c21a84c0a95e7a
+  Destination Payload SHA: 1eae30d10cba534aebb8d0bc5a1d3e3f33057ae1b9dca0ae90e216e2bf307203
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 26/31]
+  Source Path: experiments/slice-0/s1/real_parser.js
+  Commit Blob SHA: fa20349d88723ec5626ae326d199d7d7b1b39062a6da3f023d9fece310c7c56a
+  Manifest Record SHA: fa20349d88723ec5626ae326d199d7d7b1b39062a6da3f023d9fece310c7c56a
+  Destination Path: research/legacy-evidence/failed-slice-0/real_parser.js
+  Destination Full SHA: f4e8def9bc36f09f76e4e931bbd07d6c273b8902d8aa5c51a8af155e3d837dde
+  Destination Payload SHA: fa20349d88723ec5626ae326d199d7d7b1b39062a6da3f023d9fece310c7c56a
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 27/31]
+  Source Path: experiments/slice-0/s1/generic_section_parser.js
+  Commit Blob SHA: 642b4af59485d8a9822754c18a1e547b47d9ca8688696e2aac73f37fd8a76102
+  Manifest Record SHA: 642b4af59485d8a9822754c18a1e547b47d9ca8688696e2aac73f37fd8a76102
+  Destination Path: research/legacy-evidence/failed-slice-0/generic_section_parser.js
+  Destination Full SHA: 90642d9db0bef8efabb483e2e2259d871e85b5ea81d40e2aff975c8e408217e3
+  Destination Payload SHA: 642b4af59485d8a9822754c18a1e547b47d9ca8688696e2aac73f37fd8a76102
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 28/31]
+  Source Path: experiments/slice-0/s1/world/CURRENT_STATE.md
+  Commit Blob SHA: 32d333a2453a9aa1e0e33b9ea69b4747be511108d63cb14e77c887cd5a45a46c
+  Manifest Record SHA: 32d333a2453a9aa1e0e33b9ea69b4747be511108d63cb14e77c887cd5a45a46c
+  Destination Path: research/legacy-evidence/failed-slice-0/CURRENT_STATE.md
+  Destination Full SHA: 182312302be11d1eaa8d5e25ba83f74bd9f59c87b451d7e3e03170a004540f52
+  Destination Payload SHA: a7383edca8ec1d4ba3504541c06a79ef387107befa8347a215acff1cf99cff9b
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 29/31]
+  Source Path: experiments/slice-0/runs/beads-clean-001/operator/command-log.jsonl
+  Commit Blob SHA: fa09d4ff7d0fade82e7eeb18e9883e81c4cdbc0e50c7063bab23faba5638b933
+  Manifest Record SHA: fa09d4ff7d0fade82e7eeb18e9883e81c4cdbc0e50c7063bab23faba5638b933
+  Destination Path: research/legacy-evidence/failed-slice-0/beads-clean-001/command-log.jsonl
+  Destination Full SHA: 3bebd6556caf249772f135b640624921e944457574a5dff4370c830941ef11c7
+  Destination Payload SHA: fa09d4ff7d0fade82e7eeb18e9883e81c4cdbc0e50c7063bab23faba5638b933
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 30/31]
+  Source Path: experiments/slice-0/runs/beads-clean-001/operator/issue-graph-final.json
+  Commit Blob SHA: 5a738e37de296db977dda100dd202515d8f6c5a83adbb180d6d1b80f0d79c718
+  Manifest Record SHA: 5a738e37de296db977dda100dd202515d8f6c5a83adbb180d6d1b80f0d79c718
+  Destination Path: research/legacy-evidence/failed-slice-0/beads-clean-001/issue-graph-final.json
+  Destination Full SHA: 767b4b0fad8c1c673c8d92e0d820b78c8a362210ff966e641c3ee44f3cd95900
+  Destination Payload SHA: 5a738e37de296db977dda100dd202515d8f6c5a83adbb180d6d1b80f0d79c718
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+[Item 31/31]
+  Source Path: experiments/slice-0/runs/beads-clean-001/world/WORK_STATE.md
+  Commit Blob SHA: 8f7511b608871a55145ebdc7cdf98412809cdeb9d0d362fe19a44edf2ba66cf2
+  Manifest Record SHA: 8f7511b608871a55145ebdc7cdf98412809cdeb9d0d362fe19a44edf2ba66cf2
+  Destination Path: research/legacy-evidence/failed-slice-0/beads-clean-001/WORK_STATE.md
+  Destination Full SHA: fa665a20c012b109300eec67a5670599b6a8d2f2a2a04230f5da56065f1f82b8
+  Destination Payload SHA: 8f7511b608871a55145ebdc7cdf98412809cdeb9d0d362fe19a44edf2ba66cf2
+  Source == Manifest: true
+  Dest Payload == Source: true
+  Verdict: VERIFIED-PAYLOAD-MATCH
+--------------------------------------------------------------------------------
+Verification Summary: Total Files = 31, Passed = 31, Failed = 0, Exit Code = 0

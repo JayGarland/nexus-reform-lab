@@ -1,0 +1,45 @@
+---
+source_repository: JayGarland/nexus
+source_commit: c073099481f9faa3abddde96cd22716816010704
+source_path: probes/shared_fixture.json
+source_sha256: 4e5cae27787c3127a0296f7fb645732927420a2c1a078f9a39b7c70f1effe3be
+migration_reason: Shared probe evaluation fixture
+epistemic_status: CONFIRMED
+---
+
+{
+  "fixture_id": "nexus-standard-workload-v1",
+  "created_at": "2026-08-03T19:30:00Z",
+  "items": [
+    {
+      "id": "TASK-001",
+      "title": "Ingest Raw Source Signal L-0001",
+      "status": "ready",
+      "dependencies": [],
+      "payload": {
+        "source_file": "threads/L-0001.query.md",
+        "action": "extract_claims"
+      }
+    },
+    {
+      "id": "TASK-002",
+      "title": "Compile Current State Projection",
+      "status": "blocked",
+      "dependencies": ["TASK-001"],
+      "payload": {
+        "target_page": "CURRENT_STATE.md",
+        "action": "reconcile_claims"
+      }
+    },
+    {
+      "id": "TASK-003",
+      "title": "Evaluate Protocol Rule S1 vs S0",
+      "status": "blocked",
+      "dependencies": ["TASK-002"],
+      "payload": {
+        "benchmark": "eval_workload_10",
+        "action": "run_evaluator"
+      }
+    }
+  ]
+}

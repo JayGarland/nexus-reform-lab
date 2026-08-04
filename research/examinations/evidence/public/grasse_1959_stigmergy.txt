@@ -1,0 +1,7 @@
+Title: La reconstruction du nid et les interactions interindividuelles chez les Termites
+Author: Pierre-Paul Grassé (1959)
+Journal: Insectes Sociaux, Volume 6, Issue 1, pp 41–80
+DOI: 10.1007/BF02223791
+Canonical URL: https://link.springer.com/article/10.1007/BF02223791
+Quoted Anchor: "La coordination des travaux et leur régulation ne dépendent pas directement des ouvriers, mais des constructions elles-mêmes. L'ouvrier ne dirige pas son travail, il est guidé par lui."
+Summary: Grassé introduced the term 'stigmergy' (from Greek stigma: mark, ergon: work) to describe how social insects (termites) coordinate nest building indirectly through work traces left in the environment.

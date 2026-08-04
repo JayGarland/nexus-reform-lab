@@ -1,0 +1,24 @@
+---
+source_repository: JayGarland/nexus
+source_commit: c073099481f9faa3abddde96cd22716816010704
+source_path: probes/restate/package.json
+source_sha256: f32dcb69aff856decffa406d50e6652f1469c000327f192b64d6dcc2f9ede160
+migration_reason: Restate probe package metadata
+epistemic_status: CONFIRMED
+---
+
+{
+  "name": "restate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@restatedev/restate-sdk": "^1.16.2"
+  }
+}

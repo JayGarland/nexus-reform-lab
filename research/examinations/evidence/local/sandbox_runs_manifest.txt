@@ -1,0 +1,27 @@
+---
+source_repository: JayGarland/nexus
+source_commit: c073099481f9faa3abddde96cd22716816010704
+source_path: research/sources/local-world-raw/autonomy-reconciliation/sandbox_runs_manifest.txt
+source_sha256: c793e0e22e238e69aa667985a395fd6e77d2411b3a29dcd3578ecb0be6eb7000
+migration_reason: Raw sandbox runs manifest
+epistemic_status: CONFIRMED
+---
+
+=== SANDBOX RUNS RECONCILIATION MANIFEST ===
+Directory: F:\GitHub\llm-agent-experiments\sandbox
+
+1. run-20260607-003952-0fd321
+   - Mode: A2 (Apparatus-minimized)
+   - Agent-visible surface: agent_view/WAKE.md, agent_view/WORLD.md
+   - Initial files visible to agent on Turn 1: 2 files
+   - Generated file: agent_view/HELLO.md
+
+2. run-20260607-211329-5c8519
+   - Mode: A2
+   - Agent-visible surface: WAKE.md, WORLD.md, COMPUTER.md, fragments/fragment-001.md .. fragment-034.md (37 files)
+
+3. world-00000002 (Pilot Live-Gradient Coupling Run in Copilot)
+   - Initial files: WAKE.md, Computer.md (relational/)
+   - Autonomously generated files: HELLO.md, INDEX.md, TIMELINE.md, fragment-035.md, outbox/question.md, ENTITY.md (v2.0 -> v2.8), 一首诗, 给下一个
+   - Injected pulses: fragment-001 (T8), fragment-002 (T11)
+   - Stopped: T12

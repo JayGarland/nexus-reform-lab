@@ -1,0 +1,801 @@
+---
+source_repository: JayGarland/nexus
+source_commit: c073099481f9faa3abddde96cd22716816010704
+source_path: experiments/slice-0/logs/beads/issue_graph.json
+source_sha256: 8eb0bea59285e6b37d60d7e84d4f67025016b1e2ae6c95487321fb6975c86b60
+migration_reason: Raw exported issue graph from initial polluted run
+epistemic_status: HISTORICAL-FAILURE
+---
+
+[
+  {
+    "id": "TASK-2d8",
+    "title": "L-0768: Thread closure request",
+    "description": "Fixture task L-0768",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:03:49Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:03:49Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-2d8",
+        "depends_on_id": "TASK-8bm",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:04:39Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-8bm",
+    "title": "L-0767: Final documentation check",
+    "description": "Fixture task L-0767",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:03:45Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:03:45Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-8bm",
+        "depends_on_id": "TASK-osy",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:04:33Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-osy",
+    "title": "L-0759: Re-verification after multi-agent dispatch updates",
+    "description": "Fixture task L-0759",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:03:41Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:03:41Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-osy",
+        "depends_on_id": "TASK-gqo",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:04:28Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-gqo",
+    "title": "L-0680: Post-deployment boundary audit",
+    "description": "Fixture task L-0680",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:03:35Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:03:35Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-gqo",
+        "depends_on_id": "TASK-v6o",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:04:23Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-8ws",
+    "title": "L-0768: Thread closure request",
+    "description": "Fixture task L-0768",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:03:32Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:03:32Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-8ws",
+        "depends_on_id": "TASK-z79",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:04:20Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-v6o",
+    "title": "L-0674: Production deployment check (Un-pushed / Un-restarted)",
+    "description": "Fixture task L-0674",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:03:28Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:03:28Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-v6o",
+        "depends_on_id": "TASK-6b6",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:04:18Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-z79",
+    "title": "L-0767: Final documentation check",
+    "description": "Fixture task L-0767",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:03:25Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:03:25Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-z79",
+        "depends_on_id": "TASK-2kg",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:04:15Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-6b6",
+    "title": "L-0669: End-to-end integration verification (Not Live)",
+    "description": "Fixture task L-0669",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:03:22Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:03:22Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-6b6",
+        "depends_on_id": "TASK-3kx",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:04:12Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-2kg",
+    "title": "L-0759: Re-verification after multi-agent dispatch updates",
+    "description": "Fixture task L-0759",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:03:19Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:03:19Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-2kg",
+        "depends_on_id": "TASK-8g1",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:04:10Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-8g1",
+    "title": "L-0680: Post-deployment boundary audit",
+    "description": "Fixture task L-0680",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:03:13Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:03:13Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-8g1",
+        "depends_on_id": "TASK-a3d",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:04:04Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-a3d",
+    "title": "L-0674: Production deployment check (Un-pushed / Un-restarted)",
+    "description": "Fixture task L-0674",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:03:07Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:03:07Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-a3d",
+        "depends_on_id": "TASK-358",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:04:00Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-i7x",
+    "title": "L-0768: Thread closure request",
+    "description": "Fixture task L-0768",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:03:06Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:03:06Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-i7x",
+        "depends_on_id": "TASK-zvd",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:04:01Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-358",
+    "title": "L-0669: End-to-end integration verification (Not Live)",
+    "description": "Fixture task L-0669",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:03:00Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:03:00Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-358",
+        "depends_on_id": "TASK-od4",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:03:55Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-zvd",
+    "title": "L-0767: Final documentation check",
+    "description": "Fixture task L-0767",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:02:59Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:02:59Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-zvd",
+        "depends_on_id": "TASK-xoh",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:03:55Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-xoh",
+    "title": "L-0759: Re-verification after multi-agent dispatch updates",
+    "description": "Fixture task L-0759",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:02:52Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:02:52Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-xoh",
+        "depends_on_id": "TASK-u4q",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:03:51Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-u4q",
+    "title": "L-0680: Post-deployment boundary audit",
+    "description": "Fixture task L-0680",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:02:42Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:02:42Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-u4q",
+        "depends_on_id": "TASK-4zz",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:03:47Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-4zz",
+    "title": "L-0674: Production deployment check (Un-pushed / Un-restarted)",
+    "description": "Fixture task L-0674",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:02:34Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:02:34Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-4zz",
+        "depends_on_id": "TASK-wdh",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:03:42Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-wdh",
+    "title": "L-0669: End-to-end integration verification (Not Live)",
+    "description": "Fixture task L-0669",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:02:24Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:02:24Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-wdh",
+        "depends_on_id": "TASK-sxu",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:03:37Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-g72",
+    "title": "L-0768: Thread closure request",
+    "description": "Fixture task L-0768",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:02:15Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:02:15Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-g72",
+        "depends_on_id": "TASK-7z0",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:03:28Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-7z0",
+    "title": "L-0767: Final documentation check",
+    "description": "Fixture task L-0767",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:02:04Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:02:04Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-7z0",
+        "depends_on_id": "TASK-yj4",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:03:22Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-yj4",
+    "title": "L-0759: Re-verification after multi-agent dispatch updates",
+    "description": "Fixture task L-0759",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:01:54Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:01:54Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-yj4",
+        "depends_on_id": "TASK-2mg",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:03:15Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-2mg",
+    "title": "L-0680: Post-deployment boundary audit",
+    "description": "Fixture task L-0680",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:01:47Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:01:47Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-2mg",
+        "depends_on_id": "TASK-8uc",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:03:08Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-8uc",
+    "title": "L-0674: Production deployment check (Un-pushed / Un-restarted)",
+    "description": "Fixture task L-0674",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:01:43Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:01:43Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-8uc",
+        "depends_on_id": "TASK-b6f",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:03:02Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-b6f",
+    "title": "L-0669: End-to-end integration verification (Not Live)",
+    "description": "Fixture task L-0669",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:01:39Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:01:39Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-b6f",
+        "depends_on_id": "TASK-zpy",
+        "type": "blocks",
+        "created_at": "2026-08-03T20:02:56Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 1,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-5tv",
+    "title": "L-0768: Thread closure request",
+    "description": "Fixture task",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:01:15Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:01:15Z",
+    "dependency_count": 0,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-35t",
+    "title": "L-0767: Final documentation check",
+    "description": "Fixture task",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:01:11Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:01:11Z",
+    "dependency_count": 0,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-qn2",
+    "title": "L-0759: Re-verification after multi-agent dispatch updates",
+    "description": "Fixture task",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:01:08Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:01:08Z",
+    "dependency_count": 0,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-orj",
+    "title": "L-0680: Post-deployment boundary audit",
+    "description": "Fixture task",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:01:05Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:01:05Z",
+    "dependency_count": 0,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-l2f",
+    "title": "L-0674: Production deployment check (Un-pushed / Un-restarted)",
+    "description": "Fixture task",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:01:02Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:01:02Z",
+    "dependency_count": 0,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-hvq",
+    "title": "L-0669: End-to-end integration verification (Not Live)",
+    "description": "Fixture task",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:00:59Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:00:59Z",
+    "dependency_count": 0,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-4s5",
+    "title": "L-0667: Code refactoring \u0026 unit tests",
+    "description": "Fixture task",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:00:56Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:00:56Z",
+    "dependency_count": 0,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-9ez",
+    "title": "L-0666: Decoupling implementation plan",
+    "description": "Fixture task",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:00:53Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:00:53Z",
+    "dependency_count": 0,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-d96",
+    "title": "L-0662: Session state ledger specification (superseded by L-0660)",
+    "description": "Fixture task",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:00:50Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:00:50Z",
+    "dependency_count": 0,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-xft",
+    "title": "L-0660: Primordial protocol \u0026 Telegram Inline Keyboard selection",
+    "description": "Fixture task",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:00:47Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:00:47Z",
+    "dependency_count": 0,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-smh",
+    "title": "L-0658: cc-connect control plane structural diagnosis",
+    "description": "Fixture task",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T18:00:44Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T18:00:44Z",
+    "dependency_count": 0,
+    "dependent_count": 0,
+    "comment_count": 0
+  },
+  {
+    "id": "TASK-6ja",
+    "title": "Compile Current State Projection",
+    "description": "Target CURRENT_STATE.md",
+    "status": "open",
+    "priority": 2,
+    "issue_type": "task",
+    "owner": "nexus-architect@resonova.local",
+    "created_at": "2026-08-03T17:35:09Z",
+    "created_by": "nexus-architect",
+    "updated_at": "2026-08-03T17:35:09Z",
+    "dependencies": [
+      {
+        "issue_id": "TASK-6ja",
+        "depends_on_id": "TASK-wak",
+        "type": "blocks",
+        "created_at": "2026-08-03T19:35:16Z",
+        "created_by": "nexus-architect",
+        "metadata": "{}"
+      }
+    ],
+    "dependency_count": 1,
+    "dependent_count": 0,
+    "comment_count": 0
+  }
+]

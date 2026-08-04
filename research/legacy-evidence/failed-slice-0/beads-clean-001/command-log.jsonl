@@ -1,0 +1,45 @@
+---
+source_repository: JayGarland/nexus
+source_commit: c073099481f9faa3abddde96cd22716816010704
+source_path: experiments/slice-0/runs/beads-clean-001/operator/command-log.jsonl
+source_sha256: fa09d4ff7d0fade82e7eeb18e9883e81c4cdbc0e50c7063bab23faba5638b933
+migration_reason: Command log from isolated beads run
+epistemic_status: HISTORICAL-FAILURE
+---
+
+{"index":1,"cmd":"npx @beads/bd --version","startTime":"2026-08-03T18:12:55.276Z","endTime":"2026-08-03T18:12:57.585Z","exitCode":0,"stdoutFile":"stdout/cmd_01.txt","stderrFile":"stderr/cmd_01.txt"}
+{"index":2,"cmd":"git init","startTime":"2026-08-03T18:12:57.586Z","endTime":"2026-08-03T18:12:57.683Z","exitCode":0,"stdoutFile":"stdout/cmd_02.txt","stderrFile":"stderr/cmd_02.txt"}
+{"index":3,"cmd":"npx @beads/bd init --prefix TASK","startTime":"2026-08-03T18:12:57.685Z","endTime":"2026-08-03T18:13:06.060Z","exitCode":0,"stdoutFile":"stdout/cmd_03.txt","stderrFile":"stderr/cmd_03.txt"}
+{"index":4,"cmd":"npx @beads/bd create \"L-0658: cc-connect control plane structural diagnosis\" -d \"Task for L-0658\"","startTime":"2026-08-03T18:13:06.062Z","endTime":"2026-08-03T18:13:09.658Z","exitCode":0,"stdoutFile":"stdout/cmd_04.txt","stderrFile":"stderr/cmd_04.txt"}
+{"index":5,"cmd":"npx @beads/bd create \"L-0660: Primordial protocol & Telegram Inline Keyboard selection\" -d \"Task for L-0660\"","startTime":"2026-08-03T18:13:09.660Z","endTime":"2026-08-03T18:13:13.025Z","exitCode":0,"stdoutFile":"stdout/cmd_05.txt","stderrFile":"stderr/cmd_05.txt"}
+{"index":6,"cmd":"npx @beads/bd create \"L-0662: Session state ledger specification (superseded by L-0660)\" -d \"Task for L-0662\"","startTime":"2026-08-03T18:13:13.026Z","endTime":"2026-08-03T18:13:16.421Z","exitCode":0,"stdoutFile":"stdout/cmd_06.txt","stderrFile":"stderr/cmd_06.txt"}
+{"index":7,"cmd":"npx @beads/bd create \"L-0666: Decoupling implementation plan\" -d \"Task for L-0666\"","startTime":"2026-08-03T18:13:16.422Z","endTime":"2026-08-03T18:13:20.072Z","exitCode":0,"stdoutFile":"stdout/cmd_07.txt","stderrFile":"stderr/cmd_07.txt"}
+{"index":8,"cmd":"npx @beads/bd create \"L-0667: Code refactoring & unit tests\" -d \"Task for L-0667\"","startTime":"2026-08-03T18:13:20.074Z","endTime":"2026-08-03T18:13:23.438Z","exitCode":0,"stdoutFile":"stdout/cmd_08.txt","stderrFile":"stderr/cmd_08.txt"}
+{"index":9,"cmd":"npx @beads/bd create \"L-0669: End-to-end integration verification (Not Live)\" -d \"Task for L-0669\"","startTime":"2026-08-03T18:13:23.439Z","endTime":"2026-08-03T18:13:26.803Z","exitCode":0,"stdoutFile":"stdout/cmd_09.txt","stderrFile":"stderr/cmd_09.txt"}
+{"index":10,"cmd":"npx @beads/bd create \"L-0759: Re-verification after multi-agent dispatch updates\" -d \"Task for L-0759\"","startTime":"2026-08-03T18:13:26.805Z","endTime":"2026-08-03T18:13:30.204Z","exitCode":0,"stdoutFile":"stdout/cmd_10.txt","stderrFile":"stderr/cmd_10.txt"}
+{"index":11,"cmd":"npx @beads/bd create \"L-0674: Production deployment check (Local committed, Un-pushed, Un-restarted)\" -d \"Task for L-0674\"","startTime":"2026-08-03T18:13:30.206Z","endTime":"2026-08-03T18:13:33.374Z","exitCode":0,"stdoutFile":"stdout/cmd_11.txt","stderrFile":"stderr/cmd_11.txt"}
+{"index":12,"cmd":"npx @beads/bd create \"L-0680: Post-deployment boundary audit\" -d \"Task for L-0680\"","startTime":"2026-08-03T18:13:33.375Z","endTime":"2026-08-03T18:13:36.253Z","exitCode":0,"stdoutFile":"stdout/cmd_12.txt","stderrFile":"stderr/cmd_12.txt"}
+{"index":13,"cmd":"npx @beads/bd create \"L-0767: Final documentation check\" -d \"Task for L-0767\"","startTime":"2026-08-03T18:13:36.255Z","endTime":"2026-08-03T18:13:39.556Z","exitCode":0,"stdoutFile":"stdout/cmd_13.txt","stderrFile":"stderr/cmd_13.txt"}
+{"index":14,"cmd":"npx @beads/bd create \"L-0768: Thread closure request\" -d \"Task for L-0768\"","startTime":"2026-08-03T18:13:39.558Z","endTime":"2026-08-03T18:13:43.071Z","exitCode":0,"stdoutFile":"stdout/cmd_14.txt","stderrFile":"stderr/cmd_14.txt"}
+{"index":15,"cmd":"npx @beads/bd dep add TASK-3xp TASK-2lr","startTime":"2026-08-03T18:13:43.073Z","endTime":"2026-08-03T18:13:46.566Z","exitCode":0,"stdoutFile":"stdout/cmd_15.txt","stderrFile":"stderr/cmd_15.txt"}
+{"index":16,"cmd":"npx @beads/bd dep add TASK-yyr TASK-3xp","startTime":"2026-08-03T18:13:46.567Z","endTime":"2026-08-03T18:13:50.012Z","exitCode":0,"stdoutFile":"stdout/cmd_16.txt","stderrFile":"stderr/cmd_16.txt"}
+{"index":17,"cmd":"npx @beads/bd dep add TASK-tn8 TASK-3xp","startTime":"2026-08-03T18:13:50.014Z","endTime":"2026-08-03T18:13:53.262Z","exitCode":0,"stdoutFile":"stdout/cmd_17.txt","stderrFile":"stderr/cmd_17.txt"}
+{"index":18,"cmd":"npx @beads/bd dep add TASK-jxu TASK-tn8","startTime":"2026-08-03T18:13:53.264Z","endTime":"2026-08-03T18:13:56.503Z","exitCode":0,"stdoutFile":"stdout/cmd_18.txt","stderrFile":"stderr/cmd_18.txt"}
+{"index":19,"cmd":"npx @beads/bd dep add TASK-d0a TASK-jxu","startTime":"2026-08-03T18:13:56.504Z","endTime":"2026-08-03T18:13:59.667Z","exitCode":0,"stdoutFile":"stdout/cmd_19.txt","stderrFile":"stderr/cmd_19.txt"}
+{"index":20,"cmd":"npx @beads/bd dep add TASK-2yl TASK-d0a","startTime":"2026-08-03T18:13:59.668Z","endTime":"2026-08-03T18:14:02.691Z","exitCode":0,"stdoutFile":"stdout/cmd_20.txt","stderrFile":"stderr/cmd_20.txt"}
+{"index":21,"cmd":"npx @beads/bd dep add TASK-37s TASK-2yl","startTime":"2026-08-03T18:14:02.692Z","endTime":"2026-08-03T18:14:06.077Z","exitCode":0,"stdoutFile":"stdout/cmd_21.txt","stderrFile":"stderr/cmd_21.txt"}
+{"index":22,"cmd":"npx @beads/bd dep add TASK-jcl TASK-37s","startTime":"2026-08-03T18:14:06.078Z","endTime":"2026-08-03T18:14:09.312Z","exitCode":0,"stdoutFile":"stdout/cmd_22.txt","stderrFile":"stderr/cmd_22.txt"}
+{"index":23,"cmd":"npx @beads/bd dep add TASK-2wm TASK-jcl","startTime":"2026-08-03T18:14:09.313Z","endTime":"2026-08-03T18:14:12.952Z","exitCode":0,"stdoutFile":"stdout/cmd_23.txt","stderrFile":"stderr/cmd_23.txt"}
+{"index":24,"cmd":"npx @beads/bd dep add TASK-1pt TASK-2wm","startTime":"2026-08-03T18:14:12.953Z","endTime":"2026-08-03T18:14:16.104Z","exitCode":0,"stdoutFile":"stdout/cmd_24.txt","stderrFile":"stderr/cmd_24.txt"}
+{"index":25,"cmd":"npx @beads/bd ready","startTime":"2026-08-03T18:14:16.105Z","endTime":"2026-08-03T18:14:18.989Z","exitCode":0,"stdoutFile":"stdout/cmd_25.txt","stderrFile":"stderr/cmd_25.txt"}
+{"index":26,"cmd":"npx @beads/bd close TASK-2lr","startTime":"2026-08-03T18:14:18.991Z","endTime":"2026-08-03T18:14:22.562Z","exitCode":0,"stdoutFile":"stdout/cmd_26.txt","stderrFile":"stderr/cmd_26.txt"}
+{"index":27,"cmd":"npx @beads/bd ready","startTime":"2026-08-03T18:14:22.564Z","endTime":"2026-08-03T18:14:26.186Z","exitCode":0,"stdoutFile":"stdout/cmd_27.txt","stderrFile":"stderr/cmd_27.txt"}
+{"index":28,"cmd":"npx @beads/bd close TASK-3xp","startTime":"2026-08-03T18:14:26.187Z","endTime":"2026-08-03T18:14:30.466Z","exitCode":0,"stdoutFile":"stdout/cmd_28.txt","stderrFile":"stderr/cmd_28.txt"}
+{"index":29,"cmd":"npx @beads/bd ready","startTime":"2026-08-03T18:14:30.468Z","endTime":"2026-08-03T18:14:33.302Z","exitCode":0,"stdoutFile":"stdout/cmd_29.txt","stderrFile":"stderr/cmd_29.txt"}
+{"index":30,"cmd":"npx @beads/bd close TASK-yyr","startTime":"2026-08-03T18:14:33.304Z","endTime":"2026-08-03T18:14:36.205Z","exitCode":0,"stdoutFile":"stdout/cmd_30.txt","stderrFile":"stderr/cmd_30.txt"}
+{"index":31,"cmd":"npx @beads/bd ready","startTime":"2026-08-03T18:14:36.206Z","endTime":"2026-08-03T18:14:38.997Z","exitCode":0,"stdoutFile":"stdout/cmd_31.txt","stderrFile":"stderr/cmd_31.txt"}
+{"index":32,"cmd":"npx @beads/bd close TASK-tn8","startTime":"2026-08-03T18:14:38.997Z","endTime":"2026-08-03T18:14:42.019Z","exitCode":0,"stdoutFile":"stdout/cmd_32.txt","stderrFile":"stderr/cmd_32.txt"}
+{"index":33,"cmd":"npx @beads/bd ready","startTime":"2026-08-03T18:14:42.020Z","endTime":"2026-08-03T18:14:44.969Z","exitCode":0,"stdoutFile":"stdout/cmd_33.txt","stderrFile":"stderr/cmd_33.txt"}
+{"index":34,"cmd":"npx @beads/bd close TASK-jxu","startTime":"2026-08-03T18:14:44.971Z","endTime":"2026-08-03T18:14:48.519Z","exitCode":0,"stdoutFile":"stdout/cmd_34.txt","stderrFile":"stderr/cmd_34.txt"}
+{"index":35,"cmd":"npx @beads/bd ready","startTime":"2026-08-03T18:14:48.521Z","endTime":"2026-08-03T18:14:51.951Z","exitCode":0,"stdoutFile":"stdout/cmd_35.txt","stderrFile":"stderr/cmd_35.txt"}
+{"index":36,"cmd":"npx @beads/bd list --all --json","startTime":"2026-08-03T18:14:51.953Z","endTime":"2026-08-03T18:14:54.942Z","exitCode":0,"stdoutFile":"stdout/cmd_36.txt","stderrFile":"stderr/cmd_36.txt"}
