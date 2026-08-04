@@ -1,8 +1,9 @@
 # Seeded Instance Continuity
 
-> **Document Status**: `CONCEPT CLARIFICATION — UNDER OUTSIDE REVIEW`
-> **Scope**: Conceptual clarification of Persistent World as the persistent entity, fresh box AI instances as continuity-less executors, the Seed as an environment-trace entry view, regrowth, work duration, exit boundaries and obligations, stigmergic handoff, the Seed vs Work Item relation, the minimum validation form vs the final architecture, and the two Clean-Room meanings. Conceptual only; no Runtime, carrier, or schema is bound.
-> **Related**: [`WORK_ITEM_MINIMUM_CONTRACT.md`](../contracts/WORK_ITEM_MINIMUM_CONTRACT.md) (`CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md`](../plans/FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md) (`CONFIRMED FOR ROADMAP SCOPE`)
+> **Document Status**: `CONCEPT CLARIFICATION — CONFIRMED FOR CONCEPTUAL SCOPE`
+> **Reviewed Commit**: `877b3ddbe6eb21da8d7250b5b3a30e88fae5ad5d`
+> **Scope**: Conceptual clarification of Persistent World as the persistent entity, fresh box AI instances as continuity-less executors, the Seed as an environment-trace entry view, regrowth, work duration, exit boundaries and obligations, stigmergic handoff, the Seed vs Work Item relation, the minimum validation form vs the final architecture, and the two Clean-Room meanings. Conceptual only; no Runtime, Seed compiler, carrier, scheduler, worker, or Nexus integration is confirmed.
+> **Related**: [`WORK_ITEM_MINIMUM_CONTRACT.md`](../contracts/WORK_ITEM_MINIMUM_CONTRACT.md) (`CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md`](../plans/FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md) (`CONFIRMED FOR ROADMAP SCOPE`), [`PERSISTENT_WORLD_OBJECT_MODEL.md`](PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`)
 
 ---
 

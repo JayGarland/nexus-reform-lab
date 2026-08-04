@@ -12,9 +12,10 @@
 - **Latest Externally Confirmed Concept**: `Stigmergy Carrier & Artifact Taxonomy — CONFIRMED FOR CONCEPTUAL SCOPE` (Reviewed Commit: `f08d7636714be6285405894cca0adac14764069a`)
 - **Latest Externally Confirmed Roadmap**: `Four-Layer One-World Minimum Landing Roadmap — CONFIRMED FOR ROADMAP SCOPE` (Reviewed Commit: `64642bf3e601030c5c4a19c376a34d1e420890ec`)
 - **Latest Externally Confirmed Contract**: `Work Item Minimum Contract — CONFIRMED FOR SEMANTIC CONTRACT SCOPE` (Reviewed Commit: `0882f57ccc2d153e3d36519e3a70509d53add30a`)
+- **Latest Externally Confirmed Continuity Clarification**: `Seeded Instance Continuity — CONFIRMED FOR CONCEPTUAL SCOPE` (Reviewed Commit: `877b3ddbe6eb21da8d7250b5b3a30e88fae5ad5d`)
 - **Current World Level**: `Level 2 — Recoverable Persistent Artifact World`
-- **Current Phase**: `Seeded Instance Continuity Concept Write-Back`
-- **Next Authorized Work**: `Submit Seeded Instance Continuity concept clarification; no Runtime, no carrier selection, no Probe, no Nexus connection`
+- **Current Phase**: `Persistent World Object Model Clarification`
+- **Next Authorized Work**: `Submit Persistent World Object Model; no Runtime, no Provider/carrier selection, no Probe, no Nexus connection`
 - **Current Operational Phase**: See [`../state/CURRENT_PHASE.md`](../state/CURRENT_PHASE.md)
 - **Current Ratified Verdicts**: See [`../state/CURRENT_VERDICT.md`](../state/CURRENT_VERDICT.md)
 - **External Verdict History**: See [`../state/EXTERNAL_VERDICT_HISTORY.md`](../state/EXTERNAL_VERDICT_HISTORY.md)
@@ -38,6 +39,7 @@
 - Ratified the Stigmergy Carrier & Artifact Taxonomy as `CONFIRMED FOR CONCEPTUAL SCOPE` (commit `f08d7636714be6285405894cca0adac14764069a`) and closed the Knowledge E3 segment. Established the global Four-Layer One-World Minimum Landing Roadmap ([`research/plans/FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md`](../research/plans/FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md), `ROADMAP — UNDER OUTSIDE REVIEW`). Phase transitioned to `Global Minimum Landing Roadmap Preparation`. No Probe run; no Provider selected; official Nexus unmodified and not connected.
 - Ratified the Four-Layer One-World Minimum Landing Roadmap as `CONFIRMED FOR ROADMAP SCOPE` (commit `64642bf3e601030c5c4a19c376a34d1e420890ec`) and drafted the minimum Work Item semantic Contract ([`research/contracts/WORK_ITEM_MINIMUM_CONTRACT.md`](../research/contracts/WORK_ITEM_MINIMUM_CONTRACT.md), `CONTRACT DRAFT — UNDER OUTSIDE REVIEW`). Phase transitioned to `Coordination Work Item Minimum Contract Drafting`. No Probe run; no carrier selected; no Runtime implemented; official Nexus unmodified and not connected.
 - Ratified the Work Item Minimum Contract as `CONFIRMED FOR SEMANTIC CONTRACT SCOPE` (commit `0882f57ccc2d153e3d36519e3a70509d53add30a`) and recorded the Seed / Fresh Instance / pheromone handoff / Persistent World continuity clarification ([`research/synthesis/SEEDED_INSTANCE_CONTINUITY.md`](../research/synthesis/SEEDED_INSTANCE_CONTINUITY.md), `CONCEPT CLARIFICATION — UNDER OUTSIDE REVIEW`). Phase transitioned to `Seeded Instance Continuity Concept Write-Back`. No Runtime implemented; no carrier selected; no Probe run; official Nexus unmodified and not connected.
+- Ratified Seeded Instance Continuity as `CONFIRMED FOR CONCEPTUAL SCOPE` (commit `877b3ddbe6eb21da8d7250b5b3a30e88fae5ad5d`) and established the unified Persistent World Object Model ([`research/synthesis/PERSISTENT_WORLD_OBJECT_MODEL.md`](../research/synthesis/PERSISTENT_WORLD_OBJECT_MODEL.md), `CONCEPT MODEL — UNDER OUTSIDE REVIEW`). Phase transitioned to `Persistent World Object Model Clarification`. No Runtime implemented; no Provider or carrier selected; no Probe run; official Nexus unmodified and not connected.
 
 ---
 

@@ -7,6 +7,7 @@
 > **Basis**: Four-Layer One-World Minimum Landing Roadmap (`CONFIRMED FOR ROADMAP SCOPE`, reviewed commit `64642bf3e601030c5c4a19c376a34d1e420890ec`).
 > **Confirmed Scope**: stable Work Item identity; open Work Item type; carrier-neutral semantic state; Claim / Lease; execution attempt identity; executor declaration separated from external verdict; explicit blocked semantics; independent review; retry / recovery lineage; canonical work state separated from notification / mailbox / label; legacy Nexus as Adapter mapping clue only.
 > **Not Yet Confirmed**: concrete YAML / JSON schema; Markdown, Beads, GitHub Issues or database implementation; Runtime; scheduler; worker; concurrency model; official Nexus migration; production readiness.
+> **Related**: [`PERSISTENT_WORLD_OBJECT_MODEL.md`](../synthesis/PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`), [`SEEDED_INSTANCE_CONTINUITY.md`](../synthesis/SEEDED_INSTANCE_CONTINUITY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`)
 
 ---
 

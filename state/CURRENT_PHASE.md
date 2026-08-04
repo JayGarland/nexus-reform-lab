@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Seeded Instance Continuity Concept Write-Back`
-- **Current Focus**: Record the conceptual clarification of Seed, Fresh Instance, pheromone handoff, and Persistent World continuity, without implementing any Runtime, selecting a carrier, or connecting the official Nexus.
-- **External Audit Status**: `WORK ITEM MINIMUM CONTRACT CONFIRMED FOR SEMANTIC CONTRACT SCOPE — SEEDED INSTANCE CONTINUITY UNDER OUTSIDE REVIEW`
-- **Started At**: `2026-08-04T08:15:00+02:00`
+- **Current Phase**: `Persistent World Object Model Clarification`
+- **Current Focus**: Establish the unified relation model of Concept, Protocol, Provider, Artifact, Work Item, Carrier, History, and Stigmergy inside the Persistent World, without implementing any Runtime, selecting a Provider or carrier, or connecting the official Nexus.
+- **External Audit Status**: `SEEDED INSTANCE CONTINUITY CONFIRMED FOR CONCEPTUAL SCOPE — PERSISTENT WORLD OBJECT MODEL UNDER OUTSIDE REVIEW`
+- **Started At**: `2026-08-04T08:30:00+02:00`
 
 ---
 
