@@ -1,9 +1,11 @@
 # Layered World Runtime Model
 
-> **Document Status**: `CONCEPT MODEL — UNDER OUTSIDE REVIEW`
+> **Document Status**: `CONCEPT MODEL — CONFIRMED FOR CONCEPTUAL SCOPE`
+> **Reviewed Commit**: `8e05d6a8395edf3fb85a51be0c0fa5ea085383a5`
 > **Purpose**: Define the layered separation between Concept, Contract / Protocol, Provider / Engine, Runtime / Orchestration, Persistent World Instance, and Outside Governance, so that no single Engine, Runtime, or box AI can claim a Concept is landed just because it was installed or invoked.
-> **Scope**: Conceptual layering only. This model defines responsibilities, not an implementation. No Runtime, Room engine, Session launcher, or Workspace resolver is implemented or selected.
-> **Related**: [`PERSISTENT_WORLD_OBJECT_MODEL.md`](PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md`](PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`), [`SEEDED_INSTANCE_CONTINUITY.md`](SEEDED_INSTANCE_CONTINUITY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`WORK_ITEM_MINIMUM_CONTRACT.md`](../contracts/WORK_ITEM_MINIMUM_CONTRACT.md) (`CONFIRMED FOR SEMANTIC CONTRACT SCOPE`)
+> **Scope**: Conceptual layering only. This model defines responsibilities, not an implementation. No Runtime, Room engine, Session launcher, or Workspace resolver is implemented or selected. No concrete implementation, Engine, Runtime, Session launcher, Workspace resolver, or production readiness is confirmed.
+> **Confirmed Scope**: Concept Layer; Contract / Protocol Layer; Provider / Engine Layer; Runtime / Orchestration Layer; Persistent World Instance Layer; Outside Governance Layer; installing an Engine does not mean its Concept is landed; Runtime only composes and advances work and gains no outside governance power; box AI, Engine, and Runtime must not self-approve.
+> **Related**: [`PERSISTENT_WORLD_OBJECT_MODEL.md`](PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md`](PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`), [`SEEDED_INSTANCE_CONTINUITY.md`](SEEDED_INSTANCE_CONTINUITY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`WORK_ITEM_MINIMUM_CONTRACT.md`](../contracts/WORK_ITEM_MINIMUM_CONTRACT.md) (`CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`PERSISTENT_SCOPE_TOPOLOGY.md`](PERSISTENT_SCOPE_TOPOLOGY.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`)
 
 ---
 
@@ -179,6 +181,12 @@ stigmergic traces
 ```
 
 World identity does NOT equal some fixed parent directory, although it may currently be carried by a Git repository and its Artifact set.
+
+The Persistent World Instance Layer MAY contain an extensible Persistent Scope Topology (see [`PERSISTENT_SCOPE_TOPOLOGY.md`](PERSISTENT_SCOPE_TOPOLOGY.md), `CONCEPT MODEL — UNDER OUTSIDE REVIEW`):
+
+- Runtime MUST NOT assume a fixed `World → Room` depth.
+- Runtime MUST locate the wake scope through the Scope Registry and authorized relations.
+- The current minimum implementation still uses Room as the wake scope.
 
 ### 6. Outside Governance Layer
 

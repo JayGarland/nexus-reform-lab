@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Layered Persistent World and Room Model Clarification`
-- **Current Focus**: Establish the layered separation of Concept, Contract, Engine, Runtime, World Instance, and Outside Governance, and clarify Persistent World, Persistent Room, Runtime Session, Workspace Binding, and the two-leg asynchronous operating model, without implementing any Runtime, creating a Room engine, resolving real Workspace paths, selecting a Provider or carrier, or connecting the official Nexus.
-- **External Audit Status**: `PERSISTENT WORLD OBJECT MODEL CONFIRMED FOR CONCEPTUAL SCOPE — LAYERED RUNTIME / ROOM / TWO-LEG MODELS UNDER OUTSIDE REVIEW`
-- **Started At**: `2026-08-04T08:45:00+02:00`
+- **Current Phase**: `Persistent Scope Topology Clarification`
+- **Current Focus**: Generalize World / Room into an extensible Persistent Scope topology so that `World → Room` is the current minimum topology profile rather than a permanently fixed hierarchy, without implementing any Runtime, creating a Scope or Room engine, creating directories, resolving real Workspace paths, selecting a Provider or carrier, or connecting the official Nexus.
+- **External Audit Status**: `LAYERED + TWO-LEG MODELS CONFIRMED — ROOM/WS PARTIAL — PERSISTENT SCOPE TOPOLOGY UNDER OUTSIDE REVIEW`
+- **Started At**: `2026-08-04T09:00:00+02:00`
 
 ---
 

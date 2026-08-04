@@ -1,8 +1,9 @@
 # Persistent Room and Workspace Binding
 
 > **Document Status**: `CONCEPT MODEL — UNDER OUTSIDE REVIEW`
+> **Outside Review Status**: `PARTIAL — ROOM AND WORKSPACE SEMANTICS CONFIRMED; PERSISTENT SCOPE TOPOLOGY EXTENSION REQUIRED`
 > **Purpose**: Define Persistent World, Persistent Room, Workspace Binding, and Runtime Session, their persistence boundaries, and the wake-in-Room entry chain. Conceptual only; no Room engine, Session launcher, Workspace resolver, or directory schema is implemented, and no real Workspace path is resolved or scanned.
-> **Related**: [`PERSISTENT_WORLD_OBJECT_MODEL.md`](PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`LAYERED_WORLD_RUNTIME_MODEL.md`](LAYERED_WORLD_RUNTIME_MODEL.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`), [`SEEDED_INSTANCE_CONTINUITY.md`](SEEDED_INSTANCE_CONTINUITY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`)
+> **Related**: [`PERSISTENT_WORLD_OBJECT_MODEL.md`](PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`LAYERED_WORLD_RUNTIME_MODEL.md`](LAYERED_WORLD_RUNTIME_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`SEEDED_INSTANCE_CONTINUITY.md`](SEEDED_INSTANCE_CONTINUITY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`PERSISTENT_SCOPE_TOPOLOGY.md`](PERSISTENT_SCOPE_TOPOLOGY.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`)
 
 ---
 
@@ -394,6 +395,18 @@ android:
 ```
 
 This YAML is an illustration of the concept, NOT a bound schema and NOT a resolved or authorized real path in this iteration.
+
+## 11. Relation to Persistent Scope Topology
+
+See [`PERSISTENT_SCOPE_TOPOLOGY.md`](PERSISTENT_SCOPE_TOPOLOGY.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`).
+
+- Room is the current local Persistent Scope type.
+- `World → Room` is the current minimum topology profile, NOT a permanent fixed hierarchy.
+- The underlying model allows other Persistent Scope types.
+- The current fresh instance wakes inside a Room.
+- In the future, a fresh instance may wake inside any Scope that satisfies the local executable scope contract (Seed / WAKE entry, authority boundary, Protocol refs, Work Item context, Workspace Bindings, exit obligations, write-back target).
+
+The confirmed Room, Workspace Binding, and directory-carrier content above remains correct and is not rewritten here.
 
 ---
 

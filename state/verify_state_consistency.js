@@ -18,7 +18,8 @@ const allowedVerdicts = new Set([
   'CONFIRMED FOR E3 EXECUTION-PLAN SCOPE',
   'CONFIRMED FOR CONCEPTUAL SCOPE',
   'CONFIRMED FOR ROADMAP SCOPE',
-  'CONFIRMED FOR SEMANTIC CONTRACT SCOPE'
+  'CONFIRMED FOR SEMANTIC CONTRACT SCOPE',
+  'CONFIRMED FOR OPERATING MODEL SCOPE'
 ]);
 
 // ---------------------------------------------------------------------------
@@ -35,6 +36,37 @@ const allowedVerdicts = new Set([
 // "AUTHORIZED", "NOT YET AUDITED" => "NOT YET AUDITED").
 // ---------------------------------------------------------------------------
 const GATE_STAGES = [
+  {
+    id: 'PERSISTENT_SCOPE_TOPOLOGY_CLARIFICATION',
+    phaseIncludes: ['scope topology'],
+    actionReference: ['scope topology'],
+    verdicts: {
+      'State Consistency': ['CONFIRMED', 'PARTIAL', 'REJECTED', 'WITHHELD'],
+      'Repository-wide Persistent Artifact World': ['CONFIRMED', 'CONFIRMED AT LEVEL 2'],
+      'Cold-Start Recoverability': ['CONFIRMED'],
+      'CR-S0 Authorization': ['WITHHELD'],
+      'Modularity & Replaceability Doctrine': ['CONFIRMED'],
+      'Prior-Art Discovery Plan': ['CONFIRMED FOR PLANNING SCOPE'],
+      'Prior-Art E1/E2 Survey': ['CONFIRMED FOR E1/E2 SURVEY SCOPE'],
+      'E3 Probe Queue': ['UNDER OUTSIDE REVIEW'],
+      'Knowledge Projection Provider Comparison': ['CONFIRMED FOR E1/E2 COMPARISON SCOPE'],
+      'Astro-Han Knowledge E3': ['CONFIRMED FOR E3 SCOPE'],
+      'base-llm-wiki': ['E2'],
+      'Knowledge Provider Selected': ['NO'],
+      'base-llm-wiki E3 Comparison Plan': ['CONFIRMED FOR E3 EXECUTION-PLAN SCOPE'],
+      'base-llm-wiki Knowledge E3': ['CONFIRMED FOR E3 SCOPE'],
+      'Knowledge E3 Segment': ['CLOSED'],
+      'Stigmergy Carrier & Artifact Taxonomy': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Four-Layer One-World Minimum Landing Roadmap': ['CONFIRMED FOR ROADMAP SCOPE'],
+      'Work Item Minimum Contract': ['CONFIRMED FOR SEMANTIC CONTRACT SCOPE'],
+      'Seeded Instance Continuity': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Persistent World Object Model': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Layered World Runtime Model': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Two-Leg Asynchronous Operating Model': ['CONFIRMED FOR OPERATING MODEL SCOPE'],
+      'Persistent Room and Workspace Binding': ['PARTIAL'],
+      'Persistent Scope Topology': ['UNDER OUTSIDE REVIEW']
+    }
+  },
   {
     id: 'LAYERED_WORLD_AND_ROOM_MODEL_CLARIFICATION',
     phaseIncludes: ['layered', 'room model'],
@@ -707,6 +739,11 @@ function verifyRepository(targetRoot, options = {}) {
         rawLogs.push(`  NOTE: Acceptance is bounded to the semantic contract scope; no carrier, schema, or Runtime is confirmed.`);
         if (fullyAccepted !== 'yes' || currentAuthority !== 'yes' || acceptedScope === 'None' || rejectedScope === 'None') {
           fail(`CONFIRMED FOR SEMANTIC CONTRACT SCOPE schema rules violated for milestone "${rawMilestone}"!`);
+        }
+      } else if (verdict === 'CONFIRMED FOR OPERATING MODEL SCOPE') {
+        rawLogs.push(`  NOTE: Acceptance is bounded to the operating model scope; no Runtime, scheduler, or worker implementation is confirmed.`);
+        if (fullyAccepted !== 'yes' || currentAuthority !== 'yes' || acceptedScope === 'None' || rejectedScope === 'None') {
+          fail(`CONFIRMED FOR OPERATING MODEL SCOPE schema rules violated for milestone "${rawMilestone}"!`);
         }
       }
 

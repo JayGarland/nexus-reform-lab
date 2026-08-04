@@ -1,9 +1,11 @@
 # Two-Leg Asynchronous Operating Model
 
-> **Document Status**: `OPERATING MODEL — UNDER OUTSIDE REVIEW`
+> **Document Status**: `OPERATING MODEL — CONFIRMED FOR OPERATING MODEL SCOPE`
+> **Reviewed Commit**: `8e05d6a8395edf3fb85a51be0c0fa5ea085383a5`
 > **Purpose**: Record the asynchronous operating model between the box-outside discussion / governance leg and the box-in execution / artifact leg, including their responsibilities, convergence artifacts, discussion write-back flow, and the outside review order.
 > **Scope**: Operating model only. It defines how work is coordinated; it does not implement Runtime, a Room engine, a scheduler, or a worker.
-> **Related**: [`PERSISTENT_WORLD_OBJECT_MODEL.md`](PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`LAYERED_WORLD_RUNTIME_MODEL.md`](LAYERED_WORLD_RUNTIME_MODEL.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`), [`PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md`](PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`), [`SEEDED_INSTANCE_CONTINUITY.md`](SEEDED_INSTANCE_CONTINUITY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`)
+> **Confirmed Scope**: Outside Discussion and Governance Leg; Inside Execution and Artifact Leg; the two legs advance asynchronously; outside may keep discussing while the inside leg executes; outside discussion must not silently change the authorization of an executing Work Item; changing current authorization requires an explicit update / cancel / supersede instruction; discussion results are written back after classification, authorization, instruction, Artifact, Git, and outside review; a completion report is only an index; Commit, Diff, Raw Evidence, and Artifacts are the review basis.
+> **Related**: [`PERSISTENT_WORLD_OBJECT_MODEL.md`](PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`LAYERED_WORLD_RUNTIME_MODEL.md`](LAYERED_WORLD_RUNTIME_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md`](PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`), [`SEEDED_INSTANCE_CONTINUITY.md`](SEEDED_INSTANCE_CONTINUITY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`)
 
 ---
 
