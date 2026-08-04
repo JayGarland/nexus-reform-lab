@@ -37,6 +37,43 @@ const allowedVerdicts = new Set([
 // ---------------------------------------------------------------------------
 const GATE_STAGES = [
   {
+    id: 'GLOBAL_ROADMAP_RECONCILIATION_AND_CONTRACT_FREEZE',
+    phaseIncludes: ['reconciliation', 'freeze'],
+    actionReference: ['reconciliation', 'freeze'],
+    verdicts: {
+      'State Consistency': ['CONFIRMED', 'PARTIAL', 'REJECTED', 'WITHHELD'],
+      'Repository-wide Persistent Artifact World': ['CONFIRMED', 'CONFIRMED AT LEVEL 2'],
+      'Cold-Start Recoverability': ['CONFIRMED'],
+      'CR-S0 Authorization': ['WITHHELD'],
+      'Modularity & Replaceability Doctrine': ['CONFIRMED'],
+      'Prior-Art Discovery Plan': ['CONFIRMED FOR PLANNING SCOPE'],
+      'Prior-Art E1/E2 Survey': ['CONFIRMED FOR E1/E2 SURVEY SCOPE'],
+      'E3 Probe Queue': ['UNDER OUTSIDE REVIEW'],
+      'Knowledge Projection Provider Comparison': ['CONFIRMED FOR E1/E2 COMPARISON SCOPE'],
+      'Astro-Han Knowledge E3': ['CONFIRMED FOR E3 SCOPE'],
+      'base-llm-wiki': ['E2'],
+      'Knowledge Provider Selected': ['NO'],
+      'base-llm-wiki E3 Comparison Plan': ['CONFIRMED FOR E3 EXECUTION-PLAN SCOPE'],
+      'base-llm-wiki Knowledge E3': ['CONFIRMED FOR E3 SCOPE'],
+      'Knowledge E3 Segment': ['CLOSED'],
+      'Stigmergy Carrier & Artifact Taxonomy': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Four-Layer One-World Minimum Landing Roadmap': ['CONFIRMED FOR ROADMAP SCOPE'],
+      'Work Item Minimum Contract': ['CONFIRMED FOR SEMANTIC CONTRACT SCOPE'],
+      'Seeded Instance Continuity': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Persistent World Object Model': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Layered World Runtime Model': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Two-Leg Asynchronous Operating Model': ['CONFIRMED FOR OPERATING MODEL SCOPE'],
+      'Persistent Room and Workspace Binding': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Persistent Scope Topology': ['CONFIRMED FOR CONCEPTUAL SCOPE'],
+      'Protocol Governance Minimum Contract': ['CONFIRMED FOR SEMANTIC CONTRACT SCOPE'],
+      'Bounded Runtime Execution and Recovery Minimum Contract': ['CONFIRMED FOR SEMANTIC CONTRACT SCOPE'],
+      'Evaluation Baseline and Verdict Loop Minimum Contract': ['CONFIRMED FOR SEMANTIC CONTRACT SCOPE'],
+      'Concept and Contract Expansion Freeze': ['ACTIVE'],
+      'Global Roadmap Reconciliation': ['UNDER OUTSIDE REVIEW'],
+      'Contract-to-Probe Matrix': ['UNDER OUTSIDE REVIEW']
+    }
+  },
+  {
     id: 'EVALUATION_BASELINE_AND_VERDICT_LOOP_CONTRACT_DRAFT',
     phaseIncludes: ['evaluation', 'verdict', 'loop'],
     actionReference: ['evaluation', 'verdict', 'loop'],
@@ -918,7 +955,36 @@ function verifyRepository(targetRoot, options = {}) {
           'implement autoresearch', 'implement wiki'
         ];
         const lower = parsedActionText.toLowerCase();
-        const hasForbidden = forbiddenPhrases.some(p => lower.includes(p));
+        // A forbidden phrase is only an authorization when it appears in a
+        // non-negated clause. A phrase that appears inside a prohibition clause
+        // ("Do not ... start CR-S0") is NOT an authorization. This keeps the
+        // fail-closed guard: a genuine imperative ("Start CR-S0") still fails.
+        const negators = [
+          'do not', 'does not', 'did not', 'must not', 'should not',
+          'shall not', 'never', 'without', 'forbidden', 'prohibited',
+          'not allowed', 'no '
+        ];
+        let hasForbidden = false;
+        for (const p of forbiddenPhrases) {
+          let idx = lower.indexOf(p);
+          while (idx !== -1) {
+            const segStart = Math.max(
+              lower.lastIndexOf('.', idx - 1) + 1,
+              lower.lastIndexOf(';', idx - 1) + 1,
+              lower.lastIndexOf('!', idx - 1) + 1,
+              lower.lastIndexOf('?', idx - 1) + 1,
+              0
+            );
+            const clause = lower.slice(segStart, idx);
+            const negated = negators.some(n => clause.includes(n));
+            if (!negated) {
+              hasForbidden = true;
+              break;
+            }
+            idx = lower.indexOf(p, idx + 1);
+          }
+          if (hasForbidden) break;
+        }
 
         const phaseToken = extractPhaseToken(phaseValue);
         let referencesPhase = phaseToken ? lower.includes(phaseToken) : true;

@@ -1,9 +1,13 @@
 # Evaluation Baseline and Verdict Loop Minimum Contract
 
-> **Status**: `DRAFT SEMANTIC CONTRACT — UNDER OUTSIDE REVIEW`
+> **Status**: `SEMANTIC CONTRACT — CONFIRMED FOR SEMANTIC CONTRACT SCOPE`
+> **Reviewed Commit**: `f48dd7c1fb3ff0edf9337aa3a6e8a6cc3831530f`
 > **Purpose**: Define the minimum semantic contract by which a candidate Protocol, Provider, Runtime composition, or other controlled change is compared under a fixed workload, a trusted Baseline, checkable evidence, and an independent evaluator, and produces box-outside verdicts such as Keep / Discard / Revert, without binding any concrete evaluator or experiment platform.
-> **Scope**: Semantic contract only. This draft binds no evaluator, no benchmark harness, no AutoResearch loop, no experiment platform, no fixture, no Baseline run, and no Candidate run.
+> **Scope**: Semantic contract only. This contract binds no evaluator, no benchmark harness, no AutoResearch loop, no experiment platform, no fixture, no Baseline run, and no Candidate run.
 > **Basis**: [`WORK_ITEM_MINIMUM_CONTRACT.md`](WORK_ITEM_MINIMUM_CONTRACT.md) (`CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT.md`](PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT.md) (`SEMANTIC CONTRACT — CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_MINIMUM_CONTRACT.md`](BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_MINIMUM_CONTRACT.md) (`SEMANTIC CONTRACT — CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`TWO_LEG_ASYNCHRONOUS_OPERATING_MODEL.md`](../synthesis/TWO_LEG_ASYNCHRONOUS_OPERATING_MODEL.md) (`CONFIRMED FOR OPERATING MODEL SCOPE`), [`PERSISTENT_WORLD_OBJECT_MODEL.md`](../synthesis/PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md`](../plans/FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md) (`CONFIRMED FOR ROADMAP SCOPE`)
+> **Confirmed Scope**: Campaign / Workload / Fixture / Baseline / Candidate / Run / Measurement / Evidence / Evaluator / Evaluation Result / Verdict / Adoption Decision / Rollback Target separation; Baseline as evidenced comparison reference; Candidate as bounded change; metrics defined before run; environment comparability of Baseline and Candidate; Raw Evidence preferred over summaries; Executor / Evaluator / Reviewer / Final Verdict Authority separation; Evaluation Result separated from final Verdict; KEEP / DISCARD / REVERT / RETRY / INCONCLUSIVE / INVALID_EVALUATION / REQUIRES_MORE_EVIDENCE; Verdict / Adoption / Activation-Migration / Production Readiness separation; repeated run, invalidation, and human-intervention recording; AutoResearch only as a replaceable Experiment Provider; Legacy Nexus history cleaned before use as fixture or baseline evidence.
+> **Not Yet Confirmed**: Evaluation schema; evaluator implementation; benchmark runner; AutoResearch loop; real fixture; real Baseline; real Candidate; any Provider selection; production readiness; official Nexus integration.
+> **Related**: [`WORK_ITEM_MINIMUM_CONTRACT.md`](WORK_ITEM_MINIMUM_CONTRACT.md) (`CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT.md`](PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT.md) (`SEMANTIC CONTRACT — CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_MINIMUM_CONTRACT.md`](BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_MINIMUM_CONTRACT.md) (`SEMANTIC CONTRACT — CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`CONTRACT_TO_PROBE_MATRIX.md`](../probes/CONTRACT_TO_PROBE_MATRIX.md) (`PROBE MATRIX — UNDER OUTSIDE REVIEW`)
 
 ---
 
@@ -589,4 +593,4 @@ Confirmed content is not rewritten.
 
 ---
 
-*End of contract draft.*
+*End of contract.*

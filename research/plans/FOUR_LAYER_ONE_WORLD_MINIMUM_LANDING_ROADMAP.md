@@ -4,7 +4,15 @@
 > **Reviewed Commit**: `64642bf3e601030c5c4a19c376a34d1e420890ec`
 > **Purpose**: Answer, at the global level: without connecting the official Nexus, what minimum runnable capabilities does the Four-Layer One-World still lack, and what threshold must be reached before entering Nexus Shadow Integration.
 > **Prohibition**: This roadmap does NOT authorize any Probe, Provider selection, or Nexus connection. Confirmation for roadmap scope does NOT authorize automatic execution of any follow-on stage.
-> **Related**: [`PERSISTENT_WORLD_OBJECT_MODEL.md`](../synthesis/PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`LAYERED_WORLD_RUNTIME_MODEL.md`](../synthesis/LAYERED_WORLD_RUNTIME_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT.md`](../contracts/PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT.md) (`SEMANTIC CONTRACT — CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_MINIMUM_CONTRACT.md`](../contracts/BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_MINIMUM_CONTRACT.md) (`SEMANTIC CONTRACT — CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`EVALUATION_BASELINE_AND_VERDICT_LOOP_MINIMUM_CONTRACT.md`](../contracts/EVALUATION_BASELINE_AND_VERDICT_LOOP_MINIMUM_CONTRACT.md) (`DRAFT SEMANTIC CONTRACT — UNDER OUTSIDE REVIEW`)
+> **Related**: [`PERSISTENT_WORLD_OBJECT_MODEL.md`](../synthesis/PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`LAYERED_WORLD_RUNTIME_MODEL.md`](../synthesis/LAYERED_WORLD_RUNTIME_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT.md`](../contracts/PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT.md) (`SEMANTIC CONTRACT — CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_MINIMUM_CONTRACT.md`](../contracts/BOUNDED_RUNTIME_EXECUTION_AND_RECOVERY_MINIMUM_CONTRACT.md) (`SEMANTIC CONTRACT — CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`EVALUATION_BASELINE_AND_VERDICT_LOOP_MINIMUM_CONTRACT.md`](../contracts/EVALUATION_BASELINE_AND_VERDICT_LOOP_MINIMUM_CONTRACT.md) (`SEMANTIC CONTRACT — CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`GLOBAL_ROADMAP_RECONCILIATION.md`](GLOBAL_ROADMAP_RECONCILIATION.md) (`ROADMAP RECONCILIATION — UNDER OUTSIDE REVIEW`), [`CONTRACT_TO_PROBE_MATRIX.md`](../probes/CONTRACT_TO_PROBE_MATRIX.md) (`PROBE MATRIX — UNDER OUTSIDE REVIEW`), [`CONCEPT_AND_CONTRACT_EXPANSION_FREEZE.md`](../governance/CONCEPT_AND_CONTRACT_EXPANSION_FREEZE.md) (`ACTIVE GOVERNANCE BOUNDARY — OUTSIDE AUTHORIZED`)
+
+## Concept and Contract Expansion Freeze
+
+```text
+Concept and Contract Expansion Freeze: ACTIVE
+```
+
+The original stages 1–4 semantic contracts are complete, but their real-world validity still requires verification through Prior-Art Probes. New horizontal Concept Models and Minimum Contracts are frozen unless a real Probe exposes a blocking contradiction or clear safety hole (see [`CONCEPT_AND_CONTRACT_EXPANSION_FREEZE.md`](../governance/CONCEPT_AND_CONTRACT_EXPANSION_FREEZE.md)).
 
 ## Capability State Model
 
@@ -211,6 +219,24 @@ The following order is `CONFIRMED FOR ROADMAP SCOPE` as the currently approved r
 ```
 
 This order is the currently approved route but MAY still be adjusted through a formal proposal. It is NOT immutable permanent architecture.
+
+### Reconciled Actual Order (with Prior-Art Discovery)
+
+The semantic contracts of the original stages 1–4 are complete. Their real-world validity still requires Prior-Art Probe verification. The reconciled actual order (see [`GLOBAL_ROADMAP_RECONCILIATION.md`](GLOBAL_ROADMAP_RECONCILIATION.md)) is:
+
+```text
+1. Contract-to-Probe Matrix
+2. Prior-Art Candidate Refresh
+3. Real Coordination / Runtime / Protocol / Evaluation Probes
+4. Reality Check and Contract Revision
+5. Minimum Wheel Composition
+6. Minimal Evaluation Baseline / Verdict Run
+7. Knowledge E4 Comparison
+8. Seed-Triggered Bounded World Composition
+9. Nexus Shadow Integration
+```
+
+This does not delete the old route; it formally reconciles it with the early Prior-Art phase.
 
 Clarifications:
 

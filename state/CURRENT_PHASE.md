@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Evaluation Baseline and Verdict Loop Minimum Contract Draft`
-- **Current Focus**: Draft the Evaluation Baseline and Verdict Loop Minimum Contract defining how a candidate Protocol, Provider, Runtime composition, or other controlled change is compared under a fixed workload, a trusted Baseline, checkable evidence, and an independent evaluator, and how box-outside verdicts such as Keep / Discard / Revert are produced, without implementing an evaluator, benchmark harness, AutoResearch loop, or experiment platform.
-- **External Audit Status**: `BOUNDED RUNTIME CONTRACT CONFIRMED — EVALUATION BASELINE AND VERDICT LOOP MINIMUM CONTRACT UNDER OUTSIDE REVIEW`
-- **Started At**: `2026-08-04T11:00:00+02:00`
+- **Current Phase**: `Global Roadmap Reconciliation and Contract Freeze`
+- **Current Focus**: Reconcile the early Prior-Art Discovery & Composition route with the later Minimum Landing Roadmap, activate the Concept and Contract Expansion Freeze, and convert the completed Contracts into a Contract-to-Probe Matrix for real Prior-Art wheel investigation, without adding new Concept Models or Minimum Contracts, implementing any Engine or Runtime, running a Probe, or selecting a Provider.
+- **External Audit Status**: `EVALUATION CONTRACT CONFIRMED — FREEZE ACTIVE — RECONCILIATION + PROBE MATRIX UNDER OUTSIDE REVIEW`
+- **Started At**: `2026-08-04T12:00:00+02:00`
 
 ---
 
