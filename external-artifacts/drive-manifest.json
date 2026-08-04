@@ -5,7 +5,7 @@
     "folder_id": "1CdkiOeZNsQ9HAMXXbZHSjMi_oUuRvKf2",
     "local_sync_path": "G:\\My Drive\\ChatGPT-Bridge",
     "canonical_identity": "folder_id",
-    "policy": "Google Drive is a non-canonical review mirror. GitHub repository commits remain the sole authoritative audit source."
+    "policy": "Google Drive is a non-canonical review mirror. GitHub is the authoritative published and box-out-visible record for committed artifacts. It is not the sole authority for unsynchronized local files, processes, runtime state, or other current local reality."
   },
   "entries": [
     {

@@ -10,7 +10,7 @@ This page is a stable navigation entry to doctrine. It is NOT current state. All
 
 ## One-Sentence Mainline
 
-Nexus exists to maintain a persistent artifact world across short-lived, memoryless AI instances: humans and box-out reviewers define and adjudicate work, box-in AI instances execute bounded reversible tasks, and durable files plus Git preserve continuity.
+Nexus exists to maintain a persistent artifact world across short-lived, memoryless AI instances: the user is the cross-box target owner and final adjudicator, web ChatGPT supports box-out design and review, box-in AI instances execute bounded reversible tasks, and durable files plus Git preserve externalized continuity and a published lineage.
 
 ## Doctrine Points
 

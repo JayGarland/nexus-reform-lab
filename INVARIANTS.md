@@ -42,7 +42,7 @@
 ## 3. Auditability & Evidence Governance Invariants
 
 6. **GitHub Authoritative Auditability**:
-   - GitHub commit history and repository raw files are the sole authoritative audit trail.
+   - GitHub is the authoritative published and box-out-visible record for committed artifacts. It is not the sole authority for unsynchronized local files, processes, runtime state, or other current local reality.
    - Every completed iteration MUST be verified locally, committed, and pushed to the remote repository.
 
 7. **Dual-Storage Manifest Rule (GitHub + Google Drive)**:

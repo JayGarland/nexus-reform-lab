@@ -24,7 +24,8 @@ The laboratory should primarily build adapters, projections, bridges,
 and policy boundaries.
 
 All claims require committed evidence.
-GitHub is the sole authoritative audit source.
+GitHub is the authoritative published and box-out-visible record for committed artifacts.
+It is not the sole authority for unsynchronized local files, processes, runtime state, or other current local reality.
 
 Google Drive bridge root:
 - **Folder Name**: `ChatGPT-Bridge`
