@@ -10,9 +10,10 @@
 - **Latest Externally Confirmed Doctrine**: `Modularity & Replaceability Doctrine — CONFIRMED FOR REVIEWED SCOPE` (Reviewed Commit: `715a6d5f96eaae44ec4822630e8a053e4344a14c`)
 - **Latest Externally Confirmed Probe**: `base-llm-wiki Knowledge E3 — CONFIRMED FOR E3 SCOPE` (Reviewed Commit: `915836bb1fff4535cc5f3a21927098721580aa64`)
 - **Latest Externally Confirmed Concept**: `Stigmergy Carrier & Artifact Taxonomy — CONFIRMED FOR CONCEPTUAL SCOPE` (Reviewed Commit: `f08d7636714be6285405894cca0adac14764069a`)
+- **Latest Externally Confirmed Roadmap**: `Four-Layer One-World Minimum Landing Roadmap — CONFIRMED FOR ROADMAP SCOPE` (Reviewed Commit: `64642bf3e601030c5c4a19c376a34d1e420890ec`)
 - **Current World Level**: `Level 2 — Recoverable Persistent Artifact World`
-- **Current Phase**: `Global Minimum Landing Roadmap Preparation`
-- **Next Authorized Work**: `Submit Four-Layer One-World Minimum Landing Roadmap; no Probe, no Provider selection, no Nexus connection`
+- **Current Phase**: `Coordination Work Item Minimum Contract Drafting`
+- **Next Authorized Work**: `Submit Work Item Minimum Contract; no implementation, no carrier selection, no Probe, no Nexus connection`
 - **Current Operational Phase**: See [`../state/CURRENT_PHASE.md`](../state/CURRENT_PHASE.md)
 - **Current Ratified Verdicts**: See [`../state/CURRENT_VERDICT.md`](../state/CURRENT_VERDICT.md)
 - **External Verdict History**: See [`../state/EXTERNAL_VERDICT_HISTORY.md`](../state/EXTERNAL_VERDICT_HISTORY.md)
@@ -34,6 +35,7 @@
 - Executed the isolated base-llm-wiki E3 probe (plan `CONFIRMED FOR E3 EXECUTION-PLAN SCOPE`): byte-identical copy of the original (84/84), native ingest per the copy's `AGENTS.md` + workflows + templates, fixture immutable, original zero-modification, cleanup verified. Verdict `E3 PASSED`; status `SUBMITTED FOR OUTSIDE REVIEW`. Evidence under [`research/probes/e3/base-llm-wiki/`](../research/probes/e3/base-llm-wiki/README.md). No other Probe run; no Knowledge Provider selected.
 - Closed the Knowledge E3 segment: both Astro-Han and base-llm-wiki `CONFIRMED FOR E3 SCOPE` (no E4 comparison, no Provider selection). Recorded the Stigmergy Carrier & Artifact Taxonomy as a concept clarification ([`research/synthesis/STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md`](../research/synthesis/STIGMERGY_CARRIER_AND_ARTIFACT_TAXONOMY.md), `CONCEPT CLARIFICATION — UNDER OUTSIDE REVIEW`). Phase transitioned to `Knowledge E3 Segment Closure and Cross-Cutting Doctrine Write-Back`.
 - Ratified the Stigmergy Carrier & Artifact Taxonomy as `CONFIRMED FOR CONCEPTUAL SCOPE` (commit `f08d7636714be6285405894cca0adac14764069a`) and closed the Knowledge E3 segment. Established the global Four-Layer One-World Minimum Landing Roadmap ([`research/plans/FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md`](../research/plans/FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md), `ROADMAP — UNDER OUTSIDE REVIEW`). Phase transitioned to `Global Minimum Landing Roadmap Preparation`. No Probe run; no Provider selected; official Nexus unmodified and not connected.
+- Ratified the Four-Layer One-World Minimum Landing Roadmap as `CONFIRMED FOR ROADMAP SCOPE` (commit `64642bf3e601030c5c4a19c376a34d1e420890ec`) and drafted the minimum Work Item semantic Contract ([`research/contracts/WORK_ITEM_MINIMUM_CONTRACT.md`](../research/contracts/WORK_ITEM_MINIMUM_CONTRACT.md), `CONTRACT DRAFT — UNDER OUTSIDE REVIEW`). Phase transitioned to `Coordination Work Item Minimum Contract Drafting`. No Probe run; no carrier selected; no Runtime implemented; official Nexus unmodified and not connected.
 
 ---
 

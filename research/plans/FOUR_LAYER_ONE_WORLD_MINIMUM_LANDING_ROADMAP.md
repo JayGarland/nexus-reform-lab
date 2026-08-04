@@ -1,8 +1,9 @@
 # Four-Layer One-World Minimum Landing Roadmap
 
-> **Status**: `ROADMAP — UNDER OUTSIDE REVIEW`
+> **Status**: `ROADMAP — CONFIRMED FOR ROADMAP SCOPE`
+> **Reviewed Commit**: `64642bf3e601030c5c4a19c376a34d1e420890ec`
 > **Purpose**: Answer, at the global level: without connecting the official Nexus, what minimum runnable capabilities does the Four-Layer One-World still lack, and what threshold must be reached before entering Nexus Shadow Integration.
-> **Prohibition**: This roadmap does NOT authorize any Probe, Provider selection, or Nexus connection.
+> **Prohibition**: This roadmap does NOT authorize any Probe, Provider selection, or Nexus connection. Confirmation for roadmap scope does NOT authorize automatic execution of any follow-on stage.
 
 ## Capability State Model
 
@@ -188,7 +189,9 @@ Status: `CONCEPT DEFINED` (boundary requirements defined; no shadow integration 
 
 ---
 
-## Proposed Follow-on Order (proposal only)
+## Follow-on Order (confirmed for roadmap scope)
+
+The following order is `CONFIRMED FOR ROADMAP SCOPE` as the currently approved route:
 
 ```text
 1. Coordination / Work Item minimum contract
@@ -200,7 +203,15 @@ Status: `CONCEPT DEFINED` (boundary requirements defined; no shadow integration 
 7. Nexus shadow integration
 ```
 
-This order is a PROPOSAL. It requires outside review and is NOT automatic authorization.
+This order is the currently approved route but MAY still be adjusted through a formal proposal. It is NOT immutable permanent architecture.
+
+Clarifications:
+
+- Roadmap approval does NOT mean any Provider has been selected.
+- Roadmap approval does NOT mean official Nexus integration is authorized.
+- Roadmap approval does NOT mean any capability has been landed.
+- Roadmap approval does NOT authorize automatic execution of all subsequent stages.
+- Every stage still requires independent box-outside adjudication.
 
 ---
 

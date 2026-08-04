@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Global Minimum Landing Roadmap Preparation`
-- **Current Focus**: Establish the global Four-Layer One-World minimum landing roadmap without running any Probe, selecting a Provider, or connecting the official Nexus.
-- **External Audit Status**: `STIGMERGY TAXONOMY CONFIRMED FOR CONCEPTUAL SCOPE — KNOWLEDGE E3 SEGMENT CLOSED`
-- **Started At**: `2026-08-04T07:40:00+02:00`
+- **Current Phase**: `Coordination Work Item Minimum Contract Drafting`
+- **Current Focus**: Define the minimum semantic Contract for Work Item identification, claiming, execution, review, and recovery, without binding any carrier, product, database schema, or legacy Nexus field.
+- **External Audit Status**: `GLOBAL ROADMAP CONFIRMED FOR ROADMAP SCOPE — WORK ITEM MINIMUM CONTRACT UNDER OUTSIDE REVIEW`
+- **Started At**: `2026-08-04T08:00:00+02:00`
 
 ---
 
