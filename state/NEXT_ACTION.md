@@ -6,16 +6,16 @@
 
 ## Single Authorized Action
 
-> Prepare a bounded base-llm-wiki E3 comparison plan against the already confirmed Astro-Han E3 evidence. Do not execute the comparison yet and do not run any other Provider Probe.
+> Submit the bounded base-llm-wiki E3 comparison plan for outside review. Do not execute it.
 
 ---
 
 ## Prohibited Next Actions
 
-1. **DO NOT** execute the Astro-Han / base-llm-wiki comparison yet.
-2. **DO NOT** run any other Provider Probe.
+1. **DO NOT** execute the base-llm-wiki E3 comparison or run base-llm-wiki.
+2. **DO NOT** re-run Astro-Han, Beads, OPA, DVC, or any other Provider Probe.
 3. **DO NOT** execute E4/E5 or write any Nexus Adapter.
-4. **DO NOT** select, adopt, adapt, or bind any Provider.
+4. **DO NOT** select, adopt, adapt, or bind any Knowledge Provider.
 5. **DO NOT** run, modify, or attempt to authorize `CR-S0`.
-6. **DO NOT** treat any Wiki product's scheduler, MCP, database, or UI as Nexus Canonical Truth.
+6. **DO NOT** modify the original `base-llm-wiki` or treat any Wiki product's scheduler, MCP, database, or UI as Nexus Canonical Truth.
 7. **DO NOT** modify the Stable Kernel, the official Nexus, or count any model profile into candidate capability ratings.

@@ -47,7 +47,8 @@ const GATE_STAGES = [
       'Knowledge Projection Provider Comparison': ['CONFIRMED FOR E1/E2 COMPARISON SCOPE'],
       'Astro-Han Knowledge E3': ['CONFIRMED FOR E3 SCOPE'],
       'base-llm-wiki': ['E2'],
-      'Knowledge Provider Selected': ['NO']
+      'Knowledge Provider Selected': ['NO'],
+      'base-llm-wiki E3 Comparison Plan': ['UNDER OUTSIDE REVIEW']
     }
   },
   {
