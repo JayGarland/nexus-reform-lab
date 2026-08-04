@@ -1,0 +1,60 @@
+# After State — Beads E3 Probe
+
+Recorded `2026-08-04T11:39+02:00` after all 10 probe steps and before cleanup.
+
+## Store state (embedded Dolt, branch main, HEAD commit bmo4icc5)
+
+```text
+Total Issues:  6        (3 fixture tasks + 3 state-change event beads)
+Open:          2        (work-qi9 B, work-dzb C)
+In Progress:   0
+Blocked:       1        (work-dzb C, blocked by B)
+Closed:        4        (work-5cr A + 3 event beads)
+Ready to Work: 1        (work-qi9 B — blocker released after A closed)
+```
+
+## Issue history lineage (work-5cr, 10 Dolt commits)
+
+```text
+bmo4icc5  2026-08-04 11:38:48  closed
+tdnhb03b  2026-08-04 11:38:47  in_progress
+bel93e4r  2026-08-04 11:38:47  in_progress
+tid0dfaj  2026-08-04 11:37:56  in_progress
+r2jo77jm  2026-08-04 11:37:56  in_progress
+7i1ddboj  2026-08-04 11:37:55  in_progress
+9adb6j4p  2026-08-04 11:37:19  in_progress
+f6v0lu05  2026-08-04 11:36:12  open
+7pr3s4s0  2026-08-04 11:36:11  open
+v4iqk1j0  2026-08-04 11:35:56  open
+```
+
+## State dimensions on work-5cr (at end)
+
+```text
+attempt: 1
+phase: finish
+```
+
+## Files created in probe dir (work/)
+
+```text
+.beads/          embedded Dolt store (config, dolt data, hooks, interactions.jsonl, last-touched, metadata.json)
+.agents/         per-project agent skill (created by bd init)
+.claude/         per-project Claude integration settings (created by bd init)
+.codex/          per-project Codex integration (created by bd init)
+raw/             captured step logs (step1-create-A/B/C.log, watch_before_kill_stdout.txt, watch_before_kill_stderr.txt)
+.gitignore
+AGENTS.md        (created by bd init)
+CLAUDE.md        (created by bd init)
+issues.jsonl     export (6 records)
+```
+
+## Processes (after)
+
+- No `bd`/`beads` process running (watch process 56444 was hard-killed in step 6 and confirmed absent).
+- Only pre-existing `GitHubDesktop` processes remain (unchanged).
+
+## Ports / network
+
+- Embedded Dolt: no listening port, no server process, no background daemon.
+- No network traffic during the probe run.
