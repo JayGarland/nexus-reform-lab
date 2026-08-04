@@ -14,20 +14,20 @@ Wider Reform Phase:
 Prior-Art Discovery & Composition
 
 Current Authorized Subproject Phase:
-Reform Lab Boundary Reconciliation — CLOSED
+Anti-Patch-Loop Guard Repair — REVIEW_REQUIRED
 
 External Verdict:
-CONFIRMED FOR REFORM-LAB BOUNDARY-REPAIR SCOPE
+CONFIRMED FOR ANTI-PATCH-LOOP GUARD BOUNDED REPAIR SCOPE
 ```
 
-- **Scope**: The Reform Lab responsibility boundary, lightweight cold-start chain, cross-box user role, information-consistency rule, and published-record authority boundary have been externally reviewed and confirmed for this scope. This does not declare the wider Nexus reform complete.
-- **Reconciled At**: `2026-08-04`
+- **Scope**: This round adds a bounded anti-patch-loop execution guard: every Workspace mutation must advance an explicit Acceptance Criterion, hard Stop Conditions cut off repeated minimal patching and failure loops, and `REPLAN_REQUIRED` returns drifted or stuck work to box-out re-planning. Only the bounded task `tasks/ANTI_PATCH_LOOP_GUARD.md` is authorized. No archived Minimum Contracts are restored and no Engine, Runtime, scheduler, or governance platform is created. This does not declare the wider Nexus reform complete.
+- **Authorized At**: `2026-08-04`
 
 ---
 
 ## 2. Authorized Next Action
 
-> None. No further implementation is authorized by this closed subproject. Wait for a new user and box-out decision to be recorded in `state/CURRENT.md`.
+> None. Await box-out review of the submitted Git artifacts.
 
 ---
 

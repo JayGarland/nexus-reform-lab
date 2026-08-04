@@ -41,12 +41,12 @@
 
 ---
 
-### C. Active Prior-Art & Probe Work
+### C. Prior-Art & Probe Work — Preserved / Under Outside Review (Not Currently Authorized)
 
-- [`research/prior-art/CANDIDATE_REFRESH_COORDINATION_AND_DURABLE_RUNTIME.md`](research/prior-art/CANDIDATE_REFRESH_COORDINATION_AND_DURABLE_RUNTIME.md): Active candidate refresh (under outside review).
-- [`research/probes/COORDINATION_AND_DURABLE_RUNTIME_PROBE_PLAN.md`](research/probes/COORDINATION_AND_DURABLE_RUNTIME_PROBE_PLAN.md): Active unified probe plan (under outside review).
-- [`research/governance/CONCEPT_AND_CONTRACT_EXPANSION_FREEZE.md`](research/governance/CONCEPT_AND_CONTRACT_EXPANSION_FREEZE.md): Active governance boundary.
-- [`research/probes/e3/`](research/probes/e3/): Raw E3 probe evidence (astro-han-llm-wiki, base-llm-wiki, beads, go-workflows, restate). Preserved, immutable, active evidence.
+- [`research/prior-art/CANDIDATE_REFRESH_COORDINATION_AND_DURABLE_RUNTIME.md`](research/prior-art/CANDIDATE_REFRESH_COORDINATION_AND_DURABLE_RUNTIME.md): Candidate refresh submitted for outside review; not currently authorized.
+- [`research/probes/COORDINATION_AND_DURABLE_RUNTIME_PROBE_PLAN.md`](research/probes/COORDINATION_AND_DURABLE_RUNTIME_PROBE_PLAN.md): Unified probe plan submitted for outside review; E3 probes are not authorized; not currently authorized.
+- [`research/governance/CONCEPT_AND_CONTRACT_EXPANSION_FREEZE.md`](research/governance/CONCEPT_AND_CONTRACT_EXPANSION_FREEZE.md): Active governance boundary (Concept and Contract expansion remains frozen).
+- [`research/probes/e3/`](research/probes/e3/): Raw E3 probe evidence (astro-han-llm-wiki, base-llm-wiki, beads, go-workflows, restate). Preserved, immutable evidence — preserved reference only; not currently authorized.
 
 ---
 
