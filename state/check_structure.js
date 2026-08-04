@@ -96,6 +96,30 @@ if (!/Current Authorized Subproject Phase/i.test(current)) {
   fail('state/CURRENT.md does not declare a Current Authorized Subproject Phase');
 }
 
+// 3b. A REVIEW_REQUIRED phase must keep the External Verdict unadjudicated.
+const PHASE_BLOCK_RE = /```text\s*([\s\S]*?)```/g;
+let phaseBody = '';
+for (const block of current.matchAll(PHASE_BLOCK_RE)) {
+  if (/Current Authorized Subproject Phase/.test(block[0])) {
+    phaseBody = block[1];
+    break;
+  }
+}
+if (phaseBody) {
+  const phaseMatch = phaseBody.match(/Current Authorized Subproject Phase:\s*([^\r\n]+)/i);
+  const verdictMatch = phaseBody.match(/External Verdict:\s*([^\r\n]+)/i);
+  const phaseValue = phaseMatch ? phaseMatch[1].trim() : '';
+  const verdictValue = verdictMatch ? verdictMatch[1].trim() : '';
+  if (/REVIEW_REQUIRED/.test(phaseValue)) {
+    if (!/PENDING BOX-OUT REVIEW|NOT YET ADJUDICATED/i.test(verdictValue)) {
+      fail('phase is REVIEW_REQUIRED but External Verdict is not an unadjudicated state: "' + verdictValue + '"');
+    }
+    if (/\b(?:CONFIRMED|ACCEPTED|APPROVED|PASSED|COMPLETE)\b/i.test(verdictValue)) {
+      fail('phase is REVIEW_REQUIRED but External Verdict prematurely adjudicates: "' + verdictValue + '"');
+    }
+  }
+}
+
 // 4. WAKE references state/CURRENT.md as the current-state source.
 if (!/state\/CURRENT\.md/.test(wake)) {
   fail('WAKE.md does not reference state/CURRENT.md');

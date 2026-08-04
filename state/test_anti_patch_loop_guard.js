@@ -99,5 +99,15 @@ res = runValidator(dir);
 expect('missing WAKE authority fails', res.code !== 0, 'exit=' + res.code);
 cleanup(dir);
 
+// Negative 5: REVIEW_REQUIRED phase with a premature CONFIRMED External Verdict must fail.
+let current5 = currentReal.replace(
+  /PENDING BOX-OUT REVIEW/i,
+  'CONFIRMED FOR ANTI-PATCH-LOOP GUARD BOUNDED REPAIR SCOPE'
+);
+dir = makeSandbox(current5, agentsOk, taskOk);
+res = runValidator(dir);
+expect('premature CONFIRMED external verdict fails', res.code !== 0, 'exit=' + res.code);
+cleanup(dir);
+
 console.log('Total Test Failures: ' + failures);
 process.exit(failures === 0 ? 0 : 1);

@@ -17,11 +17,11 @@ Current Authorized Subproject Phase:
 Anti-Patch-Loop Guard Repair — REVIEW_REQUIRED
 
 External Verdict:
-CONFIRMED FOR ANTI-PATCH-LOOP GUARD BOUNDED REPAIR SCOPE
+PENDING BOX-OUT REVIEW
 ```
 
-- **Scope**: This round adds a bounded anti-patch-loop execution guard: every Workspace mutation must advance an explicit Acceptance Criterion, hard Stop Conditions cut off repeated minimal patching and failure loops, and `REPLAN_REQUIRED` returns drifted or stuck work to box-out re-planning. Only the bounded task `tasks/ANTI_PATCH_LOOP_GUARD.md` is authorized. No archived Minimum Contracts are restored and no Engine, Runtime, scheduler, or governance platform is created. This does not declare the wider Nexus reform complete.
-- **Authorized At**: `2026-08-04`
+- **Scope**: This round added a bounded anti-patch-loop execution guard (per-mutation Acceptance-Criterion binding, hard Stop Conditions, and `REPLAN_REQUIRED` hand-back). The bounded fix is implemented and submitted; the execution authorization is exhausted and the result awaits box-out review. No further mutation is authorized by this state. No archived Minimum Contracts are restored and no Engine, Runtime, scheduler, or governance platform is created.
+- **Submitted At**: `2026-08-04`
 
 ---
 
