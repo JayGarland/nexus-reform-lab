@@ -14,20 +14,20 @@ Wider Reform Phase:
 Prior-Art Discovery & Composition
 
 Current Authorized Subproject Phase:
-Reform Lab Boundary Reconciliation — Box-Out Review Closure
+Reform Lab Boundary Reconciliation — CLOSED
 
 External Verdict:
-PARTIAL — core boundary repair confirmed; terminology reconciliation required before merge.
+CONFIRMED FOR REFORM-LAB BOUNDARY-REPAIR SCOPE
 ```
 
-- **Scope**: Apply only the bounded terminology and authority corrections required by the box-out review, run structural validation, commit, push, and stop for final box-out review. This does not declare the whole Nexus reform or runtime engineering complete.
+- **Scope**: The Reform Lab responsibility boundary, lightweight cold-start chain, cross-box user role, information-consistency rule, and published-record authority boundary have been externally reviewed and confirmed for this scope. This does not declare the wider Nexus reform complete.
 - **Reconciled At**: `2026-08-04`
 
 ---
 
 ## 2. Authorized Next Action
 
-> Apply only the bounded terminology and authority corrections required by the box-out review, run structural validation, commit, push, and stop for final box-out review.
+> None. No further implementation is authorized by this closed subproject. Wait for a new user and box-out decision to be recorded in `state/CURRENT.md`.
 
 ---
 
