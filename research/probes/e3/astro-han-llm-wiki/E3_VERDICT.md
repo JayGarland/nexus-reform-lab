@@ -3,30 +3,27 @@
 ## Verdict
 
 ```text
-E3 PASSED
+E3 PARTIAL
 ```
 
-## Basis (E3 scope only)
+## Reason
 
-- Upstream Agent Skill obtained in an isolated directory at a clearly identified commit (`eafcc77001e496cc43499e4923b663aec722c813`), MIT licensed.
-- Loaded as local files (SKILL.md + references/ + scripts/). No global Skills-directory write.
-- Per the skill's native instructions, completed one minimal raw-source → Markdown wiki operation:
-  - initialized the wiki;
-  - ingested two fixture sources into `raw/`;
-  - compiled two Markdown wiki articles (current claim vs `Status: Outdated` supersession);
-  - updated `wiki/index.md`; appended to `wiki/log.md`.
-- Upstream mechanical lint (`scripts/check_evidence.py`) exited 0 with 0 fidelity suspects, 0 evidence errors, 0 unreferenced raw files.
-- Expected observation items satisfied: Markdown wiki page; both sources recorded; current vs superseded distinguishable; internal links/index; raw sources unmodified (hash-verified).
-- Cleanup verified (see CLEANUP.md).
+```text
+Installation/loading, isolation, mechanical lint and cleanup are evidenced.
+The generated raw/wiki output contents were not included in the original
+remote evidence package and therefore were not independently reviewable.
+```
 
-## Explicitly NOT established by this E3
+## Supporting evidence
 
-- Nexus fit (not evaluated).
-- Suitability relative to base-llm-wiki (not evaluated).
-- Provenance sufficiency (not evaluated).
-- Replaceability of the existing Knowledge Provider (not evaluated).
-- Incremental-update reliability (not evaluated).
-- Semantic-compilation completeness (not evaluated).
+- Installation/loading: `UPSTREAM_IDENTITY.md`, `COMMANDS.md`, `ENVIRONMENT.md` (commit `eafcc77001e496cc43499e4923b663aec722c813`, MIT, loaded as local files).
+- Isolation + cleanup: `ENVIRONMENT.md`, `CLEANUP.md` (no global Skills write; isolated dir removed and verified).
+- Mechanical lint: `STDOUT.txt`, `RAW_OUTPUT/lint_stdout.txt` (exit 0; 0 fidelity suspects / 0 evidence errors / 0 unreferenced raws).
+- Output contents: original run's generated files were not in the remote package. An **Evidence Reproduction Run** (`REPRODUCTION.md`) captured byte-identical outputs (all six hashes match `FILE_HASHES_AFTER.sha256`) into `CAPTURED_WORKTREE/`; `OUTPUT_EVIDENCE.md` maps claims to artifacts. The reproduction is a re-execution, not the original run's artifacts.
+
+## Explicitly NOT established
+
+- Nexus fit; superiority over base-llm-wiki; provenance sufficiency; replaceability; incremental-update reliability; semantic-compilation completeness.
 - ADOPT / KEEP / SELECT / BIND / NEXUS FIT CONFIRMED (not used).
 
-Verdict recorded per `E3_EXECUTION_PROTOCOL.md` allowed values: `E3 PASSED`.
+The outside reviewer may confirm `E3 PASSED` only after independently reviewing `CAPTURED_WORKTREE/` and `OUTPUT_EVIDENCE.md`. Until then the verdict is `E3 PARTIAL`.
