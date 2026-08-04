@@ -1,0 +1,4 @@
+== CAPABILITIES: pause / cancel / retry ==
+{"time":"2026-08-04T11:55:40.5810542+02:00","level":"ERROR","msg":"run error [role=cap-pause-1-consumer-1-of-1], [process=created-consumer-1-of-1]: consumer error: transient error 1 (pause after threshold), meta: map[foreign_id:pause-item run_id:75d663c2-ce28-4b3c-bea7-90883222a5ef]"}
+PAUSE/RETRY: attempts=3 final run_state=Completed status=Done
+CANCEL: run_state=Cancelled status=Created reason="cancelled-by-probe"

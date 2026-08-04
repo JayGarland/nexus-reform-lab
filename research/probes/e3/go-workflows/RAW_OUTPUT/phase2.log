@@ -1,0 +1,11 @@
+== PHASE 2 (new process, same store) ==
+recovered from crash at 2026-08-04T11:54:15+02:00; run_ids=map[A:80613aae-118d-45f7-a55f-e41742bfe3bb B:28d715af-7e87-4854-80d4-220d025e79e4 C:c3fa01d7-88b4-4530-90e2-5bd0160a7855]
+STEP7+8 A recovered and continued: run_state=Completed status=Done
+STEP9 A output submitted: output="output for A @ 2026-08-04T11:54:26+02:00" attempt_id=80613aae-118d-45f7-a55f-e41742bfe3bb intermediate="attempt-started 2026-08-04T11:54:15+02:00"
+STEP7-9 B completed: run_state=Completed status=Done
+STEP7-9 C completed: run_state=Completed status=Done
+dumped 3 record(s) to state-final.json
+== LINEAGE ==
+foreign_id=A run_id=80613aae-118d-45f7-a55f-e41742bfe3bb version=5 status=5(Done) run_state=Completed updated_at=2026-08-04T11:54:26+02:00
+foreign_id=B run_id=28d715af-7e87-4854-80d4-220d025e79e4 version=5 status=5(Done) run_state=Completed updated_at=2026-08-04T11:54:27+02:00
+foreign_id=C run_id=c3fa01d7-88b4-4530-90e2-5bd0160a7855 version=5 status=5(Done) run_state=Completed updated_at=2026-08-04T11:54:27+02:00

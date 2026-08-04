@@ -1,0 +1,50 @@
+[
+  {
+    "WorkflowName": "probe-work-item",
+    "ForeignID": "A",
+    "RunID": "80613aae-118d-45f7-a55f-e41742bfe3bb",
+    "RunState": 2,
+    "Status": 4,
+    "Object": "eyJpZCI6IkEiLCJjbGFpbWVkX2J5IjoicHJvYmUtd29ya2VyIiwiYXR0ZW1wdF9pZCI6IjgwNjEzYWFlLTExOGQtNDVmNy1hNTVmLWU0MTc0MmJmZTNiYiIsImludGVybWVkaWF0ZV9zdGF0ZSI6ImF0dGVtcHQtc3RhcnRlZCAyMDI2LTA4LTA0VDExOjU0OjE1KzAyOjAwIn0=",
+    "CreatedAt": "2026-08-04T11:54:04.0530541+02:00",
+    "UpdatedAt": "2026-08-04T11:54:15.0590564+02:00",
+    "Meta": {
+      "RunStateReason": "",
+      "StatusDescription": "Attempting",
+      "Version": 4,
+      "TraceOrigin": "\tF:/nexus-probes/coordination/go-workflows-e3/probe/main.go:199 +0x49d\n\tF:/nexus-probes/coordination/go-workflows-e3/probe/main.go:166 +0x177\n"
+    }
+  },
+  {
+    "WorkflowName": "probe-work-item",
+    "ForeignID": "B",
+    "RunID": "28d715af-7e87-4854-80d4-220d025e79e4",
+    "RunState": 1,
+    "Status": 1,
+    "Object": "eyJpZCI6IkIiLCJkZXBlbmRzX29uIjpbIkEiXX0=",
+    "CreatedAt": "2026-08-04T11:54:04.056055+02:00",
+    "UpdatedAt": "2026-08-04T11:54:04.056055+02:00",
+    "Meta": {
+      "RunStateReason": "",
+      "StatusDescription": "Pending",
+      "Version": 1,
+      "TraceOrigin": "\tF:/nexus-probes/coordination/go-workflows-e3/probe/main.go:199 +0x49d\n\tF:/nexus-probes/coordination/go-workflows-e3/probe/main.go:166 +0x177\n"
+    }
+  },
+  {
+    "WorkflowName": "probe-work-item",
+    "ForeignID": "C",
+    "RunID": "c3fa01d7-88b4-4530-90e2-5bd0160a7855",
+    "RunState": 1,
+    "Status": 1,
+    "Object": "eyJpZCI6IkMiLCJkZXBlbmRzX29uIjpbIkIiXX0=",
+    "CreatedAt": "2026-08-04T11:54:04.0570559+02:00",
+    "UpdatedAt": "2026-08-04T11:54:04.0570559+02:00",
+    "Meta": {
+      "RunStateReason": "",
+      "StatusDescription": "Pending",
+      "Version": 1,
+      "TraceOrigin": "\tF:/nexus-probes/coordination/go-workflows-e3/probe/main.go:199 +0x49d\n\tF:/nexus-probes/coordination/go-workflows-e3/probe/main.go:166 +0x177\n"
+    }
+  }
+]
