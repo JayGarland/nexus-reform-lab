@@ -3,6 +3,19 @@
 > Purpose: Map each E3 claim to its reviewable artifact. Every artifact below lives in this probe directory.
 > Method: **Evidence Reproduction Run** — the original run's isolated worktree was removed at cleanup before its outputs were captured into the remote package. The same upstream commit, same fixture, and same isolation rules were re-executed, and the six output files were captured BEFORE cleanup (see `REPRODUCTION.md`).
 
+## Outside Review Verdict
+
+```text
+Outside Review Verdict: CONFIRMED FOR E3 SCOPE
+
+Evidence Boundary:
+The original isolated worktree was deleted during cleanup.
+The reproduction outputs are accepted because all six captured files
+match the original run's recorded FILE_HASHES_AFTER.sha256 values.
+```
+
+The reproduction outputs are accepted as evidence; they are NOT presented as the original run's worktree.
+
 ## Claim → Artifact mapping
 
 | Claim | Required artifact | Result |

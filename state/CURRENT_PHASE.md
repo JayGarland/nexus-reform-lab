@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Astro-Han Knowledge Provider E3 Probe / Foundation 1.0`
-- **Current Focus**: Execute one isolated upstream-native E3 Probe of Astro-Han/karpathy-llm-wiki.
-- **External Audit Status**: `FOUNDATION 0.9 CONFIRMED FOR E1/E2 COMPARISON SCOPE — ONE KNOWLEDGE E3 PROBE AUTHORIZED`
-- **Started At**: `2026-08-03T23:41:00+02:00`
+- **Current Phase**: `Knowledge Provider E3 Comparison Preparation`
+- **Current Focus**: Define the smallest fair E3 comparison between Astro-Han and local base-llm-wiki without selecting or binding a Provider.
+- **External Audit Status**: `ASTRO-HAN KNOWLEDGE E3 CONFIRMED FOR E3 SCOPE`
+- **Started At**: `2026-08-04T07:10:00+02:00`
 
 ---
 
