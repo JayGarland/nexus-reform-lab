@@ -1,9 +1,13 @@
 # Bounded Runtime Execution and Recovery Minimum Contract
 
-> **Status**: `DRAFT SEMANTIC CONTRACT — UNDER OUTSIDE REVIEW`
+> **Status**: `SEMANTIC CONTRACT — CONFIRMED FOR SEMANTIC CONTRACT SCOPE`
+> **Reviewed Commit**: `a35e80fd40eb1a35cc2282f436c00353dcb1155a`
 > **Purpose**: Define the minimum semantic contract by which a transient fresh instance wakes in an explicitly authorized Persistent Scope, restores context, claims or continues a Work Item, accesses a Workspace, performs bounded work, exits, writes back persistent traces, and recovers safely after failure or a stale attempt, without binding any concrete Runtime.
-> **Scope**: Semantic contract only. This draft binds no Runtime, no Session launcher, no scheduler, no worker, no Scope / Room Engine, no Workspace resolver, no Claim / Lease Engine, no Protocol Engine, and no automatic recovery mechanism.
+> **Scope**: Semantic contract only. This contract binds no Runtime, no Session launcher, no scheduler, no worker, no Scope / Room Engine, no Workspace resolver, no Claim / Lease Engine, no Protocol Engine, and no automatic recovery mechanism.
 > **Basis**: [`WORK_ITEM_MINIMUM_CONTRACT.md`](WORK_ITEM_MINIMUM_CONTRACT.md) (`CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT.md`](PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT.md) (`SEMANTIC CONTRACT — CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`SEEDED_INSTANCE_CONTINUITY.md`](../synthesis/SEEDED_INSTANCE_CONTINUITY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md`](../synthesis/PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`PERSISTENT_SCOPE_TOPOLOGY.md`](../synthesis/PERSISTENT_SCOPE_TOPOLOGY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`LAYERED_WORLD_RUNTIME_MODEL.md`](../synthesis/LAYERED_WORLD_RUNTIME_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`TWO_LEG_ASYNCHRONOUS_OPERATING_MODEL.md`](../synthesis/TWO_LEG_ASYNCHRONOUS_OPERATING_MODEL.md) (`CONFIRMED FOR OPERATING MODEL SCOPE`), [`FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md`](../plans/FOUR_LAYER_ONE_WORLD_MINIMUM_LANDING_ROADMAP.md) (`CONFIRMED FOR ROADMAP SCOPE`)
+> **Confirmed Scope**: Fresh Instance / Runtime Session / Execution Attempt / Work Item / Persistent Scope / Workspace Binding separation; Room wake boundary and Seed recovery; pre-execution gate; Claim / Lease interaction; Session and Attempt identity / state; bounded execution; Workspace entry and drift handling; executor declaration boundary; exit and write-back obligation; crash / power-loss recovery; stale attempt recovery; retry and model replacement; independent Review; explicit Protocol update / cancel / suspend / supersede during execution; cross-Scope execution; Runtime / Provider permission boundary; current-state projections; future recovery proof conditions.
+> **Not Yet Confirmed**: any Runtime; Session launcher; scheduler; worker; Workspace resolver; Claim / Lease Engine; heartbeat; stale detector; recovery implementation; production readiness.
+> **Related**: [`WORK_ITEM_MINIMUM_CONTRACT.md`](WORK_ITEM_MINIMUM_CONTRACT.md) (`CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT.md`](PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT.md) (`SEMANTIC CONTRACT — CONFIRMED FOR SEMANTIC CONTRACT SCOPE`), [`EVALUATION_BASELINE_AND_VERDICT_LOOP_MINIMUM_CONTRACT.md`](EVALUATION_BASELINE_AND_VERDICT_LOOP_MINIMUM_CONTRACT.md) (`DRAFT SEMANTIC CONTRACT — UNDER OUTSIDE REVIEW`)
 
 ---
 
@@ -763,4 +767,4 @@ Confirmed content is not rewritten.
 
 ---
 
-*End of contract draft.*
+*End of contract.*

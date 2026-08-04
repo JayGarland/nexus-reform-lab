@@ -165,7 +165,7 @@ runFixtureTest('9_session_log_parent_mismatch', false, (dir) => {
 runFixtureTest('10_multiple_next_action_blockquotes', false, (dir) => {
   const p = path.join(dir, 'state/NEXT_ACTION.md');
   let content = fs.readFileSync(p, 'utf8');
-  const targetStr = '> Submit the Bounded Runtime Execution and Recovery Minimum Contract for outside review. Do not implement Runtime, Session launcher, scheduler, worker, Scope/Room Engine, Workspace resolver, Claim/Lease Engine, Protocol Engine, Provider/carrier binding, Probe, official Nexus integration, or CR-S0.';
+  const targetStr = '> Submit the Evaluation Baseline and Verdict Loop Minimum Contract for outside review. Do not implement an evaluator, AutoResearch loop, benchmark runner, Runtime, Provider binding, real fixture, Baseline, Candidate, Probe, official Nexus integration, or CR-S0.';
   content = content.replace(targetStr, `${targetStr}\n> Execute forbidden world modification now!`);
   fs.writeFileSync(p, content, 'utf8');
 });
