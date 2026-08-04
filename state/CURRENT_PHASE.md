@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Knowledge Provider E3 Comparison Preparation`
-- **Current Focus**: Define the smallest fair E3 comparison between Astro-Han and local base-llm-wiki without selecting or binding a Provider.
-- **External Audit Status**: `ASTRO-HAN KNOWLEDGE E3 CONFIRMED FOR E3 SCOPE`
-- **Started At**: `2026-08-04T07:10:00+02:00`
+- **Current Phase**: `base-llm-wiki Knowledge Provider E3 Probe`
+- **Current Focus**: Execute one isolated native-protocol E3 probe of the local base-llm-wiki against the Astro-Han E3 evidence.
+- **External Audit Status**: `BASE-LLM-WIKI E3 EXECUTION PLAN CONFIRMED — PROBE EXECUTED, SUBMITTED`
+- **Started At**: `2026-08-04T07:20:00+02:00`
 
 ---
 

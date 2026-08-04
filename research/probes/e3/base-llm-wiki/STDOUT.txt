@@ -1,0 +1,19 @@
+NOT APPLICABLE — agent-driven file workflow.
+
+base-llm-wiki v1 is an agent-driven file workflow (per its AGENTS.md and workflows/). It produces and modifies Markdown files rather than emitting stdout/stderr. The ingest short-report output of the native workflow is recorded below.
+
+## Native ingest report (per workflows/ingest-source.md "Output")
+
+Ingest of `raw/source-a.md`:
+- Read source; extracted claims (file-first canonical state; worker instances have no persistent internal memory).
+- Created `wiki/source-summaries/Project Atlas - Versioned State.md`.
+- No existing concept page warranted updates (no pre-existing Canonical State page).
+- Added wikilinks; updated `wiki/index.md` (Source Summaries section); appended log entry.
+
+Ingest of `raw/source-b.md`:
+- Read source; extracted claims (previously database-as-canonical; superseded 2026-07-01; database may remain only as a rebuildable index).
+- Created `wiki/source-summaries/Project Atlas - Database Supersession.md`.
+- Recorded the supersession/contradiction explicitly in Contradictions / Tensions.
+- Updated `wiki/index.md`; appended log entry.
+
+Changed pages: 2 new source summaries + index + log. Unresolved questions: none.

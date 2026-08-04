@@ -10,8 +10,9 @@
 - **Latest Externally Confirmed Doctrine**: `Modularity & Replaceability Doctrine — CONFIRMED FOR REVIEWED SCOPE` (Reviewed Commit: `715a6d5f96eaae44ec4822630e8a053e4344a14c`)
 - **Latest Externally Confirmed Probe**: `Astro-Han Knowledge Provider E3 — CONFIRMED FOR E3 SCOPE` (Reviewed Commit: `9f2eb0ede6929054f3cbfe7153799e384c1711fa`)
 - **Current World Level**: `Level 2 — Recoverable Persistent Artifact World`
-- **Current Phase**: `Knowledge Provider E3 Comparison Preparation`
-- **Next Authorized Work**: `Prepare base-llm-wiki E3 comparison plan only`
+- **Active E3 Probe**: `base-llm-wiki Knowledge Provider E3 Probe — SUBMITTED FOR OUTSIDE REVIEW`
+- **Current Phase**: `base-llm-wiki Knowledge Provider E3 Probe`
+- **Next Authorized Work**: `Submit isolated base-llm-wiki E3 evidence; no other Probe, no Knowledge Provider selection`
 - **Current Operational Phase**: See [`../state/CURRENT_PHASE.md`](../state/CURRENT_PHASE.md)
 - **Current Ratified Verdicts**: See [`../state/CURRENT_VERDICT.md`](../state/CURRENT_VERDICT.md)
 - **External Verdict History**: See [`../state/EXTERNAL_VERDICT_HISTORY.md`](../state/EXTERNAL_VERDICT_HISTORY.md)
@@ -30,6 +31,7 @@
 - Recorded Foundation 0.8 as `CONFIRMED FOR QUEUE-STRUCTURE AND EVIDENCE-BOUNDARY SCOPE` (commit `3e81f0a75e53e2a12217ec8cb1b928e8910c876d`) and produced the dedicated Knowledge Projection comparison: [`research/prior-art/e1-e2/LLM_WIKI_DEDICATED_COMPARISON.md`](../research/prior-art/e1-e2/LLM_WIKI_DEDICATED_COMPARISON.md) and [`research/audit/prior-art-discovery/LLM_WIKI_COMPARISON_AUDIT.md`](../research/audit/prior-art-discovery/LLM_WIKI_COMPARISON_AUDIT.md). Captured the bounded local evidence artifact for base-llm-wiki under [`research/prior-art/e1-e2/local-base-llm-wiki/`](../research/prior-art/e1-e2/local-base-llm-wiki/). No E3 executed; no candidate selected.
 - Recorded Foundation 0.9 as `CONFIRMED FOR E1/E2 COMPARISON SCOPE` (commit `3119173ca049356c57796a14721d94fbef244bbe`), upgraded base-llm-wiki to E2, and executed the single authorized isolated upstream-native E3 probe of Astro-Han/karpathy-llm-wiki (upstream commit `eafcc77001e496cc43499e4923b663aec722c813`, MIT; verdict `E3 PASSED` at E3 scope only). Evidence committed under [`research/probes/e3/astro-han-llm-wiki/`](../research/probes/e3/astro-han-llm-wiki/README.md). No other Probe executed; no Adapter; official Nexus unmodified.
 - Recorded Foundation 1.0 as `CONFIRMED FOR E3 SCOPE` (commit `9f2eb0ede6929054f3cbfe7153799e384c1711fa`): the Evidence Reproduction Run outputs are byte-identical to the original after-state hashes and are accepted for E3 scope; E3 verdict closed as `E3 PASSED`. Transitioned to `Knowledge Provider E3 Comparison Preparation`; next authorized work is a bounded base-llm-wiki E3 comparison plan only.
+- Executed the isolated base-llm-wiki E3 probe (plan `CONFIRMED FOR E3 EXECUTION-PLAN SCOPE`): byte-identical copy of the original (84/84), native ingest per the copy's `AGENTS.md` + workflows + templates, fixture immutable, original zero-modification, cleanup verified. Verdict `E3 PASSED`; status `SUBMITTED FOR OUTSIDE REVIEW`. Evidence under [`research/probes/e3/base-llm-wiki/`](../research/probes/e3/base-llm-wiki/README.md). No other Probe run; no Knowledge Provider selected.
 
 ---
 
