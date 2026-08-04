@@ -1,0 +1,94 @@
+{
+  "records": {
+    "4e64838e-37fe-449b-9c48-2e9c5eb3358b": {
+      "WorkflowName": "cap-cancel",
+      "ForeignID": "cancel-item",
+      "RunID": "4e64838e-37fe-449b-9c48-2e9c5eb3358b",
+      "RunState": 4,
+      "Status": 1,
+      "Object": "eyJpZCI6ImNhbmNlbC1pdGVtIn0=",
+      "CreatedAt": "2026-08-04T11:55:41.648053+02:00",
+      "UpdatedAt": "2026-08-04T11:55:41.648053+02:00",
+      "Meta": {
+        "RunStateReason": "cancelled-by-probe",
+        "StatusDescription": "Created",
+        "Version": 3,
+        "TraceOrigin": "\tF:/nexus-probes/coordination/go-workflows-e3/probe/capab.go:105 +0x7e6\n\tF:/nexus-probes/coordination/go-workflows-e3/probe/main.go:176 +0x15f\n"
+      }
+    },
+    "75d663c2-ce28-4b3c-bea7-90883222a5ef": {
+      "WorkflowName": "cap-pause",
+      "ForeignID": "pause-item",
+      "RunID": "75d663c2-ce28-4b3c-bea7-90883222a5ef",
+      "RunState": 5,
+      "Status": 2,
+      "Object": "eyJpZCI6InBhdXNlLWl0ZW0iLCJkb25lIjp0cnVlfQ==",
+      "CreatedAt": "2026-08-04T11:55:40.429555+02:00",
+      "UpdatedAt": "2026-08-04T11:55:41.6350533+02:00",
+      "Meta": {
+        "RunStateReason": "",
+        "StatusDescription": "Done",
+        "Version": 4,
+        "TraceOrigin": "\tF:/nexus-probes/coordination/go-workflows-e3/probe/capab.go:71 +0x374\n\tF:/nexus-probes/coordination/go-workflows-e3/probe/main.go:176 +0x15f\n"
+      }
+    }
+  },
+  "order": [
+    "75d663c2-ce28-4b3c-bea7-90883222a5ef",
+    "4e64838e-37fe-449b-9c48-2e9c5eb3358b"
+  ],
+  "outbox": [
+    {
+      "ID": "outbox-id-56114737-b1b6-4286-9e87-87bdfbe923e0",
+      "WorkflowName": "cap-pause",
+      "Data": "EAIaGgoNd29ya2Zsb3dfbmFtZRIJY2FwLXBhdXNlGiMKBXRvcGljEhpjYXAtcGF1c2UtcnVuLXN0YXRlLWNoYW5nZRouCgZydW5faWQSJDc1ZDY2M2MyLWNlMjgtNGIzYy1iZWE3LTkwODgzMjIyYTVlZhoOCglydW5fc3RhdGUSATUaEwoOcmVjb3JkX3ZlcnNpb24SATQaGAoKZm9yZWlnbl9pZBIKcGF1c2UtaXRlbSIkNzVkNjYzYzItY2UyOC00YjNjLWJlYTctOTA4ODMyMjJhNWVm",
+      "CreatedAt": "2026-08-04T11:55:41.6350533+02:00"
+    },
+    {
+      "ID": "outbox-id-3227510c-1271-4496-bdd2-654c6942b6b6",
+      "WorkflowName": "cap-cancel",
+      "Data": "EAEaGQoKZm9yZWlnbl9pZBILY2FuY2VsLWl0ZW0aGwoNd29ya2Zsb3dfbmFtZRIKY2FwLWNhbmNlbBokCgV0b3BpYxIbY2FwLWNhbmNlbC1ydW4tc3RhdGUtY2hhbmdlGi4KBnJ1bl9pZBIkNGU2NDgzOGUtMzdmZS00NDliLTljNDgtMmU5YzVlYjMzNThiGg4KCXJ1bl9zdGF0ZRIBMxoTCg5yZWNvcmRfdmVyc2lvbhIBMiIkNGU2NDgzOGUtMzdmZS00NDliLTljNDgtMmU5YzVlYjMzNThi",
+      "CreatedAt": "2026-08-04T11:55:41.799556+02:00"
+    },
+    {
+      "ID": "outbox-id-63b90798-cf9a-4abf-afd5-82fb351a6e2f",
+      "WorkflowName": "cap-cancel",
+      "Data": "EAEaGQoKZm9yZWlnbl9pZBILY2FuY2VsLWl0ZW0aGwoNd29ya2Zsb3dfbmFtZRIKY2FwLWNhbmNlbBokCgV0b3BpYxIbY2FwLWNhbmNlbC1ydW4tc3RhdGUtY2hhbmdlGi4KBnJ1bl9pZBIkNGU2NDgzOGUtMzdmZS00NDliLTljNDgtMmU5YzVlYjMzNThiGg4KCXJ1bl9zdGF0ZRIBNBoTCg5yZWNvcmRfdmVyc2lvbhIBMyIkNGU2NDgzOGUtMzdmZS00NDliLTljNDgtMmU5YzVlYjMzNThi",
+      "CreatedAt": "2026-08-04T11:55:41.8005554+02:00"
+    }
+  ],
+  "by_key": {
+    "cap-cancel|cancel-item": {
+      "WorkflowName": "cap-cancel",
+      "ForeignID": "cancel-item",
+      "RunID": "4e64838e-37fe-449b-9c48-2e9c5eb3358b",
+      "RunState": 4,
+      "Status": 1,
+      "Object": "eyJpZCI6ImNhbmNlbC1pdGVtIn0=",
+      "CreatedAt": "2026-08-04T11:55:41.648053+02:00",
+      "UpdatedAt": "2026-08-04T11:55:41.648053+02:00",
+      "Meta": {
+        "RunStateReason": "cancelled-by-probe",
+        "StatusDescription": "Created",
+        "Version": 3,
+        "TraceOrigin": "\tF:/nexus-probes/coordination/go-workflows-e3/probe/capab.go:105 +0x7e6\n\tF:/nexus-probes/coordination/go-workflows-e3/probe/main.go:176 +0x15f\n"
+      }
+    },
+    "cap-pause|pause-item": {
+      "WorkflowName": "cap-pause",
+      "ForeignID": "pause-item",
+      "RunID": "75d663c2-ce28-4b3c-bea7-90883222a5ef",
+      "RunState": 5,
+      "Status": 2,
+      "Object": "eyJpZCI6InBhdXNlLWl0ZW0iLCJkb25lIjp0cnVlfQ==",
+      "CreatedAt": "2026-08-04T11:55:40.429555+02:00",
+      "UpdatedAt": "2026-08-04T11:55:41.6350533+02:00",
+      "Meta": {
+        "RunStateReason": "",
+        "StatusDescription": "Done",
+        "Version": 4,
+        "TraceOrigin": "\tF:/nexus-probes/coordination/go-workflows-e3/probe/capab.go:71 +0x374\n\tF:/nexus-probes/coordination/go-workflows-e3/probe/main.go:176 +0x15f\n"
+      }
+    }
+  }
+}

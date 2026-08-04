@@ -1,0 +1,26 @@
+=== RUN   TestFileStoreAdapterContract
+=== RUN   TestFileStoreAdapterContract/Latest
+=== RUN   TestFileStoreAdapterContract/Lookup
+=== RUN   TestFileStoreAdapterContract/RecordStore
+=== RUN   TestFileStoreAdapterContract/ListOutboxEvents
+=== RUN   TestFileStoreAdapterContract/DeleteOutboxEvent
+=== RUN   TestFileStoreAdapterContract/List_with_no_workflow_specified_returns_all
+=== RUN   TestFileStoreAdapterContract/List_-_WorkflowName
+=== RUN   TestFileStoreAdapterContract/List_-_FilterByForeignID
+=== RUN   TestFileStoreAdapterContract/List_-_FilterByRunState
+=== RUN   TestFileStoreAdapterContract/List_-_FilterByStatus
+=== RUN   TestFileStoreAdapterContract/List_-_Filter_by_Created_At
+--- PASS: TestFileStoreAdapterContract (7.18s)
+    --- PASS: TestFileStoreAdapterContract/Latest (0.01s)
+    --- PASS: TestFileStoreAdapterContract/Lookup (0.00s)
+    --- PASS: TestFileStoreAdapterContract/RecordStore (0.00s)
+    --- PASS: TestFileStoreAdapterContract/ListOutboxEvents (0.00s)
+    --- PASS: TestFileStoreAdapterContract/DeleteOutboxEvent (0.00s)
+    --- PASS: TestFileStoreAdapterContract/List_with_no_workflow_specified_returns_all (6.07s)
+    --- PASS: TestFileStoreAdapterContract/List_-_WorkflowName (0.39s)
+    --- PASS: TestFileStoreAdapterContract/List_-_FilterByForeignID (0.04s)
+    --- PASS: TestFileStoreAdapterContract/List_-_FilterByRunState (0.27s)
+    --- PASS: TestFileStoreAdapterContract/List_-_FilterByStatus (0.20s)
+    --- PASS: TestFileStoreAdapterContract/List_-_Filter_by_Created_At (0.18s)
+PASS
+ok  	nexusprobe/go-workflows-e3/filestore	(cached)
