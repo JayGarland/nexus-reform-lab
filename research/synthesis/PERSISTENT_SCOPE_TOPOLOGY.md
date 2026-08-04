@@ -1,9 +1,12 @@
 # Persistent Scope Topology
 
-> **Document Status**: `CONCEPT MODEL — UNDER OUTSIDE REVIEW`
+> **Document Status**: `CONCEPT MODEL — CONFIRMED FOR CONCEPTUAL SCOPE`
+> **Reviewed Commit**: `2cc39043519a307769e440de60f766df23031236`
 > **Purpose**: Generalize World / Room into an extensible Persistent Scope topology so that `World → Room` is treated as the current minimum topology profile rather than a permanently fixed hierarchy.
 > **Scope**: Conceptual topology only. No Persistent Scope Runtime, schema, Scope or Room Engine, or real directory is created; no real Workspace path is resolved or scanned.
-> **Related**: [`PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md`](PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`), [`LAYERED_WORLD_RUNTIME_MODEL.md`](LAYERED_WORLD_RUNTIME_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`PERSISTENT_WORLD_OBJECT_MODEL.md`](PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`SEEDED_INSTANCE_CONTINUITY.md`](SEEDED_INSTANCE_CONTINUITY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`)
+> **Confirmed Scope**: `World → Room` as the current minimum topology profile; Persistent Scope as the underlying general concept; extensible scope types; Runtime and Contract must not depend on fixed names or fixed depth; topology may be a graph, not only a tree; containment / reference / review / knowledge / dependency / governance edges must be distinguished; cross-scope references must not blur canonical ownership; `canonical_scope_ref` denotes canonical ownership; a fresh instance must wake inside one explicitly authorized local persistent scope; current wake profile is Room; no arbitrary traversal of other Scopes by default; cross-scope access requires authorization by edges, Protocol, and permissions; the directory is the current carrier and `scope_id` is the stable identity; the World may govern Scopes but must not become a central Boss that dispatches every Work Item.
+> **Not Yet Confirmed**: Scope schema; Scope Runtime; Scope Registry implementation; permission engine; real directory structure; cross-scope communication implementation; production readiness.
+> **Related**: [`PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md`](PERSISTENT_ROOM_AND_WORKSPACE_BINDING.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`LAYERED_WORLD_RUNTIME_MODEL.md`](LAYERED_WORLD_RUNTIME_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`PERSISTENT_WORLD_OBJECT_MODEL.md`](PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`SEEDED_INSTANCE_CONTINUITY.md`](SEEDED_INSTANCE_CONTINUITY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT.md`](../contracts/PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT.md) (`DRAFT SEMANTIC CONTRACT — UNDER OUTSIDE REVIEW`)
 
 ---
 

@@ -1,9 +1,11 @@
 # Persistent Room and Workspace Binding
 
-> **Document Status**: `CONCEPT MODEL — UNDER OUTSIDE REVIEW`
-> **Outside Review Status**: `PARTIAL — ROOM AND WORKSPACE SEMANTICS CONFIRMED; PERSISTENT SCOPE TOPOLOGY EXTENSION REQUIRED`
+> **Document Status**: `CONCEPT MODEL — CONFIRMED FOR CONCEPTUAL SCOPE`
+> **Reviewed Commit**: `2cc39043519a307769e440de60f766df23031236`
 > **Purpose**: Define Persistent World, Persistent Room, Workspace Binding, and Runtime Session, their persistence boundaries, and the wake-in-Room entry chain. Conceptual only; no Room engine, Session launcher, Workspace resolver, or directory schema is implemented, and no real Workspace path is resolved or scanned.
-> **Related**: [`PERSISTENT_WORLD_OBJECT_MODEL.md`](PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`LAYERED_WORLD_RUNTIME_MODEL.md`](LAYERED_WORLD_RUNTIME_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`SEEDED_INSTANCE_CONTINUITY.md`](SEEDED_INSTANCE_CONTINUITY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`PERSISTENT_SCOPE_TOPOLOGY.md`](PERSISTENT_SCOPE_TOPOLOGY.md) (`CONCEPT MODEL — UNDER OUTSIDE REVIEW`)
+> **Confirmed Scope**: World persistent; Room persistent; Runtime Session and fresh instance transient; Room as the current local Persistent Scope type; the fresh instance currently wakes inside a Room; Room WAKE as the local recovery entry; World WAKE as an optional global routing entry; in the current file-first implementation a Room is normally carried by a persistent directory; Room identity is `room_id`, not the absolute path; a Room may reference external resources; Workspace Binding as an explicit authorized reference; product repository need not be nested inside the World or Room directory; Workspace access remains within the Room governance boundary; retainable pheromones, outputs, and state must be written back to the Scope before a Session exits; Room is the current profile, not the permanently unique local scope type.
+> **Not Yet Confirmed**: concrete directory schema; Workspace resolver; Runtime; permission implementation; real paths.
+> **Related**: [`PERSISTENT_WORLD_OBJECT_MODEL.md`](PERSISTENT_WORLD_OBJECT_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`LAYERED_WORLD_RUNTIME_MODEL.md`](LAYERED_WORLD_RUNTIME_MODEL.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`SEEDED_INSTANCE_CONTINUITY.md`](SEEDED_INSTANCE_CONTINUITY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`PERSISTENT_SCOPE_TOPOLOGY.md`](PERSISTENT_SCOPE_TOPOLOGY.md) (`CONFIRMED FOR CONCEPTUAL SCOPE`), [`PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT.md`](../contracts/PROTOCOL_GOVERNANCE_MINIMUM_CONTRACT.md) (`DRAFT SEMANTIC CONTRACT — UNDER OUTSIDE REVIEW`)
 
 ---
 

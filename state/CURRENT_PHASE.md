@@ -6,10 +6,10 @@
 
 ## Phase Attributes
 
-- **Current Phase**: `Persistent Scope Topology Clarification`
-- **Current Focus**: Generalize World / Room into an extensible Persistent Scope topology so that `World → Room` is the current minimum topology profile rather than a permanently fixed hierarchy, without implementing any Runtime, creating a Scope or Room engine, creating directories, resolving real Workspace paths, selecting a Provider or carrier, or connecting the official Nexus.
-- **External Audit Status**: `LAYERED + TWO-LEG MODELS CONFIRMED — ROOM/WS PARTIAL — PERSISTENT SCOPE TOPOLOGY UNDER OUTSIDE REVIEW`
-- **Started At**: `2026-08-04T09:00:00+02:00`
+- **Current Phase**: `Protocol Governance Minimum Contract Draft`
+- **Current Focus**: Draft the Protocol Governance Minimum Contract defining the minimum identity, scope, authority, version, conflict handling, amendment, approval, deprecation, rollback, and evidence semantics for natural-language Protocols as Software 3.0, without implementing a Protocol Engine, Runtime enforcement, or any rule engine.
+- **External Audit Status**: `PERSISTENT SCOPE TOPOLOGY + ROOM/WS CONFIRMED — PROTOCOL GOVERNANCE MINIMUM CONTRACT UNDER OUTSIDE REVIEW`
+- **Started At**: `2026-08-04T09:15:00+02:00`
 
 ---
 
